@@ -58,7 +58,11 @@ jobs:
           python -u tests/test_runner.py
 
       - name: Ejecutar el scraper
-        run: python -u scraper_runner.py
+        shell: bash
+        run: |
+          mkdir -p debug
+          set -o pipefail
+          python -u scraper_runner.py 2>&1 | tee debug/ejecucion.log
 
       - name: Guardar diagnóstico
         if: always()
