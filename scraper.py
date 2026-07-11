@@ -1,26 +1,28 @@
 #!/usr/bin/env python3
 """Seguimiento BÜRK de jugadores en torneos de Pickle Pro Tour.
 
-Versión 4:
-- Localiza únicamente controles de grupo visibles y realmente clicables.
-- Lee las tablas por sus cabeceras (Jugador/Pareja, Horario/Pista y Resultado),
-  sin depender de que el título exacto "GRUPO N - PARTIDOS" esté en un único nodo.
-- Admite individuales, dobles y páginas que contienen varias tablas de partidos.
-- Normaliza tildes, saltos de línea y elementos HTML intermedios en los nombres.
-- Elimina duplicados y genera diagnósticos útiles cuando la web cambia.
+Versión 5:
+- Extrae las URL reales de las categorías y grupos desde el HTML del torneo.
+- Navega directamente a esas URL: no simula clics sobre decenas de botones.
+- Procesa primero las páginas de categoría y usa los grupos individuales como respaldo.
+- Evita duplicados, muestra progreso inmediato y no sobrescribe datos si falla.
 """
 
 from __future__ import annotations
 
+import html as html_lib
 import json
+import os
 import re
+import time
 import unicodedata
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
+from urllib.parse import parse_qs, urljoin, urlparse
 
 from bs4 import BeautifulSoup, Tag
-from playwright.sync_api import Page, TimeoutError as PlaywrightTimeoutError, sync_playwright
+from playwright.sync_api import Page, sync_playwright
 
 BASE_URL = "https://pickleprotour.com"
 ROOT = Path(__file__).parent
@@ -28,8 +30,17 @@ CONFIG_PATH = ROOT / "jugadores.json"
 OUTPUT_PATH = ROOT / "docs" / "resultados.json"
 DEBUG_DIR = ROOT / "debug"
 
-BOTON_GRUPO = re.compile(r"^GRUPO\s+\d+\s*$", re.I)
 ENCABEZADO_PARTIDOS = re.compile(r"GRUPO\s+\d+\s*-\s*PARTIDOS", re.I)
+URL_VISOR_RE = re.compile(
+    r"abrirCuadroVisor\(\s*['\"]([^'\"]*torneogrupo\.aspx[^'\"]*)['\"]",
+    re.I,
+)
+MAX_RUNTIME_SECONDS = 7 * 60
+NAVIGATION_TIMEOUT_MS = 12_000
+
+
+def log(mensaje: str) -> None:
+    print(mensaje, flush=True)
 
 
 def limpiar_texto(texto: str) -> str:
@@ -48,6 +59,14 @@ def normalizar(texto: str) -> str:
 def cargar_config() -> dict[str, Any]:
     with CONFIG_PATH.open(encoding="utf-8") as f:
         config = json.load(f)
+
+    torneo_id_env = os.getenv("TORNEO_ID", "").strip()
+    torneo_nombre_env = os.getenv("TORNEO_NOMBRE", "").strip()
+    if torneo_id_env:
+        config["torneo_id"] = int(torneo_id_env)
+    if torneo_nombre_env:
+        config["torneo_nombre"] = torneo_nombre_env
+
     if not config.get("torneo_id"):
         raise ValueError("Falta 'torneo_id' en jugadores.json")
     if not isinstance(config.get("jugadores"), list) or not config["jugadores"]:
@@ -180,15 +199,13 @@ def extraer_todas_las_tablas_partidos(html: str) -> list[dict[str, str]]:
 
             pareja1, pareja2 = equipos
             horario = valores[idx_horario] if idx_horario is not None and idx_horario < len(valores) else ""
-            resultado = valores[idx_resultado]
-
             partidos.append(
                 {
                     "categoria": etiqueta,
                     "pareja1": pareja1,
                     "pareja2": pareja2,
                     "horario_pista": horario,
-                    "resultado": resultado,
+                    "resultado": valores[idx_resultado],
                 }
             )
 
@@ -206,7 +223,7 @@ def extraer_todas_las_tablas_partidos(html: str) -> list[dict[str, str]]:
 
 
 def extraer_categoria_y_tabla_partidos(html: str) -> tuple[str, list[dict[str, str]]]:
-    """Compatibilidad con las pruebas antiguas: devuelve la primera tabla/grupo."""
+    """Compatibilidad con las pruebas: devuelve la primera tabla/grupo."""
     partidos = extraer_todas_las_tablas_partidos(html)
     if not partidos:
         return "", []
@@ -224,66 +241,82 @@ def extraer_categoria_y_tabla_partidos(html: str) -> tuple[str, list[dict[str, s
     return categoria, salida
 
 
-def abrir_vista_grupos(page: Page, torneo_id: int) -> int:
-    url = f"{BASE_URL}/torneo.aspx?id={torneo_id}"
-    page.goto(url, wait_until="domcontentloaded", timeout=45_000)
-    page.get_by_text("Grupos y Cuadros", exact=True).first.click(timeout=15_000)
-    try:
-        page.wait_for_load_state("networkidle", timeout=10_000)
-    except PlaywrightTimeoutError:
-        pass
-    page.wait_for_timeout(1_000)
-    return marcar_botones_grupo(page)
+def _url_desde_onclick(onclick: str) -> str | None:
+    coincidencia = URL_VISOR_RE.search(html_lib.unescape(onclick or ""))
+    if not coincidencia:
+        return None
+    return urljoin(f"{BASE_URL}/", coincidencia.group(1))
 
 
-def marcar_botones_grupo(page: Page) -> int:
-    """Marca controles clicables y visibles, evitando duplicados ocultos desktop/móvil."""
-    return int(
-        page.evaluate(
-            r"""
-            () => {
-              const patron = /^GRUPO\s+\d+\s*$/i;
-              const selectores = 'button, a, input[type="button"], input[type="submit"], [role="button"], [onclick]';
-              const candidatos = Array.from(document.querySelectorAll(selectores));
-              const visibles = candidatos.filter(el => {
-                const texto = (el.innerText || el.value || el.textContent || '').trim();
-                const rect = el.getBoundingClientRect();
-                const estilo = window.getComputedStyle(el);
-                return patron.test(texto) && rect.width > 0 && rect.height > 0 &&
-                       estilo.display !== 'none' && estilo.visibility !== 'hidden';
-              });
-              visibles.forEach((el, i) => el.setAttribute('data-burk-group-index', String(i)));
-              return visibles.length;
-            }
-            """
+def _es_url_categoria(url: str, torneo_id: int) -> bool:
+    parsed = urlparse(url)
+    params = parse_qs(parsed.query)
+    return (
+        parsed.path.lower().endswith("torneogrupo.aspx")
+        and str(torneo_id) in params.get("idT", [])
+        and bool(params.get("g"))
+    )
+
+
+def _es_url_grupo(url: str) -> bool:
+    parsed = urlparse(url)
+    params = parse_qs(parsed.query)
+    return (
+        parsed.path.lower().endswith("torneogrupo.aspx")
+        and bool(params.get("id"))
+        and not params.get("idT")
+    )
+
+
+def extraer_destinos_torneo(html: str, torneo_id: int) -> list[dict[str, Any]]:
+    """Extrae cada categoría con su URL agregada y sus grupos individuales."""
+    soup = BeautifulSoup(html, "html.parser")
+    bloques = soup.select("#cuadros-todos .cuadros-categoria-block")
+    if not bloques:
+        bloques = soup.select(".cuadros-categoria-block")
+
+    destinos: list[dict[str, Any]] = []
+    vistos: set[str] = set()
+
+    for bloque in bloques:
+        cabecera = bloque.select_one(".cuadros-categoria-header")
+        nombre = limpiar_texto(cabecera.get_text(" ", strip=True)) if cabecera else "Categoría"
+        categoria_url: str | None = None
+        grupos: list[str] = []
+
+        for elemento in bloque.select("[onclick]"):
+            url = _url_desde_onclick(elemento.get("onclick", ""))
+            if not url:
+                continue
+            if _es_url_categoria(url, torneo_id) and categoria_url is None:
+                categoria_url = url
+            elif _es_url_grupo(url) and url not in grupos:
+                grupos.append(url)
+
+        clave = categoria_url or "|".join(grupos)
+        if clave and clave not in vistos:
+            vistos.add(clave)
+            destinos.append({"nombre": nombre, "categoria_url": categoria_url, "grupo_urls": grupos})
+
+    if not destinos:
+        categorias: list[str] = []
+        grupos: list[str] = []
+        for elemento in soup.select("[onclick]"):
+            url = _url_desde_onclick(elemento.get("onclick", ""))
+            if not url:
+                continue
+            if _es_url_categoria(url, torneo_id) and url not in categorias:
+                categorias.append(url)
+            elif _es_url_grupo(url) and url not in grupos:
+                grupos.append(url)
+        destinos.extend(
+            {"nombre": f"Categoría {i}", "categoria_url": url, "grupo_urls": []}
+            for i, url in enumerate(categorias, 1)
         )
-    )
+        if not categorias and grupos:
+            destinos.append({"nombre": "Grupos", "categoria_url": None, "grupo_urls": grupos})
 
-
-def esperar_tabla_partidos(page: Page) -> None:
-    page.wait_for_function(
-        r"""
-        () => Array.from(document.querySelectorAll('table')).some(tabla => {
-          const texto = (tabla.innerText || '').toLowerCase();
-          return texto.includes('resultado') && (texto.includes('jugador') || texto.includes('pareja') || texto.includes('equipo'));
-        })
-        """,
-        timeout=15_000,
-    )
-    page.wait_for_timeout(300)
-
-
-def volver_a_grupos(page: Page, torneo_id: int) -> int:
-    try:
-        volver = page.get_by_text(re.compile(r"volver", re.I)).first
-        volver.click(timeout=8_000)
-        page.wait_for_timeout(500)
-        cantidad = marcar_botones_grupo(page)
-        if cantidad:
-            return cantidad
-    except Exception:
-        pass
-    return abrir_vista_grupos(page, torneo_id)
+    return destinos
 
 
 def resultado_esta_jugado(resultado: str) -> bool:
@@ -296,114 +329,183 @@ def guardar_debug(nombre: str, contenido: str) -> None:
     (DEBUG_DIR / nombre).write_text(contenido, encoding="utf-8")
 
 
+def cargar_pagina(page: Page, url: str) -> str:
+    page.goto(url, wait_until="domcontentloaded", timeout=NAVIGATION_TIMEOUT_MS)
+    page.wait_for_timeout(350)
+    return page.content()
+
+
+def contar_grupos_en_partidos(partidos: list[dict[str, str]]) -> int:
+    grupos = set()
+    for partido in partidos:
+        coincidencia = re.search(r"GRUPO\s+\d+", partido.get("categoria", ""), re.I)
+        if coincidencia:
+            grupos.add(normalizar(coincidencia.group(0)))
+    return len(grupos)
+
+
+def incorporar_partidos(
+    partidos: list[dict[str, str]],
+    jugadores: list[str],
+    resultados: dict[str, dict[str, list[dict[str, Any]]]],
+    firmas_resultados: set[tuple[str, ...]],
+    url_origen: str,
+    categoria_respaldo: str,
+) -> int:
+    encontrados = 0
+    for partido in partidos:
+        for nombre in jugadores:
+            en_p1 = jugador_en_texto(nombre, partido["pareja1"])
+            en_p2 = jugador_en_texto(nombre, partido["pareja2"])
+            if not (en_p1 or en_p2):
+                continue
+
+            rival = partido["pareja2"] if en_p1 else partido["pareja1"]
+            resultado_txt = limpiar_texto(partido["resultado"])
+            registro = {
+                "categoria": partido["categoria"] or categoria_respaldo,
+                "rival": rival,
+                "horario_pista": partido["horario_pista"],
+                "resultado": resultado_txt,
+                "jugado": resultado_esta_jugado(resultado_txt),
+                "url_grupo": url_origen,
+            }
+            firma = (
+                normalizar(nombre),
+                normalizar(registro["categoria"]),
+                normalizar(rival),
+                normalizar(registro["horario_pista"]),
+                normalizar(resultado_txt),
+            )
+            if firma not in firmas_resultados:
+                firmas_resultados.add(firma)
+                resultados[nombre]["partidos"].append(registro)
+                encontrados += 1
+    return encontrados
+
+
 def main() -> None:
+    inicio = time.monotonic()
     config = cargar_config()
     torneo_id = int(config["torneo_id"])
     torneo_nombre = config.get("torneo_nombre", "")
     jugadores: list[str] = config["jugadores"]
-    resultados = {nombre: {"partidos": []} for nombre in jugadores}
+    resultados: dict[str, dict[str, list[dict[str, Any]]]] = {
+        nombre: {"partidos": []} for nombre in jugadores
+    }
     firmas_resultados: set[tuple[str, ...]] = set()
 
-    total_botones = 0
-    procesados = 0
+    categorias_procesadas = 0
+    paginas_grupo_procesadas = 0
     errores = 0
-    tablas_detectadas = 0
     filas_detectadas = 0
 
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
         page = browser.new_page(viewport={"width": 1440, "height": 1000}, locale="es-ES")
+        page.set_default_navigation_timeout(NAVIGATION_TIMEOUT_MS)
 
-        print(f"Abriendo torneo id={torneo_id}...")
-        total_botones = abrir_vista_grupos(page, torneo_id)
-        print(f"Detectados {total_botones} controles de grupo visibles y clicables.")
-        if total_botones == 0:
-            guardar_debug("sin_botones.html", page.content())
-            raise RuntimeError("No se encontró ningún control GRUPO N. Se guardó debug/sin_botones.html")
+        log(f"Torneo seleccionado: {torneo_nombre or torneo_id} (id={torneo_id})")
+        url_torneo = f"{BASE_URL}/torneo.aspx?id={torneo_id}"
+        page.goto(url_torneo, wait_until="domcontentloaded", timeout=30_000)
+        page.get_by_text("Grupos y Cuadros", exact=True).first.click(timeout=15_000)
+        page.wait_for_timeout(700)
 
-        for i in range(total_botones):
-            try:
-                cantidad_actual = marcar_botones_grupo(page)
-                if i >= cantidad_actual:
-                    cantidad_actual = abrir_vista_grupos(page, torneo_id)
-                if i >= cantidad_actual:
-                    raise RuntimeError(f"El grupo {i + 1} ya no existe; ahora solo hay {cantidad_actual}")
+        html_listado = page.content()
+        destinos = extraer_destinos_torneo(html_listado, torneo_id)
+        if not destinos:
+            guardar_debug("sin_destinos.html", html_listado)
+            browser.close()
+            raise RuntimeError("No se localizaron URL de categorías o grupos en el torneo")
 
-                boton = page.locator(f'[data-burk-group-index="{i}"]')
-                texto_boton = limpiar_texto(
-                    boton.inner_text(timeout=5_000)
-                    or boton.get_attribute("value")
-                    or f"GRUPO {i + 1}"
-                )
-                boton.scroll_into_view_if_needed(timeout=5_000)
-                boton.click(timeout=10_000)
-                esperar_tabla_partidos(page)
+        total_grupos = len({url for d in destinos for url in d["grupo_urls"]})
+        log(f"Detectadas {len(destinos)} categorías y {total_grupos} grupos únicos.")
 
-                partidos_vista = extraer_todas_las_tablas_partidos(page.content())
-                if partidos_vista:
-                    tablas_detectadas += len({p["categoria"] for p in partidos_vista}) or 1
-                    filas_detectadas += len(partidos_vista)
-                else:
-                    guardar_debug(f"grupo_{i + 1:03d}_sin_tabla.html", page.content())
-                    raise RuntimeError("La vista no contiene una tabla de partidos reconocible")
+        for indice, destino in enumerate(destinos, 1):
+            if time.monotonic() - inicio > MAX_RUNTIME_SECONDS:
+                browser.close()
+                raise RuntimeError("Tiempo máximo interno superado; no se sobrescribirá resultados.json")
 
-                encontrados = 0
-                for partido in partidos_vista:
-                    for nombre in jugadores:
-                        en_p1 = jugador_en_texto(nombre, partido["pareja1"])
-                        en_p2 = jugador_en_texto(nombre, partido["pareja2"])
-                        if not (en_p1 or en_p2):
-                            continue
-                        rival = partido["pareja2"] if en_p1 else partido["pareja1"]
-                        resultado_txt = limpiar_texto(partido["resultado"])
-                        registro = {
-                            "categoria": partido["categoria"] or texto_boton,
-                            "rival": rival,
-                            "horario_pista": partido["horario_pista"],
-                            "resultado": resultado_txt,
-                            "jugado": resultado_esta_jugado(resultado_txt),
-                        }
-                        firma = (
-                            normalizar(nombre),
-                            normalizar(registro["categoria"]),
-                            normalizar(rival),
-                            normalizar(registro["horario_pista"]),
-                            normalizar(resultado_txt),
-                        )
-                        if firma not in firmas_resultados:
-                            firmas_resultados.add(firma)
-                            resultados[nombre]["partidos"].append(registro)
-                            encontrados += 1
+            nombre_categoria = destino["nombre"]
+            partidos_categoria: list[dict[str, str]] = []
+            url_categoria = destino["categoria_url"]
 
-                procesados += 1
-                print(
-                    f"  [{i + 1}/{total_botones}] {texto_boton}: "
-                    f"{len(partidos_vista)} fila(s), {encontrados} coincidencia(s) BÜRK"
-                )
-                volver_a_grupos(page, torneo_id)
-
-            except Exception as exc:
-                errores += 1
-                print(f"  ERROR [{i + 1}/{total_botones}]: {type(exc).__name__}: {exc}")
+            if url_categoria:
                 try:
-                    guardar_debug(f"error_grupo_{i + 1:03d}.html", page.content())
-                except Exception:
-                    pass
-                abrir_vista_grupos(page, torneo_id)
+                    html_categoria = cargar_pagina(page, url_categoria)
+                    partidos_categoria = extraer_todas_las_tablas_partidos(html_categoria)
+                except Exception as exc:
+                    errores += 1
+                    log(f"  ERROR categoría {indice}/{len(destinos)} {nombre_categoria}: {type(exc).__name__}")
+                    try:
+                        guardar_debug(f"error_categoria_{indice:02d}.html", page.content())
+                    except Exception:
+                        pass
+
+            grupos_leidos = contar_grupos_en_partidos(partidos_categoria)
+            grupos_esperados = len(destino["grupo_urls"])
+            usar_respaldo = not partidos_categoria or (
+                grupos_esperados > 1 and grupos_leidos < grupos_esperados
+            )
+
+            if partidos_categoria:
+                filas_detectadas += len(partidos_categoria)
+                encontrados = incorporar_partidos(
+                    partidos_categoria,
+                    jugadores,
+                    resultados,
+                    firmas_resultados,
+                    url_categoria or url_torneo,
+                    nombre_categoria,
+                )
+                categorias_procesadas += 1
+                log(
+                    f"  [{indice}/{len(destinos)}] {nombre_categoria}: "
+                    f"{len(partidos_categoria)} partido(s), {encontrados} coincidencia(s) BÜRK"
+                )
+
+            if usar_respaldo and destino["grupo_urls"]:
+                log(
+                    f"    Respaldo: leyendo {len(destino['grupo_urls'])} grupo(s) directos "
+                    f"de {nombre_categoria}"
+                )
+                for num_grupo, url_grupo in enumerate(destino["grupo_urls"], 1):
+                    if time.monotonic() - inicio > MAX_RUNTIME_SECONDS:
+                        browser.close()
+                        raise RuntimeError("Tiempo máximo interno superado; no se sobrescribirá resultados.json")
+                    try:
+                        html_grupo = cargar_pagina(page, url_grupo)
+                        partidos_grupo = extraer_todas_las_tablas_partidos(html_grupo)
+                        if not partidos_grupo:
+                            raise RuntimeError("Sin tabla de partidos reconocible")
+                        filas_detectadas += len(partidos_grupo)
+                        incorporar_partidos(
+                            partidos_grupo,
+                            jugadores,
+                            resultados,
+                            firmas_resultados,
+                            url_grupo,
+                            nombre_categoria,
+                        )
+                        paginas_grupo_procesadas += 1
+                        log(f"      grupo {num_grupo}/{len(destino['grupo_urls'])}: OK")
+                    except Exception as exc:
+                        errores += 1
+                        log(
+                            f"      ERROR grupo {num_grupo}/{len(destino['grupo_urls'])}: "
+                            f"{type(exc).__name__}: {exc}"
+                        )
 
         browser.close()
 
-    print(f"\nGrupos procesados: {procesados}/{total_botones}; errores: {errores}")
-    print(f"Tablas detectadas: {tablas_detectadas}; filas de partido: {filas_detectadas}")
+    log(
+        f"Resumen: categorías procesadas={categorias_procesadas}; "
+        f"grupos directos procesados={paginas_grupo_procesadas}; errores={errores}; "
+        f"filas leídas={filas_detectadas}"
+    )
 
-    if procesados == 0 or filas_detectadas == 0:
-        raise RuntimeError(
-            "La extracción no produjo ninguna tabla/fila válida; no se sobrescribirá resultados.json"
-        )
-    if errores and errores >= max(5, total_botones // 3):
-        raise RuntimeError(
-            f"Demasiados errores ({errores}/{total_botones}); no se sobrescribirá resultados.json"
-        )
+    if filas_detectadas == 0:
+        raise RuntimeError("La extracción no produjo ninguna fila válida; no se sobrescribirá resultados.json")
 
     for datos in resultados.values():
         datos["partidos"].sort(
@@ -419,8 +521,10 @@ def main() -> None:
         "torneo_nombre": torneo_nombre,
         "actualizado": datetime.now(timezone.utc).isoformat(),
         "diagnostico": {
-            "controles_grupo": total_botones,
-            "grupos_procesados": procesados,
+            "categorias_detectadas": len(destinos),
+            "grupos_unicos_detectados": total_grupos,
+            "categorias_procesadas": categorias_procesadas,
+            "grupos_directos_procesados": paginas_grupo_procesadas,
             "errores": errores,
             "filas_partido_leidas": filas_detectadas,
         },
@@ -432,8 +536,8 @@ def main() -> None:
         json.dump(salida, f, ensure_ascii=False, indent=2)
 
     total = sum(len(v["partidos"]) for v in resultados.values())
-    print(f"Listo: {total} partido(s) encontrados para {len(jugadores)} jugadores BÜRK.")
-    print(f"Guardado en {OUTPUT_PATH}")
+    log(f"Listo: {total} partido(s) encontrados para {len(jugadores)} jugadores BÜRK.")
+    log(f"Guardado en {OUTPUT_PATH}")
 
 
 if __name__ == "__main__":
