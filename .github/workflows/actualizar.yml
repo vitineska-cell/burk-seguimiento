@@ -16,6 +16,7 @@ on:
     paths:
       - "scraper.py"
       - "scraper_runner.py"
+      - "diagnostico_parser.py"
       - "tests/**"
       - ".github/workflows/actualizar.yml"
 
@@ -53,7 +54,7 @@ jobs:
 
       - name: Ejecutar pruebas
         run: |
-          python -m py_compile scraper.py scraper_runner.py
+          python -m py_compile scraper.py scraper_runner.py diagnostico_parser.py
           python -u tests/test_parser.py
           python -u tests/test_runner.py
 
@@ -63,6 +64,10 @@ jobs:
           mkdir -p debug
           set -o pipefail
           python -u scraper_runner.py 2>&1 | tee debug/ejecucion.log
+
+      - name: Diagnosticar nombres y tablas
+        if: failure()
+        run: python -u diagnostico_parser.py
 
       - name: Guardar diagnóstico
         if: always()
