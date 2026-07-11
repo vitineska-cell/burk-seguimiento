@@ -16,9 +16,11 @@ Qué hace:
 Historial:
 - v1 intentaba buscar enlaces <a href="torneogrupo.aspx..."> - no existían,
   0 grupos encontrados en la primera ejecucion real (11/07/2026).
-- v2 (esta version) simula los clics, basado en una captura real de la web
-  que confirmo: los botones se llaman exactamente "GRUPO N", existe un
-  boton "Volver", y el resultado tiene formatos como "21 - 0 WO Justificado".
+- v2 simula los clics en los botones GRUPO N - funcionó pero se atascaba
+  en torneos con muchos grupos (172), porque los botones muy abajo en la
+  pagina no estaban "activos" hasta hacer scroll hasta ellos.
+- v3 (esta version) hace scroll explicito antes de cada clic, con un
+  reintento forzado y un cortacircuitos si hay demasiados fallos seguidos.
 
 Si esta version tambien falla, copia el log de GitHub Actions y peaselo a
 Claude - cada intento deja mas informacion real sobre como es la web.
@@ -156,6 +158,8 @@ def main() -> None:
 
         procesados = 0
         errores = 0
+        consecutivos_fallidos = 0
+        MAX_CONSECUTIVOS = 15  # si fallan 15 seguidos, algo estructural pasa: paramos en vez de arrastrarlo
 
         for i in range(total_grupos):
             if not asegurar_vista_de_grupos(page, torneo_id):
@@ -163,7 +167,20 @@ def main() -> None:
                 break
 
             try:
-                page.get_by_text(BOTON_GRUPO).nth(i).click()
+                boton = page.get_by_text(BOTON_GRUPO).nth(i)
+                # En torneos con muchos grupos, los botones muy abajo en la
+                # pagina a veces no estan "activos" hasta hacer scroll hasta
+                # ellos. Forzamos el scroll primero para evitar el timeout.
+                boton.scroll_into_view_if_needed(timeout=5000)
+                page.wait_for_timeout(150)
+                try:
+                    boton.click(timeout=8000)
+                except Exception:
+                    # Reintento mas agresivo: ignora el chequeo de visibilidad
+                    # de Playwright, por si el bloque esta ahi pero se marca
+                    # como "no visible" por error.
+                    boton.click(timeout=5000, force=True)
+
                 page.wait_for_selector(f"text=/{ENCABEZADO_PARTIDOS.pattern}/i", timeout=10000)
 
                 categoria, partidos = extraer_categoria_y_tabla_partidos(page.content())
@@ -189,14 +206,24 @@ def main() -> None:
                         encontrados_aqui += 1
 
                 procesados += 1
+                consecutivos_fallidos = 0
                 if encontrados_aqui or procesados % 10 == 0:
                     print(f"  [{i + 1}/{total_grupos}] {categoria or '(sin categoria)'} - {encontrados_aqui} partido(s) BURK")
 
-                page.get_by_text("Volver", exact=False).first.click()
+                page.get_by_text("Volver", exact=False).first.click(timeout=8000)
 
             except Exception as e:
                 errores += 1
-                print(f"  Error en el grupo #{i + 1}/{total_grupos}: {e}")
+                consecutivos_fallidos += 1
+                print(f"  Error en el grupo #{i + 1}/{total_grupos}: {type(e).__name__}")
+                try:
+                    page.get_by_text("Volver", exact=False).first.click(timeout=3000)
+                except Exception:
+                    pass
+                if consecutivos_fallidos >= MAX_CONSECUTIVOS:
+                    print(f"\n{consecutivos_fallidos} fallos seguidos: paro aquí para no colgar la ejecución.")
+                    print("Esto suele indicar algo estructural (no solo un grupo suelto) - copia este log para Claude.")
+                    break
 
         browser.close()
 
