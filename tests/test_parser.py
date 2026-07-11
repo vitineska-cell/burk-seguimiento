@@ -5,6 +5,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from scraper import (
     extraer_categoria_y_tabla_partidos,
+    extraer_destinos_torneo,
     extraer_todas_las_tablas_partidos,
     jugador_en_texto,
     normalizar,
@@ -50,8 +51,38 @@ def test_dobles_en_cuatro_columnas_y_varios_grupos():
     assert "Rival Uno" in partidos[1]["pareja2"]
 
 
+def test_extrae_urls_directas_sin_duplicar():
+    html = """
+    <div id="cuadros-todos">
+      <div class="cuadros-categoria-block">
+        <div class="cuadros-categoria-header">
+          <a onclick="abrirCuadroVisor('torneogrupo.aspx?idT=2339&amp;g=908&amp;visor=0', 'ABSOLUTA 3.5')">ABSOLUTA 3.5</a>
+        </div>
+        <div onclick="abrirCuadroVisor('torneoGrupo.aspx?id=1541&amp;visor=0', 'GRUPO 1')">GRUPO 1</div>
+        <div onclick="abrirCuadroVisor('torneoGrupo.aspx?id=1542&amp;visor=0', 'GRUPO 2')">GRUPO 2</div>
+      </div>
+      <div class="cuadros-categoria-block">
+        <div class="cuadros-categoria-header">
+          <a onclick="abrirCuadroVisor('torneogrupo.aspx?idT=2339&amp;g=909&amp;visor=0', 'ABSOLUTA 4.5')">ABSOLUTA 4.5</a>
+        </div>
+        <div onclick="abrirCuadroVisor('torneoGrupo.aspx?id=1529&amp;visor=0', 'GRUPO 1')">GRUPO 1</div>
+      </div>
+    </div>
+    <div class="cuadros-categoria-block">
+      <a onclick="abrirCuadroVisor('torneogrupo.aspx?idT=2339&amp;g=908&amp;visor=0', 'DUPLICADO')">DUPLICADO</a>
+    </div>
+    """
+    destinos = extraer_destinos_torneo(html, 2339)
+    assert len(destinos) == 2
+    assert destinos[0]["nombre"] == "ABSOLUTA 3.5"
+    assert destinos[0]["categoria_url"].endswith("idT=2339&g=908&visor=0")
+    assert len(destinos[0]["grupo_urls"]) == 2
+    assert destinos[1]["grupo_urls"][0].endswith("id=1529&visor=0")
+
+
 if __name__ == "__main__":
     test_fixture_real()
     test_nombres_con_html_intermedio()
     test_dobles_en_cuatro_columnas_y_varios_grupos()
-    print("Todos los tests del parser v4 pasan.")
+    test_extrae_urls_directas_sin_duplicar()
+    print("Todos los tests del parser v5 pasan.")
