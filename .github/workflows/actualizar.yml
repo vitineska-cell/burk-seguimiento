@@ -44,11 +44,14 @@ jobs:
           pip install -r requirements.txt
           playwright install chromium --with-deps
 
-      - name: Ejecutar pruebas del parser
-        run: python -u tests/test_parser.py
+      - name: Ejecutar pruebas
+        run: |
+          python -m py_compile scraper.py scraper_runner.py
+          python -u tests/test_parser.py
+          python -u tests/test_runner.py
 
       - name: Ejecutar el scraper
-        run: python -u scraper.py
+        run: python -u scraper_runner.py
 
       - name: Guardar diagnóstico
         if: always()
