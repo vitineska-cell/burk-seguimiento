@@ -2,6 +2,15 @@ name: Actualizar resultados BÜRK
 
 on:
   workflow_dispatch:
+    inputs:
+      torneo_id:
+        description: "ID del torneo (vacío = usar jugadores.json)"
+        required: false
+        type: string
+      torneo_nombre:
+        description: "Nombre del torneo (vacío = usar jugadores.json)"
+        required: false
+        type: string
 
 concurrency:
   group: actualizar-burk-main
@@ -13,7 +22,11 @@ permissions:
 jobs:
   actualizar:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 10
+    env:
+      PYTHONUNBUFFERED: "1"
+      TORNEO_ID: ${{ inputs.torneo_id }}
+      TORNEO_NOMBRE: ${{ inputs.torneo_nombre }}
 
     steps:
       - name: Descargar el repositorio
@@ -32,10 +45,10 @@ jobs:
           playwright install chromium --with-deps
 
       - name: Ejecutar pruebas del parser
-        run: python tests/test_parser.py
+        run: python -u tests/test_parser.py
 
       - name: Ejecutar el scraper
-        run: python scraper.py
+        run: python -u scraper.py
 
       - name: Guardar diagnóstico
         if: always()
