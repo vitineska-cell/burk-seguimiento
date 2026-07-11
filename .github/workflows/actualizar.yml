@@ -16,6 +16,8 @@ on:
     paths:
       - "scraper.py"
       - "scraper_runner.py"
+      - "scraper_final.py"
+      - "matching.py"
       - "diagnostico_parser.py"
       - "tests/**"
       - ".github/workflows/actualizar.yml"
@@ -54,16 +56,17 @@ jobs:
 
       - name: Ejecutar pruebas
         run: |
-          python -m py_compile scraper.py scraper_runner.py diagnostico_parser.py
+          python -m py_compile scraper.py scraper_runner.py scraper_final.py matching.py diagnostico_parser.py
           python -u tests/test_parser.py
           python -u tests/test_runner.py
+          python -u tests/test_matching.py
 
       - name: Ejecutar el scraper
         shell: bash
         run: |
           mkdir -p debug
           set -o pipefail
-          python -u scraper_runner.py 2>&1 | tee debug/ejecucion.log
+          python -u scraper_final.py 2>&1 | tee debug/ejecucion.log
 
       - name: Diagnosticar nombres y tablas
         if: failure()
