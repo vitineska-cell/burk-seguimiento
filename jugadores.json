@@ -1,0 +1,17 @@
+{
+  "_instrucciones": "Antes de cada torneo, cambia 'torneo_id' por el ID del nuevo torneo (está en la URL: pickleprotour.com/torneo.aspx?id=XXXX) y revisa que los nombres de 'jugadores' sean exactos. No hace falta tocar nada más.",
+
+  "torneo_id": 2339,
+  "torneo_nombre": "A Coruña Open",
+
+  "jugadores": [
+    "Oscar Villar Sancosmed",
+    "Hugo Granados Jimenez",
+    "Lucas Corral Falagan",
+    "Jose Manuel Granados Sánchez",
+    "Brenda Fariña Solís",
+    "Victor Sebastian Davila",
+    "Laura Davila Alcala",
+    "Bárbara Molina Durán"
+  ]
+}

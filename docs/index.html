@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BÜRK · Seguimiento Pickle Pro Tour</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #10141C;
+    --bg-header: #161B26;
+    --card: #1A2029;
+    --card-border: #262E3A;
+    --text: #F2F4F0;
+    --text-dim: #8B93A3;
+    --accent: #D7F24C;
+    --accent-dim: #9AAE3A;
+    --court: #3ECFCF;
+    --won: #6FDB8F;
+    --pending-glow: rgba(215, 242, 76, 0.15);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  header {
+    background: var(--bg-header);
+    border-bottom: 1px solid var(--card-border);
+    padding: 28px 20px 24px;
+    background-image: repeating-linear-gradient(
+      100deg,
+      transparent, transparent 68px,
+      rgba(215, 242, 76, 0.045) 68px, rgba(215, 242, 76, 0.045) 70px
+    );
+  }
+
+  .header-inner { max-width: 980px; margin: 0 auto; }
+
+  .brand {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.14em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin: 0 0 6px;
+  }
+
+  h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(24px, 5vw, 32px);
+    font-weight: 600;
+    margin: 0 0 8px;
+    line-height: 1.15;
+  }
+
+  .meta {
+    color: var(--text-dim);
+    font-size: 13.5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+  }
+
+  main {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 24px 20px 60px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 14px;
+  }
+
+  .player-card {
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: 14px;
+    padding: 18px 18px 16px;
+  }
+
+  .player-name {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    margin: 0 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .player-name::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+  }
+
+  .match {
+    border-left: 3px solid var(--card-border);
+    padding: 8px 0 8px 12px;
+    margin-bottom: 8px;
+  }
+
+  .match:last-child { margin-bottom: 0; }
+
+  .match.pendiente {
+    border-left-color: var(--accent);
+    background: linear-gradient(90deg, var(--pending-glow), transparent 60%);
+    border-radius: 0 8px 8px 0;
+  }
+
+  .match-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .categoria {
+    font-size: 11.5px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  .status-pill {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+
+  .status-pill.pendiente {
+    background: var(--accent);
+    color: #14180A;
+  }
+
+  .status-pill.jugado {
+    background: rgba(111, 219, 143, 0.15);
+    color: var(--won);
+  }
+
+  .rival {
+    font-size: 14.5px;
+    margin: 4px 0 2px;
+  }
+
+  .rival strong { font-weight: 600; }
+
+  .detalle {
+    font-size: 13px;
+    color: var(--text-dim);
+  }
+
+  .resultado-txt {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--won);
+    margin-top: 2px;
+  }
+
+  .sin-partidos {
+    color: var(--text-dim);
+    font-size: 13.5px;
+    font-style: italic;
+  }
+
+  .empty-state, .error-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-dim);
+  }
+
+  .empty-state h2, .error-state h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    color: var(--text);
+    font-size: 19px;
+    margin-bottom: 8px;
+  }
+
+  .empty-state code {
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    padding: 2px 7px;
+    border-radius: 5px;
+    font-size: 13px;
+  }
+
+  a.grupo-link {
+    color: var(--court);
+    text-decoration: none;
+    font-size: 12.5px;
+  }
+  a.grupo-link:hover { text-decoration: underline; }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .player-card { transition: border-color 0.2s ease; }
+    .player-card:hover { border-color: var(--accent-dim); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <p class="brand">BÜRK · Jugadores patrocinados</p>
+    <h1 id="torneo-titulo">Cargando torneo…</h1>
+    <div class="meta">
+      <span id="ultima-actualizacion">—</span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div id="contenido">
+    <div class="empty-state"><h2>Cargando resultados…</h2></div>
+  </div>
+</main>
+
+<script>
+async function cargar() {
+  const contenido = document.getElementById('contenido');
+  try {
+    const res = await fetch('./resultados.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error('No se pudo leer resultados.json');
+    const data = await res.json();
+    render(data);
+  } catch (err) {
+    contenido.innerHTML = `
+      <div class="error-state">
+        <h2>No se han podido cargar los resultados</h2>
+        <p>Comprueba que <code>resultados.json</code> existe en el repositorio.</p>
+      </div>`;
+    console.error(err);
+  }
+}
+
+function formatearHorarioPista(texto) {
+  // Formato de origen: "11/07/2026 9:00 / Pista: 14"
+  const partes = texto.split(' / Pista:');
+  if (partes.length === 2) {
+    return { horario: partes[0].trim(), pista: partes[1].trim() };
+  }
+  return { horario: texto, pista: '' };
+}
+
+function render(data) {
+  document.getElementById('torneo-titulo').textContent = data.torneo_nombre || 'Torneo';
+
+  const actualizadoEl = document.getElementById('ultima-actualizacion');
+  if (data.actualizado) {
+    const fecha = new Date(data.actualizado);
+    actualizadoEl.textContent = 'Última actualización: ' + fecha.toLocaleString('es-ES', {
+      day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit'
+    });
+  } else {
+    actualizadoEl.textContent = 'Todavía no se ha ejecutado ninguna actualización';
+  }
+
+  const contenido = document.getElementById('contenido');
+  const nombres = Object.keys(data.jugadores || {});
+
+  if (nombres.length === 0) {
+    contenido.innerHTML = `
+      <div class="empty-state">
+        <h2>Todavía no hay datos</h2>
+        <p>Ve a la pestaña <strong>Actions</strong> del repositorio de GitHub y pulsa<br>
+        <code>Run workflow</code> en "Actualizar resultados BÜRK".</p>
+      </div>`;
+    return;
+  }
+
+  const grid = document.createElement('div');
+  grid.className = 'grid';
+
+  for (const nombre of nombres) {
+    const partidos = data.jugadores[nombre].partidos || [];
+    const card = document.createElement('div');
+    card.className = 'player-card';
+
+    let matchesHtml = '';
+    if (partidos.length === 0) {
+      matchesHtml = `<p class="sin-partidos">Sin partidos encontrados en este torneo.</p>`;
+    } else {
+      matchesHtml = partidos.map(p => {
+        const { horario, pista } = formatearHorarioPista(p.horario_pista || '');
+        const estado = p.jugado ? 'jugado' : 'pendiente';
+        const pillTexto = p.jugado ? 'Jugado' : 'Próximo';
+        return `
+          <div class="match ${estado}">
+            <div class="match-top">
+              <span class="categoria">${p.categoria || ''}</span>
+              <span class="status-pill ${estado}">${pillTexto}</span>
+            </div>
+            <p class="rival">vs <strong>${p.rival || '—'}</strong></p>
+            <p class="detalle">${horario}${pista ? ' · Pista ' + pista : ''}</p>
+            ${p.jugado ? `<p class="resultado-txt">${p.resultado}</p>` : ''}
+            ${p.url_grupo ? `<a class="grupo-link" href="${p.url_grupo}" target="_blank" rel="noopener">Ver grupo completo →</a>` : ''}
+          </div>`;
+      }).join('');
+    }
+
+    card.innerHTML = `<p class="player-name">${nombre}</p>${matchesHtml}`;
+    grid.appendChild(card);
+  }
+
+  contenido.innerHTML = '';
+  contenido.appendChild(grid);
+}
+
+cargar();
+</script>
+
+</body>
+</html>

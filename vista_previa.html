@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vista previa · BÜRK Seguimiento</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #10141C; --bg-header: #161B26; --card: #1A2029; --card-border: #262E3A;
+    --text: #F2F4F0; --text-dim: #8B93A3; --accent: #D7F24C; --accent-dim: #9AAE3A;
+    --court: #3ECFCF; --won: #6FDB8F; --pending-glow: rgba(215, 242, 76, 0.15);
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  .aviso { background: var(--court); color: #0A2626; text-align: center; padding: 8px; font-size: 13px; font-weight: 600; }
+  header { background: var(--bg-header); border-bottom: 1px solid var(--card-border); padding: 28px 20px 24px;
+    background-image: repeating-linear-gradient(100deg, transparent, transparent 68px, rgba(215, 242, 76, 0.045) 68px, rgba(215, 242, 76, 0.045) 70px); }
+  .header-inner { max-width: 980px; margin: 0 auto; }
+  .brand { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 0.14em; color: var(--accent); text-transform: uppercase; margin: 0 0 6px; }
+  h1 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(24px, 5vw, 32px); font-weight: 600; margin: 0 0 8px; line-height: 1.15; }
+  .meta { color: var(--text-dim); font-size: 13.5px; display: flex; flex-wrap: wrap; gap: 6px 14px; }
+  main { max-width: 980px; margin: 0 auto; padding: 24px 20px 60px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+  .player-card { background: var(--card); border: 1px solid var(--card-border); border-radius: 14px; padding: 18px 18px 16px; }
+  .player-name { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 17px; margin: 0 0 12px; display: flex; align-items: center; gap: 8px; }
+  .player-name::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+  .match { border-left: 3px solid var(--card-border); padding: 8px 0 8px 12px; margin-bottom: 8px; }
+  .match:last-child { margin-bottom: 0; }
+  .match.pendiente { border-left-color: var(--accent); background: linear-gradient(90deg, var(--pending-glow), transparent 60%); border-radius: 0 8px 8px 0; }
+  .match-top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+  .categoria { font-size: 11.5px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.03em; }
+  .status-pill { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 20px; white-space: nowrap; }
+  .status-pill.pendiente { background: var(--accent); color: #14180A; }
+  .status-pill.jugado { background: rgba(111, 219, 143, 0.15); color: var(--won); }
+  .rival { font-size: 14.5px; margin: 4px 0 2px; }
+  .rival strong { font-weight: 600; }
+  .detalle { font-size: 13px; color: var(--text-dim); }
+  .resultado-txt { font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 600; color: var(--won); margin-top: 2px; }
+  .sin-partidos { color: var(--text-dim); font-size: 13.5px; font-style: italic; }
+  a.grupo-link { color: var(--court); text-decoration: none; font-size: 12.5px; }
+  a.grupo-link:hover { text-decoration: underline; }
+  @media (prefers-reduced-motion: no-preference) {
+    .player-card { transition: border-color 0.2s ease; }
+    .player-card:hover { border-color: var(--accent-dim); }
+  }
+</style>
+</head>
+<body>
+<div class="aviso">👁️ VISTA PREVIA con datos de ejemplo — así se verá el panel real</div>
+<header>
+  <div class="header-inner">
+    <p class="brand">BÜRK · Jugadores patrocinados</p>
+    <h1>A Coruña Open</h1>
+    <div class="meta"><span>Última actualización: 11/07 · 11:32</span></div>
+  </div>
+</header>
+<main>
+  <div class="grid">
+
+    <div class="player-card">
+      <p class="player-name">Oscar Villar Sancosmed</p>
+      <div class="match pendiente">
+        <div class="match-top"><span class="categoria">GRUPO 2 · DOBLE MASCULINA 4.5</span><span class="status-pill pendiente">Próximo</span></div>
+        <p class="rival">vs <strong>Marcos Iglesias / Pedro Rial</strong></p>
+        <p class="detalle">11/07/2026 17:30 · Pista 6</p>
+        <a class="grupo-link" href="#">Ver grupo completo →</a>
+      </div>
+      <div class="match">
+        <div class="match-top"><span class="categoria">GRUPO 2 · DOBLE MASCULINA 4.5</span><span class="status-pill jugado">Jugado</span></div>
+        <p class="rival">vs <strong>Sergio Naya / Iván Bua</strong></p>
+        <p class="detalle">11/07/2026 9:15 · Pista 6</p>
+        <p class="resultado-txt">11-4, 11-7</p>
+        <a class="grupo-link" href="#">Ver grupo completo →</a>
+      </div>
+    </div>
+
+    <div class="player-card">
+      <p class="player-name">Brenda Fariña Solís</p>
+      <div class="match pendiente">
+        <div class="match-top"><span class="categoria">GRUPO 1 · DOBLE FEMENINA PRO</span><span class="status-pill pendiente">Próximo</span></div>
+        <p class="rival">vs <strong>Lucía Souto / Marta Pena</strong></p>
+        <p class="detalle">11/07/2026 18:00 · Pista 3</p>
+        <a class="grupo-link" href="#">Ver grupo completo →</a>
+      </div>
+      <div class="match pendiente">
+        <div class="match-top"><span class="categoria">MIXTO ABSOLUTA 4.5</span><span class="status-pill pendiente">Próximo</span></div>
+        <p class="rival">vs <strong>Pareja por confirmar</strong></p>
+        <p class="detalle">12/07/2026 10:00 · Pista 2</p>
+      </div>
+    </div>
+
+    <div class="player-card">
+      <p class="player-name">Hugo Granados Jimenez</p>
+      <p class="sin-partidos">Sin partidos encontrados en este torneo.</p>
+    </div>
+
+    <div class="player-card">
+      <p class="player-name">Lucas Corral Falagan</p>
+      <div class="match">
+        <div class="match-top"><span class="categoria">INDIVIDUAL MASCULINA PRO</span><span class="status-pill jugado">Jugado</span></div>
+        <p class="rival">vs <strong>Adrián Costa</strong></p>
+        <p class="detalle">11/07/2026 8:30 · Pista 1</p>
+        <p class="resultado-txt">6-11, 9-11</p>
+        <a class="grupo-link" href="#">Ver grupo completo →</a>
+      </div>
+    </div>
+
+  </div>
+</main>
+</body>
+</html>
