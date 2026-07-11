@@ -11,10 +11,17 @@ on:
         description: "Nombre del torneo (vacío = usar jugadores.json)"
         required: false
         type: string
+  pull_request:
+    branches: [main]
+    paths:
+      - "scraper.py"
+      - "scraper_runner.py"
+      - "tests/**"
+      - ".github/workflows/actualizar.yml"
 
 concurrency:
-  group: actualizar-burk-main
-  cancel-in-progress: false
+  group: actualizar-burk-${{ github.ref }}
+  cancel-in-progress: true
 
 permissions:
   contents: write
@@ -63,6 +70,7 @@ jobs:
           retention-days: 7
 
       - name: Guardar los resultados actualizados
+        if: github.event_name == 'workflow_dispatch'
         run: |
           git config user.name "BÜRK Bot"
           git config user.email "actions@github.com"
