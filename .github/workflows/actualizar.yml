@@ -1,15 +1,10 @@
 name: Actualizar resultados BÜRK
 
-# "workflow_dispatch" es lo que hace aparecer el botón "Run workflow" en la
-# pestaña Actions de GitHub. Pulsándolo, se ejecuta todo el proceso de nuevo.
 on:
   workflow_dispatch:
 
-# Evita que dos ejecuciones se pisen si se pulsa "Run workflow" más de una
-# vez: si ya hay una en marcha, la siguiente espera en cola en vez de
-# correr a la vez y chocar al guardar.
 concurrency:
-  group: actualizar-burk
+  group: actualizar-burk-main
   cancel-in-progress: false
 
 permissions:
@@ -18,9 +13,13 @@ permissions:
 jobs:
   actualizar:
     runs-on: ubuntu-latest
+    timeout-minutes: 25
+
     steps:
       - name: Descargar el repositorio
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Configurar Python
         uses: actions/setup-python@v5
@@ -32,15 +31,40 @@ jobs:
           pip install -r requirements.txt
           playwright install chromium --with-deps
 
+      - name: Ejecutar pruebas del parser
+        run: python tests/test_parser.py
+
       - name: Ejecutar el scraper
         run: python scraper.py
 
-      - name: Guardar los resultados actualizados en el repositorio
+      - name: Guardar diagnóstico
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: diagnostico-scraper
+          path: debug/
+          if-no-files-found: ignore
+          retention-days: 7
+
+      - name: Guardar los resultados actualizados
         run: |
           git config user.name "BÜRK Bot"
           git config user.email "actions@github.com"
-          git fetch origin main
-          git reset --soft origin/main
           git add docs/resultados.json
-          git diff --staged --quiet || git commit -m "Actualizar resultados $(date -u +'%Y-%m-%d %H:%M UTC')"
-          git push origin HEAD:main
+
+          if git diff --staged --quiet; then
+            echo "No hay cambios en resultados.json"
+            exit 0
+          fi
+
+          git commit -m "Actualizar resultados $(date -u +'%Y-%m-%d %H:%M UTC')"
+
+          for intento in 1 2 3; do
+            git pull --rebase -X theirs origin main && git push origin HEAD:main && exit 0
+            echo "Push rechazado; reintento $intento/3..."
+            git rebase --abort 2>/dev/null || true
+            sleep $((intento * 3))
+          done
+
+          echo "No se pudo publicar resultados.json tras 3 intentos"
+          exit 1
