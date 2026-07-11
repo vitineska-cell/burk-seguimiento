@@ -5,6 +5,13 @@ name: Actualizar resultados BÜRK
 on:
   workflow_dispatch:
 
+# Evita que dos ejecuciones se pisen si se pulsa "Run workflow" más de una
+# vez: si ya hay una en marcha, la siguiente espera en cola en vez de
+# correr a la vez y chocar al guardar.
+concurrency:
+  group: actualizar-burk
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
@@ -32,6 +39,8 @@ jobs:
         run: |
           git config user.name "BÜRK Bot"
           git config user.email "actions@github.com"
+          git fetch origin main
+          git reset --soft origin/main
           git add docs/resultados.json
           git diff --staged --quiet || git commit -m "Actualizar resultados $(date -u +'%Y-%m-%d %H:%M UTC')"
-          git push
+          git push origin HEAD:main
