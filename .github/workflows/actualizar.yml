@@ -1,0 +1,37 @@
+name: Actualizar resultados BÜRK
+
+# "workflow_dispatch" es lo que hace aparecer el botón "Run workflow" en la
+# pestaña Actions de GitHub. Pulsándolo, se ejecuta todo el proceso de nuevo.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Instalar dependencias
+        run: |
+          pip install -r requirements.txt
+          playwright install chromium --with-deps
+
+      - name: Ejecutar el scraper
+        run: python scraper.py
+
+      - name: Guardar los resultados actualizados en el repositorio
+        run: |
+          git config user.name "BÜRK Bot"
+          git config user.email "actions@github.com"
+          git add docs/resultados.json
+          git diff --staged --quiet || git commit -m "Actualizar resultados $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push
