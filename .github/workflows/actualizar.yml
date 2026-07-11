@@ -11,10 +11,30 @@ on:
         description: "Nombre del torneo (vacío = usar jugadores.json)"
         required: false
         type: string
+  pull_request:
+    branches: [main]
+    paths:
+      - "scraper.py"
+      - "scraper_runner.py"
+      - "scraper_final.py"
+      - "matching.py"
+      - "diagnostico_parser.py"
+      - "tests/**"
+      - ".github/workflows/actualizar.yml"
+  push:
+    branches: [main]
+    paths:
+      - "scraper.py"
+      - "scraper_runner.py"
+      - "scraper_final.py"
+      - "matching.py"
+      - "diagnostico_parser.py"
+      - "tests/**"
+      - ".github/workflows/actualizar.yml"
 
 concurrency:
-  group: actualizar-burk-main
-  cancel-in-progress: false
+  group: actualizar-burk-${{ github.ref }}
+  cancel-in-progress: true
 
 permissions:
   contents: write
@@ -44,22 +64,37 @@ jobs:
           pip install -r requirements.txt
           playwright install chromium --with-deps
 
-      - name: Ejecutar pruebas del parser
-        run: python -u tests/test_parser.py
+      - name: Ejecutar pruebas
+        run: |
+          python -m py_compile scraper.py scraper_runner.py scraper_final.py matching.py diagnostico_parser.py
+          python -u tests/test_parser.py
+          python -u tests/test_runner.py
+          python -u tests/test_matching.py
 
       - name: Ejecutar el scraper
-        run: python -u scraper.py
+        shell: bash
+        run: |
+          mkdir -p debug
+          set -o pipefail
+          python -u scraper_final.py 2>&1 | tee debug/ejecucion.log
+
+      - name: Diagnosticar nombres y tablas
+        if: failure()
+        run: python -u diagnostico_parser.py
 
       - name: Guardar diagnóstico
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: diagnostico-scraper
-          path: debug/
+          path: |
+            debug/
+            docs/resultados.json
           if-no-files-found: ignore
           retention-days: 7
 
       - name: Guardar los resultados actualizados
+        if: github.event_name != 'pull_request'
         run: |
           git config user.name "BÜRK Bot"
           git config user.email "actions@github.com"
