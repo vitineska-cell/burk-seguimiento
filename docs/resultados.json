@@ -1,6 +1,31 @@
 {
   "torneo_id": 2339,
   "torneo_nombre": "A Coruña Open",
-  "actualizado": null,
-  "jugadores": {}
+  "actualizado": "2026-07-11T07:56:43.271863+00:00",
+  "jugadores": {
+    "Oscar Villar Sancosmed": {
+      "partidos": []
+    },
+    "Hugo Granados Jimenez": {
+      "partidos": []
+    },
+    "Lucas Corral Falagan": {
+      "partidos": []
+    },
+    "Jose Manuel Granados Sánchez": {
+      "partidos": []
+    },
+    "Brenda Fariña Solís": {
+      "partidos": []
+    },
+    "Victor Sebastian Davila": {
+      "partidos": []
+    },
+    "Laura Davila Alcala": {
+      "partidos": []
+    },
+    "Bárbara Molina Durán": {
+      "partidos": []
+    }
+  }
 }
