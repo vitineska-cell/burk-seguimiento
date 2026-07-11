@@ -372,7 +372,6 @@ def incorporar_partidos(
             }
             firma = (
                 normalizar(nombre),
-                normalizar(registro["categoria"]),
                 normalizar(rival),
                 normalizar(registro["horario_pista"]),
                 normalizar(resultado_txt),
@@ -408,6 +407,10 @@ def main() -> None:
         log(f"Torneo seleccionado: {torneo_nombre or torneo_id} (id={torneo_id})")
         url_torneo = f"{BASE_URL}/torneo.aspx?id={torneo_id}"
         page.goto(url_torneo, wait_until="domcontentloaded", timeout=30_000)
+        titulo_web = limpiar_texto(page.title().split("|")[0])
+        if titulo_web:
+            torneo_nombre = titulo_web
+            log(f"Nombre confirmado por la web: {torneo_nombre}")
         page.get_by_text("Grupos y Cuadros", exact=True).first.click(timeout=15_000)
         page.wait_for_timeout(700)
 
@@ -532,10 +535,16 @@ def main() -> None:
     }
 
     OUTPUT_PATH.parent.mkdir(exist_ok=True)
+    total = sum(len(v["partidos"]) for v in resultados.values())
+    if total == 0:
+        raise RuntimeError(
+            "Se leyeron partidos, pero ninguno coincide con los jugadores BÜRK; "
+            "no se sobrescribirá resultados.json"
+        )
+
     with OUTPUT_PATH.open("w", encoding="utf-8") as f:
         json.dump(salida, f, ensure_ascii=False, indent=2)
 
-    total = sum(len(v["partidos"]) for v in resultados.values())
     log(f"Listo: {total} partido(s) encontrados para {len(jugadores)} jugadores BÜRK.")
     log(f"Guardado en {OUTPUT_PATH}")
 
