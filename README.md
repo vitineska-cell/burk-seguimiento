@@ -46,13 +46,14 @@ enlace directo a la información oficial.
 
 **Antes del torneo:**
 Edita `jugadores.json` directamente en GitHub (ábrelo, pulsa el icono del
-lápiz ✏️, cambia `torneo_id` por el del nuevo torneo y revisa la lista de
-jugadores). El ID del torneo está en su URL:
+lápiz ✏️), añade el torneo a la lista `torneos` con su ID, nombre y fechas, y
+revisa la lista de jugadores. El ID del torneo está en su URL:
 `pickleprotour.com/torneo.aspx?id=XXXX` ← ese número.
 
 **Durante el fin de semana:**
 Dentro de las fechas `actualizacion_desde` y `actualizacion_hasta`, GitHub
-comprueba los resultados cada 10 minutos. Fuera de esa ventana termina sin
+selecciona automáticamente el torneo de la lista y comprueba sus resultados
+cada 10 minutos. Fuera de todas las ventanas termina sin
 consultar Pickle Pro Tour. También puedes forzar una actualización desde
 **Actions → Actualizar resultados BÜRK → Run workflow**. El panel comprueba
 cada 60 segundos si hay nuevos datos publicados.
