@@ -1,7 +1,7 @@
+from fases import detectar_fase
 from scraper_runner import (
     calcular_logros,
     categoria_limpia,
-    detectar_fase,
     incorporar_partidos_enriquecidos,
 )
 
