@@ -1,3 +1,8 @@
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
 from fases import detectar_fase
 from scraper_runner import (
     calcular_logros,
@@ -43,3 +48,11 @@ def test_categoria_limpia():
     assert categoria_limpia(
         "GRUPO 3 - PARTIDOS · CATEGORIA ABSOLUTA 3.5 Double MASCULINO", "respaldo"
     ) == "ABSOLUTA 3.5 Double MASCULINO"
+
+
+if __name__ == "__main__":
+    test_detectar_fases()
+    test_resultado_se_interpreta_segun_lado_del_jugador()
+    test_logro_final()
+    test_categoria_limpia()
+    print("OK: fases, victorias y logros")
