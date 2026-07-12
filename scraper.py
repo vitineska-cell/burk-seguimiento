@@ -18,11 +18,12 @@ import time
 import unicodedata
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any
+from typing import TYPE_CHECKING, Any
 from urllib.parse import parse_qs, urljoin, urlparse
 
 from bs4 import BeautifulSoup, Tag
-from playwright.sync_api import Page, sync_playwright
+if TYPE_CHECKING:
+    from playwright.sync_api import Page
 
 BASE_URL = "https://pickleprotour.com"
 ROOT = Path(__file__).parent
@@ -32,7 +33,11 @@ DEBUG_DIR = ROOT / "debug"
 
 ENCABEZADO_PARTIDOS = re.compile(r"GRUPO\s+\d+\s*-\s*PARTIDOS", re.I)
 URL_VISOR_RE = re.compile(
-    r"abrirCuadroVisor\(\s*['\"]([^'\"]*torneogrupo\.aspx[^'\"]*)['\"]",
+    r"abrirCuadroVisor\(\s*['\"]([^'\"]*torneo(?:grupo|cuadro)\.aspx[^'\"]*)['\"]",
+    re.I,
+)
+URL_ORDEN_RE = re.compile(
+    r"abrirOJVisor\(\s*['\"]([^'\"]*ordenjuego\.aspx[^'\"]*)['\"]",
     re.I,
 )
 MAX_RUNTIME_SECONDS = 7 * 60
@@ -268,6 +273,12 @@ def _es_url_grupo(url: str) -> bool:
     )
 
 
+def _es_url_cuadro(url: str) -> bool:
+    parsed = urlparse(url)
+    params = parse_qs(parsed.query)
+    return parsed.path.lower().endswith("torneocuadro.aspx") and bool(params.get("id"))
+
+
 def extraer_destinos_torneo(html: str, torneo_id: int) -> list[dict[str, Any]]:
     """Extrae cada categoría con su URL agregada y sus grupos individuales."""
     soup = BeautifulSoup(html, "html.parser")
@@ -283,6 +294,7 @@ def extraer_destinos_torneo(html: str, torneo_id: int) -> list[dict[str, Any]]:
         nombre = limpiar_texto(cabecera.get_text(" ", strip=True)) if cabecera else "Categoría"
         categoria_url: str | None = None
         grupos: list[str] = []
+        cuadros: list[str] = []
 
         for elemento in bloque.select("[onclick]"):
             url = _url_desde_onclick(elemento.get("onclick", ""))
@@ -292,15 +304,25 @@ def extraer_destinos_torneo(html: str, torneo_id: int) -> list[dict[str, Any]]:
                 categoria_url = url
             elif _es_url_grupo(url) and url not in grupos:
                 grupos.append(url)
+            elif _es_url_cuadro(url) and url not in cuadros:
+                cuadros.append(url)
 
-        clave = categoria_url or "|".join(grupos)
+        clave = categoria_url or "|".join(grupos + cuadros)
         if clave and clave not in vistos:
             vistos.add(clave)
-            destinos.append({"nombre": nombre, "categoria_url": categoria_url, "grupo_urls": grupos})
+            destinos.append(
+                {
+                    "nombre": nombre,
+                    "categoria_url": categoria_url,
+                    "grupo_urls": grupos,
+                    "cuadro_urls": cuadros,
+                }
+            )
 
     if not destinos:
         categorias: list[str] = []
         grupos: list[str] = []
+        cuadros: list[str] = []
         for elemento in soup.select("[onclick]"):
             url = _url_desde_onclick(elemento.get("onclick", ""))
             if not url:
@@ -309,14 +331,188 @@ def extraer_destinos_torneo(html: str, torneo_id: int) -> list[dict[str, Any]]:
                 categorias.append(url)
             elif _es_url_grupo(url) and url not in grupos:
                 grupos.append(url)
+            elif _es_url_cuadro(url) and url not in cuadros:
+                cuadros.append(url)
         destinos.extend(
-            {"nombre": f"Categoría {i}", "categoria_url": url, "grupo_urls": []}
+            {
+                "nombre": f"Categoría {i}",
+                "categoria_url": url,
+                "grupo_urls": [],
+                "cuadro_urls": [],
+            }
             for i, url in enumerate(categorias, 1)
         )
         if not categorias and grupos:
-            destinos.append({"nombre": "Grupos", "categoria_url": None, "grupo_urls": grupos})
+            destinos.append(
+                {
+                    "nombre": "Grupos",
+                    "categoria_url": None,
+                    "grupo_urls": grupos,
+                    "cuadro_urls": cuadros,
+                }
+            )
 
     return destinos
+
+
+def extraer_partidos_cuadro(
+    html: str, categoria_respaldo: str = "Categoría"
+) -> list[dict[str, Any]]:
+    """Extrae todos los cruces de la vista ``torneoCuadro.aspx``.
+
+    La web representa el cuadro con divs, no con las tablas usadas en grupos.
+    La clase ``winner`` es la fuente más fiable para decidir el ganador cuando
+    hay varios sets o un WO.
+    """
+    soup = BeautifulSoup(html, "html.parser")
+    cabecera = soup.select_one(".tournament-header")
+    categoria = limpiar_texto(cabecera.get_text(" ", strip=True)) if cabecera else categoria_respaldo
+    categoria = re.sub(r"^CATEGORIA\s+", "", categoria, flags=re.I)
+    categoria = categoria or categoria_respaldo
+    partidos: list[dict[str, Any]] = []
+
+    for ronda in soup.select(".tournament-round"):
+        encabezado = ronda.select_one(".round-header")
+        fase = limpiar_texto(encabezado.get_text(" ", strip=True)) if encabezado else ""
+        for partido in ronda.select(".match"):
+            equipos = partido.select(":scope > .match-team")
+            if len(equipos) < 2:
+                continue
+            nombres = []
+            for equipo in equipos[:2]:
+                nombre_el = equipo.select_one(".team-name")
+                nombres.append(
+                    limpiar_texto(nombre_el.get_text(" / ", strip=True)) if nombre_el else ""
+                )
+            if not all(nombres):
+                continue
+            resultado_el = partido.select_one(":scope > .match-result")
+            resultado = limpiar_texto(resultado_el.get_text(" ", strip=True)) if resultado_el else ""
+            ganador = None
+            if "winner" in (equipos[0].get("class") or []):
+                ganador = 1
+            elif "winner" in (equipos[1].get("class") or []):
+                ganador = 2
+            partidos.append(
+                {
+                    "categoria": f"{fase} · CATEGORIA {categoria}",
+                    "pareja1": nombres[0],
+                    "pareja2": nombres[1],
+                    "horario_pista": "",
+                    "resultado": resultado,
+                    "ganador": ganador,
+                }
+            )
+    return partidos
+
+
+def extraer_urls_orden_juego(html: str, torneo_id: int) -> list[str]:
+    """Devuelve las páginas diarias publicadas en Orden de juego."""
+    soup = BeautifulSoup(html, "html.parser")
+    urls: list[str] = []
+    for elemento in soup.select("[onclick]"):
+        coincidencia = URL_ORDEN_RE.search(html_lib.unescape(elemento.get("onclick", "")))
+        if not coincidencia:
+            continue
+        url = urljoin(f"{BASE_URL}/", coincidencia.group(1))
+        params = parse_qs(urlparse(url).query)
+        if str(torneo_id) not in params.get("id_torneo", []) or not params.get("f"):
+            continue
+        if url not in urls:
+            urls.append(url)
+    return urls
+
+
+def _fecha_orden_juego(soup: BeautifulSoup, respaldo: str) -> str:
+    dia = soup.select_one(".oj-dayval")
+    texto = limpiar_texto(dia.get_text(" ", strip=True)) if dia else ""
+    coincidencia = re.search(r"(\d{4})[./-](\d{2})[./-](\d{2})", texto)
+    if coincidencia:
+        return f"{coincidencia.group(3)}/{coincidencia.group(2)}/{coincidencia.group(1)}"
+    coincidencia = re.search(r"(\d{2})[./-](\d{2})[./-](\d{4})", respaldo)
+    return coincidencia.group(0).replace("-", "/") if coincidencia else respaldo
+
+
+def extraer_partidos_orden_juego(
+    html: str, fecha_respaldo: str = ""
+) -> list[dict[str, Any]]:
+    """Extrae partidos, ronda, pista y estado de la programación diaria."""
+    soup = BeautifulSoup(html, "html.parser")
+    fecha = _fecha_orden_juego(soup, fecha_respaldo)
+    partidos: list[dict[str, Any]] = []
+
+    for pista in soup.select(".oj-court"):
+        pista_el = pista.select_one(".oj-court-nm")
+        numero_pista = limpiar_texto(pista_el.get_text(" ", strip=True)) if pista_el else ""
+        for partido in pista.select(":scope > .oj-match"):
+            categorias = [
+                limpiar_texto(el.get_text(" ", strip=True))
+                for el in partido.select(".oj-chip-cat")
+            ]
+            categoria = next((c for c in categorias if normalizar(c) != "cuadro"), "Categoría")
+            fase_el = partido.select_one(".oj-chip-r")
+            fase = limpiar_texto(fase_el.get_text(" ", strip=True)) if fase_el else "Grupos"
+            filas = partido.select(".oj-score-row")
+            if len(filas) < 2:
+                continue
+            nombres: list[str] = []
+            sets: list[list[str]] = []
+            for fila in filas[:2]:
+                nombres_el = fila.select_one(".oj-player-names")
+                nombres.append(
+                    limpiar_texto(nombres_el.get_text(" ", strip=True)) if nombres_el else ""
+                )
+                sets.append(
+                    [limpiar_texto(el.get_text(" ", strip=True)) for el in fila.select(".oj-set")]
+                )
+            if not all(nombres):
+                continue
+
+            parciales: list[str] = []
+            for izquierda, derecha in zip(sets[0], sets[1]):
+                if izquierda.isdigit() and derecha.isdigit():
+                    parciales.append(f"{izquierda}-{derecha}")
+            resultado = " / ".join(parciales)
+            estado_el = partido.select_one(".oj-status")
+            estado = limpiar_texto(estado_el.get_text(" ", strip=True)) if estado_el else ""
+            estado_normalizado = normalizar(estado)
+            if not resultado and re.search(r"\bp\s*1\b.*\bwo\b", estado_normalizado):
+                resultado = estado
+                ganador = 2
+            elif not resultado and re.search(r"\bp\s*2\b.*\bwo\b", estado_normalizado):
+                resultado = estado
+                ganador = 1
+            else:
+                ganador = None
+            hora = re.search(r"\b([0-2]?\d:[0-5]\d)\b", estado)
+            momento = f"{fecha} {hora.group(1)}" if hora else fecha
+            if not hora and normalizar(estado) == "a continuacion":
+                momento = f"{fecha} · A continuación"
+            horario = momento
+            if numero_pista:
+                horario = f"{momento} / Pista: {numero_pista}"
+
+            ganados = [
+                sum("winner" in (el.get("class") or []) for el in fila.select(".oj-set"))
+                for fila in filas[:2]
+            ]
+            if ganador is None and ganados[0] > ganados[1]:
+                ganador = 1
+            elif ganador is None and ganados[1] > ganados[0]:
+                ganador = 2
+
+            partidos.append(
+                {
+                    "categoria": f"{fase} · CATEGORIA {categoria}",
+                    "pareja1": nombres[0],
+                    "pareja2": nombres[1],
+                    "horario_pista": horario,
+                    "resultado": resultado,
+                    "ganador": ganador,
+                    "estado_programacion": estado,
+                }
+            )
+    return partidos
 
 
 def resultado_esta_jugado(resultado: str) -> bool:
@@ -329,7 +525,7 @@ def guardar_debug(nombre: str, contenido: str) -> None:
     (DEBUG_DIR / nombre).write_text(contenido, encoding="utf-8")
 
 
-def cargar_pagina(page: Page, url: str) -> str:
+def cargar_pagina(page: "Page", url: str) -> str:
     page.goto(url, wait_until="domcontentloaded", timeout=NAVIGATION_TIMEOUT_MS)
     page.wait_for_timeout(350)
     return page.content()
@@ -384,6 +580,8 @@ def incorporar_partidos(
 
 
 def main() -> None:
+    from playwright.sync_api import sync_playwright
+
     inicio = time.monotonic()
     config = cargar_config()
     torneo_id = int(config["torneo_id"])

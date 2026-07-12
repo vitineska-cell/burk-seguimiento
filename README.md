@@ -1,8 +1,9 @@
 # Seguimiento BÜRK · Pickle Pro Tour
 
 Panel para ver de un vistazo los partidos de los jugadores patrocinados por
-BÜRK en cada torneo del Pickle Pro Tour: resultados, próximo partido (hora,
-pista, rival) y enlace directo a su grupo en la web oficial.
+BÜRK en cada torneo del Pickle Pro Tour: fase de grupos, cuadro eliminatorio,
+logros, resultados, próximo partido (día, hora o estado, pista y rival) y
+enlace directo a la información oficial.
 
 ---
 
@@ -61,7 +62,7 @@ recargar la página.
 | Fichero | Para qué sirve |
 |---|---|
 | `jugadores.json` | **El único que edita Víctor.** Torneo activo + lista de jugadores BÜRK. |
-| `scraper.py` | Busca los partidos de esos jugadores en pickleprotour.com. |
+| `scraper.py` | Lee grupos, cuadros eliminatorios y orden de juego en pickleprotour.com. |
 | `docs/index.html` | El panel visual (lo que ves en el navegador). |
 | `docs/resultados.json` | Los datos que genera el scraper; los lee `index.html`. |
 | `.github/workflows/actualizar.yml` | Define el botón "Run workflow". |
@@ -84,12 +85,10 @@ ejecutarlo:
 
 ---
 
-## 🔮 Próximos pasos posibles (Fase 2 y 3)
+## 🔮 Próximos pasos posibles
 
 - **Bot de Telegram**: aviso automático al grupo del equipo cuando un
   jugador BÜRK termina un partido.
-- **Detección automática de victoria/derrota**: hoy el resultado se muestra
-  tal cual (ej. "11-4, 11-6"), sin marcar quién ganó.
 - **Actualización automática** cada 15 min los findes de torneo (hoy es
   manual, a propósito, tal y como se pidió).
 

@@ -6,7 +6,10 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from scraper import (
     extraer_categoria_y_tabla_partidos,
     extraer_destinos_torneo,
+    extraer_partidos_cuadro,
+    extraer_partidos_orden_juego,
     extraer_todas_las_tablas_partidos,
+    extraer_urls_orden_juego,
     jugador_en_texto,
     normalizar,
 )
@@ -60,6 +63,7 @@ def test_extrae_urls_directas_sin_duplicar():
         </div>
         <div onclick="abrirCuadroVisor('torneoGrupo.aspx?id=1541&amp;visor=0', 'GRUPO 1')">GRUPO 1</div>
         <div onclick="abrirCuadroVisor('torneoGrupo.aspx?id=1542&amp;visor=0', 'GRUPO 2')">GRUPO 2</div>
+        <div onclick="abrirCuadroVisor('torneoCuadro.aspx?id=22380&amp;visor=0', 'Cuadro')">Cuadro</div>
       </div>
       <div class="cuadros-categoria-block">
         <div class="cuadros-categoria-header">
@@ -77,7 +81,35 @@ def test_extrae_urls_directas_sin_duplicar():
     assert destinos[0]["nombre"] == "ABSOLUTA 3.5"
     assert destinos[0]["categoria_url"].endswith("idT=2339&g=908&visor=0")
     assert len(destinos[0]["grupo_urls"]) == 2
+    assert destinos[0]["cuadro_urls"][0].endswith("id=22380&visor=0")
     assert destinos[1]["grupo_urls"][0].endswith("id=1529&visor=0")
+
+
+def test_extrae_cuadro_real_con_campeones():
+    html = (Path(__file__).parent / "fixture_cuadro.html").read_text(encoding="utf-8")
+    partidos = extraer_partidos_cuadro(html)
+    assert len(partidos) == 4
+    final = partidos[-1]
+    assert final["categoria"] == "Final · CATEGORIA ABSOLUTA 3.5 Double MASCULINO"
+    assert final["pareja1"] == "Lucas Corral / Victor Sebastian"
+    assert final["resultado"] == "21-14 / 21-18"
+    assert final["ganador"] == 1
+
+
+def test_extrae_horario_de_final_y_urls_diarias():
+    panel = """
+    <button onclick="abrirOJVisor('ordenJuego.aspx?id_torneo=2339&amp;f=12-07-2026&amp;visor=0','Domingo')"></button>
+    """
+    urls = extraer_urls_orden_juego(panel, 2339)
+    assert urls == [
+        "https://pickleprotour.com/ordenJuego.aspx?id_torneo=2339&f=12-07-2026&visor=0"
+    ]
+    html = (Path(__file__).parent / "fixture_orden_juego.html").read_text(encoding="utf-8")
+    partidos = extraer_partidos_orden_juego(html)
+    assert len(partidos) == 1
+    assert partidos[0]["horario_pista"] == "12/07/2026 10:00 / Pista: 17"
+    assert partidos[0]["resultado"] == ""
+    assert partidos[0]["estado_programacion"] == "Comienza a las 10:00"
 
 
 if __name__ == "__main__":
@@ -85,4 +117,6 @@ if __name__ == "__main__":
     test_nombres_con_html_intermedio()
     test_dobles_en_cuatro_columnas_y_varios_grupos()
     test_extrae_urls_directas_sin_duplicar()
+    test_extrae_cuadro_real_con_campeones()
+    test_extrae_horario_de_final_y_urls_diarias()
     print("Todos los tests del parser v5 pasan.")

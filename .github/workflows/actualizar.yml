@@ -17,6 +17,7 @@ on:
       - "scraper.py"
       - "scraper_runner.py"
       - "scraper_final.py"
+      - "fases.py"
       - "matching.py"
       - "diagnostico_parser.py"
       - "docs/index.html"
@@ -28,6 +29,7 @@ on:
       - "scraper.py"
       - "scraper_runner.py"
       - "scraper_final.py"
+      - "fases.py"
       - "matching.py"
       - "diagnostico_parser.py"
       - "docs/index.html"
@@ -64,11 +66,10 @@ jobs:
       - name: Instalar dependencias
         run: |
           pip install -r requirements.txt
-          playwright install chromium --with-deps
 
       - name: Ejecutar pruebas
         run: |
-          python -m py_compile scraper.py scraper_runner.py scraper_final.py matching.py diagnostico_parser.py
+          python -m py_compile scraper.py scraper_runner.py scraper_final.py matching.py fases.py diagnostico_parser.py
           python -u tests/test_parser.py
           python -u tests/test_runner.py
           python -u tests/test_matching.py
