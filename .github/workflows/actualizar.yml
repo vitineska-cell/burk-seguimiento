@@ -73,11 +73,17 @@ jobs:
             exit 0
           fi
 
-          ACTIVO=$(python3 ventana.py)
-          echo "activo=$ACTIVO" >> "$GITHUB_OUTPUT"
-          if [ "$ACTIVO" != "true" ]; then
+          python3 ventana.py --github-output "$GITHUB_OUTPUT"
+          if [ "$(python3 ventana.py)" != "true" ]; then
             echo "Fuera de la ventana del torneo: no se consulta Pickle Pro Tour."
           fi
+
+      - name: Seleccionar el torneo programado
+        if: github.event_name == 'schedule' && steps.ventana.outputs.activo == 'true'
+        shell: bash
+        run: |
+          echo "TORNEO_ID=${{ steps.ventana.outputs.torneo_id }}" >> "$GITHUB_ENV"
+          echo "TORNEO_NOMBRE=${{ steps.ventana.outputs.torneo_nombre }}" >> "$GITHUB_ENV"
 
       - name: Configurar Python
         if: steps.ventana.outputs.activo == 'true'
