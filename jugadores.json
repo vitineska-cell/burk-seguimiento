@@ -1,8 +1,10 @@
 {
-  "_instrucciones": "Antes de cada torneo, cambia 'torneo_id' por el ID del nuevo torneo (está en la URL: pickleprotour.com/torneo.aspx?id=XXXX) y revisa que los nombres de 'jugadores' sean exactos. No hace falta tocar nada más.",
+  "_instrucciones": "Antes de cada torneo, cambia torneo_id, torneo_nombre, actualizacion_desde y actualizacion_hasta; revisa también que los nombres de jugadores sean exactos. Las fechas deben incluir la zona horaria de España.",
 
   "torneo_id": 2339,
   "torneo_nombre": "A Coruña Open",
+  "actualizacion_desde": "2026-07-12T00:00:00+02:00",
+  "actualizacion_hasta": "2026-07-12T23:59:59+02:00",
 
   "jugadores": [
     "Oscar Villar Sancosmed",

@@ -3,7 +3,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from scraper_runner import listado_cuadros_cargado
+from scraper_runner import listado_cuadros_cargado, salida_tiene_cambios
 
 
 def test_placeholder_no_se_considera_cargado():
@@ -32,7 +32,27 @@ def test_listado_con_categoria_y_url_se_considera_cargado():
     assert listado_cuadros_cargado(html) is True
 
 
+def test_no_publica_si_solo_cambian_fecha_o_diagnostico():
+    anterior = {
+        "torneo_id": 2339,
+        "torneo_nombre": "A Coruña Open",
+        "actualizado": "fecha anterior",
+        "diagnostico": {"errores": 1},
+        "jugadores": {"Víctor": {"partidos": []}},
+    }
+    nueva = {
+        "torneo_id": 2339,
+        "torneo_nombre": "A Coruña Open",
+        "diagnostico": {"errores": 0},
+        "jugadores": {"Víctor": {"partidos": []}},
+    }
+    assert salida_tiene_cambios(anterior, nueva) is False
+    nueva["jugadores"]["Víctor"]["partidos"].append({"resultado": "21-18"})
+    assert salida_tiene_cambios(anterior, nueva) is True
+
+
 if __name__ == "__main__":
     test_placeholder_no_se_considera_cargado()
     test_listado_con_categoria_y_url_se_considera_cargado()
+    test_no_publica_si_solo_cambian_fecha_o_diagnostico()
     print("Todos los tests del ejecutor v6 pasan.")

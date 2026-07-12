@@ -1,6 +1,8 @@
 name: Actualizar resultados BÜRK
 
 on:
+  schedule:
+    - cron: "7,17,27,37,47,57 * * * *"
   workflow_dispatch:
     inputs:
       torneo_id:
@@ -20,6 +22,8 @@ on:
       - "fases.py"
       - "matching.py"
       - "diagnostico_parser.py"
+      - "jugadores.json"
+      - "ventana.py"
       - "docs/index.html"
       - "tests/**"
       - ".github/workflows/actualizar.yml"
@@ -32,6 +36,8 @@ on:
       - "fases.py"
       - "matching.py"
       - "diagnostico_parser.py"
+      - "jugadores.json"
+      - "ventana.py"
       - "docs/index.html"
       - "tests/**"
       - ".github/workflows/actualizar.yml"
@@ -58,24 +64,44 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Comprobar ventana automática del torneo
+        id: ventana
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" != "schedule" ]; then
+            echo "activo=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          ACTIVO=$(python3 ventana.py)
+          echo "activo=$ACTIVO" >> "$GITHUB_OUTPUT"
+          if [ "$ACTIVO" != "true" ]; then
+            echo "Fuera de la ventana del torneo: no se consulta Pickle Pro Tour."
+          fi
+
       - name: Configurar Python
+        if: steps.ventana.outputs.activo == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
       - name: Instalar dependencias
+        if: steps.ventana.outputs.activo == 'true'
         run: |
           pip install -r requirements.txt
 
       - name: Ejecutar pruebas
+        if: steps.ventana.outputs.activo == 'true'
         run: |
-          python -m py_compile scraper.py scraper_runner.py scraper_final.py matching.py fases.py diagnostico_parser.py
+          python -m py_compile scraper.py scraper_runner.py scraper_final.py matching.py fases.py ventana.py diagnostico_parser.py
           python -u tests/test_parser.py
           python -u tests/test_runner.py
           python -u tests/test_matching.py
           python -u tests/test_logros.py
+          python -u tests/test_ventana.py
 
       - name: Ejecutar el scraper
+        if: steps.ventana.outputs.activo == 'true'
         shell: bash
         run: |
           mkdir -p debug
@@ -83,11 +109,11 @@ jobs:
           python -u scraper_final.py 2>&1 | tee debug/ejecucion.log
 
       - name: Diagnosticar nombres y tablas
-        if: failure()
+        if: failure() && steps.ventana.outputs.activo == 'true'
         run: python -u diagnostico_parser.py
 
       - name: Guardar diagnóstico
-        if: always()
+        if: always() && steps.ventana.outputs.activo == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: diagnostico-scraper
@@ -98,7 +124,7 @@ jobs:
           retention-days: 7
 
       - name: Guardar los resultados actualizados
-        if: github.event_name != 'pull_request'
+        if: steps.ventana.outputs.activo == 'true' && github.event_name != 'pull_request'
         run: |
           git config user.name "BÜRK Bot"
           git config user.email "actions@github.com"

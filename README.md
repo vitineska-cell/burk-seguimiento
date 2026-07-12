@@ -51,9 +51,11 @@ jugadores). El ID del torneo está en su URL:
 `pickleprotour.com/torneo.aspx?id=XXXX` ← ese número.
 
 **Durante el fin de semana:**
-Cada vez que quieras refrescar resultados: **Actions → Actualizar resultados
-BÜRK → Run workflow**. Tarda 1-2 minutos. El panel se actualiza solo al
-recargar la página.
+Dentro de las fechas `actualizacion_desde` y `actualizacion_hasta`, GitHub
+comprueba los resultados cada 10 minutos. Fuera de esa ventana termina sin
+consultar Pickle Pro Tour. También puedes forzar una actualización desde
+**Actions → Actualizar resultados BÜRK → Run workflow**. El panel comprueba
+cada 60 segundos si hay nuevos datos publicados.
 
 ---
 

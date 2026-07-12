@@ -228,6 +228,12 @@ def calcular_logros(partidos: list[dict[str, Any]]) -> list[dict[str, str]]:
     return sorted(logros, key=lambda x: (x["titulo"] != "Campeón", x["categoria"]))
 
 
+def salida_tiene_cambios(anterior: dict[str, Any], nueva: dict[str, Any]) -> bool:
+    """Compara los datos deportivos ignorando fecha y diagnóstico técnico."""
+    claves = ("torneo_id", "torneo_nombre", "jugadores")
+    return any(anterior.get(clave) != nueva.get(clave) for clave in claves)
+
+
 def main() -> None:
     inicio = time.monotonic()
     config = cargar_config()
@@ -359,9 +365,8 @@ def main() -> None:
     total = sum(len(v["partidos"]) for v in resultados.values())
     if total == 0:
         raise RuntimeError("No hubo coincidencias con jugadores BÜRK")
-    salida = {
+    salida: dict[str, Any] = {
         "torneo_id": torneo_id, "torneo_nombre": torneo_nombre,
-        "actualizado": datetime.now(timezone.utc).isoformat(),
         "diagnostico": {"categorias_detectadas": len(destinos), "grupos_unicos_detectados": total_grupos,
                         "categorias_procesadas": categorias_procesadas,
                         "grupos_directos_procesados": paginas_grupo_procesadas,
@@ -371,6 +376,16 @@ def main() -> None:
         "jugadores": resultados,
     }
     OUTPUT_PATH.parent.mkdir(exist_ok=True)
+    anterior: dict[str, Any] = {}
+    if OUTPUT_PATH.exists():
+        try:
+            anterior = json.loads(OUTPUT_PATH.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            anterior = {}
+    if anterior and not salida_tiene_cambios(anterior, salida):
+        log("Sin cambios deportivos: se conserva resultados.json y no se crea un commit.")
+        return
+    salida["actualizado"] = datetime.now(timezone.utc).isoformat()
     OUTPUT_PATH.write_text(json.dumps(salida, ensure_ascii=False, indent=2), encoding="utf-8")
     log(f"Listo: {total} partidos para {len(jugadores)} jugadores BÜRK.")
 
