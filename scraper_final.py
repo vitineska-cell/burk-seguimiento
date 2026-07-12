@@ -3,12 +3,15 @@
 
 import scraper
 from matching import jugador_en_texto_flexible
+from fases import detectar_fase
 
-# incorporar_partidos() consulta esta función en el módulo scraper en tiempo de ejecución.
+# El parser consulta estas funciones en tiempo de ejecución.
 scraper.jugador_en_texto = jugador_en_texto_flexible
 
-from scraper_runner import main  # noqa: E402
+import scraper_runner  # noqa: E402
+scraper_runner.jugador_en_texto = jugador_en_texto_flexible
+scraper_runner.detectar_fase = detectar_fase
 
 
 if __name__ == "__main__":
-    main()
+    scraper_runner.main()
