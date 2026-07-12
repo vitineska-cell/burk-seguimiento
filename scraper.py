@@ -492,15 +492,6 @@ def extraer_partidos_orden_juego(
             if numero_pista:
                 horario = f"{momento} / Pista: {numero_pista}"
 
-            ganados = [
-                sum("winner" in (el.get("class") or []) for el in fila.select(".oj-set"))
-                for fila in filas[:2]
-            ]
-            if ganador is None and ganados[0] > ganados[1]:
-                ganador = 1
-            elif ganador is None and ganados[1] > ganados[0]:
-                ganador = 2
-
             partidos.append(
                 {
                     "categoria": f"{fase} · CATEGORIA {categoria}",

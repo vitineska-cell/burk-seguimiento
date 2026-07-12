@@ -68,7 +68,12 @@ def detectar_fase(texto: str) -> str:
     valor = normalizar(texto)
     if "final" in valor and "semifinal" not in valor:
         return "final"
-    if "semifinal" in valor or "semi final" in valor:
+    if (
+        "semifinal" in valor
+        or "semi final" in valor
+        or valor == "semi"
+        or valor.startswith("semi ")
+    ):
         return "semifinal"
     if "cuartos" in valor or "1 4" in valor:
         return "cuartos"
@@ -83,7 +88,8 @@ def categoria_limpia(texto: str, respaldo: str) -> str:
     base = texto or respaldo
     base = re.sub(r"GRUPO\s+\d+\s*-\s*PARTIDOS\s*[·-]?\s*", "", base, flags=re.I)
     base = re.sub(
-        r"^(?:GRUPOS|DIECISEISAVOS|OCTAVOS|CUARTOS(?:\s+DE\s+FINAL)?|SEMI(?:FINAL)?|FINAL)"
+        r"^(?:GRUPOS|1\s*/\s*16|1\s*/\s*8|1\s*/\s*4|DIECISEISAVOS|OCTAVOS|"
+        r"CUARTOS(?:\s+DE\s+FINAL)?|SEMI(?:FINAL)?|FINAL)"
         r"\s*[·-]?\s*",
         "",
         base,

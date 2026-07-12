@@ -14,6 +14,7 @@ from scraper_runner import (
 
 def test_detectar_fases():
     assert detectar_fase("SEMIFINAL") == "semifinal"
+    assert detectar_fase("Semi · CATEGORIA ABSOLUTA 3.5 Double MASCULINO") == "semifinal"
     assert detectar_fase("FINAL") == "final"
     assert detectar_fase("CUARTOS DE FINAL") == "cuartos"
     assert detectar_fase("GRUPO 3 - PARTIDOS") == "grupos"
@@ -52,6 +53,9 @@ def test_categoria_limpia():
     assert categoria_limpia(
         "Grupos · CATEGORIA ABSOLUTA 3.5 Single MASCULINO", "respaldo"
     ) == "ABSOLUTA 3.5 Single MASCULINO"
+    assert categoria_limpia(
+        "1/4 · CATEGORIA ABSOLUTA 3.5 Double MASCULINO", "respaldo"
+    ) == "ABSOLUTA 3.5 Double MASCULINO"
 
 
 def test_marcador_a_varios_sets():

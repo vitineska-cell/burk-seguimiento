@@ -6,7 +6,12 @@ from scraper import normalizar
 def detectar_fase(texto: str) -> str:
     """Detecta la ronda evitando confundir 'cuartos de final' con la final."""
     valor = normalizar(texto)
-    if "semifinal" in valor or "semi final" in valor:
+    if (
+        "semifinal" in valor
+        or "semi final" in valor
+        or valor == "semi"
+        or valor.startswith("semi ")
+    ):
         return "semifinal"
     if "cuartos" in valor or "1 4" in valor:
         return "cuartos"
