@@ -19,6 +19,7 @@ on:
       - "scraper_final.py"
       - "matching.py"
       - "diagnostico_parser.py"
+      - "docs/index.html"
       - "tests/**"
       - ".github/workflows/actualizar.yml"
   push:
@@ -29,6 +30,7 @@ on:
       - "scraper_final.py"
       - "matching.py"
       - "diagnostico_parser.py"
+      - "docs/index.html"
       - "tests/**"
       - ".github/workflows/actualizar.yml"
 
@@ -70,6 +72,7 @@ jobs:
           python -u tests/test_parser.py
           python -u tests/test_runner.py
           python -u tests/test_matching.py
+          python -u tests/test_logros.py
 
       - name: Ejecutar el scraper
         shell: bash
