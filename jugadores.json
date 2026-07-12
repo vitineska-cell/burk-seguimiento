@@ -1,10 +1,25 @@
 {
-  "_instrucciones": "Antes de cada torneo, cambia torneo_id, torneo_nombre, actualizacion_desde y actualizacion_hasta; revisa también que los nombres de jugadores sean exactos. Las fechas deben incluir la zona horaria de España.",
+  "_instrucciones": "Añade cada torneo a 'torneos' con su ID, nombre y ventana de actualización; revisa también que los nombres de jugadores sean exactos. Las fechas deben incluir la zona horaria de España.",
 
   "torneo_id": 2339,
   "torneo_nombre": "A Coruña Open",
   "actualizacion_desde": "2026-07-12T00:00:00+02:00",
   "actualizacion_hasta": "2026-07-12T23:59:59+02:00",
+
+  "torneos": [
+    {
+      "torneo_id": 2339,
+      "torneo_nombre": "A Coruña Open",
+      "actualizacion_desde": "2026-07-12T00:00:00+02:00",
+      "actualizacion_hasta": "2026-07-12T23:59:59+02:00"
+    },
+    {
+      "torneo_id": 2340,
+      "torneo_nombre": "Mijas-Costa del Sol Open",
+      "actualizacion_desde": "2026-09-11T00:00:00+02:00",
+      "actualizacion_hasta": "2026-09-13T23:59:59+02:00"
+    }
+  ],
 
   "jugadores": [
     "Oscar Villar Sancosmed",
