@@ -65,8 +65,7 @@ def main() -> None:
             if torneo:
                 salida.write(f"torneo_id={int(torneo['torneo_id'])}\n")
                 salida.write(f"torneo_nombre={torneo.get('torneo_nombre', '')}\n")
-    else:
-        print(activo)
+    print(activo)
 
 
 if __name__ == "__main__":
