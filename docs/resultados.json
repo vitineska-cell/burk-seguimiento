@@ -9,7 +9,7 @@
     "cuadros_procesados": 3,
     "dias_orden_juego_procesados": 2,
     "errores": 0,
-    "filas_partido_leidas": 1404
+    "filas_partido_leidas": 1410
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -127,12 +127,12 @@
           "categoria": "ABSOLUTA 4.5 Single MASCULINO",
           "fase": "cuartos",
           "rival": "Pablo Sánchez",
-          "horario_pista": "11/09/2026 11:00 / Pista: 13",
-          "resultado": "11/09/2026 11:00 - Pista:13",
+          "horario_pista": "11/09/2026 / Pista: 13",
+          "resultado": "21-10",
           "jugado": true,
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22397&visor=0",
-          "estado_programacion": "Comienza a las 11:00"
+          "estado_programacion": "Partido finalizado"
         }
       ],
       "logros": [
@@ -675,5 +675,5 @@
       }
     }
   },
-  "actualizado": "2026-09-11T09:52:32.250975+00:00"
+  "actualizado": "2026-09-11T10:13:13.136543+00:00"
 }
