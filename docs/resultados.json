@@ -9,7 +9,7 @@
     "cuadros_procesados": 10,
     "dias_orden_juego_procesados": 2,
     "errores": 0,
-    "filas_partido_leidas": 1467
+    "filas_partido_leidas": 1468
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -24,28 +24,6 @@
     },
     "Hugo Granados Jimenez": {
       "partidos": [
-        {
-          "categoria": "ABSOLUTA 4.5 Double MASCULINO",
-          "fase": "grupos",
-          "rival": "Óliver Nuñez / Lucas Corral",
-          "horario_pista": "11/09/2026 16:45 / Pista: 7",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=950&visor=0",
-          "estado_programacion": "Comienza a las 16:45"
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Double MASCULINO",
-          "fase": "grupos",
-          "rival": "Raul Antonio García Portillo / Jesus Bernal",
-          "horario_pista": "11/09/2026 17:00 / Pista: 7",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=950&visor=0",
-          "estado_programacion": "Comienza a las 17:00"
-        },
         {
           "categoria": "ABSOLUTA 4.5 Double MIXTO",
           "fase": "grupos",
@@ -133,6 +111,28 @@
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=950&visor=0",
           "estado_programacion": "Partido finalizado"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double MASCULINO",
+          "fase": "grupos",
+          "rival": "Óliver Nuñez / Lucas Corral",
+          "horario_pista": "11/09/2026 / Pista: 7",
+          "resultado": "21-15",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=950&visor=0",
+          "estado_programacion": "Partido finalizado"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double MASCULINO",
+          "fase": "grupos",
+          "rival": "Raul Antonio García Portillo / Jesus Bernal",
+          "horario_pista": "11/09/2026 / Pista: 7",
+          "resultado": "22-20",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=950&visor=0",
+          "estado_programacion": "Partido finalizado"
         }
       ],
       "logros": [
@@ -142,10 +142,10 @@
         }
       ],
       "resumen": {
-        "jugados": 5,
-        "victorias": 4,
+        "jugados": 7,
+        "victorias": 6,
         "derrotas": 1,
-        "proximos": 5
+        "proximos": 3
       }
     },
     "Lucas Corral Falagan": {
@@ -160,17 +160,6 @@
           "ganado": null,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=950&visor=0",
           "estado_programacion": "Comienza a las 16:30"
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Double MASCULINO",
-          "fase": "grupos",
-          "rival": "Juan Jaramillo / Hugo Granados",
-          "horario_pista": "11/09/2026 16:45 / Pista: 7",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=950&visor=0",
-          "estado_programacion": "Comienza a las 16:45"
         },
         {
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
@@ -270,6 +259,17 @@
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22397&visor=0",
           "estado_programacion": "Partido finalizado"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double MASCULINO",
+          "fase": "grupos",
+          "rival": "Juan Jaramillo / Hugo Granados",
+          "horario_pista": "11/09/2026 / Pista: 7",
+          "resultado": "21-15",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=950&visor=0",
+          "estado_programacion": "Partido finalizado"
         }
       ],
       "logros": [
@@ -279,10 +279,10 @@
         }
       ],
       "resumen": {
-        "jugados": 4,
+        "jugados": 5,
         "victorias": 3,
-        "derrotas": 1,
-        "proximos": 7
+        "derrotas": 2,
+        "proximos": 6
       }
     },
     "Jose Manuel Granados Sánchez": {
@@ -728,5 +728,5 @@
       }
     }
   },
-  "actualizado": "2026-09-11T17:39:29.996850+00:00"
+  "actualizado": "2026-09-11T17:49:45.508750+00:00"
 }
