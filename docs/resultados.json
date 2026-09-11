@@ -6,10 +6,10 @@
     "grupos_unicos_detectados": 92,
     "categorias_procesadas": 26,
     "grupos_directos_procesados": 0,
-    "cuadros_procesados": 9,
+    "cuadros_procesados": 10,
     "dias_orden_juego_procesados": 2,
     "errores": 0,
-    "filas_partido_leidas": 1454
+    "filas_partido_leidas": 1462
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -500,17 +500,32 @@
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22403&visor=0",
           "estado_programacion": "Partido finalizado"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double FEMENINO",
+          "fase": "cuartos",
+          "rival": "María De Miguel / Carmen Rosa",
+          "horario_pista": "11/09/2026 15:45 / Pista: 9",
+          "resultado": "11/09/2026 15:45 - Pista:9",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22402&visor=0",
+          "estado_programacion": "Comienza a las 15:45"
         }
       ],
       "logros": [
+        {
+          "titulo": "Semifinalista",
+          "categoria": "ABSOLUTA 4.5 Double FEMENINO"
+        },
         {
           "titulo": "Cuartofinalista",
           "categoria": "ABSOLUTA 4.5 Single FEMENINO"
         }
       ],
       "resumen": {
-        "jugados": 7,
-        "victorias": 4,
+        "jugados": 8,
+        "victorias": 5,
         "derrotas": 3,
         "proximos": 3
       }
@@ -571,17 +586,6 @@
     },
     "Bárbara Molina Durán": {
       "partidos": [
-        {
-          "categoria": "+50 PRO Double FEMENINO",
-          "fase": "grupos",
-          "rival": "Gabriela Costantino / Paola Patrucco",
-          "horario_pista": "11/09/2026 15:15 / Pista: 5",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=969&visor=0",
-          "estado_programacion": "Comienza a las 15:15"
-        },
         {
           "categoria": "+50 PRO Double FEMENINO",
           "fase": "grupos",
@@ -680,16 +684,27 @@
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=969&visor=0",
           "estado_programacion": "Partido finalizado"
+        },
+        {
+          "categoria": "+50 PRO Double FEMENINO",
+          "fase": "grupos",
+          "rival": "Gabriela Costantino / Paola Patrucco",
+          "horario_pista": "11/09/2026 / Pista: 5",
+          "resultado": "21-17",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=969&visor=0",
+          "estado_programacion": "Partido finalizado"
         }
       ],
       "logros": [],
       "resumen": {
-        "jugados": 4,
-        "victorias": 1,
+        "jugados": 5,
+        "victorias": 2,
         "derrotas": 3,
-        "proximos": 6
+        "proximos": 5
       }
     }
   },
-  "actualizado": "2026-09-11T14:31:24.449055+00:00"
+  "actualizado": "2026-09-11T14:36:57.688005+00:00"
 }
