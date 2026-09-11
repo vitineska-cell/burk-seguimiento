@@ -9,7 +9,7 @@
     "cuadros_procesados": 7,
     "dias_orden_juego_procesados": 2,
     "errores": 0,
-    "filas_partido_leidas": 1440
+    "filas_partido_leidas": 1442
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -585,17 +585,6 @@
         {
           "categoria": "+50 PRO Double FEMENINO",
           "fase": "grupos",
-          "rival": "Anna Castells / Cristina Almirall",
-          "horario_pista": "11/09/2026 14:30 / Pista: 5",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=969&visor=0",
-          "estado_programacion": "Comienza a las 14:30"
-        },
-        {
-          "categoria": "+50 PRO Double FEMENINO",
-          "fase": "grupos",
           "rival": "Eva Martinez / Elena Bonilla",
           "horario_pista": "11/09/2026 14:45 / Pista: 5",
           "resultado": "sin resultado",
@@ -680,16 +669,27 @@
           "ganado": null,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=972&visor=0",
           "estado_programacion": "Comienza a las 10:30"
+        },
+        {
+          "categoria": "+50 PRO Double FEMENINO",
+          "fase": "grupos",
+          "rival": "Anna Castells / Cristina Almirall",
+          "horario_pista": "11/09/2026 / Pista: 5",
+          "resultado": "21-12",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=969&visor=0",
+          "estado_programacion": "Partido finalizado"
         }
       ],
       "logros": [],
       "resumen": {
-        "jugados": 0,
-        "victorias": 0,
+        "jugados": 1,
+        "victorias": 1,
         "derrotas": 0,
-        "proximos": 10
+        "proximos": 9
       }
     }
   },
-  "actualizado": "2026-09-11T12:22:10.947466+00:00"
+  "actualizado": "2026-09-11T12:43:13.937375+00:00"
 }
