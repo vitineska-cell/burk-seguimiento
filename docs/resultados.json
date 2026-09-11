@@ -9,7 +9,7 @@
     "cuadros_procesados": 15,
     "dias_orden_juego_procesados": 2,
     "errores": 0,
-    "filas_partido_leidas": 1552
+    "filas_partido_leidas": 1570
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -114,6 +114,17 @@
         },
         {
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
+          "fase": "semifinal",
+          "rival": "Raul Antonio García Portillo / Jesus Bernal",
+          "horario_pista": "11/09/2026 / Pista: 17",
+          "resultado": "10-21 / 21-16 / 12-21",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22399&visor=0",
+          "estado_programacion": "Partido finalizado"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double MASCULINO",
           "fase": "grupos",
           "rival": "Marc Fernandez / Alan Llopart",
           "horario_pista": "11/09/2026 / Pista: 7",
@@ -147,19 +158,19 @@
         },
         {
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
-          "fase": "semifinal",
-          "rival": "Raul Antonio García Portillo / Jesus Bernal",
-          "horario_pista": "11/09/2026 19:30 / Pista: 17",
-          "resultado": "11/09/2026 19:30 - Pista:17",
+          "fase": "final",
+          "rival": "Manuel Trabada / Henry Alberto Infante",
+          "horario_pista": "12/09/2026 10:00 / Pista: 17",
+          "resultado": "12/09/2026 10:00 - Pista:17",
           "jugado": true,
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22399&visor=0",
-          "estado_programacion": "Comienza a las 19:30"
+          "estado_programacion": "Comienza a las 10:00"
         }
       ],
       "logros": [
         {
-          "titulo": "Finalista",
+          "titulo": "Campeón",
           "categoria": "ABSOLUTA 4.5 Double MASCULINO"
         },
         {
@@ -168,8 +179,8 @@
         }
       ],
       "resumen": {
-        "jugados": 9,
-        "victorias": 8,
+        "jugados": 10,
+        "victorias": 9,
         "derrotas": 1,
         "proximos": 3
       }
@@ -786,5 +797,5 @@
       }
     }
   },
-  "actualizado": "2026-09-11T21:12:11.761370+00:00"
+  "actualizado": "2026-09-11T22:08:26.109671+00:00"
 }
