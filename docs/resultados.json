@@ -25,17 +25,6 @@
     "Hugo Granados Jimenez": {
       "partidos": [
         {
-          "categoria": "ABSOLUTA 4.5 Single MASCULINO",
-          "fase": "grupos",
-          "rival": "Juan Francisco Marín",
-          "horario_pista": "11/09/2026 10:00 / Pista: 10",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=944&visor=0",
-          "estado_programacion": "Comienza a las 10:00"
-        },
-        {
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
           "fase": "grupos",
           "rival": "Marc Fernandez / Alan Llopart",
@@ -122,29 +111,29 @@
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=944&visor=0",
           "estado_programacion": "Partido finalizado"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Single MASCULINO",
+          "fase": "grupos",
+          "rival": "Juan Francisco Marín",
+          "horario_pista": "11/09/2026 / Pista: 10",
+          "resultado": "P2. WO",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=944&visor=0",
+          "estado_programacion": "P2. WO"
         }
       ],
       "logros": [],
       "resumen": {
-        "jugados": 2,
-        "victorias": 2,
+        "jugados": 3,
+        "victorias": 3,
         "derrotas": 0,
-        "proximos": 7
+        "proximos": 6
       }
     },
     "Lucas Corral Falagan": {
       "partidos": [
-        {
-          "categoria": "ABSOLUTA 4.5 Single MASCULINO",
-          "fase": "grupos",
-          "rival": "Daniel Almenar",
-          "horario_pista": "11/09/2026 09:30 / Pista: 11",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=944&visor=0",
-          "estado_programacion": "Comienza a las 09:30"
-        },
         {
           "categoria": "ABSOLUTA 4.5 Single MASCULINO",
           "fase": "grupos",
@@ -243,14 +232,25 @@
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=944&visor=0",
           "estado_programacion": "Partido finalizado"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Single MASCULINO",
+          "fase": "grupos",
+          "rival": "Daniel Almenar",
+          "horario_pista": "11/09/2026 / Pista: 11",
+          "resultado": "19-21",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=944&visor=0",
+          "estado_programacion": "Partido finalizado"
         }
       ],
       "logros": [],
       "resumen": {
-        "jugados": 1,
-        "victorias": 1,
+        "jugados": 2,
+        "victorias": 2,
         "derrotas": 0,
-        "proximos": 9
+        "proximos": 8
       }
     },
     "Jose Manuel Granados Sánchez": {
@@ -344,17 +344,6 @@
     "Brenda Fariña Solís": {
       "partidos": [
         {
-          "categoria": "ABSOLUTA 4.5 Single FEMENINO",
-          "fase": "grupos",
-          "rival": "Laura Bandera",
-          "horario_pista": "11/09/2026 10:15 / Pista: 7",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=947&visor=0",
-          "estado_programacion": "Comienza a las 10:15"
-        },
-        {
           "categoria": "ABSOLUTA 4.5 Double FEMENINO",
           "fase": "grupos",
           "rival": "Cristina Gómez / Beatriz Urbano",
@@ -441,14 +430,25 @@
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=947&visor=0",
           "estado_programacion": "Partido finalizado"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Single FEMENINO",
+          "fase": "grupos",
+          "rival": "Laura Bandera",
+          "horario_pista": "11/09/2026 / Pista: 7",
+          "resultado": "7-21",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=947&visor=0",
+          "estado_programacion": "Partido finalizado"
         }
       ],
       "logros": [],
       "resumen": {
-        "jugados": 2,
+        "jugados": 3,
         "victorias": 2,
-        "derrotas": 0,
-        "proximos": 7
+        "derrotas": 1,
+        "proximos": 6
       }
     },
     "Victor Sebastian Davila": {
@@ -627,5 +627,5 @@
       }
     }
   },
-  "actualizado": "2026-09-11T07:54:37.743654+00:00"
+  "actualizado": "2026-09-11T08:25:08.802838+00:00"
 }
