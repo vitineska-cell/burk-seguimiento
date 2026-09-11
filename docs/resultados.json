@@ -6,10 +6,10 @@
     "grupos_unicos_detectados": 92,
     "categorias_procesadas": 26,
     "grupos_directos_procesados": 0,
-    "cuadros_procesados": 4,
+    "cuadros_procesados": 7,
     "dias_orden_juego_procesados": 2,
     "errores": 0,
-    "filas_partido_leidas": 1422
+    "filas_partido_leidas": 1436
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -344,6 +344,17 @@
         },
         {
           "categoria": "+50 4.5 Single MASCULINO",
+          "fase": "semifinal",
+          "rival": "Fernando Sarrasin",
+          "horario_pista": "11/09/2026 / Pista: 1",
+          "resultado": "8-21 / 13-21",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22415&visor=0",
+          "estado_programacion": "Partido finalizado"
+        },
+        {
+          "categoria": "+50 4.5 Single MASCULINO",
           "fase": "grupos",
           "rival": "Jose Maria Corral",
           "horario_pista": "11/09/2026 / Pista: 4",
@@ -363,29 +374,18 @@
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=959&visor=0",
           "estado_programacion": "Partido finalizado"
-        },
-        {
-          "categoria": "+50 4.5 Single MASCULINO",
-          "fase": "semifinal",
-          "rival": "Fernando Sarrasin",
-          "horario_pista": "11/09/2026 12:00 / Pista: 1",
-          "resultado": "11/09/2026 12:00 - Pista:1",
-          "jugado": true,
-          "ganado": true,
-          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22415&visor=0",
-          "estado_programacion": "Comienza a las 12:00"
         }
       ],
       "logros": [
         {
-          "titulo": "Finalista",
+          "titulo": "Semifinalista",
           "categoria": "+50 4.5 Single MASCULINO"
         }
       ],
       "resumen": {
         "jugados": 3,
-        "victorias": 2,
-        "derrotas": 1,
+        "victorias": 1,
+        "derrotas": 2,
         "proximos": 5
       }
     },
@@ -691,5 +691,5 @@
       }
     }
   },
-  "actualizado": "2026-09-11T11:05:03.353403+00:00"
+  "actualizado": "2026-09-11T11:46:16.798400+00:00"
 }
