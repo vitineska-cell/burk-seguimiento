@@ -585,17 +585,6 @@
         {
           "categoria": "+50 PRO Double FEMENINO",
           "fase": "grupos",
-          "rival": "Eva Martinez / Elena Bonilla",
-          "horario_pista": "11/09/2026 14:45 / Pista: 5",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=969&visor=0",
-          "estado_programacion": "Comienza a las 14:45"
-        },
-        {
-          "categoria": "+50 PRO Double FEMENINO",
-          "fase": "grupos",
           "rival": "Fiona Edwards / Federica Mundula",
           "horario_pista": "11/09/2026 15:00 / Pista: 5",
           "resultado": "sin resultado",
@@ -680,16 +669,27 @@
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=969&visor=0",
           "estado_programacion": "Partido finalizado"
+        },
+        {
+          "categoria": "+50 PRO Double FEMENINO",
+          "fase": "grupos",
+          "rival": "Eva Martinez / Elena Bonilla",
+          "horario_pista": "11/09/2026 / Pista: 5",
+          "resultado": "21-22",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=969&visor=0",
+          "estado_programacion": "Partido finalizado"
         }
       ],
       "logros": [],
       "resumen": {
-        "jugados": 1,
+        "jugados": 2,
         "victorias": 1,
-        "derrotas": 0,
-        "proximos": 9
+        "derrotas": 1,
+        "proximos": 8
       }
     }
   },
-  "actualizado": "2026-09-11T13:29:12.804492+00:00"
+  "actualizado": "2026-09-11T13:34:13.983343+00:00"
 }
