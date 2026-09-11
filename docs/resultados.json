@@ -6,10 +6,10 @@
     "grupos_unicos_detectados": 92,
     "categorias_procesadas": 26,
     "grupos_directos_procesados": 0,
-    "cuadros_procesados": 10,
+    "cuadros_procesados": 11,
     "dias_orden_juego_procesados": 2,
     "errores": 0,
-    "filas_partido_leidas": 1472
+    "filas_partido_leidas": 1474
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -609,17 +609,6 @@
           "estado_programacion": "Comienza a las 15:30"
         },
         {
-          "categoria": "+50 PRO Double FEMENINO",
-          "fase": "semifinal",
-          "rival": "Eva Martinez / Elena Bonilla",
-          "horario_pista": "11/09/2026 17:30 / Pista: 17",
-          "resultado": "",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/ordenJuego.aspx?id_torneo=2340&f=11-09-2026&visor=0",
-          "estado_programacion": "Comienza a las 17:30"
-        },
-        {
           "categoria": "+50 PRO Double MIXTO",
           "fase": "grupos",
           "rival": "Ricardo Lozano / Benigna Villasuso",
@@ -717,16 +706,32 @@
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=969&visor=0",
           "estado_programacion": "Partido finalizado"
+        },
+        {
+          "categoria": "+50 PRO Double FEMENINO",
+          "fase": "semifinal",
+          "rival": "Eva Martinez / Elena Bonilla",
+          "horario_pista": "11/09/2026 17:30 / Pista: 17",
+          "resultado": "11/09/2026 17:30 - Pista:17",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22416&visor=0",
+          "estado_programacion": "Comienza a las 17:30"
         }
       ],
-      "logros": [],
+      "logros": [
+        {
+          "titulo": "Semifinalista",
+          "categoria": "+50 PRO Double FEMENINO"
+        }
+      ],
       "resumen": {
-        "jugados": 5,
+        "jugados": 6,
         "victorias": 2,
-        "derrotas": 3,
-        "proximos": 6
+        "derrotas": 4,
+        "proximos": 5
       }
     }
   },
-  "actualizado": "2026-09-11T18:57:59.350038+00:00"
+  "actualizado": "2026-09-11T19:18:41.361761+00:00"
 }
