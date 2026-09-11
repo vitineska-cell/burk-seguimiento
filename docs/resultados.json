@@ -4,11 +4,11 @@
   "diagnostico": {
     "categorias_detectadas": 26,
     "grupos_unicos_detectados": 92,
-    "categorias_procesadas": 21,
-    "grupos_directos_procesados": 29,
+    "categorias_procesadas": 26,
+    "grupos_directos_procesados": 0,
     "cuadros_procesados": 10,
     "dias_orden_juego_procesados": 2,
-    "errores": 5,
+    "errores": 0,
     "filas_partido_leidas": 1470
   },
   "jugadores": {
@@ -65,7 +65,7 @@
           "resultado": "sin resultado",
           "jugado": false,
           "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneoGrupo.aspx?id=1608&visor=0",
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=956&visor=0",
           "estado_programacion": "Comienza a las 15:00"
         },
         {
@@ -76,7 +76,7 @@
           "resultado": "sin resultado",
           "jugado": false,
           "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneoGrupo.aspx?id=1608&visor=0",
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=956&visor=0",
           "estado_programacion": "Comienza a las 15:30"
         },
         {
@@ -87,7 +87,7 @@
           "resultado": "sin resultado",
           "jugado": false,
           "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneoGrupo.aspx?id=1608&visor=0",
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=956&visor=0",
           "estado_programacion": "Comienza a las 16:00"
         },
         {
@@ -191,7 +191,7 @@
           "resultado": "sin resultado",
           "jugado": false,
           "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneoGrupo.aspx?id=1609&visor=0",
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=956&visor=0",
           "estado_programacion": "Comienza a las 15:00"
         },
         {
@@ -202,7 +202,7 @@
           "resultado": "sin resultado",
           "jugado": false,
           "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneoGrupo.aspx?id=1609&visor=0",
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=956&visor=0",
           "estado_programacion": "Comienza a las 15:30"
         },
         {
@@ -213,7 +213,7 @@
           "resultado": "sin resultado",
           "jugado": false,
           "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneoGrupo.aspx?id=1609&visor=0",
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=956&visor=0",
           "estado_programacion": "Comienza a las 15:45"
         },
         {
@@ -224,7 +224,7 @@
           "resultado": "sin resultado",
           "jugado": false,
           "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneoGrupo.aspx?id=1609&visor=0",
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=956&visor=0",
           "estado_programacion": "Comienza a las 16:15"
         },
         {
@@ -399,7 +399,7 @@
           "resultado": "sin resultado",
           "jugado": false,
           "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneoGrupo.aspx?id=1604&visor=0",
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=956&visor=0",
           "estado_programacion": "Comienza a las 15:15"
         },
         {
@@ -410,7 +410,7 @@
           "resultado": "sin resultado",
           "jugado": false,
           "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneoGrupo.aspx?id=1604&visor=0",
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=956&visor=0",
           "estado_programacion": "Comienza a las 15:30"
         },
         {
@@ -421,7 +421,7 @@
           "resultado": "sin resultado",
           "jugado": false,
           "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneoGrupo.aspx?id=1604&visor=0",
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=956&visor=0",
           "estado_programacion": "Comienza a las 16:15"
         },
         {
@@ -432,7 +432,7 @@
           "resultado": "21-10",
           "jugado": true,
           "ganado": true,
-          "url_grupo": "https://pickleprotour.com/torneoGrupo.aspx?id=1651&visor=0",
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=953&visor=0",
           "estado_programacion": "Partido finalizado"
         },
         {
@@ -443,7 +443,7 @@
           "resultado": "21-15",
           "jugado": true,
           "ganado": false,
-          "url_grupo": "https://pickleprotour.com/torneoGrupo.aspx?id=1651&visor=0",
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=953&visor=0",
           "estado_programacion": "Partido finalizado"
         },
         {
@@ -454,7 +454,7 @@
           "resultado": "21-18",
           "jugado": true,
           "ganado": true,
-          "url_grupo": "https://pickleprotour.com/torneoGrupo.aspx?id=1651&visor=0",
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=953&visor=0",
           "estado_programacion": "Partido finalizado"
         },
         {
@@ -717,5 +717,5 @@
       }
     }
   },
-  "actualizado": "2026-09-11T17:22:48.761183+00:00"
+  "actualizado": "2026-09-11T17:24:17.419665+00:00"
 }
