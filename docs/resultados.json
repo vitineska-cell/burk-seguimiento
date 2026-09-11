@@ -9,7 +9,7 @@
     "cuadros_procesados": 14,
     "dias_orden_juego_procesados": 2,
     "errores": 0,
-    "filas_partido_leidas": 1514
+    "filas_partido_leidas": 1524
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -472,6 +472,17 @@
           "estado_programacion": "Partido finalizado"
         },
         {
+          "categoria": "ABSOLUTA 4.5 Double FEMENINO",
+          "fase": "semifinal",
+          "rival": "Soledad Fernandez / María Jesús Fernández",
+          "horario_pista": "11/09/2026 / Pista: 13",
+          "resultado": "21-22 / 21-16 / 21-5",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22402&visor=0",
+          "estado_programacion": "Partido finalizado"
+        },
+        {
           "categoria": "ABSOLUTA 4.5 Single FEMENINO",
           "fase": "grupos",
           "rival": "Laura Alvarez",
@@ -525,17 +536,6 @@
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22402&visor=0",
           "estado_programacion": "Partido finalizado"
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Double FEMENINO",
-          "fase": "semifinal",
-          "rival": "Soledad Fernandez / María Jesús Fernández",
-          "horario_pista": "11/09/2026 16:00 / Pista: 13",
-          "resultado": "11/09/2026 16:00 - Pista:13",
-          "jugado": true,
-          "ganado": false,
-          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22402&visor=0",
-          "estado_programacion": "Comienza a las 16:00"
         }
       ],
       "logros": [
@@ -763,5 +763,5 @@
       }
     }
   },
-  "actualizado": "2026-09-11T20:05:28.589145+00:00"
+  "actualizado": "2026-09-11T20:21:30.525058+00:00"
 }
