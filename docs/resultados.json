@@ -9,7 +9,7 @@
     "cuadros_procesados": 3,
     "dias_orden_juego_procesados": 2,
     "errores": 0,
-    "filas_partido_leidas": 1400
+    "filas_partido_leidas": 1404
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -264,12 +264,12 @@
           "categoria": "ABSOLUTA 4.5 Single MASCULINO",
           "fase": "octavos",
           "rival": "Daniel Cabrera",
-          "horario_pista": "11/09/2026 10:45 / Pista: 13",
-          "resultado": "11/09/2026 10:45 - Pista:13",
+          "horario_pista": "11/09/2026 / Pista: 13",
+          "resultado": "12-21",
           "jugado": true,
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22397&visor=0",
-          "estado_programacion": "Comienza a las 10:45"
+          "estado_programacion": "Partido finalizado"
         }
       ],
       "logros": [
@@ -287,17 +287,6 @@
     },
     "Jose Manuel Granados Sánchez": {
       "partidos": [
-        {
-          "categoria": "+50 4.5 Single MASCULINO",
-          "fase": "grupos",
-          "rival": "Manuel Sanz",
-          "horario_pista": "11/09/2026 11:00 / Pista: 4",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=959&visor=0",
-          "estado_programacion": "Comienza a las 11:00"
-        },
         {
           "categoria": "+50 4.5 Double MASCULINO",
           "fase": "grupos",
@@ -363,14 +352,25 @@
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=959&visor=0",
           "estado_programacion": "Partido finalizado"
+        },
+        {
+          "categoria": "+50 4.5 Single MASCULINO",
+          "fase": "grupos",
+          "rival": "Manuel Sanz",
+          "horario_pista": "11/09/2026 / Pista: 4",
+          "resultado": "21-16",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=959&visor=0",
+          "estado_programacion": "Partido finalizado"
         }
       ],
       "logros": [],
       "resumen": {
-        "jugados": 1,
+        "jugados": 2,
         "victorias": 1,
-        "derrotas": 0,
-        "proximos": 6
+        "derrotas": 1,
+        "proximos": 5
       }
     },
     "Brenda Fariña Solís": {
@@ -675,5 +675,5 @@
       }
     }
   },
-  "actualizado": "2026-09-11T09:42:23.476018+00:00"
+  "actualizado": "2026-09-11T09:52:32.250975+00:00"
 }
