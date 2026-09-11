@@ -9,7 +9,7 @@
     "cuadros_procesados": 11,
     "dias_orden_juego_procesados": 2,
     "errores": 0,
-    "filas_partido_leidas": 1474
+    "filas_partido_leidas": 1482
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -557,17 +557,6 @@
         {
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
           "fase": "grupos",
-          "rival": "Marcos Rodríguez / Guille Hernando",
-          "horario_pista": "11/09/2026 16:45 / Pista: 3",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=950&visor=0",
-          "estado_programacion": "Comienza a las 16:45"
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Double MASCULINO",
-          "fase": "grupos",
           "rival": "Humberto Villamizar / Adrián Galán",
           "horario_pista": "11/09/2026 17:00 / Pista: 4",
           "resultado": "sin resultado",
@@ -575,14 +564,25 @@
           "ganado": null,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=950&visor=0",
           "estado_programacion": "Comienza a las 17:00"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double MASCULINO",
+          "fase": "grupos",
+          "rival": "Marcos Rodríguez / Guille Hernando",
+          "horario_pista": "11/09/2026 / Pista: 3",
+          "resultado": "21-16",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=950&visor=0",
+          "estado_programacion": "Partido finalizado"
         }
       ],
       "logros": [],
       "resumen": {
-        "jugados": 0,
+        "jugados": 1,
         "victorias": 0,
-        "derrotas": 0,
-        "proximos": 3
+        "derrotas": 1,
+        "proximos": 2
       }
     },
     "Laura Davila Alcala": {
@@ -733,5 +733,5 @@
       }
     }
   },
-  "actualizado": "2026-09-11T19:24:03.831089+00:00"
+  "actualizado": "2026-09-11T19:39:25.587890+00:00"
 }
