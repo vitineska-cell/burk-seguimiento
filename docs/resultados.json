@@ -574,17 +574,6 @@
         {
           "categoria": "+50 PRO Double FEMENINO",
           "fase": "grupos",
-          "rival": "Fiona Edwards / Federica Mundula",
-          "horario_pista": "11/09/2026 15:00 / Pista: 5",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=969&visor=0",
-          "estado_programacion": "Comienza a las 15:00"
-        },
-        {
-          "categoria": "+50 PRO Double FEMENINO",
-          "fase": "grupos",
           "rival": "Gabriela Costantino / Paola Patrucco",
           "horario_pista": "11/09/2026 15:15 / Pista: 5",
           "resultado": "sin resultado",
@@ -680,16 +669,27 @@
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=969&visor=0",
           "estado_programacion": "Partido finalizado"
+        },
+        {
+          "categoria": "+50 PRO Double FEMENINO",
+          "fase": "grupos",
+          "rival": "Fiona Edwards / Federica Mundula",
+          "horario_pista": "11/09/2026 / Pista: 5",
+          "resultado": "13-21",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=969&visor=0",
+          "estado_programacion": "Partido finalizado"
         }
       ],
       "logros": [],
       "resumen": {
-        "jugados": 3,
+        "jugados": 4,
         "victorias": 1,
-        "derrotas": 2,
-        "proximos": 7
+        "derrotas": 3,
+        "proximos": 6
       }
     }
   },
-  "actualizado": "2026-09-11T14:05:11.888847+00:00"
+  "actualizado": "2026-09-11T14:15:45.811833+00:00"
 }
