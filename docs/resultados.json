@@ -6,10 +6,10 @@
     "grupos_unicos_detectados": 92,
     "categorias_procesadas": 26,
     "grupos_directos_procesados": 0,
-    "cuadros_procesados": 14,
+    "cuadros_procesados": 15,
     "dias_orden_juego_procesados": 2,
     "errores": 0,
-    "filas_partido_leidas": 1539
+    "filas_partido_leidas": 1544
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -56,16 +56,6 @@
           "ganado": null,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=956&visor=0",
           "estado_programacion": "Comienza a las 16:00"
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Double MASCULINO",
-          "fase": "octavos",
-          "rival": "/",
-          "horario_pista": "",
-          "resultado": "0-0",
-          "jugado": true,
-          "ganado": true,
-          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22399&visor=0"
         },
         {
           "categoria": "ABSOLUTA 4.5 Single MASCULINO",
@@ -167,8 +157,8 @@
         }
       ],
       "resumen": {
-        "jugados": 9,
-        "victorias": 8,
+        "jugados": 8,
+        "victorias": 7,
         "derrotas": 1,
         "proximos": 3
       }
@@ -695,6 +685,17 @@
         },
         {
           "categoria": "+50 PRO Double FEMENINO",
+          "fase": "semifinal",
+          "rival": "Eva Martinez / Elena Bonilla",
+          "horario_pista": "11/09/2026 / Pista: 17",
+          "resultado": "20-22 / 21-19 / 11-21",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22416&visor=0",
+          "estado_programacion": "Partido finalizado"
+        },
+        {
+          "categoria": "+50 PRO Double FEMENINO",
           "fase": "grupos",
           "rival": "Pernilla Ohlin / Anna Fäldt",
           "horario_pista": "11/09/2026 / Pista: 5",
@@ -747,17 +748,6 @@
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=969&visor=0",
           "estado_programacion": "Partido finalizado"
-        },
-        {
-          "categoria": "+50 PRO Double FEMENINO",
-          "fase": "semifinal",
-          "rival": "Eva Martinez / Elena Bonilla",
-          "horario_pista": "11/09/2026 17:30 / Pista: 17",
-          "resultado": "11/09/2026 17:30 - Pista:17",
-          "jugado": true,
-          "ganado": false,
-          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22416&visor=0",
-          "estado_programacion": "Comienza a las 17:30"
         }
       ],
       "logros": [
@@ -774,5 +764,5 @@
       }
     }
   },
-  "actualizado": "2026-09-11T20:41:14.317974+00:00"
+  "actualizado": "2026-09-11T20:51:39.845277+00:00"
 }
