@@ -9,7 +9,7 @@
     "cuadros_procesados": 10,
     "dias_orden_juego_procesados": 2,
     "errores": 0,
-    "filas_partido_leidas": 1470
+    "filas_partido_leidas": 1467
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -24,17 +24,6 @@
     },
     "Hugo Granados Jimenez": {
       "partidos": [
-        {
-          "categoria": "ABSOLUTA 4.5 Double MASCULINO",
-          "fase": "grupos",
-          "rival": "Marc Fernandez / Alan Llopart",
-          "horario_pista": "11/09/2026 16:30 / Pista: 7",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=950&visor=0",
-          "estado_programacion": "Comienza a las 16:30"
-        },
         {
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
           "fase": "grupos",
@@ -133,6 +122,17 @@
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22397&visor=0",
           "estado_programacion": "Partido finalizado"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double MASCULINO",
+          "fase": "grupos",
+          "rival": "Marc Fernandez / Alan Llopart",
+          "horario_pista": "11/09/2026 / Pista: 7",
+          "resultado": "21-15",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=950&visor=0",
+          "estado_programacion": "Partido finalizado"
         }
       ],
       "logros": [
@@ -142,10 +142,10 @@
         }
       ],
       "resumen": {
-        "jugados": 4,
-        "victorias": 3,
+        "jugados": 5,
+        "victorias": 4,
         "derrotas": 1,
-        "proximos": 6
+        "proximos": 5
       }
     },
     "Lucas Corral Falagan": {
@@ -609,6 +609,17 @@
           "estado_programacion": "Comienza a las 15:30"
         },
         {
+          "categoria": "+50 PRO Double FEMENINO",
+          "fase": "semifinal",
+          "rival": "Eva Martinez / Elena Bonilla",
+          "horario_pista": "11/09/2026 17:30 / Pista: 17",
+          "resultado": "",
+          "jugado": false,
+          "ganado": null,
+          "url_grupo": "https://pickleprotour.com/ordenJuego.aspx?id_torneo=2340&f=11-09-2026&visor=0",
+          "estado_programacion": "Comienza a las 17:30"
+        },
+        {
           "categoria": "+50 PRO Double MIXTO",
           "fase": "grupos",
           "rival": "Ricardo Lozano / Benigna Villasuso",
@@ -713,9 +724,9 @@
         "jugados": 5,
         "victorias": 2,
         "derrotas": 3,
-        "proximos": 5
+        "proximos": 6
       }
     }
   },
-  "actualizado": "2026-09-11T17:24:17.419665+00:00"
+  "actualizado": "2026-09-11T17:39:29.996850+00:00"
 }
