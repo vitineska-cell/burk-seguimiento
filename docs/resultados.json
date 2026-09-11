@@ -6,10 +6,10 @@
     "grupos_unicos_detectados": 92,
     "categorias_procesadas": 26,
     "grupos_directos_procesados": 0,
-    "cuadros_procesados": 2,
+    "cuadros_procesados": 3,
     "dias_orden_juego_procesados": 2,
     "errores": 0,
-    "filas_partido_leidas": 1384
+    "filas_partido_leidas": 1394
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -457,13 +457,29 @@
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=947&visor=0",
           "estado_programacion": "Partido finalizado"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Single FEMENINO",
+          "fase": "cuartos",
+          "rival": "María Jesús Fernández",
+          "horario_pista": "11/09/2026 10:45 / Pista: 8",
+          "resultado": "11/09/2026 10:45 - Pista:8",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22403&visor=0",
+          "estado_programacion": "Comienza a las 10:45"
         }
       ],
-      "logros": [],
+      "logros": [
+        {
+          "titulo": "Cuartofinalista",
+          "categoria": "ABSOLUTA 4.5 Single FEMENINO"
+        }
+      ],
       "resumen": {
-        "jugados": 3,
+        "jugados": 4,
         "victorias": 2,
-        "derrotas": 1,
+        "derrotas": 2,
         "proximos": 6
       }
     },
@@ -643,5 +659,5 @@
       }
     }
   },
-  "actualizado": "2026-09-11T09:06:11.910877+00:00"
+  "actualizado": "2026-09-11T09:21:34.834880+00:00"
 }
