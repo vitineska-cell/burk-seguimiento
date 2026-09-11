@@ -394,17 +394,6 @@
         {
           "categoria": "ABSOLUTA 4.5 Double FEMENINO",
           "fase": "grupos",
-          "rival": "Zayda Simon / Leticia Rodriguez",
-          "horario_pista": "11/09/2026 14:30 / Pista: 10",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=953&visor=0",
-          "estado_programacion": "Comienza a las 14:30"
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Double FEMENINO",
-          "fase": "grupos",
           "rival": "Yvonne Rivera / Laura Alvarez",
           "horario_pista": "11/09/2026 15:15 / Pista: 10",
           "resultado": "sin resultado",
@@ -454,6 +443,17 @@
           "resultado": "21-10",
           "jugado": true,
           "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=953&visor=0",
+          "estado_programacion": "Partido finalizado"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double FEMENINO",
+          "fase": "grupos",
+          "rival": "Zayda Simon / Leticia Rodriguez",
+          "horario_pista": "11/09/2026 / Pista: 10",
+          "resultado": "21-15",
+          "jugado": true,
+          "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=953&visor=0",
           "estado_programacion": "Partido finalizado"
         },
@@ -509,10 +509,10 @@
         }
       ],
       "resumen": {
-        "jugados": 5,
+        "jugados": 6,
         "victorias": 3,
-        "derrotas": 2,
-        "proximos": 5
+        "derrotas": 3,
+        "proximos": 4
       }
     },
     "Victor Sebastian Davila": {
@@ -691,5 +691,5 @@
       }
     }
   },
-  "actualizado": "2026-09-11T13:13:38.191054+00:00"
+  "actualizado": "2026-09-11T13:24:02.144766+00:00"
 }
