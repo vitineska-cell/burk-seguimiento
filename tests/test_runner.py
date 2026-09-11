@@ -3,7 +3,11 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from scraper_runner import listado_cuadros_cargado, salida_tiene_cambios
+from scraper_runner import (
+    cargar_urls_en_paralelo,
+    listado_cuadros_cargado,
+    salida_tiene_cambios,
+)
 
 
 def test_placeholder_no_se_considera_cargado():
@@ -51,8 +55,24 @@ def test_no_publica_si_solo_cambian_fecha_o_diagnostico():
     assert salida_tiene_cambios(anterior, nueva) is True
 
 
+def test_carga_paralela_conserva_exitos_y_errores():
+    def cargador(url):
+        if url.endswith("/error"):
+            raise RuntimeError("fallo controlado")
+        return f"contenido:{url}"
+
+    paginas, errores = cargar_urls_en_paralelo(
+        ["https://ejemplo.test/uno", "https://ejemplo.test/error", "https://ejemplo.test/uno"],
+        cargador=cargador,
+        max_workers=2,
+    )
+    assert paginas == {"https://ejemplo.test/uno": "contenido:https://ejemplo.test/uno"}
+    assert set(errores) == {"https://ejemplo.test/error"}
+
+
 if __name__ == "__main__":
     test_placeholder_no_se_considera_cargado()
     test_listado_con_categoria_y_url_se_considera_cargado()
     test_no_publica_si_solo_cambian_fecha_o_diagnostico()
+    test_carga_paralela_conserva_exitos_y_errores()
     print("Todos los tests del ejecutor v6 pasan.")

@@ -5,8 +5,9 @@ from __future__ import annotations
 import json
 import re
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
-from typing import Any
+from typing import Any, Callable
 from urllib.parse import parse_qs, urlparse
 from urllib.request import Request, urlopen
 
@@ -27,6 +28,7 @@ FASES = {
     "grupos": 0, "dieciseisavos": 1, "octavos": 2,
     "cuartos": 3, "semifinal": 4, "final": 5,
 }
+MAX_PARALLEL_REQUESTS = 6
 
 
 def listado_cuadros_cargado(html: str) -> bool:
@@ -62,6 +64,32 @@ def cargar_url(url: str, intentos: int = 3, timeout: int = 35) -> str:
             if intento < intentos:
                 time.sleep(intento)
     raise RuntimeError(f"No se pudo cargar {url}: {ultimo_error}")
+
+
+def cargar_urls_en_paralelo(
+    urls: list[str],
+    cargador: Callable[[str], str] = cargar_url,
+    max_workers: int = MAX_PARALLEL_REQUESTS,
+) -> tuple[dict[str, str], dict[str, Exception]]:
+    """Descarga URL independientes a la vez y conserva cada error por separado."""
+    unicas = list(dict.fromkeys(url for url in urls if url))
+    if not unicas:
+        return {}, {}
+
+    paginas: dict[str, str] = {}
+    errores: dict[str, Exception] = {}
+    trabajadores = max(1, min(max_workers, len(unicas)))
+    with ThreadPoolExecutor(
+        max_workers=trabajadores, thread_name_prefix="burk-http"
+    ) as ejecutor:
+        futuros = {ejecutor.submit(cargador, url): url for url in unicas}
+        for futuro in as_completed(futuros):
+            url = futuros[futuro]
+            try:
+                paginas[url] = futuro.result()
+            except Exception as exc:
+                errores[url] = exc
+    return paginas, errores
 
 
 def detectar_fase(texto: str) -> str:
@@ -262,6 +290,14 @@ def main() -> None:
     total_grupos = len({u for d in destinos for u in d["grupo_urls"]})
     log(f"Detectadas {len(destinos)} categorías y {total_grupos} grupos únicos.")
 
+    urls_principales = [
+        url
+        for destino in destinos
+        for url in ([destino.get("categoria_url")] + destino.get("cuadro_urls", []))
+        if url
+    ]
+    paginas_principales, fallos_principales = cargar_urls_en_paralelo(urls_principales)
+
     for indice, destino in enumerate(destinos, 1):
         if time.monotonic() - inicio > MAX_RUNTIME_SECONDS:
             raise RuntimeError("Tiempo máximo interno superado")
@@ -269,11 +305,14 @@ def main() -> None:
         partidos_categoria: list[dict[str, str]] = []
         url_categoria = destino["categoria_url"]
         if url_categoria:
-            try:
-                partidos_categoria = extraer_todas_las_tablas_partidos(cargar_url(url_categoria))
-            except Exception as exc:
+            if url_categoria in fallos_principales:
                 errores += 1
+                exc = fallos_principales[url_categoria]
                 log(f"ERROR categoría {indice}: {type(exc).__name__}: {exc}")
+            else:
+                partidos_categoria = extraer_todas_las_tablas_partidos(
+                    paginas_principales.get(url_categoria, "")
+                )
         grupos_leidos = contar_grupos_en_partidos(partidos_categoria)
         usar_respaldo = not partidos_categoria or (
             len(destino["grupo_urls"]) > 1 and grupos_leidos < len(destino["grupo_urls"])
@@ -289,47 +328,60 @@ def main() -> None:
                 f"{len(partidos_categoria)} partidos, {encontrados} BÜRK"
             )
         if usar_respaldo:
+            paginas_grupo, fallos_grupo = cargar_urls_en_paralelo(destino["grupo_urls"])
             for url_grupo in destino["grupo_urls"]:
-                try:
-                    partidos_grupo = extraer_todas_las_tablas_partidos(cargar_url(url_grupo))
-                    if not partidos_grupo:
-                        continue
-                    filas_detectadas += len(partidos_grupo)
-                    incorporar_partidos_enriquecidos(
-                        partidos_grupo, jugadores, resultados, firmas,
-                        url_grupo, nombre_categoria)
-                    paginas_grupo_procesadas += 1
-                except Exception as exc:
+                if url_grupo in fallos_grupo:
                     errores += 1
+                    exc = fallos_grupo[url_grupo]
                     log(f"ERROR grupo: {type(exc).__name__}: {exc}")
+                    continue
+                partidos_grupo = extraer_todas_las_tablas_partidos(
+                    paginas_grupo.get(url_grupo, "")
+                )
+                if not partidos_grupo:
+                    continue
+                filas_detectadas += len(partidos_grupo)
+                incorporar_partidos_enriquecidos(
+                    partidos_grupo, jugadores, resultados, firmas,
+                    url_grupo, nombre_categoria)
+                paginas_grupo_procesadas += 1
 
         for url_cuadro in destino.get("cuadro_urls", []):
-            try:
-                partidos_cuadro = extraer_partidos_cuadro(
-                    cargar_url(url_cuadro), nombre_categoria
-                )
-                if not partidos_cuadro:
-                    continue
-                filas_detectadas += len(partidos_cuadro)
-                encontrados = incorporar_partidos_enriquecidos(
-                    partidos_cuadro, jugadores, resultados, firmas,
-                    url_cuadro, nombre_categoria,
-                )
-                cuadros_procesados += 1
-                log(
-                    f"  cuadro {nombre_categoria}: {len(partidos_cuadro)} cruces, "
-                    f"{encontrados} coincidencias BÜRK"
-                )
-            except Exception as exc:
+            if url_cuadro in fallos_principales:
                 errores += 1
+                exc = fallos_principales[url_cuadro]
                 log(f"ERROR cuadro {nombre_categoria}: {type(exc).__name__}: {exc}")
+                continue
+            partidos_cuadro = extraer_partidos_cuadro(
+                paginas_principales.get(url_cuadro, ""), nombre_categoria
+            )
+            if not partidos_cuadro:
+                continue
+            filas_detectadas += len(partidos_cuadro)
+            encontrados = incorporar_partidos_enriquecidos(
+                partidos_cuadro, jugadores, resultados, firmas,
+                url_cuadro, nombre_categoria,
+            )
+            cuadros_procesados += 1
+            log(
+                f"  cuadro {nombre_categoria}: {len(partidos_cuadro)} cruces, "
+                f"{encontrados} coincidencias BÜRK"
+            )
 
     try:
         url_panel_orden = f"{BASE_URL}/torneo_panel.ashx?panel=ordenjuego&id={torneo_id}"
         urls_orden = extraer_urls_orden_juego(cargar_url(url_panel_orden), torneo_id)
+        paginas_orden, fallos_orden = cargar_urls_en_paralelo(urls_orden)
         for url_orden in urls_orden:
+            if url_orden in fallos_orden:
+                errores += 1
+                exc = fallos_orden[url_orden]
+                log(f"ERROR día de orden de juego: {type(exc).__name__}: {exc}")
+                continue
             fecha = parse_qs(urlparse(url_orden).query).get("f", [""])[0]
-            partidos_orden = extraer_partidos_orden_juego(cargar_url(url_orden), fecha)
+            partidos_orden = extraer_partidos_orden_juego(
+                paginas_orden.get(url_orden, ""), fecha
+            )
             filas_detectadas += len(partidos_orden)
             incorporar_partidos_enriquecidos(
                 partidos_orden, jugadores, resultados, firmas,
