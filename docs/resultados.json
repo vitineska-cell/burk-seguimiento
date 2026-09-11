@@ -6,10 +6,10 @@
     "grupos_unicos_detectados": 92,
     "categorias_procesadas": 26,
     "grupos_directos_procesados": 0,
-    "cuadros_procesados": 3,
+    "cuadros_procesados": 4,
     "dias_orden_juego_procesados": 2,
     "errores": 0,
-    "filas_partido_leidas": 1410
+    "filas_partido_leidas": 1422
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -363,12 +363,28 @@
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=959&visor=0",
           "estado_programacion": "Partido finalizado"
+        },
+        {
+          "categoria": "+50 4.5 Single MASCULINO",
+          "fase": "semifinal",
+          "rival": "Fernando Sarrasin",
+          "horario_pista": "11/09/2026 12:00 / Pista: 1",
+          "resultado": "11/09/2026 12:00 - Pista:1",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22415&visor=0",
+          "estado_programacion": "Comienza a las 12:00"
         }
       ],
-      "logros": [],
+      "logros": [
+        {
+          "titulo": "Finalista",
+          "categoria": "+50 4.5 Single MASCULINO"
+        }
+      ],
       "resumen": {
-        "jugados": 2,
-        "victorias": 1,
+        "jugados": 3,
+        "victorias": 2,
         "derrotas": 1,
         "proximos": 5
       }
@@ -675,5 +691,5 @@
       }
     }
   },
-  "actualizado": "2026-09-11T10:13:13.136543+00:00"
+  "actualizado": "2026-09-11T11:05:03.353403+00:00"
 }
