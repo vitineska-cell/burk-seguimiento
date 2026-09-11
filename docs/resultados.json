@@ -9,7 +9,7 @@
     "cuadros_procesados": 15,
     "dias_orden_juego_procesados": 2,
     "errores": 0,
-    "filas_partido_leidas": 1544
+    "filas_partido_leidas": 1552
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -103,6 +103,17 @@
         },
         {
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
+          "fase": "cuartos",
+          "rival": "Daniel Cabrera / Pablo Sánchez",
+          "horario_pista": "11/09/2026 / Pista: 14",
+          "resultado": "15-21",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22399&visor=0",
+          "estado_programacion": "Partido finalizado"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double MASCULINO",
           "fase": "grupos",
           "rival": "Marc Fernandez / Alan Llopart",
           "horario_pista": "11/09/2026 / Pista: 7",
@@ -136,19 +147,19 @@
         },
         {
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
-          "fase": "cuartos",
-          "rival": "Daniel Cabrera / Pablo Sánchez",
-          "horario_pista": "11/09/2026 17:30 / Pista: 14",
-          "resultado": "11/09/2026 17:30 - Pista:14",
+          "fase": "semifinal",
+          "rival": "Raul Antonio García Portillo / Jesus Bernal",
+          "horario_pista": "11/09/2026 19:30 / Pista: 17",
+          "resultado": "11/09/2026 19:30 - Pista:17",
           "jugado": true,
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22399&visor=0",
-          "estado_programacion": "Comienza a las 17:30"
+          "estado_programacion": "Comienza a las 19:30"
         }
       ],
       "logros": [
         {
-          "titulo": "Semifinalista",
+          "titulo": "Finalista",
           "categoria": "ABSOLUTA 4.5 Double MASCULINO"
         },
         {
@@ -157,8 +168,8 @@
         }
       ],
       "resumen": {
-        "jugados": 8,
-        "victorias": 7,
+        "jugados": 9,
+        "victorias": 8,
         "derrotas": 1,
         "proximos": 3
       }
@@ -748,21 +759,32 @@
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=969&visor=0",
           "estado_programacion": "Partido finalizado"
+        },
+        {
+          "categoria": "+50 PRO Double FEMENINO",
+          "fase": "final",
+          "rival": "Pernilla Ohlin / Anna Fäldt",
+          "horario_pista": "12/09/2026 19:00 / Pista: 17",
+          "resultado": "12/09/2026 19:00 - Pista:17",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22416&visor=0",
+          "estado_programacion": "Comienza a las 19:00"
         }
       ],
       "logros": [
         {
-          "titulo": "Semifinalista",
+          "titulo": "Campeón",
           "categoria": "+50 PRO Double FEMENINO"
         }
       ],
       "resumen": {
-        "jugados": 6,
-        "victorias": 2,
+        "jugados": 7,
+        "victorias": 3,
         "derrotas": 4,
         "proximos": 5
       }
     }
   },
-  "actualizado": "2026-09-11T20:51:39.845277+00:00"
+  "actualizado": "2026-09-11T21:12:11.761370+00:00"
 }
