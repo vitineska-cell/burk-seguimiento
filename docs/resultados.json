@@ -9,7 +9,7 @@
     "cuadros_procesados": 10,
     "dias_orden_juego_procesados": 2,
     "errores": 0,
-    "filas_partido_leidas": 1462
+    "filas_partido_leidas": 1045
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -32,8 +32,7 @@
           "resultado": "sin resultado",
           "jugado": false,
           "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=950&visor=0",
-          "estado_programacion": "Comienza a las 16:30"
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=950&visor=0"
         },
         {
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
@@ -43,8 +42,7 @@
           "resultado": "sin resultado",
           "jugado": false,
           "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=950&visor=0",
-          "estado_programacion": "Comienza a las 16:45"
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=950&visor=0"
         },
         {
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
@@ -54,8 +52,7 @@
           "resultado": "sin resultado",
           "jugado": false,
           "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=950&visor=0",
-          "estado_programacion": "Comienza a las 17:00"
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=950&visor=0"
         },
         {
           "categoria": "ABSOLUTA 4.5 Double MIXTO",
@@ -92,47 +89,43 @@
         },
         {
           "categoria": "ABSOLUTA 4.5 Single MASCULINO",
-          "fase": "grupos",
-          "rival": "Miguel Morales",
-          "horario_pista": "11/09/2026 / Pista: 10",
-          "resultado": "21-15",
+          "fase": "cuartos",
+          "rival": "Pablo Sánchez",
+          "horario_pista": "",
+          "resultado": "21-10",
           "jugado": true,
-          "ganado": true,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=944&visor=0",
-          "estado_programacion": "Partido finalizado"
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Single MASCULINO",
-          "fase": "grupos",
-          "rival": "Mario Acuyo",
-          "horario_pista": "11/09/2026 / Pista: 10",
-          "resultado": "21-7",
-          "jugado": true,
-          "ganado": true,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=944&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22397&visor=0"
         },
         {
           "categoria": "ABSOLUTA 4.5 Single MASCULINO",
           "fase": "grupos",
           "rival": "Juan Francisco Marín",
-          "horario_pista": "11/09/2026 / Pista: 10",
-          "resultado": "P2. WO",
+          "horario_pista": "11/09/2026 10:00 / Pista: 10",
+          "resultado": "21 - 0 / WO",
           "jugado": true,
           "ganado": true,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=944&visor=0",
-          "estado_programacion": "P2. WO"
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=944&visor=0"
         },
         {
           "categoria": "ABSOLUTA 4.5 Single MASCULINO",
-          "fase": "cuartos",
-          "rival": "Pablo Sánchez",
-          "horario_pista": "11/09/2026 / Pista: 13",
-          "resultado": "21-10",
+          "fase": "grupos",
+          "rival": "Miguel Morales",
+          "horario_pista": "11/09/2026 9:00 / Pista: 10",
+          "resultado": "21 - 15",
           "jugado": true,
-          "ganado": false,
-          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22397&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=944&visor=0"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Single MASCULINO",
+          "fase": "grupos",
+          "rival": "Mario Acuyo",
+          "horario_pista": "11/09/2026 9:30 / Pista: 10",
+          "resultado": "21 - 7",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=944&visor=0"
         }
       ],
       "logros": [
@@ -158,8 +151,7 @@
           "resultado": "sin resultado",
           "jugado": false,
           "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=950&visor=0",
-          "estado_programacion": "Comienza a las 16:30"
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=950&visor=0"
         },
         {
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
@@ -169,8 +161,7 @@
           "resultado": "sin resultado",
           "jugado": false,
           "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=950&visor=0",
-          "estado_programacion": "Comienza a las 16:45"
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=950&visor=0"
         },
         {
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
@@ -180,8 +171,7 @@
           "resultado": "sin resultado",
           "jugado": false,
           "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=950&visor=0",
-          "estado_programacion": "Comienza a las 17:00"
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=950&visor=0"
         },
         {
           "categoria": "ABSOLUTA 4.5 Double MIXTO",
@@ -229,47 +219,43 @@
         },
         {
           "categoria": "ABSOLUTA 4.5 Single MASCULINO",
-          "fase": "grupos",
-          "rival": "Juan Jaramillo",
-          "horario_pista": "11/09/2026 / Pista: 11",
-          "resultado": "21-18",
+          "fase": "octavos",
+          "rival": "Daniel Cabrera",
+          "horario_pista": "",
+          "resultado": "12-21",
           "jugado": true,
-          "ganado": true,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=944&visor=0",
-          "estado_programacion": "Partido finalizado"
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Single MASCULINO",
-          "fase": "grupos",
-          "rival": "Daniel Almenar",
-          "horario_pista": "11/09/2026 / Pista: 11",
-          "resultado": "19-21",
-          "jugado": true,
-          "ganado": true,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=944&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22397&visor=0"
         },
         {
           "categoria": "ABSOLUTA 4.5 Single MASCULINO",
           "fase": "grupos",
           "rival": "Manuel Molins",
-          "horario_pista": "11/09/2026 / Pista: 11",
-          "resultado": "P2. WO Justificado",
+          "horario_pista": "11/09/2026 10:15 / Pista: 11",
+          "resultado": "21 - 0 / WO Justificado",
           "jugado": true,
           "ganado": true,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=944&visor=0",
-          "estado_programacion": "P2. WO Justificado"
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=944&visor=0"
         },
         {
           "categoria": "ABSOLUTA 4.5 Single MASCULINO",
-          "fase": "octavos",
-          "rival": "Daniel Cabrera",
-          "horario_pista": "11/09/2026 / Pista: 13",
-          "resultado": "12-21",
+          "fase": "grupos",
+          "rival": "Juan Jaramillo",
+          "horario_pista": "11/09/2026 9:15 / Pista: 11",
+          "resultado": "21 - 18",
           "jugado": true,
-          "ganado": false,
-          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22397&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=944&visor=0"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Single MASCULINO",
+          "fase": "grupos",
+          "rival": "Daniel Almenar",
+          "horario_pista": "11/09/2026 9:30 / Pista: 11",
+          "resultado": "19 - 21",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=944&visor=0"
         }
       ],
       "logros": [
@@ -291,89 +277,81 @@
           "categoria": "+50 4.5 Single MASCULINO",
           "fase": "semifinal",
           "rival": "Fernando Sarrasin",
-          "horario_pista": "11/09/2026 / Pista: 1",
+          "horario_pista": "",
           "resultado": "8-21 / 13-21",
           "jugado": true,
           "ganado": false,
-          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22415&visor=0",
-          "estado_programacion": "Partido finalizado"
-        },
-        {
-          "categoria": "+50 4.5 Double MASCULINO",
-          "fase": "grupos",
-          "rival": "Tony Wilkinson / Andrew Benson",
-          "horario_pista": "11/09/2026 / Pista: 14",
-          "resultado": "19-21",
-          "jugado": true,
-          "ganado": false,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=965&visor=0",
-          "estado_programacion": "Partido finalizado"
-        },
-        {
-          "categoria": "+50 4.5 Double MASCULINO",
-          "fase": "grupos",
-          "rival": "Ramón Peña / Diego Cimadevilla",
-          "horario_pista": "11/09/2026 / Pista: 14",
-          "resultado": "21-18",
-          "jugado": true,
-          "ganado": true,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=965&visor=0",
-          "estado_programacion": "Partido finalizado"
-        },
-        {
-          "categoria": "+50 4.5 Double MASCULINO",
-          "fase": "grupos",
-          "rival": "Alfonso Diaz / Jose Maria Sardiña",
-          "horario_pista": "11/09/2026 / Pista: 14",
-          "resultado": "18-21",
-          "jugado": true,
-          "ganado": false,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=965&visor=0",
-          "estado_programacion": "Partido finalizado"
-        },
-        {
-          "categoria": "+50 4.5 Double MASCULINO",
-          "fase": "grupos",
-          "rival": "Carlo Sacchiero / Luis González",
-          "horario_pista": "11/09/2026 / Pista: 14",
-          "resultado": "22-20",
-          "jugado": true,
-          "ganado": true,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=965&visor=0",
-          "estado_programacion": "Partido finalizado"
-        },
-        {
-          "categoria": "+50 4.5 Double MASCULINO",
-          "fase": "grupos",
-          "rival": "Michael Cohen / Ralph Gorgoglione",
-          "horario_pista": "11/09/2026 / Pista: 14",
-          "resultado": "13-21",
-          "jugado": true,
-          "ganado": false,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=965&visor=0",
-          "estado_programacion": "Partido finalizado"
-        },
-        {
-          "categoria": "+50 4.5 Single MASCULINO",
-          "fase": "grupos",
-          "rival": "Jose Maria Corral",
-          "horario_pista": "11/09/2026 / Pista: 4",
-          "resultado": "22-21",
-          "jugado": true,
-          "ganado": true,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=959&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22415&visor=0"
         },
         {
           "categoria": "+50 4.5 Single MASCULINO",
           "fase": "grupos",
           "rival": "Manuel Sanz",
-          "horario_pista": "11/09/2026 / Pista: 4",
-          "resultado": "21-16",
+          "horario_pista": "11/09/2026 11:00 / Pista: 4",
+          "resultado": "21 - 16",
           "jugado": true,
           "ganado": false,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=959&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=959&visor=0"
+        },
+        {
+          "categoria": "+50 4.5 Single MASCULINO",
+          "fase": "grupos",
+          "rival": "Jose Maria Corral",
+          "horario_pista": "11/09/2026 11:30 / Pista: 2",
+          "resultado": "22 - 21",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=959&visor=0"
+        },
+        {
+          "categoria": "+50 4.5 Double MASCULINO",
+          "fase": "grupos",
+          "rival": "Tony Wilkinson / Andrew Benson",
+          "horario_pista": "11/09/2026 14:00 / Pista: 14",
+          "resultado": "19 - 21",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=965&visor=0"
+        },
+        {
+          "categoria": "+50 4.5 Double MASCULINO",
+          "fase": "grupos",
+          "rival": "Ramón Peña / Diego Cimadevilla",
+          "horario_pista": "11/09/2026 14:15 / Pista: 14",
+          "resultado": "21 - 18",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=965&visor=0"
+        },
+        {
+          "categoria": "+50 4.5 Double MASCULINO",
+          "fase": "grupos",
+          "rival": "Alfonso Diaz / Jose Maria Sardiña",
+          "horario_pista": "11/09/2026 14:30 / Pista: 14",
+          "resultado": "18 - 21",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=965&visor=0"
+        },
+        {
+          "categoria": "+50 4.5 Double MASCULINO",
+          "fase": "grupos",
+          "rival": "Carlo Sacchiero / Luis González",
+          "horario_pista": "11/09/2026 14:45 / Pista: 14",
+          "resultado": "22 - 20",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=965&visor=0"
+        },
+        {
+          "categoria": "+50 4.5 Double MASCULINO",
+          "fase": "grupos",
+          "rival": "Michael Cohen / Ralph Gorgoglione",
+          "horario_pista": "11/09/2026 15:00 / Pista: 14",
+          "resultado": "13 - 21",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=965&visor=0"
         }
       ],
       "logros": [
@@ -425,92 +403,94 @@
           "estado_programacion": "Comienza a las 16:15"
         },
         {
-          "categoria": "ABSOLUTA 4.5 Double FEMENINO",
-          "fase": "grupos",
-          "rival": "Cristina Gómez / Beatriz Urbano",
-          "horario_pista": "11/09/2026 / Pista: 10",
-          "resultado": "21-10",
-          "jugado": true,
-          "ganado": true,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=953&visor=0",
-          "estado_programacion": "Partido finalizado"
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Double FEMENINO",
-          "fase": "grupos",
-          "rival": "Zayda Simon / Leticia Rodriguez",
-          "horario_pista": "11/09/2026 / Pista: 10",
-          "resultado": "21-15",
-          "jugado": true,
-          "ganado": false,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=953&visor=0",
-          "estado_programacion": "Partido finalizado"
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Double FEMENINO",
-          "fase": "grupos",
-          "rival": "Yvonne Rivera / Laura Alvarez",
-          "horario_pista": "11/09/2026 / Pista: 10",
-          "resultado": "21-18",
-          "jugado": true,
-          "ganado": true,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=953&visor=0",
-          "estado_programacion": "Partido finalizado"
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Single FEMENINO",
-          "fase": "grupos",
-          "rival": "Laura Alvarez",
-          "horario_pista": "11/09/2026 / Pista: 7",
-          "resultado": "21-18",
-          "jugado": true,
-          "ganado": true,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=947&visor=0",
-          "estado_programacion": "Partido finalizado"
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Single FEMENINO",
-          "fase": "grupos",
-          "rival": "Virginia Lainez",
-          "horario_pista": "11/09/2026 / Pista: 7",
-          "resultado": "14-21",
-          "jugado": true,
-          "ganado": true,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=947&visor=0",
-          "estado_programacion": "Partido finalizado"
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Single FEMENINO",
-          "fase": "grupos",
-          "rival": "Laura Bandera",
-          "horario_pista": "11/09/2026 / Pista: 7",
-          "resultado": "7-21",
-          "jugado": true,
-          "ganado": false,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=947&visor=0",
-          "estado_programacion": "Partido finalizado"
-        },
-        {
           "categoria": "ABSOLUTA 4.5 Single FEMENINO",
           "fase": "cuartos",
           "rival": "María Jesús Fernández",
-          "horario_pista": "11/09/2026 / Pista: 8",
+          "horario_pista": "",
           "resultado": "8-21",
           "jugado": true,
           "ganado": false,
-          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22403&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22403&visor=0"
         },
         {
           "categoria": "ABSOLUTA 4.5 Double FEMENINO",
           "fase": "cuartos",
           "rival": "María De Miguel / Carmen Rosa",
-          "horario_pista": "11/09/2026 15:45 / Pista: 9",
-          "resultado": "11/09/2026 15:45 - Pista:9",
+          "horario_pista": "",
+          "resultado": "21-22",
           "jugado": true,
           "ganado": true,
-          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22402&visor=0",
-          "estado_programacion": "Comienza a las 15:45"
+          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22402&visor=0"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double FEMENINO",
+          "fase": "semifinal",
+          "rival": "Soledad Fernandez / María Jesús Fernández",
+          "horario_pista": "",
+          "resultado": "11/09/2026 16:00 - Pista:13",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22402&visor=0"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Single FEMENINO",
+          "fase": "grupos",
+          "rival": "Laura Bandera",
+          "horario_pista": "11/09/2026 10:15 / Pista: 7",
+          "resultado": "7 - 21",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=947&visor=0"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double FEMENINO",
+          "fase": "grupos",
+          "rival": "Cristina Gómez / Beatriz Urbano",
+          "horario_pista": "11/09/2026 14:15 / Pista: 10",
+          "resultado": "21 - 10",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=953&visor=0"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double FEMENINO",
+          "fase": "grupos",
+          "rival": "Zayda Simon / Leticia Rodriguez",
+          "horario_pista": "11/09/2026 14:30 / Pista: 10",
+          "resultado": "21 - 15",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=953&visor=0"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double FEMENINO",
+          "fase": "grupos",
+          "rival": "Yvonne Rivera / Laura Alvarez",
+          "horario_pista": "11/09/2026 15:15 / Pista: 10",
+          "resultado": "21 - 18",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=953&visor=0"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Single FEMENINO",
+          "fase": "grupos",
+          "rival": "Laura Alvarez",
+          "horario_pista": "11/09/2026 9:15 / Pista: 7",
+          "resultado": "21 - 18",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=947&visor=0"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Single FEMENINO",
+          "fase": "grupos",
+          "rival": "Virginia Lainez",
+          "horario_pista": "11/09/2026 9:30 / Pista: 7",
+          "resultado": "14 - 21",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=947&visor=0"
         }
       ],
       "logros": [
@@ -524,9 +504,9 @@
         }
       ],
       "resumen": {
-        "jugados": 8,
+        "jugados": 9,
         "victorias": 5,
-        "derrotas": 3,
+        "derrotas": 4,
         "proximos": 3
       }
     },
@@ -540,8 +520,7 @@
           "resultado": "sin resultado",
           "jugado": false,
           "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=950&visor=0",
-          "estado_programacion": "Comienza a las 16:30"
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=950&visor=0"
         },
         {
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
@@ -551,8 +530,7 @@
           "resultado": "sin resultado",
           "jugado": false,
           "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=950&visor=0",
-          "estado_programacion": "Comienza a las 16:45"
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=950&visor=0"
         },
         {
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
@@ -562,8 +540,7 @@
           "resultado": "sin resultado",
           "jugado": false,
           "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=950&visor=0",
-          "estado_programacion": "Comienza a las 17:00"
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=950&visor=0"
         }
       ],
       "logros": [],
@@ -594,8 +571,7 @@
           "resultado": "sin resultado",
           "jugado": false,
           "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=969&visor=0",
-          "estado_programacion": "Comienza a las 15:30"
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=969&visor=0"
         },
         {
           "categoria": "+50 PRO Double MIXTO",
@@ -645,56 +621,51 @@
           "categoria": "+50 PRO Double FEMENINO",
           "fase": "grupos",
           "rival": "Pernilla Ohlin / Anna Fäldt",
-          "horario_pista": "11/09/2026 / Pista: 5",
-          "resultado": "17-21",
+          "horario_pista": "11/09/2026 14:15 / Pista: 5",
+          "resultado": "17 - 21",
           "jugado": true,
           "ganado": false,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=969&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=969&visor=0"
         },
         {
           "categoria": "+50 PRO Double FEMENINO",
           "fase": "grupos",
           "rival": "Anna Castells / Cristina Almirall",
-          "horario_pista": "11/09/2026 / Pista: 5",
-          "resultado": "21-12",
+          "horario_pista": "11/09/2026 14:30 / Pista: 5",
+          "resultado": "21 - 12",
           "jugado": true,
           "ganado": true,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=969&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=969&visor=0"
         },
         {
           "categoria": "+50 PRO Double FEMENINO",
           "fase": "grupos",
           "rival": "Eva Martinez / Elena Bonilla",
-          "horario_pista": "11/09/2026 / Pista: 5",
-          "resultado": "21-22",
+          "horario_pista": "11/09/2026 14:45 / Pista: 5",
+          "resultado": "21 - 22",
           "jugado": true,
           "ganado": false,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=969&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=969&visor=0"
         },
         {
           "categoria": "+50 PRO Double FEMENINO",
           "fase": "grupos",
           "rival": "Fiona Edwards / Federica Mundula",
-          "horario_pista": "11/09/2026 / Pista: 5",
-          "resultado": "13-21",
+          "horario_pista": "11/09/2026 15:00 / Pista: 5",
+          "resultado": "13 - 21",
           "jugado": true,
           "ganado": false,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=969&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=969&visor=0"
         },
         {
           "categoria": "+50 PRO Double FEMENINO",
           "fase": "grupos",
           "rival": "Gabriela Costantino / Paola Patrucco",
-          "horario_pista": "11/09/2026 / Pista: 5",
-          "resultado": "21-17",
+          "horario_pista": "11/09/2026 15:15 / Pista: 5",
+          "resultado": "21 - 17",
           "jugado": true,
           "ganado": true,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=969&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=969&visor=0"
         }
       ],
       "logros": [],
@@ -706,5 +677,5 @@
       }
     }
   },
-  "actualizado": "2026-09-11T14:36:57.688005+00:00"
+  "actualizado": "2026-09-11T15:06:26.557519+00:00"
 }
