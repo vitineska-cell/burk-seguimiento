@@ -6,10 +6,10 @@
     "grupos_unicos_detectados": 92,
     "categorias_procesadas": 26,
     "grupos_directos_procesados": 0,
-    "cuadros_procesados": 16,
+    "cuadros_procesados": 19,
     "dias_orden_juego_procesados": 2,
     "errores": 0,
-    "filas_partido_leidas": 1580
+    "filas_partido_leidas": 1610
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -772,6 +772,17 @@
           "estado_programacion": "Partido finalizado"
         },
         {
+          "categoria": "+50 PRO Double MIXTO",
+          "fase": "cuartos",
+          "rival": "Silvio Martin Suarez / Elena Bonilla",
+          "horario_pista": "12/09/2026 11:30 / Pista: 16",
+          "resultado": "12/09/2026 11:30 - Pista:16",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22421&visor=0",
+          "estado_programacion": "Comienza a las 11:30"
+        },
+        {
           "categoria": "+50 PRO Double FEMENINO",
           "fase": "final",
           "rival": "Pernilla Ohlin / Anna Fäldt",
@@ -787,15 +798,19 @@
         {
           "titulo": "Campeón",
           "categoria": "+50 PRO Double FEMENINO"
+        },
+        {
+          "titulo": "Cuartofinalista",
+          "categoria": "+50 PRO Double MIXTO"
         }
       ],
       "resumen": {
-        "jugados": 12,
+        "jugados": 13,
         "victorias": 6,
-        "derrotas": 6,
+        "derrotas": 7,
         "proximos": 0
       }
     }
   },
-  "actualizado": "2026-09-12T09:43:49.863118+00:00"
+  "actualizado": "2026-09-12T10:24:56.732772+00:00"
 }
