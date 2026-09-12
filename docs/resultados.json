@@ -429,17 +429,6 @@
     "Brenda Fariña Solís": {
       "partidos": [
         {
-          "categoria": "ABSOLUTA 4.5 Double MIXTO",
-          "fase": "grupos",
-          "rival": "Beatriz Urbano / Francisco Javier Llamas",
-          "horario_pista": "12/09/2026 16:15 / Pista: 8",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=956&visor=0",
-          "estado_programacion": "Comienza a las 16:15"
-        },
-        {
           "categoria": "ABSOLUTA 4.5 Double FEMENINO",
           "fase": "grupos",
           "rival": "Cristina Gómez / Beatriz Urbano",
@@ -559,6 +548,17 @@
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=956&visor=0",
           "estado_programacion": "Partido finalizado"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double MIXTO",
+          "fase": "grupos",
+          "rival": "Beatriz Urbano / Francisco Javier Llamas",
+          "horario_pista": "12/09/2026 / Pista: 8",
+          "resultado": "22-21",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=956&visor=0",
+          "estado_programacion": "Partido finalizado"
         }
       ],
       "logros": [
@@ -572,10 +572,10 @@
         }
       ],
       "resumen": {
-        "jugados": 11,
-        "victorias": 6,
+        "jugados": 12,
+        "victorias": 7,
         "derrotas": 5,
-        "proximos": 1
+        "proximos": 0
       }
     },
     "Victor Sebastian Davila": {
@@ -801,5 +801,5 @@
       }
     }
   },
-  "actualizado": "2026-09-12T14:52:27.648380+00:00"
+  "actualizado": "2026-09-12T15:08:00.186141+00:00"
 }
