@@ -199,17 +199,6 @@
           "estado_programacion": "Comienza a las 15:45"
         },
         {
-          "categoria": "ABSOLUTA 4.5 Double MIXTO",
-          "fase": "grupos",
-          "rival": "Daniel Almenar / María De Miguel",
-          "horario_pista": "12/09/2026 16:15 / Pista: 15",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=956&visor=0",
-          "estado_programacion": "Comienza a las 16:15"
-        },
-        {
           "categoria": "ABSOLUTA 4.5 Single MASCULINO",
           "fase": "grupos",
           "rival": "Juan Jaramillo",
@@ -307,6 +296,17 @@
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=956&visor=0",
           "estado_programacion": "Partido finalizado"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double MIXTO",
+          "fase": "grupos",
+          "rival": "Daniel Almenar / María De Miguel",
+          "horario_pista": "12/09/2026 / Pista: 15",
+          "resultado": "21-11",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=956&visor=0",
+          "estado_programacion": "Partido finalizado"
         }
       ],
       "logros": [
@@ -316,10 +316,10 @@
         }
       ],
       "resumen": {
-        "jugados": 9,
+        "jugados": 10,
         "victorias": 3,
-        "derrotas": 6,
-        "proximos": 2
+        "derrotas": 7,
+        "proximos": 1
       }
     },
     "Jose Manuel Granados Sánchez": {
@@ -801,5 +801,5 @@
       }
     }
   },
-  "actualizado": "2026-09-12T14:16:07.067453+00:00"
+  "actualizado": "2026-09-12T14:31:46.327256+00:00"
 }
