@@ -6,10 +6,10 @@
     "grupos_unicos_detectados": 92,
     "categorias_procesadas": 26,
     "grupos_directos_procesados": 0,
-    "cuadros_procesados": 19,
+    "cuadros_procesados": 20,
     "dias_orden_juego_procesados": 2,
     "errores": 0,
-    "filas_partido_leidas": 1620
+    "filas_partido_leidas": 1644
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -24,17 +24,6 @@
     },
     "Hugo Granados Jimenez": {
       "partidos": [
-        {
-          "categoria": "ABSOLUTA 4.5 Double MIXTO",
-          "fase": "grupos",
-          "rival": "Óliver Nuñez / Marta Raga",
-          "horario_pista": "12/09/2026 15:00 / Pista: 12",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=956&visor=0",
-          "estado_programacion": "Comienza a las 15:00"
-        },
         {
           "categoria": "ABSOLUTA 4.5 Double MIXTO",
           "fase": "grupos",
@@ -157,6 +146,17 @@
           "estado_programacion": "Partido finalizado"
         },
         {
+          "categoria": "ABSOLUTA 4.5 Double MIXTO",
+          "fase": "grupos",
+          "rival": "Óliver Nuñez / Marta Raga",
+          "horario_pista": "12/09/2026 / Pista: 12",
+          "resultado": "21-5",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=956&visor=0",
+          "estado_programacion": "Partido finalizado"
+        },
+        {
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
           "fase": "final",
           "rival": "Manuel Trabada / Henry Alberto Infante",
@@ -179,10 +179,10 @@
         }
       ],
       "resumen": {
-        "jugados": 10,
-        "victorias": 9,
+        "jugados": 11,
+        "victorias": 10,
         "derrotas": 1,
-        "proximos": 3
+        "proximos": 2
       }
     },
     "Lucas Corral Falagan": {
@@ -801,5 +801,5 @@
       }
     }
   },
-  "actualizado": "2026-09-12T10:55:50.804820+00:00"
+  "actualizado": "2026-09-12T13:14:20.493634+00:00"
 }
