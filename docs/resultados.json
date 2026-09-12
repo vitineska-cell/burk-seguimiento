@@ -431,17 +431,6 @@
         {
           "categoria": "ABSOLUTA 4.5 Double MIXTO",
           "fase": "grupos",
-          "rival": "Sergio Fernández / Yasmina Rincón",
-          "horario_pista": "12/09/2026 15:30 / Pista: 8",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=956&visor=0",
-          "estado_programacion": "Comienza a las 15:30"
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Double MIXTO",
-          "fase": "grupos",
           "rival": "Beatriz Urbano / Francisco Javier Llamas",
           "horario_pista": "12/09/2026 16:15 / Pista: 8",
           "resultado": "sin resultado",
@@ -559,6 +548,17 @@
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=956&visor=0",
           "estado_programacion": "Partido finalizado"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double MIXTO",
+          "fase": "grupos",
+          "rival": "Sergio Fernández / Yasmina Rincón",
+          "horario_pista": "12/09/2026 / Pista: 8",
+          "resultado": "21-13",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=956&visor=0",
+          "estado_programacion": "Partido finalizado"
         }
       ],
       "logros": [
@@ -572,10 +572,10 @@
         }
       ],
       "resumen": {
-        "jugados": 10,
+        "jugados": 11,
         "victorias": 6,
-        "derrotas": 4,
-        "proximos": 2
+        "derrotas": 5,
+        "proximos": 1
       }
     },
     "Victor Sebastian Davila": {
@@ -801,5 +801,5 @@
       }
     }
   },
-  "actualizado": "2026-09-12T14:01:00.933013+00:00"
+  "actualizado": "2026-09-12T14:05:49.169272+00:00"
 }
