@@ -653,17 +653,6 @@
         {
           "categoria": "+50 PRO Double MIXTO",
           "fase": "grupos",
-          "rival": "Monica Ramirez / Juber Aviles",
-          "horario_pista": "12/09/2026 10:00 / Pista: 12",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=972&visor=0",
-          "estado_programacion": "Comienza a las 10:00"
-        },
-        {
-          "categoria": "+50 PRO Double MIXTO",
-          "fase": "grupos",
           "rival": "Manuel Sanz / Mercedes Cascales",
           "horario_pista": "12/09/2026 10:30 / Pista: 12",
           "resultado": "sin resultado",
@@ -772,6 +761,17 @@
           "estado_programacion": "Partido finalizado"
         },
         {
+          "categoria": "+50 PRO Double MIXTO",
+          "fase": "grupos",
+          "rival": "Monica Ramirez / Juber Aviles",
+          "horario_pista": "12/09/2026 / Pista: 12",
+          "resultado": "21-15",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=972&visor=0",
+          "estado_programacion": "Partido finalizado"
+        },
+        {
           "categoria": "+50 PRO Double FEMENINO",
           "fase": "final",
           "rival": "Pernilla Ohlin / Anna Fäldt",
@@ -790,12 +790,12 @@
         }
       ],
       "resumen": {
-        "jugados": 10,
+        "jugados": 11,
         "victorias": 5,
-        "derrotas": 5,
-        "proximos": 2
+        "derrotas": 6,
+        "proximos": 1
       }
     }
   },
-  "actualizado": "2026-09-12T08:47:12.246792+00:00"
+  "actualizado": "2026-09-12T08:57:26.106184+00:00"
 }
