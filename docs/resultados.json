@@ -9,7 +9,7 @@
     "cuadros_procesados": 20,
     "dias_orden_juego_procesados": 2,
     "errores": 0,
-    "filas_partido_leidas": 1644
+    "filas_partido_leidas": 1645
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -190,17 +190,6 @@
         {
           "categoria": "ABSOLUTA 4.5 Double MIXTO",
           "fase": "grupos",
-          "rival": "Jesus Bernal / Vanessa Varo",
-          "horario_pista": "12/09/2026 15:00 / Pista: 14",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=956&visor=0",
-          "estado_programacion": "Comienza a las 15:00"
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Double MIXTO",
-          "fase": "grupos",
           "rival": "Cristina Ruiz / Manuel Garcia",
           "horario_pista": "12/09/2026 15:30 / Pista: 13",
           "resultado": "sin resultado",
@@ -307,6 +296,17 @@
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=950&visor=0",
           "estado_programacion": "Partido finalizado"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double MIXTO",
+          "fase": "grupos",
+          "rival": "Jesus Bernal / Vanessa Varo",
+          "horario_pista": "12/09/2026 / Pista: 14",
+          "resultado": "14-21",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=956&visor=0",
+          "estado_programacion": "Partido finalizado"
         }
       ],
       "logros": [
@@ -316,10 +316,10 @@
         }
       ],
       "resumen": {
-        "jugados": 7,
+        "jugados": 8,
         "victorias": 3,
-        "derrotas": 4,
-        "proximos": 4
+        "derrotas": 5,
+        "proximos": 3
       }
     },
     "Jose Manuel Granados Sánchez": {
@@ -801,5 +801,5 @@
       }
     }
   },
-  "actualizado": "2026-09-12T13:14:20.493634+00:00"
+  "actualizado": "2026-09-12T13:24:41.142069+00:00"
 }
