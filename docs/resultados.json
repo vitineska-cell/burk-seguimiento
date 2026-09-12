@@ -6,10 +6,10 @@
     "grupos_unicos_detectados": 92,
     "categorias_procesadas": 26,
     "grupos_directos_procesados": 0,
-    "cuadros_procesados": 23,
+    "cuadros_procesados": 24,
     "dias_orden_juego_procesados": 3,
     "errores": 0,
-    "filas_partido_leidas": 1677
+    "filas_partido_leidas": 1680
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -157,6 +157,17 @@
           "estado_programacion": "Partido finalizado"
         },
         {
+          "categoria": "ABSOLUTA 4.5 Double MIXTO",
+          "fase": "octavos",
+          "rival": "Sara Silvestre / Francisco Ramos",
+          "horario_pista": "12/09/2026 / Pista: 14",
+          "resultado": "16-21",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22395&visor=0",
+          "estado_programacion": "Partido finalizado"
+        },
+        {
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
           "fase": "final",
           "rival": "Manuel Trabada / Henry Alberto Infante",
@@ -166,17 +177,6 @@
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22399&visor=0",
           "estado_programacion": "Partido finalizado"
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Double MIXTO",
-          "fase": "octavos",
-          "rival": "Sara Silvestre / Francisco Ramos",
-          "horario_pista": "12/09/2026 17:15 / Pista: 14",
-          "resultado": "12/09/2026 17:15 - Pista:14",
-          "jugado": true,
-          "ganado": true,
-          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22395&visor=0",
-          "estado_programacion": "Comienza a las 17:15"
         }
       ],
       "logros": [
@@ -185,7 +185,7 @@
           "categoria": "ABSOLUTA 4.5 Double MASCULINO"
         },
         {
-          "titulo": "Cuartofinalista",
+          "titulo": "Octavofinalista",
           "categoria": "ABSOLUTA 4.5 Double MIXTO"
         },
         {
@@ -195,8 +195,8 @@
       ],
       "resumen": {
         "jugados": 14,
-        "victorias": 13,
-        "derrotas": 1,
+        "victorias": 12,
+        "derrotas": 2,
         "proximos": 0
       }
     },
@@ -831,5 +831,5 @@
       }
     }
   },
-  "actualizado": "2026-09-12T16:09:37.061780+00:00"
+  "actualizado": "2026-09-12T16:25:13.123298+00:00"
 }
