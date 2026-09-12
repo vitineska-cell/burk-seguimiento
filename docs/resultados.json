@@ -9,7 +9,7 @@
     "cuadros_procesados": 19,
     "dias_orden_juego_procesados": 2,
     "errores": 0,
-    "filas_partido_leidas": 1614
+    "filas_partido_leidas": 1620
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -775,12 +775,12 @@
           "categoria": "+50 PRO Double MIXTO",
           "fase": "cuartos",
           "rival": "Silvio Martin Suarez / Elena Bonilla",
-          "horario_pista": "12/09/2026 11:30 / Pista: 16",
-          "resultado": "12/09/2026 11:30 - Pista:16",
+          "horario_pista": "12/09/2026 / Pista: 16",
+          "resultado": "13-21",
           "jugado": true,
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22421&visor=0",
-          "estado_programacion": "Comienza a las 11:30"
+          "estado_programacion": "Partido finalizado"
         }
       ],
       "logros": [
@@ -801,5 +801,5 @@
       }
     }
   },
-  "actualizado": "2026-09-12T10:45:31.938446+00:00"
+  "actualizado": "2026-09-12T10:55:50.804820+00:00"
 }
