@@ -6,10 +6,10 @@
     "grupos_unicos_detectados": 92,
     "categorias_procesadas": 26,
     "grupos_directos_procesados": 0,
-    "cuadros_procesados": 15,
+    "cuadros_procesados": 16,
     "dias_orden_juego_procesados": 2,
     "errores": 0,
-    "filas_partido_leidas": 1574
+    "filas_partido_leidas": 1578
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -160,12 +160,12 @@
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
           "fase": "final",
           "rival": "Manuel Trabada / Henry Alberto Infante",
-          "horario_pista": "12/09/2026 10:00 / Pista: 17",
-          "resultado": "12/09/2026 10:00 - Pista:17",
+          "horario_pista": "12/09/2026 / Pista: 17",
+          "resultado": "22-21 / 21-13",
           "jugado": true,
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22399&visor=0",
-          "estado_programacion": "Comienza a las 10:00"
+          "estado_programacion": "Partido finalizado"
         }
       ],
       "logros": [
@@ -797,5 +797,5 @@
       }
     }
   },
-  "actualizado": "2026-09-12T08:36:52.119563+00:00"
+  "actualizado": "2026-09-12T08:47:12.246792+00:00"
 }
