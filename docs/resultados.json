@@ -190,17 +190,6 @@
         {
           "categoria": "ABSOLUTA 4.5 Double MIXTO",
           "fase": "grupos",
-          "rival": "Cristina Ruiz / Manuel Garcia",
-          "horario_pista": "12/09/2026 15:30 / Pista: 13",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=956&visor=0",
-          "estado_programacion": "Comienza a las 15:30"
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Double MIXTO",
-          "fase": "grupos",
           "rival": "Marangelli Orellana / Jose Maria Balmori",
           "horario_pista": "12/09/2026 15:45 / Pista: 15",
           "resultado": "sin resultado",
@@ -300,6 +289,17 @@
         {
           "categoria": "ABSOLUTA 4.5 Double MIXTO",
           "fase": "grupos",
+          "rival": "Cristina Ruiz / Manuel Garcia",
+          "horario_pista": "12/09/2026 / Pista: 13",
+          "resultado": "21-8",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=956&visor=0",
+          "estado_programacion": "Partido finalizado"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double MIXTO",
+          "fase": "grupos",
           "rival": "Jesus Bernal / Vanessa Varo",
           "horario_pista": "12/09/2026 / Pista: 14",
           "resultado": "14-21",
@@ -316,10 +316,10 @@
         }
       ],
       "resumen": {
-        "jugados": 8,
+        "jugados": 9,
         "victorias": 3,
-        "derrotas": 5,
-        "proximos": 3
+        "derrotas": 6,
+        "proximos": 2
       }
     },
     "Jose Manuel Granados Sánchez": {
@@ -801,5 +801,5 @@
       }
     }
   },
-  "actualizado": "2026-09-12T14:05:49.169272+00:00"
+  "actualizado": "2026-09-12T14:16:07.067453+00:00"
 }
