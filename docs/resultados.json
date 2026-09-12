@@ -9,7 +9,7 @@
     "cuadros_procesados": 19,
     "dias_orden_juego_procesados": 2,
     "errores": 0,
-    "filas_partido_leidas": 1610
+    "filas_partido_leidas": 1614
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -781,22 +781,11 @@
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22421&visor=0",
           "estado_programacion": "Comienza a las 11:30"
-        },
-        {
-          "categoria": "+50 PRO Double FEMENINO",
-          "fase": "final",
-          "rival": "Pernilla Ohlin / Anna Fäldt",
-          "horario_pista": "12/09/2026 19:00 / Pista: 17",
-          "resultado": "12/09/2026 19:00 - Pista:17",
-          "jugado": true,
-          "ganado": true,
-          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22416&visor=0",
-          "estado_programacion": "Comienza a las 19:00"
         }
       ],
       "logros": [
         {
-          "titulo": "Campeón",
+          "titulo": "Semifinalista",
           "categoria": "+50 PRO Double FEMENINO"
         },
         {
@@ -805,12 +794,12 @@
         }
       ],
       "resumen": {
-        "jugados": 13,
-        "victorias": 6,
+        "jugados": 12,
+        "victorias": 5,
         "derrotas": 7,
         "proximos": 0
       }
     }
   },
-  "actualizado": "2026-09-12T10:24:56.732772+00:00"
+  "actualizado": "2026-09-12T10:45:31.938446+00:00"
 }
