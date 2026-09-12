@@ -9,7 +9,7 @@
     "cuadros_procesados": 15,
     "dias_orden_juego_procesados": 2,
     "errores": 0,
-    "filas_partido_leidas": 1570
+    "filas_partido_leidas": 1574
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -653,17 +653,6 @@
         {
           "categoria": "+50 PRO Double MIXTO",
           "fase": "grupos",
-          "rival": "Federico Bitan / Anna Castells",
-          "horario_pista": "12/09/2026 09:45 / Pista: 11",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=972&visor=0",
-          "estado_programacion": "Comienza a las 09:45"
-        },
-        {
-          "categoria": "+50 PRO Double MIXTO",
-          "fase": "grupos",
           "rival": "Monica Ramirez / Juber Aviles",
           "horario_pista": "12/09/2026 10:00 / Pista: 12",
           "resultado": "sin resultado",
@@ -772,6 +761,17 @@
           "estado_programacion": "Partido finalizado"
         },
         {
+          "categoria": "+50 PRO Double MIXTO",
+          "fase": "grupos",
+          "rival": "Federico Bitan / Anna Castells",
+          "horario_pista": "12/09/2026 / Pista: 11",
+          "resultado": "15-21",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=972&visor=0",
+          "estado_programacion": "Partido finalizado"
+        },
+        {
           "categoria": "+50 PRO Double FEMENINO",
           "fase": "final",
           "rival": "Pernilla Ohlin / Anna Fäldt",
@@ -790,12 +790,12 @@
         }
       ],
       "resumen": {
-        "jugados": 9,
+        "jugados": 10,
         "victorias": 5,
-        "derrotas": 4,
-        "proximos": 3
+        "derrotas": 5,
+        "proximos": 2
       }
     }
   },
-  "actualizado": "2026-09-12T07:55:45.805012+00:00"
+  "actualizado": "2026-09-12T08:36:52.119563+00:00"
 }
