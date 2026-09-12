@@ -325,6 +325,17 @@
     "Jose Manuel Granados Sánchez": {
       "partidos": [
         {
+          "categoria": "+50 4.5 Single MASCULINO",
+          "fase": "semifinal",
+          "rival": "Fernando Sarrasin",
+          "horario_pista": "11/09/2026 / Pista: 1",
+          "resultado": "8-21 / 13-21",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22415&visor=0",
+          "estado_programacion": "Partido finalizado"
+        },
+        {
           "categoria": "+50 4.5 Double MASCULINO",
           "fase": "grupos",
           "rival": "Tony Wilkinson / Andrew Benson",
@@ -377,17 +388,6 @@
           "jugado": true,
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=965&visor=0",
-          "estado_programacion": "Partido finalizado"
-        },
-        {
-          "categoria": "+50 4.5 Single MASCULINO",
-          "fase": "semifinal",
-          "rival": "Fernando Sarrasin",
-          "horario_pista": "11/09/2026 / Pista: 2",
-          "resultado": "8-21 / 13-21",
-          "jugado": true,
-          "ganado": false,
-          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22415&visor=0",
           "estado_programacion": "Partido finalizado"
         },
         {
@@ -797,5 +797,5 @@
       }
     }
   },
-  "actualizado": "2026-09-12T06:59:22.736413+00:00"
+  "actualizado": "2026-09-12T07:04:30.385921+00:00"
 }
