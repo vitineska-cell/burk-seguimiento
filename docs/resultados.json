@@ -6,10 +6,10 @@
     "grupos_unicos_detectados": 92,
     "categorias_procesadas": 26,
     "grupos_directos_procesados": 0,
-    "cuadros_procesados": 20,
+    "cuadros_procesados": 22,
     "dias_orden_juego_procesados": 3,
     "errores": 0,
-    "filas_partido_leidas": 1647
+    "filas_partido_leidas": 1667
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -166,6 +166,17 @@
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22399&visor=0",
           "estado_programacion": "Partido finalizado"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double MIXTO",
+          "fase": "octavos",
+          "rival": "Sara Silvestre / Francisco Ramos",
+          "horario_pista": "12/09/2026 17:15 / Pista: 14",
+          "resultado": "12/09/2026 17:15 - Pista:14",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22395&visor=0",
+          "estado_programacion": "Comienza a las 17:15"
         }
       ],
       "logros": [
@@ -175,12 +186,16 @@
         },
         {
           "titulo": "Cuartofinalista",
+          "categoria": "ABSOLUTA 4.5 Double MIXTO"
+        },
+        {
+          "titulo": "Cuartofinalista",
           "categoria": "ABSOLUTA 4.5 Single MASCULINO"
         }
       ],
       "resumen": {
-        "jugados": 13,
-        "victorias": 12,
+        "jugados": 14,
+        "victorias": 13,
         "derrotas": 1,
         "proximos": 0
       }
@@ -559,6 +574,17 @@
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=956&visor=0",
           "estado_programacion": "Partido finalizado"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double MIXTO",
+          "fase": "octavos",
+          "rival": "Marina Serrano / Pablo Sánchez",
+          "horario_pista": "12/09/2026 17:00 / Pista: 13",
+          "resultado": "12/09/2026 17:00 - Pista:13",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22395&visor=0",
+          "estado_programacion": "Comienza a las 17:00"
         }
       ],
       "logros": [
@@ -568,12 +594,16 @@
         },
         {
           "titulo": "Cuartofinalista",
+          "categoria": "ABSOLUTA 4.5 Double MIXTO"
+        },
+        {
+          "titulo": "Cuartofinalista",
           "categoria": "ABSOLUTA 4.5 Single FEMENINO"
         }
       ],
       "resumen": {
-        "jugados": 12,
-        "victorias": 7,
+        "jugados": 13,
+        "victorias": 8,
         "derrotas": 5,
         "proximos": 0
       }
@@ -801,5 +831,5 @@
       }
     }
   },
-  "actualizado": "2026-09-12T15:08:00.186141+00:00"
+  "actualizado": "2026-09-12T15:38:53.881815+00:00"
 }
