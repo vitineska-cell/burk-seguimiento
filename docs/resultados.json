@@ -653,17 +653,6 @@
         {
           "categoria": "+50 PRO Double MIXTO",
           "fase": "grupos",
-          "rival": "Ricardo Lozano / Benigna Villasuso",
-          "horario_pista": "12/09/2026 09:15 / Pista: 11",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=972&visor=0",
-          "estado_programacion": "Comienza a las 09:15"
-        },
-        {
-          "categoria": "+50 PRO Double MIXTO",
-          "fase": "grupos",
           "rival": "Federico Bitan / Anna Castells",
           "horario_pista": "12/09/2026 09:45 / Pista: 11",
           "resultado": "sin resultado",
@@ -772,6 +761,17 @@
           "estado_programacion": "Partido finalizado"
         },
         {
+          "categoria": "+50 PRO Double MIXTO",
+          "fase": "grupos",
+          "rival": "Ricardo Lozano / Benigna Villasuso",
+          "horario_pista": "12/09/2026 / Pista: 11",
+          "resultado": "21-16",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=972&visor=0",
+          "estado_programacion": "Partido finalizado"
+        },
+        {
           "categoria": "+50 PRO Double FEMENINO",
           "fase": "final",
           "rival": "Pernilla Ohlin / Anna Fäldt",
@@ -790,12 +790,12 @@
         }
       ],
       "resumen": {
-        "jugados": 8,
-        "victorias": 4,
+        "jugados": 9,
+        "victorias": 5,
         "derrotas": 4,
-        "proximos": 4
+        "proximos": 3
       }
     }
   },
-  "actualizado": "2026-09-12T07:25:06.881308+00:00"
+  "actualizado": "2026-09-12T07:55:45.805012+00:00"
 }
