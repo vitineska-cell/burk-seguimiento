@@ -27,17 +27,6 @@
         {
           "categoria": "ABSOLUTA 4.5 Double MIXTO",
           "fase": "grupos",
-          "rival": "Laura Alvarez / Sergio Rojo Muñoz",
-          "horario_pista": "12/09/2026 15:30 / Pista: 12",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=956&visor=0",
-          "estado_programacion": "Comienza a las 15:30"
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Double MIXTO",
-          "fase": "grupos",
           "rival": "Cristina Gómez / Manuel Garcia",
           "horario_pista": "12/09/2026 16:00 / Pista: 12",
           "resultado": "sin resultado",
@@ -157,6 +146,17 @@
           "estado_programacion": "Partido finalizado"
         },
         {
+          "categoria": "ABSOLUTA 4.5 Double MIXTO",
+          "fase": "grupos",
+          "rival": "Laura Alvarez / Sergio Rojo Muñoz",
+          "horario_pista": "12/09/2026 / Pista: 12",
+          "resultado": "22-21",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2340&g=956&visor=0",
+          "estado_programacion": "Partido finalizado"
+        },
+        {
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
           "fase": "final",
           "rival": "Manuel Trabada / Henry Alberto Infante",
@@ -179,10 +179,10 @@
         }
       ],
       "resumen": {
-        "jugados": 11,
-        "victorias": 10,
+        "jugados": 12,
+        "victorias": 11,
         "derrotas": 1,
-        "proximos": 2
+        "proximos": 1
       }
     },
     "Lucas Corral Falagan": {
@@ -801,5 +801,5 @@
       }
     }
   },
-  "actualizado": "2026-09-12T13:50:46.496808+00:00"
+  "actualizado": "2026-09-12T14:01:00.933013+00:00"
 }
