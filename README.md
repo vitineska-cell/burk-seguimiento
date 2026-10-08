@@ -52,11 +52,21 @@ revisa la lista de jugadores. El ID del torneo está en su URL:
 
 **Durante el fin de semana:**
 Dentro de las fechas `actualizacion_desde` y `actualizacion_hasta`, GitHub
-selecciona automáticamente el torneo de la lista y comprueba sus resultados
-cada 10 minutos. Fuera de todas las ventanas termina sin
-consultar Pickle Pro Tour. También puedes forzar una actualización desde
-**Actions → Actualizar resultados BÜRK → Run workflow**. El panel comprueba
-cada 60 segundos si hay nuevos datos publicados.
+selecciona automáticamente el torneo y solicita un nuevo barrido **cada 5 minutos**
+mediante una cadena de ejecuciones, con cron de respaldo. El cron comprueba si
+ya hay una cadena reciente para evitar ciclos duplicados. Los intervalos
+dependen también de la cola de GitHub Actions y de la web de Pickle Pro Tour,
+por lo que no constituyen una garantía de tiempo real.
+
+**Barcelona Open 2026 (ID 2341):** ventana desde el 15 de octubre a las
+09:00 hasta el 19 de octubre a las 12:00 (hora peninsular). El sorteo está
+previsto para el 9 de octubre. Hasta que haya grupos y cuadros publicados,
+el panel indica que los resultados están pendientes.
+
+Fuera de las ventanas no se consulta Pickle Pro Tour. Las modificaciones
+`push` ejecutan las pruebas aunque el torneo esté inactivo. También puedes
+forzar una actualización desde **Actions → Actualizar resultados BÜRK →
+Run workflow**. El panel comprueba cada 60 segundos si hay nuevos datos.
 
 ---
 
@@ -92,8 +102,8 @@ ejecutarlo:
 
 - **Bot de Telegram**: aviso automático al grupo del equipo cuando un
   jugador BÜRK termina un partido.
-- **Actualización automática** cada 15 min los findes de torneo (hoy es
-  manual, a propósito, tal y como se pidió).
+- **Monitorización externa** del calendario de GitHub Actions como respaldo
+  adicional frente a retrasos de GitHub (pendiente de valorar).
 
 No construidos todavía — se añaden cuando el panel esté validado con datos
 reales del primer torneo.
