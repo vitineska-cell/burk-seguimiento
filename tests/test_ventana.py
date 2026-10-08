@@ -1,4 +1,5 @@
 import sys
+import json
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -71,9 +72,24 @@ def test_rechaza_ventanas_solapadas():
         raise AssertionError("Debía rechazar ventanas solapadas")
 
 
+def test_barcelona_programado():
+    config = json.loads(
+        (Path(__file__).parent.parent / "jugadores.json").read_text(encoding="utf-8")
+    )
+    antes = torneo_activo(config, datetime(2026, 10, 15, 6, 59, tzinfo=timezone.utc))
+    previo = torneo_activo(config, datetime(2026, 10, 15, 7, 0, tzinfo=timezone.utc))
+    torneo = torneo_activo(config, datetime(2026, 10, 16, 12, 0, tzinfo=timezone.utc))
+    cierre = torneo_activo(config, datetime(2026, 10, 19, 10, 1, tzinfo=timezone.utc))
+    assert antes is None
+    assert previo is not None and previo["torneo_id"] == 2341
+    assert torneo is not None and torneo["torneo_id"] == 2341
+    assert cierre is None
+
+
 if __name__ == "__main__":
     test_ventana_automatica_del_torneo()
     test_rechaza_fechas_sin_zona_horaria()
     test_selecciona_el_torneo_de_cada_ventana()
     test_rechaza_ventanas_solapadas()
+    test_barcelona_programado()
     print("OK: ventana automática del torneo")
