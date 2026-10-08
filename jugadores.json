@@ -1,11 +1,9 @@
 {
   "_instrucciones": "Añade cada torneo a 'torneos' con su ID, nombre y ventana de actualización; revisa también que los nombres de jugadores sean exactos. Las fechas deben incluir la zona horaria de España.",
-
-  "torneo_id": 2340,
-  "torneo_nombre": "Mijas-Costa del Sol Open",
-  "actualizacion_desde": "2026-09-11T00:00:00+02:00",
-  "actualizacion_hasta": "2026-09-13T23:59:59+02:00",
-
+  "torneo_id": 2341,
+  "torneo_nombre": "Barcelona Open 2026",
+  "actualizacion_desde": "2026-10-15T09:00:00+02:00",
+  "actualizacion_hasta": "2026-10-19T12:00:00+02:00",
   "torneos": [
     {
       "torneo_id": 2339,
@@ -18,9 +16,14 @@
       "torneo_nombre": "Mijas-Costa del Sol Open",
       "actualizacion_desde": "2026-09-11T00:00:00+02:00",
       "actualizacion_hasta": "2026-09-13T23:59:59+02:00"
+    },
+    {
+      "torneo_id": 2341,
+      "torneo_nombre": "Barcelona Open 2026",
+      "actualizacion_desde": "2026-10-15T09:00:00+02:00",
+      "actualizacion_hasta": "2026-10-19T12:00:00+02:00"
     }
   ],
-
   "jugadores": [
     "Oscar Villar Sancosmed",
     "Hugo Granados Jimenez",
