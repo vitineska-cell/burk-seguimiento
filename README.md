@@ -58,10 +58,11 @@ ya hay una cadena reciente para evitar ciclos duplicados. Los intervalos
 dependen también de la cola de GitHub Actions y de la web de Pickle Pro Tour,
 por lo que no constituyen una garantía de tiempo real.
 
-**Barcelona Open 2026 (ID 2341):** ventana desde el 15 de octubre a las
-09:00 hasta el 19 de octubre a las 12:00 (hora peninsular). El sorteo está
-previsto para el 9 de octubre. Hasta que haya grupos y cuadros publicados,
-el panel indica que los resultados están pendientes.
+**Barcelona Open 2026 (ID 2341):** ventana desde el 12 de octubre a las
+21:00 hasta el 19 de octubre a las 12:00 (hora peninsular). Se adelantó el
+inicio cuando estuvieron publicados los grupos el 12 de octubre, sin esperar
+al primer día de competición (16 de octubre). El panel muestra partidos
+programados aunque aún no se hayan disputado.
 
 Fuera de las ventanas no se consulta Pickle Pro Tour. Las modificaciones
 `push` ejecutan las pruebas aunque el torneo esté inactivo. También puedes
