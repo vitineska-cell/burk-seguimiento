@@ -76,8 +76,8 @@ def test_barcelona_programado():
     config = json.loads(
         (Path(__file__).parent.parent / "jugadores.json").read_text(encoding="utf-8")
     )
-    antes = torneo_activo(config, datetime(2026, 10, 15, 6, 59, tzinfo=timezone.utc))
-    previo = torneo_activo(config, datetime(2026, 10, 15, 7, 0, tzinfo=timezone.utc))
+    antes = torneo_activo(config, datetime(2026, 10, 12, 18, 59, tzinfo=timezone.utc))
+    previo = torneo_activo(config, datetime(2026, 10, 12, 19, 0, tzinfo=timezone.utc))
     torneo = torneo_activo(config, datetime(2026, 10, 16, 12, 0, tzinfo=timezone.utc))
     cierre = torneo_activo(config, datetime(2026, 10, 19, 10, 1, tzinfo=timezone.utc))
     assert antes is None
