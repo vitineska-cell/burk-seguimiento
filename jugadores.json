@@ -2,7 +2,7 @@
   "_instrucciones": "Añade cada torneo a 'torneos' con su ID, nombre y ventana de actualización; revisa también que los nombres de jugadores sean exactos. Las fechas deben incluir la zona horaria de España.",
   "torneo_id": 2341,
   "torneo_nombre": "Barcelona Open 2026",
-  "actualizacion_desde": "2026-10-15T09:00:00+02:00",
+  "actualizacion_desde": "2026-10-12T21:00:00+02:00",
   "actualizacion_hasta": "2026-10-19T12:00:00+02:00",
   "torneos": [
     {
@@ -20,7 +20,7 @@
     {
       "torneo_id": 2341,
       "torneo_nombre": "Barcelona Open 2026",
-      "actualizacion_desde": "2026-10-15T09:00:00+02:00",
+      "actualizacion_desde": "2026-10-12T21:00:00+02:00",
       "actualizacion_hasta": "2026-10-19T12:00:00+02:00"
     }
   ],
