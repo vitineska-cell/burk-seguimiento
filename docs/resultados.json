@@ -2,14 +2,14 @@
   "torneo_id": 2341,
   "torneo_nombre": "Barcelona Open 2026",
   "diagnostico": {
-    "categorias_detectadas": 22,
-    "grupos_unicos_detectados": 70,
-    "categorias_procesadas": 22,
-    "grupos_directos_procesados": 0,
+    "categorias_detectadas": 18,
+    "grupos_unicos_detectados": 43,
+    "categorias_procesadas": 17,
+    "grupos_directos_procesados": 5,
     "cuadros_procesados": 0,
     "dias_orden_juego_procesados": 0,
     "errores": 0,
-    "filas_partido_leidas": 519
+    "filas_partido_leidas": 349
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -24,36 +24,6 @@
     },
     "Hugo Granados Jimenez": {
       "partidos": [
-        {
-          "categoria": "ABSOLUTA 4.5 Single MASCULINO",
-          "fase": "grupos",
-          "rival": "Daniel Cabrera",
-          "horario_pista": "16/10/2026 10:30 / Pista: 1",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=979&visor=0"
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Single MASCULINO",
-          "fase": "grupos",
-          "rival": "Fabio Coloma",
-          "horario_pista": "16/10/2026 9:00 / Pista: 1",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=979&visor=0"
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Single MASCULINO",
-          "fase": "grupos",
-          "rival": "Juan Jaramillo",
-          "horario_pista": "16/10/2026 9:45 / Pista: 1",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=979&visor=0"
-        },
         {
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
           "fase": "grupos",
@@ -93,36 +63,6 @@
           "jugado": false,
           "ganado": null,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=985&visor=0"
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Double MIXTO",
-          "fase": "grupos",
-          "rival": "Alba Garcia / Javier Tejada",
-          "horario_pista": "sin horario",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0"
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Double MIXTO",
-          "fase": "grupos",
-          "rival": "David Jiménez / Lorena Jimenez",
-          "horario_pista": "sin horario",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0"
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Double MIXTO",
-          "fase": "grupos",
-          "rival": "Juliana Bustos / Humberto Villamizar",
-          "horario_pista": "sin horario",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0"
         }
       ],
       "logros": [],
@@ -130,51 +70,11 @@
         "jugados": 0,
         "victorias": 0,
         "derrotas": 0,
-        "proximos": 10
+        "proximos": 4
       }
     },
     "Lucas Corral Falagan": {
       "partidos": [
-        {
-          "categoria": "ABSOLUTA PRO Single MASCULINO",
-          "fase": "grupos",
-          "rival": "Jordi Segura",
-          "horario_pista": "sin horario",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=980&visor=0"
-        },
-        {
-          "categoria": "ABSOLUTA PRO Single MASCULINO",
-          "fase": "grupos",
-          "rival": "Miguel López",
-          "horario_pista": "sin horario",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=980&visor=0"
-        },
-        {
-          "categoria": "ABSOLUTA PRO Single MASCULINO",
-          "fase": "grupos",
-          "rival": "Pedro Cámara",
-          "horario_pista": "sin horario",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=980&visor=0"
-        },
-        {
-          "categoria": "ABSOLUTA PRO Single MASCULINO",
-          "fase": "grupos",
-          "rival": "SAMUEL GIRALDO",
-          "horario_pista": "sin horario",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=980&visor=0"
-        },
         {
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
           "fase": "grupos",
@@ -214,36 +114,6 @@
           "jugado": false,
           "ganado": null,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=985&visor=0"
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Double MIXTO",
-          "fase": "grupos",
-          "rival": "Jose Alberto Martinez / Carmen Rosa",
-          "horario_pista": "sin horario",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0"
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Double MIXTO",
-          "fase": "grupos",
-          "rival": "Alan Llopart / Julia Pulgarin",
-          "horario_pista": "sin horario",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0"
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Double MIXTO",
-          "fase": "grupos",
-          "rival": "Sergio Rojo Muñoz / Yasmina Rincón",
-          "horario_pista": "sin horario",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0"
         }
       ],
       "logros": [],
@@ -251,7 +121,7 @@
         "jugados": 0,
         "victorias": 0,
         "derrotas": 0,
-        "proximos": 11
+        "proximos": 4
       }
     },
     "Jose Manuel Granados Sánchez": {
@@ -406,36 +276,6 @@
           "jugado": false,
           "ganado": null,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=988&visor=0"
-        },
-        {
-          "categoria": "ABSOLUTA PRO Double MIXTO",
-          "fase": "grupos",
-          "rival": "Sergi Ventura / Alicia Roca",
-          "horario_pista": "sin horario",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=992&visor=0"
-        },
-        {
-          "categoria": "ABSOLUTA PRO Double MIXTO",
-          "fase": "grupos",
-          "rival": "Giovanna Mandon / Pedro Cámara",
-          "horario_pista": "sin horario",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=992&visor=0"
-        },
-        {
-          "categoria": "ABSOLUTA PRO Double MIXTO",
-          "fase": "grupos",
-          "rival": "Asis Garrido G. / Paula Clemente",
-          "horario_pista": "sin horario",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=992&visor=0"
         }
       ],
       "logros": [],
@@ -443,7 +283,7 @@
         "jugados": 0,
         "victorias": 0,
         "derrotas": 0,
-        "proximos": 10
+        "proximos": 7
       }
     },
     "Victor Sebastian Davila": {
@@ -477,36 +317,6 @@
           "jugado": false,
           "ganado": null,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=985&visor=0"
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Double MIXTO",
-          "fase": "grupos",
-          "rival": "Daniel Cabrera / María de Lluch Gual",
-          "horario_pista": "sin horario",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0"
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Double MIXTO",
-          "fase": "grupos",
-          "rival": "Marangelli Orellana / Pablo Segade",
-          "horario_pista": "sin horario",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0"
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Double MIXTO",
-          "fase": "grupos",
-          "rival": "Yvonne Rivera / Luis Goñi",
-          "horario_pista": "sin horario",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0"
         }
       ],
       "logros": [],
@@ -514,7 +324,7 @@
         "jugados": 0,
         "victorias": 0,
         "derrotas": 0,
-        "proximos": 6
+        "proximos": 3
       }
     },
     "Laura Davila Alcala": {
@@ -609,5 +419,5 @@
       }
     }
   },
-  "actualizado": "2026-10-13T18:47:43.494886+00:00"
+  "actualizado": "2026-10-13T19:44:29.592277+00:00"
 }
