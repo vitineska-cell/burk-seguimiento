@@ -25,36 +25,6 @@
     "Hugo Granados Jimenez": {
       "partidos": [
         {
-          "categoria": "ABSOLUTA 4.5 Double MIXTO",
-          "fase": "grupos",
-          "rival": "Alba Garcia / Javier Tejada",
-          "horario_pista": "17/10/2026 14:20 / Pista: 9",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0"
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Double MIXTO",
-          "fase": "grupos",
-          "rival": "David Jiménez / Lorena Jimenez",
-          "horario_pista": "17/10/2026 15:20 / Pista: 11",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0"
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Double MIXTO",
-          "fase": "grupos",
-          "rival": "Juliana Bustos / Humberto Villamizar",
-          "horario_pista": "17/10/2026 16:20 / Pista: 9",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0"
-        },
-        {
           "categoria": "ABSOLUTA 4.5 Single MASCULINO",
           "fase": "grupos",
           "rival": "Fabio Coloma",
@@ -123,6 +93,36 @@
           "jugado": false,
           "ganado": null,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=985&visor=0"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double MIXTO",
+          "fase": "grupos",
+          "rival": "Alba Garcia / Javier Tejada",
+          "horario_pista": "sin horario",
+          "resultado": "sin resultado",
+          "jugado": false,
+          "ganado": null,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double MIXTO",
+          "fase": "grupos",
+          "rival": "David Jiménez / Lorena Jimenez",
+          "horario_pista": "sin horario",
+          "resultado": "sin resultado",
+          "jugado": false,
+          "ganado": null,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double MIXTO",
+          "fase": "grupos",
+          "rival": "Juliana Bustos / Humberto Villamizar",
+          "horario_pista": "sin horario",
+          "resultado": "sin resultado",
+          "jugado": false,
+          "ganado": null,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0"
         }
       ],
       "logros": [],
@@ -135,36 +135,6 @@
     },
     "Lucas Corral Falagan": {
       "partidos": [
-        {
-          "categoria": "ABSOLUTA 4.5 Double MIXTO",
-          "fase": "grupos",
-          "rival": "Jose Alberto Martinez / Carmen Rosa",
-          "horario_pista": "17/10/2026 14:40 / Pista: 8",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0"
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Double MIXTO",
-          "fase": "grupos",
-          "rival": "Alan Llopart / Julia Pulgarin",
-          "horario_pista": "17/10/2026 15:40 / Pista: 10",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0"
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Double MIXTO",
-          "fase": "grupos",
-          "rival": "Sergio Rojo Muñoz / Yasmina Rincón",
-          "horario_pista": "17/10/2026 16:00 / Pista: 11",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0"
-        },
         {
           "categoria": "ABSOLUTA PRO Single MASCULINO",
           "fase": "grupos",
@@ -244,6 +214,36 @@
           "jugado": false,
           "ganado": null,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=985&visor=0"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double MIXTO",
+          "fase": "grupos",
+          "rival": "Jose Alberto Martinez / Carmen Rosa",
+          "horario_pista": "sin horario",
+          "resultado": "sin resultado",
+          "jugado": false,
+          "ganado": null,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double MIXTO",
+          "fase": "grupos",
+          "rival": "Alan Llopart / Julia Pulgarin",
+          "horario_pista": "sin horario",
+          "resultado": "sin resultado",
+          "jugado": false,
+          "ganado": null,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double MIXTO",
+          "fase": "grupos",
+          "rival": "Sergio Rojo Muñoz / Yasmina Rincón",
+          "horario_pista": "sin horario",
+          "resultado": "sin resultado",
+          "jugado": false,
+          "ganado": null,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0"
         }
       ],
       "logros": [],
@@ -338,36 +338,6 @@
     "Brenda Fariña Solís": {
       "partidos": [
         {
-          "categoria": "ABSOLUTA PRO Double MIXTO",
-          "fase": "grupos",
-          "rival": "Sergi Ventura / Alicia Roca",
-          "horario_pista": "17/10/2026 14:00 / Pista: 3",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=992&visor=0"
-        },
-        {
-          "categoria": "ABSOLUTA PRO Double MIXTO",
-          "fase": "grupos",
-          "rival": "Giovanna Mandon / Pedro Cámara",
-          "horario_pista": "17/10/2026 15:00 / Pista: 3",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=992&visor=0"
-        },
-        {
-          "categoria": "ABSOLUTA PRO Double MIXTO",
-          "fase": "grupos",
-          "rival": "Asis Garrido G. / Paula Clemente",
-          "horario_pista": "17/10/2026 15:40 / Pista: 3",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=992&visor=0"
-        },
-        {
           "categoria": "ABSOLUTA 4.5 Single FEMENINO",
           "fase": "grupos",
           "rival": "Marina Serrano",
@@ -436,6 +406,36 @@
           "jugado": false,
           "ganado": null,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=988&visor=0"
+        },
+        {
+          "categoria": "ABSOLUTA PRO Double MIXTO",
+          "fase": "grupos",
+          "rival": "Sergi Ventura / Alicia Roca",
+          "horario_pista": "sin horario",
+          "resultado": "sin resultado",
+          "jugado": false,
+          "ganado": null,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=992&visor=0"
+        },
+        {
+          "categoria": "ABSOLUTA PRO Double MIXTO",
+          "fase": "grupos",
+          "rival": "Giovanna Mandon / Pedro Cámara",
+          "horario_pista": "sin horario",
+          "resultado": "sin resultado",
+          "jugado": false,
+          "ganado": null,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=992&visor=0"
+        },
+        {
+          "categoria": "ABSOLUTA PRO Double MIXTO",
+          "fase": "grupos",
+          "rival": "Asis Garrido G. / Paula Clemente",
+          "horario_pista": "sin horario",
+          "resultado": "sin resultado",
+          "jugado": false,
+          "ganado": null,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=992&visor=0"
         }
       ],
       "logros": [],
@@ -448,36 +448,6 @@
     },
     "Victor Sebastian Davila": {
       "partidos": [
-        {
-          "categoria": "ABSOLUTA 4.5 Double MIXTO",
-          "fase": "grupos",
-          "rival": "Daniel Cabrera / María de Lluch Gual",
-          "horario_pista": "17/10/2026 14:00 / Pista: 10",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0"
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Double MIXTO",
-          "fase": "grupos",
-          "rival": "Marangelli Orellana / Pablo Segade",
-          "horario_pista": "17/10/2026 15:20 / Pista: 8",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0"
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Double MIXTO",
-          "fase": "grupos",
-          "rival": "Yvonne Rivera / Luis Goñi",
-          "horario_pista": "17/10/2026 16:00 / Pista: 12",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0"
-        },
         {
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
           "fase": "grupos",
@@ -507,6 +477,36 @@
           "jugado": false,
           "ganado": null,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=985&visor=0"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double MIXTO",
+          "fase": "grupos",
+          "rival": "Daniel Cabrera / María de Lluch Gual",
+          "horario_pista": "sin horario",
+          "resultado": "sin resultado",
+          "jugado": false,
+          "ganado": null,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double MIXTO",
+          "fase": "grupos",
+          "rival": "Marangelli Orellana / Pablo Segade",
+          "horario_pista": "sin horario",
+          "resultado": "sin resultado",
+          "jugado": false,
+          "ganado": null,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double MIXTO",
+          "fase": "grupos",
+          "rival": "Yvonne Rivera / Luis Goñi",
+          "horario_pista": "sin horario",
+          "resultado": "sin resultado",
+          "jugado": false,
+          "ganado": null,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0"
         }
       ],
       "logros": [],
@@ -529,46 +529,6 @@
     },
     "Bárbara Molina Durán": {
       "partidos": [
-        {
-          "categoria": "+50 PRO Double MIXTO",
-          "fase": "grupos",
-          "rival": "Rinaldo Rossi / Federica Mundula",
-          "horario_pista": "17/10/2026 11:00 / Pista: 10",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1007&visor=0"
-        },
-        {
-          "categoria": "+50 PRO Double MIXTO",
-          "fase": "grupos",
-          "rival": "Federico Bitan / Eva Martinez",
-          "horario_pista": "17/10/2026 11:20 / Pista: 10",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1007&visor=0"
-        },
-        {
-          "categoria": "+50 PRO Double MIXTO",
-          "fase": "grupos",
-          "rival": "Hector Santana / Benigna Villasuso",
-          "horario_pista": "17/10/2026 11:40 / Pista: 10",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1007&visor=0"
-        },
-        {
-          "categoria": "+50 PRO Double MIXTO",
-          "fase": "grupos",
-          "rival": "Juber Aviles / Monica Ramirez",
-          "horario_pista": "17/10/2026 12:20 / Pista: 9",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1007&visor=0"
-        },
         {
           "categoria": "+50 PRO Double FEMENINO",
           "fase": "grupos",
@@ -598,6 +558,46 @@
           "jugado": false,
           "ganado": null,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1004&visor=0"
+        },
+        {
+          "categoria": "+50 PRO Double MIXTO",
+          "fase": "grupos",
+          "rival": "Rinaldo Rossi / Federica Mundula",
+          "horario_pista": "sin horario",
+          "resultado": "sin resultado",
+          "jugado": false,
+          "ganado": null,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1007&visor=0"
+        },
+        {
+          "categoria": "+50 PRO Double MIXTO",
+          "fase": "grupos",
+          "rival": "Federico Bitan / Eva Martinez",
+          "horario_pista": "sin horario",
+          "resultado": "sin resultado",
+          "jugado": false,
+          "ganado": null,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1007&visor=0"
+        },
+        {
+          "categoria": "+50 PRO Double MIXTO",
+          "fase": "grupos",
+          "rival": "Hector Santana / Benigna Villasuso",
+          "horario_pista": "sin horario",
+          "resultado": "sin resultado",
+          "jugado": false,
+          "ganado": null,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1007&visor=0"
+        },
+        {
+          "categoria": "+50 PRO Double MIXTO",
+          "fase": "grupos",
+          "rival": "Juber Aviles / Monica Ramirez",
+          "horario_pista": "sin horario",
+          "resultado": "sin resultado",
+          "jugado": false,
+          "ganado": null,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1007&visor=0"
         }
       ],
       "logros": [],
@@ -609,5 +609,5 @@
       }
     }
   },
-  "actualizado": "2026-10-13T16:12:53.970617+00:00"
+  "actualizado": "2026-10-13T17:30:20.115736+00:00"
 }
