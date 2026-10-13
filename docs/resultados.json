@@ -338,6 +338,36 @@
     "Brenda Fariña Solís": {
       "partidos": [
         {
+          "categoria": "ABSOLUTA PRO Double MIXTO",
+          "fase": "grupos",
+          "rival": "Asis Garrido G. / Paula Clemente",
+          "horario_pista": "17/10/2026 10:15 / Pista: 3",
+          "resultado": "sin resultado",
+          "jugado": false,
+          "ganado": null,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=992&visor=0"
+        },
+        {
+          "categoria": "ABSOLUTA PRO Double MIXTO",
+          "fase": "grupos",
+          "rival": "Sergi Ventura / Alicia Roca",
+          "horario_pista": "17/10/2026 9:00 / Pista: 3",
+          "resultado": "sin resultado",
+          "jugado": false,
+          "ganado": null,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=992&visor=0"
+        },
+        {
+          "categoria": "ABSOLUTA PRO Double MIXTO",
+          "fase": "grupos",
+          "rival": "Giovanna Mandon / Pedro Cámara",
+          "horario_pista": "17/10/2026 9:45 / Pista: 3",
+          "resultado": "sin resultado",
+          "jugado": false,
+          "ganado": null,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=992&visor=0"
+        },
+        {
           "categoria": "ABSOLUTA 4.5 Single FEMENINO",
           "fase": "grupos",
           "rival": "Marina Serrano",
@@ -406,36 +436,6 @@
           "jugado": false,
           "ganado": null,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=988&visor=0"
-        },
-        {
-          "categoria": "ABSOLUTA PRO Double MIXTO",
-          "fase": "grupos",
-          "rival": "Sergi Ventura / Alicia Roca",
-          "horario_pista": "sin horario",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=992&visor=0"
-        },
-        {
-          "categoria": "ABSOLUTA PRO Double MIXTO",
-          "fase": "grupos",
-          "rival": "Giovanna Mandon / Pedro Cámara",
-          "horario_pista": "sin horario",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=992&visor=0"
-        },
-        {
-          "categoria": "ABSOLUTA PRO Double MIXTO",
-          "fase": "grupos",
-          "rival": "Asis Garrido G. / Paula Clemente",
-          "horario_pista": "sin horario",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=992&visor=0"
         }
       ],
       "logros": [],
@@ -609,5 +609,5 @@
       }
     }
   },
-  "actualizado": "2026-10-13T17:40:37.463221+00:00"
+  "actualizado": "2026-10-13T18:37:23.089029+00:00"
 }
