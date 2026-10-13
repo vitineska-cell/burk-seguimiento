@@ -27,8 +27,18 @@
         {
           "categoria": "ABSOLUTA 4.5 Single MASCULINO",
           "fase": "grupos",
+          "rival": "Daniel Cabrera",
+          "horario_pista": "16/10/2026 10:30 / Pista: 1",
+          "resultado": "sin resultado",
+          "jugado": false,
+          "ganado": null,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=979&visor=0"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Single MASCULINO",
+          "fase": "grupos",
           "rival": "Fabio Coloma",
-          "horario_pista": "sin horario",
+          "horario_pista": "16/10/2026 9:00 / Pista: 1",
           "resultado": "sin resultado",
           "jugado": false,
           "ganado": null,
@@ -38,17 +48,7 @@
           "categoria": "ABSOLUTA 4.5 Single MASCULINO",
           "fase": "grupos",
           "rival": "Juan Jaramillo",
-          "horario_pista": "sin horario",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=979&visor=0"
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Single MASCULINO",
-          "fase": "grupos",
-          "rival": "Daniel Cabrera",
-          "horario_pista": "sin horario",
+          "horario_pista": "16/10/2026 9:45 / Pista: 1",
           "resultado": "sin resultado",
           "jugado": false,
           "ganado": null,
@@ -260,7 +260,7 @@
           "categoria": "+50 4.5 Single MASCULINO",
           "fase": "grupos",
           "rival": "Jose Maria Arroyo",
-          "horario_pista": "sin horario",
+          "horario_pista": "16/10/2026 10:00 / Pista: 11",
           "resultado": "sin resultado",
           "jugado": false,
           "ganado": null,
@@ -270,7 +270,7 @@
           "categoria": "+50 4.5 Single MASCULINO",
           "fase": "grupos",
           "rival": "Israel Vidal",
-          "horario_pista": "sin horario",
+          "horario_pista": "16/10/2026 10:15 / Pista: 11",
           "resultado": "sin resultado",
           "jugado": false,
           "ganado": null,
@@ -280,7 +280,7 @@
           "categoria": "+50 4.5 Single MASCULINO",
           "fase": "grupos",
           "rival": "Raul Villarreal Alvarez",
-          "horario_pista": "sin horario",
+          "horario_pista": "16/10/2026 10:45 / Pista: 11",
           "resultado": "sin resultado",
           "jugado": false,
           "ganado": null,
@@ -609,5 +609,5 @@
       }
     }
   },
-  "actualizado": "2026-10-13T17:30:20.115736+00:00"
+  "actualizado": "2026-10-13T17:40:37.463221+00:00"
 }
