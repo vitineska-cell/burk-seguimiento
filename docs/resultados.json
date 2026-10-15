@@ -4,8 +4,8 @@
   "diagnostico": {
     "categorias_detectadas": 22,
     "grupos_unicos_detectados": 70,
-    "categorias_procesadas": 21,
-    "grupos_directos_procesados": 6,
+    "categorias_procesadas": 22,
+    "grupos_directos_procesados": 0,
     "cuadros_procesados": 0,
     "dias_orden_juego_procesados": 0,
     "errores": 0,
@@ -32,7 +32,7 @@
           "resultado": "sin resultado",
           "jugado": false,
           "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneoGrupo.aspx?id=1711&visor=0"
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=979&visor=0"
         },
         {
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
@@ -82,7 +82,7 @@
           "resultado": "sin resultado",
           "jugado": false,
           "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneoGrupo.aspx?id=1711&visor=0"
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=979&visor=0"
         },
         {
           "categoria": "ABSOLUTA 4.5 Single MASCULINO",
@@ -92,7 +92,7 @@
           "resultado": "sin resultado",
           "jugado": false,
           "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneoGrupo.aspx?id=1711&visor=0"
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=979&visor=0"
         },
         {
           "categoria": "ABSOLUTA 4.5 Double MIXTO",
@@ -609,5 +609,5 @@
       }
     }
   },
-  "actualizado": "2026-10-15T14:03:17.018107+00:00"
+  "actualizado": "2026-10-15T14:08:20.465284+00:00"
 }
