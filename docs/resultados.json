@@ -4,8 +4,8 @@
   "diagnostico": {
     "categorias_detectadas": 22,
     "grupos_unicos_detectados": 70,
-    "categorias_procesadas": 22,
-    "grupos_directos_procesados": 0,
+    "categorias_procesadas": 21,
+    "grupos_directos_procesados": 6,
     "cuadros_procesados": 0,
     "dias_orden_juego_procesados": 0,
     "errores": 0,
@@ -32,7 +32,7 @@
           "resultado": "sin resultado",
           "jugado": false,
           "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=979&visor=0"
+          "url_grupo": "https://pickleprotour.com/torneoGrupo.aspx?id=1711&visor=0"
         },
         {
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
@@ -82,7 +82,7 @@
           "resultado": "sin resultado",
           "jugado": false,
           "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=979&visor=0"
+          "url_grupo": "https://pickleprotour.com/torneoGrupo.aspx?id=1711&visor=0"
         },
         {
           "categoria": "ABSOLUTA 4.5 Single MASCULINO",
@@ -92,7 +92,7 @@
           "resultado": "sin resultado",
           "jugado": false,
           "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=979&visor=0"
+          "url_grupo": "https://pickleprotour.com/torneoGrupo.aspx?id=1711&visor=0"
         },
         {
           "categoria": "ABSOLUTA 4.5 Double MIXTO",
@@ -208,7 +208,7 @@
         {
           "categoria": "ABSOLUTA PRO Single MASCULINO",
           "fase": "grupos",
-          "rival": "SAMUEL GIRALDO",
+          "rival": "Samuel Giraldo",
           "horario_pista": "16/10/2026 18:45 / Pista: 1",
           "resultado": "sin resultado",
           "jugado": false,
@@ -309,7 +309,7 @@
         {
           "categoria": "+50 4.5 Double MASCULINO",
           "fase": "grupos",
-          "rival": "XAVIER MASO / Xavi Sitges",
+          "rival": "Xavier Maso / Xavi Sitges",
           "horario_pista": "16/10/2026 17:45 / Pista: 11",
           "resultado": "sin resultado",
           "jugado": false,
@@ -390,7 +390,7 @@
         {
           "categoria": "ABSOLUTA 4.5 Double FEMENINO",
           "fase": "grupos",
-          "rival": "María de Lluch Gual / ANA PIETROSANTI",
+          "rival": "María De Lluch Gual / Ana Pietrosanti",
           "horario_pista": "16/10/2026 15:00 / Pista: 3",
           "resultado": "sin resultado",
           "jugado": false,
@@ -481,7 +481,7 @@
         {
           "categoria": "ABSOLUTA 4.5 Double MIXTO",
           "fase": "grupos",
-          "rival": "Daniel Cabrera / María de Lluch Gual",
+          "rival": "Daniel Cabrera / María De Lluch Gual",
           "horario_pista": "17/10/2026 17:30 / Pista: 5",
           "resultado": "sin resultado",
           "jugado": false,
@@ -609,5 +609,5 @@
       }
     }
   },
-  "actualizado": "2026-10-14T19:29:43.102235+00:00"
+  "actualizado": "2026-10-15T14:03:17.018107+00:00"
 }
