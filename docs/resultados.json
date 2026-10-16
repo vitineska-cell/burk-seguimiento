@@ -25,17 +25,6 @@
     "Hugo Granados Jimenez": {
       "partidos": [
         {
-          "categoria": "Categoría",
-          "fase": "grupos",
-          "rival": "Juan Jaramillo",
-          "horario_pista": "16/10/2026 09:45 / Pista: 1 (Pista 1 (shooter))",
-          "resultado": "",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/ordenJuego.aspx?id_torneo=2341&f=16-10-2026&visor=0",
-          "estado_programacion": "Comienza a las 09:45"
-        },
-        {
           "categoria": "ABSOLUTA 4.5 Single MASCULINO",
           "fase": "grupos",
           "rival": "Daniel Cabrera",
@@ -141,16 +130,6 @@
           "estado_programacion": "Comienza a las 15:45"
         },
         {
-          "categoria": "ABSOLUTA 4.5 Single MASCULINO",
-          "fase": "grupos",
-          "rival": "Juan Jaramillo",
-          "horario_pista": "16/10/2026 9:45 / Pista: 1",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=979&visor=0"
-        },
-        {
           "categoria": "ABSOLUTA 4.5 Double MIXTO",
           "fase": "grupos",
           "rival": "Alba Garcia / Javier Tejada",
@@ -195,6 +174,17 @@
           "estado_programacion": "Partido finalizado"
         },
         {
+          "categoria": "Categoría",
+          "fase": "grupos",
+          "rival": "Juan Jaramillo",
+          "horario_pista": "16/10/2026 / Pista: 1 (Pista 1 (shooter))",
+          "resultado": "21-13",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/ordenJuego.aspx?id_torneo=2341&f=16-10-2026&visor=0",
+          "estado_programacion": "Partido finalizado"
+        },
+        {
           "categoria": "ABSOLUTA 4.5 Single MASCULINO",
           "fase": "grupos",
           "rival": "Fabio Coloma",
@@ -203,14 +193,24 @@
           "jugado": true,
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=979&visor=0"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Single MASCULINO",
+          "fase": "grupos",
+          "rival": "Juan Jaramillo",
+          "horario_pista": "16/10/2026 9:45 / Pista: 1",
+          "resultado": "21 - 13",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=979&visor=0"
         }
       ],
       "logros": [],
       "resumen": {
-        "jugados": 2,
-        "victorias": 2,
+        "jugados": 4,
+        "victorias": 4,
         "derrotas": 0,
-        "proximos": 15
+        "proximos": 13
       }
     },
     "Lucas Corral Falagan": {
@@ -1010,5 +1010,5 @@
       }
     }
   },
-  "actualizado": "2026-10-16T07:17:27.922908+00:00"
+  "actualizado": "2026-10-16T07:58:27.055630+00:00"
 }
