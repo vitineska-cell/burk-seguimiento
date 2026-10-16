@@ -9,7 +9,7 @@
     "cuadros_procesados": 5,
     "dias_orden_juego_procesados": 2,
     "errores": 0,
-    "filas_partido_leidas": 1079
+    "filas_partido_leidas": 1081
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -156,9 +156,9 @@
           "fase": "semifinal",
           "rival": "Alan Llopart",
           "horario_pista": "",
-          "resultado": "16/10/2026 12:00 - Pista:1",
+          "resultado": "12-21 / 14-21",
           "jugado": true,
-          "ganado": true,
+          "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22432&visor=0"
         },
         {
@@ -249,7 +249,7 @@
       ],
       "logros": [
         {
-          "titulo": "Finalista",
+          "titulo": "Semifinalista",
           "categoria": "ABSOLUTA 4.5 Single MASCULINO"
         },
         {
@@ -259,8 +259,8 @@
       ],
       "resumen": {
         "jugados": 10,
-        "victorias": 9,
-        "derrotas": 1,
+        "victorias": 8,
+        "derrotas": 2,
         "proximos": 11
       }
     },
@@ -1061,5 +1061,5 @@
       }
     }
   },
-  "actualizado": "2026-10-16T10:43:10.622139+00:00"
+  "actualizado": "2026-10-16T10:48:15.082439+00:00"
 }
