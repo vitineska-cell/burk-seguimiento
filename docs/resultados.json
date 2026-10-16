@@ -767,7 +767,7 @@
           "fase": "grupos",
           "equipo": "Mercedes Cascales / Bárbara Molina",
           "rival": "Marisa Bueno / Yolanda García",
-          "horario_pista": "16/10/2026 20:00 / Pista: 6 (Pista 6 (shooter))",
+          "horario_pista": "16/10/2026 20:00 / Pista: 7 (Pista 7 (shooter))",
           "resultado": "21-9",
           "jugado": true,
           "ganado": true,
@@ -784,5 +784,5 @@
       }
     }
   },
-  "actualizado": "2026-10-16T18:47:06.468558+00:00"
+  "actualizado": "2026-10-16T18:52:12.538570+00:00"
 }
