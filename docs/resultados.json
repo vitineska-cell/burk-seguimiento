@@ -6,10 +6,10 @@
     "grupos_unicos_detectados": 70,
     "categorias_procesadas": 22,
     "grupos_directos_procesados": 0,
-    "cuadros_procesados": 5,
+    "cuadros_procesados": 6,
     "dias_orden_juego_procesados": 2,
     "errores": 0,
-    "filas_partido_leidas": 1083
+    "filas_partido_leidas": 1091
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -637,27 +637,6 @@
     "Brenda Fariña Solís": {
       "partidos": [
         {
-          "categoria": "ABSOLUTA 4.5 Single FEMENINO",
-          "fase": "grupos",
-          "rival": "Aldara Aguilera",
-          "horario_pista": "16/10/2026 12:45 / Pista: 7",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=982&visor=0"
-        },
-        {
-          "categoria": "Categoría",
-          "fase": "grupos",
-          "rival": "Aldara Aguilera",
-          "horario_pista": "16/10/2026 12:45 / Pista: 7 (Pista 7 (shooter))",
-          "resultado": "",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/ordenJuego.aspx?id_torneo=2341&f=16-10-2026&visor=0",
-          "estado_programacion": "Comienza a las 12:45"
-        },
-        {
           "categoria": "ABSOLUTA 4.5 Double FEMENINO",
           "fase": "grupos",
           "rival": "Marangelli Orellana / Laura Alvarez",
@@ -797,6 +776,17 @@
           "estado_programacion": "Partido finalizado"
         },
         {
+          "categoria": "Categoría",
+          "fase": "grupos",
+          "rival": "Aldara Aguilera",
+          "horario_pista": "16/10/2026 / Pista: 7 (Pista 7 (shooter))",
+          "resultado": "22-20",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/ordenJuego.aspx?id_torneo=2341&f=16-10-2026&visor=0",
+          "estado_programacion": "Partido finalizado"
+        },
+        {
           "categoria": "ABSOLUTA 4.5 Single FEMENINO",
           "fase": "grupos",
           "rival": "Marina Serrano",
@@ -815,14 +805,24 @@
           "jugado": true,
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=982&visor=0"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Single FEMENINO",
+          "fase": "grupos",
+          "rival": "Aldara Aguilera",
+          "horario_pista": "16/10/2026 12:45 / Pista: 7",
+          "resultado": "22 - 20",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=982&visor=0"
         }
       ],
       "logros": [],
       "resumen": {
-        "jugados": 4,
-        "victorias": 0,
+        "jugados": 6,
+        "victorias": 2,
         "derrotas": 4,
-        "proximos": 13
+        "proximos": 11
       }
     },
     "Victor Sebastian Davila": {
@@ -1061,5 +1061,5 @@
       }
     }
   },
-  "actualizado": "2026-10-16T11:29:24.871014+00:00"
+  "actualizado": "2026-10-16T11:39:42.162797+00:00"
 }
