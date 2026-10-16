@@ -500,6 +500,16 @@
           "estado_programacion": "Comienza a las 17:15"
         },
         {
+          "categoria": "+50 4.5 Double MASCULINO",
+          "fase": "grupos",
+          "rival": "Mario Garrido Sanjuan / Juan Antonio Garrido",
+          "horario_pista": "16/10/2026 17:30 / Pista: 11",
+          "resultado": "sin resultado",
+          "jugado": false,
+          "ganado": null,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1000&visor=0"
+        },
+        {
           "categoria": "Categoría",
           "fase": "grupos",
           "rival": "Mario Garrido Sanjuan / Juan Antonio Garrido",
@@ -509,6 +519,16 @@
           "ganado": null,
           "url_grupo": "https://pickleprotour.com/ordenJuego.aspx?id_torneo=2341&f=16-10-2026&visor=0",
           "estado_programacion": "Comienza a las 17:30"
+        },
+        {
+          "categoria": "+50 4.5 Double MASCULINO",
+          "fase": "grupos",
+          "rival": "Xavier Maso / Xavi Sitges",
+          "horario_pista": "16/10/2026 17:45 / Pista: 11",
+          "resultado": "sin resultado",
+          "jugado": false,
+          "ganado": null,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1000&visor=0"
         },
         {
           "categoria": "Categoría",
@@ -522,6 +542,16 @@
           "estado_programacion": "Comienza a las 17:45"
         },
         {
+          "categoria": "+50 4.5 Double MASCULINO",
+          "fase": "grupos",
+          "rival": "Juan Plana / David Rius Marti",
+          "horario_pista": "16/10/2026 18:15 / Pista: 10",
+          "resultado": "sin resultado",
+          "jugado": false,
+          "ganado": null,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1000&visor=0"
+        },
+        {
           "categoria": "Categoría",
           "fase": "grupos",
           "rival": "Juan Plana / David Marti",
@@ -531,36 +561,6 @@
           "ganado": null,
           "url_grupo": "https://pickleprotour.com/ordenJuego.aspx?id_torneo=2341&f=16-10-2026&visor=0",
           "estado_programacion": "Comienza a las 18:15"
-        },
-        {
-          "categoria": "+50 4.5 Double MASCULINO",
-          "fase": "grupos",
-          "rival": "Mario Garrido Sanjuan / Juan Antonio Garrido",
-          "horario_pista": "sin horario",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1000&visor=0"
-        },
-        {
-          "categoria": "+50 4.5 Double MASCULINO",
-          "fase": "grupos",
-          "rival": "Xavier Maso / Xavi Sitges",
-          "horario_pista": "sin horario",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1000&visor=0"
-        },
-        {
-          "categoria": "+50 4.5 Double MASCULINO",
-          "fase": "grupos",
-          "rival": "Juan Plana / David Rius Marti",
-          "horario_pista": "sin horario",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1000&visor=0"
         },
         {
           "categoria": "Categoría",
@@ -1061,5 +1061,5 @@
       }
     }
   },
-  "actualizado": "2026-10-16T10:22:32.207230+00:00"
+  "actualizado": "2026-10-16T10:27:39.530634+00:00"
 }
