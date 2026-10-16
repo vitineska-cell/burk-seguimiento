@@ -138,11 +138,11 @@
           "equipo": "Juan Jaramillo / Hugo Granados",
           "rival": "Jose Maria Corral / Lucas Corral",
           "horario_pista": "16/10/2026 14:45 / Pista: 5 (Pista 5 (shooter))",
-          "resultado": "21 - 15",
+          "resultado": "21-15",
           "jugado": true,
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=985&visor=0",
-          "estado_programacion": "Comienza a las 14:45"
+          "estado_programacion": "Partido finalizado"
         },
         {
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
@@ -302,7 +302,7 @@
           "jugado": true,
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=985&visor=0",
-          "estado_programacion": "Comienza a las 14:45"
+          "estado_programacion": "Partido finalizado"
         },
         {
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
@@ -554,18 +554,6 @@
     "Victor Sebastian Davila": {
       "partidos": [
         {
-          "categoria": "ABSOLUTA 4.5 Double MASCULINO",
-          "fase": "grupos",
-          "equipo": "Victor Sebastian / Jose Alberto Martinez",
-          "rival": "Marcos Rodríguez / Guille Hernando",
-          "horario_pista": "16/10/2026 15:00 / Pista: 6 (Pista 6 (shooter))",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=985&visor=0",
-          "estado_programacion": "Comienza a las 15:00"
-        },
-        {
           "categoria": "ABSOLUTA 4.5 Double MIXTO",
           "fase": "grupos",
           "equipo": "Sara Silvestre / Victor Sebastian",
@@ -617,6 +605,18 @@
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
           "fase": "grupos",
           "equipo": "Victor Sebastian / Jose Alberto Martinez",
+          "rival": "Marcos Rodríguez / Guille Hernando",
+          "horario_pista": "16/10/2026 15:00 / Pista: 6 (Pista 6 (shooter))",
+          "resultado": "19-21",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=985&visor=0",
+          "estado_programacion": "Partido finalizado"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double MASCULINO",
+          "fase": "grupos",
+          "equipo": "Victor Sebastian / Jose Alberto Martinez",
           "rival": "Fabio Coloma / Vicente Garcia",
           "horario_pista": "16/10/2026 15:30 / Pista: 7 (Pista 7 (shooter))",
           "resultado": "19-21",
@@ -628,10 +628,10 @@
       ],
       "logros": [],
       "resumen": {
-        "jugados": 2,
+        "jugados": 3,
         "victorias": 1,
-        "derrotas": 1,
-        "proximos": 4
+        "derrotas": 2,
+        "proximos": 3
       }
     },
     "Laura Davila Alcala": {
@@ -740,5 +740,5 @@
       }
     }
   },
-  "actualizado": "2026-10-16T14:13:58.013820+00:00"
+  "actualizado": "2026-10-16T14:19:07.912915+00:00"
 }
