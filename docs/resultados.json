@@ -430,16 +430,6 @@
         {
           "categoria": "+50 4.5 Single MASCULINO",
           "fase": "grupos",
-          "rival": "Jose Maria Arroyo",
-          "horario_pista": "16/10/2026 10:00 / Pista: 11",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=994&visor=0"
-        },
-        {
-          "categoria": "+50 4.5 Single MASCULINO",
-          "fase": "grupos",
           "rival": "Raul Villarreal Alvarez",
           "horario_pista": "16/10/2026 10:45 / Pista: 11",
           "resultado": "sin resultado",
@@ -567,6 +557,16 @@
         {
           "categoria": "+50 4.5 Single MASCULINO",
           "fase": "grupos",
+          "rival": "Jose Maria Arroyo",
+          "horario_pista": "16/10/2026 10:00 / Pista: 11",
+          "resultado": "13 - 21",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=994&visor=0"
+        },
+        {
+          "categoria": "+50 4.5 Single MASCULINO",
+          "fase": "grupos",
           "rival": "Israel Vidal",
           "horario_pista": "16/10/2026 10:15 / Pista: 11",
           "resultado": "21 - 10",
@@ -577,10 +577,10 @@
       ],
       "logros": [],
       "resumen": {
-        "jugados": 3,
+        "jugados": 4,
         "victorias": 0,
-        "derrotas": 3,
-        "proximos": 11
+        "derrotas": 4,
+        "proximos": 10
       }
     },
     "Brenda Fariña Solís": {
@@ -1010,5 +1010,5 @@
       }
     }
   },
-  "actualizado": "2026-10-16T08:55:10.205376+00:00"
+  "actualizado": "2026-10-16T09:00:16.845695+00:00"
 }
