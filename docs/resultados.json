@@ -197,18 +197,6 @@
           "estado_programacion": "Comienza a las 14:45"
         },
         {
-          "categoria": "ABSOLUTA 4.5 Double MASCULINO",
-          "fase": "grupos",
-          "equipo": "Jose Maria Corral / Lucas Corral",
-          "rival": "Alex Chaput / Marc Martínez",
-          "horario_pista": "16/10/2026 15:30 / Pista: 5 (Pista 5 (shooter))",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=985&visor=0",
-          "estado_programacion": "Comienza a las 15:30"
-        },
-        {
           "categoria": "ABSOLUTA PRO Single MASCULINO",
           "fase": "grupos",
           "equipo": "Lucas Corral",
@@ -315,14 +303,26 @@
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=985&visor=0",
           "estado_programacion": "Partido finalizado"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double MASCULINO",
+          "fase": "grupos",
+          "equipo": "Jose Maria Corral / Lucas Corral",
+          "rival": "Alex Chaput / Marc Martínez",
+          "horario_pista": "16/10/2026 15:30 / Pista: 5 (Pista 5 (shooter))",
+          "resultado": "21 - 18",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=985&visor=0",
+          "estado_programacion": "Comienza a las 15:30"
         }
       ],
       "logros": [],
       "resumen": {
-        "jugados": 2,
-        "victorias": 2,
+        "jugados": 3,
+        "victorias": 3,
         "derrotas": 0,
-        "proximos": 9
+        "proximos": 8
       }
     },
     "Jose Manuel Granados Sánchez": {
@@ -740,5 +740,5 @@
       }
     }
   },
-  "actualizado": "2026-10-16T13:27:31.897308+00:00"
+  "actualizado": "2026-10-16T13:37:56.436427+00:00"
 }
