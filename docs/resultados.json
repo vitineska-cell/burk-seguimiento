@@ -9,7 +9,7 @@
     "cuadros_procesados": 3,
     "dias_orden_juego_procesados": 2,
     "errores": 0,
-    "filas_partido_leidas": 1065
+    "filas_partido_leidas": 1067
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -614,27 +614,6 @@
         {
           "categoria": "ABSOLUTA 4.5 Single FEMENINO",
           "fase": "grupos",
-          "rival": "Marina Serrano",
-          "horario_pista": "16/10/2026 11:30 / Pista: 7",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=982&visor=0"
-        },
-        {
-          "categoria": "Categoría",
-          "fase": "grupos",
-          "rival": "Marina Serrano",
-          "horario_pista": "16/10/2026 11:30 / Pista: 7 (Pista 7 (shooter))",
-          "resultado": "",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/ordenJuego.aspx?id_torneo=2341&f=16-10-2026&visor=0",
-          "estado_programacion": "Comienza a las 11:30"
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Single FEMENINO",
-          "fase": "grupos",
           "rival": "Celia Millon",
           "horario_pista": "16/10/2026 12:00 / Pista: 4",
           "resultado": "sin resultado",
@@ -790,14 +769,35 @@
           "ganado": null,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=992&visor=0",
           "estado_programacion": "Comienza a las 16:15"
+        },
+        {
+          "categoria": "Categoría",
+          "fase": "grupos",
+          "rival": "Marina Serrano",
+          "horario_pista": "16/10/2026 / Pista: 7 (Pista 7 (shooter))",
+          "resultado": "19-21",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/ordenJuego.aspx?id_torneo=2341&f=16-10-2026&visor=0",
+          "estado_programacion": "Partido finalizado"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Single FEMENINO",
+          "fase": "grupos",
+          "rival": "Marina Serrano",
+          "horario_pista": "16/10/2026 11:30 / Pista: 7",
+          "resultado": "19 - 21",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=982&visor=0"
         }
       ],
       "logros": [],
       "resumen": {
-        "jugados": 0,
+        "jugados": 2,
         "victorias": 0,
-        "derrotas": 0,
-        "proximos": 17
+        "derrotas": 2,
+        "proximos": 15
       }
     },
     "Victor Sebastian Davila": {
@@ -1036,5 +1036,5 @@
       }
     }
   },
-  "actualizado": "2026-10-16T09:56:49.293573+00:00"
+  "actualizado": "2026-10-16T10:01:56.762774+00:00"
 }
