@@ -9,7 +9,7 @@
     "cuadros_procesados": 12,
     "dias_orden_juego_procesados": 2,
     "errores": 0,
-    "filas_partido_leidas": 1180
+    "filas_partido_leidas": 1175
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -59,17 +59,6 @@
           "ganado": null,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0",
           "estado_programacion": "Comienza a las 18:45"
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Double MASCULINO",
-          "fase": "cuartos",
-          "equipo": "Juan Jaramillo / Hugo Granados",
-          "rival": "/",
-          "horario_pista": "",
-          "resultado": "0-0",
-          "jugado": true,
-          "ganado": true,
-          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22437&visor=0"
         },
         {
           "categoria": "ABSOLUTA 4.5 Single MASCULINO",
@@ -203,8 +192,8 @@
         }
       ],
       "resumen": {
-        "jugados": 11,
-        "victorias": 9,
+        "jugados": 10,
+        "victorias": 8,
         "derrotas": 2,
         "proximos": 3
       }
@@ -695,7 +684,7 @@
           "fase": "grupos",
           "equipo": "Mercedes Cascales / Bárbara Molina",
           "rival": "Gabriela Costantino / Anna Castells",
-          "horario_pista": "16/10/2026 20:45 / Pista: 6 (Pista 6 (shooter))",
+          "horario_pista": "16/10/2026 20:45 / Pista: 5 (Pista 5 (shooter))",
           "resultado": "sin resultado",
           "jugado": false,
           "ganado": null,
@@ -707,7 +696,7 @@
           "fase": "grupos",
           "equipo": "Mercedes Cascales / Bárbara Molina",
           "rival": "Federica Mundula / Monica Ramirez",
-          "horario_pista": "16/10/2026 21:15 / Pista: 7 (Pista 7 (shooter))",
+          "horario_pista": "16/10/2026 21:15 / Pista: 5 (Pista 5 (shooter))",
           "resultado": "sin resultado",
           "jugado": false,
           "ganado": null,
@@ -767,7 +756,7 @@
           "fase": "grupos",
           "equipo": "Mercedes Cascales / Bárbara Molina",
           "rival": "Marisa Bueno / Yolanda García",
-          "horario_pista": "16/10/2026 20:00 / Pista: 7 (Pista 7 (shooter))",
+          "horario_pista": "16/10/2026 20:15 / Pista: 7 (Pista 7 (shooter))",
           "resultado": "21-9",
           "jugado": true,
           "ganado": true,
@@ -784,5 +773,5 @@
       }
     }
   },
-  "actualizado": "2026-10-16T18:52:12.538570+00:00"
+  "actualizado": "2026-10-16T18:57:20.994968+00:00"
 }
