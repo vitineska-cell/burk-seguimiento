@@ -37,18 +37,6 @@
           "estado_programacion": "Comienza a las 14:45"
         },
         {
-          "categoria": "ABSOLUTA 4.5 Double MASCULINO",
-          "fase": "grupos",
-          "equipo": "Juan Jaramillo / Hugo Granados",
-          "rival": "Isaac González Plaza / Jose Luis González",
-          "horario_pista": "16/10/2026 15:45 / Pista: 5 (Pista 5 (shooter))",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=985&visor=0",
-          "estado_programacion": "Comienza a las 15:45"
-        },
-        {
           "categoria": "ABSOLUTA 4.5 Double MIXTO",
           "fase": "grupos",
           "equipo": "Hugo Granados / Lola Perez",
@@ -167,6 +155,18 @@
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=985&visor=0",
           "estado_programacion": "Partido finalizado"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double MASCULINO",
+          "fase": "grupos",
+          "equipo": "Juan Jaramillo / Hugo Granados",
+          "rival": "Isaac González Plaza / Jose Luis González",
+          "horario_pista": "16/10/2026 15:45 / Pista: 5 (Pista 5 (shooter))",
+          "resultado": "21-9",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=985&visor=0",
+          "estado_programacion": "Partido finalizado"
         }
       ],
       "logros": [
@@ -176,10 +176,10 @@
         }
       ],
       "resumen": {
-        "jugados": 7,
-        "victorias": 6,
+        "jugados": 8,
+        "victorias": 7,
         "derrotas": 1,
-        "proximos": 5
+        "proximos": 4
       }
     },
     "Lucas Corral Falagan": {
@@ -740,5 +740,5 @@
       }
     }
   },
-  "actualizado": "2026-10-16T13:53:23.208785+00:00"
+  "actualizado": "2026-10-16T13:58:31.840457+00:00"
 }
