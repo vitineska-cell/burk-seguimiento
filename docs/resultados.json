@@ -375,18 +375,6 @@
           "categoria": "+50 4.5 Double MASCULINO",
           "fase": "grupos",
           "equipo": "Ricardo Mateo / Jose Manuel Granados",
-          "rival": "Mario Garrido Sanjuan / Juan Antonio Garrido",
-          "horario_pista": "16/10/2026 17:30 / Pista: 11",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1000&visor=0",
-          "estado_programacion": "Comienza a las 17:30"
-        },
-        {
-          "categoria": "+50 4.5 Double MASCULINO",
-          "fase": "grupos",
-          "equipo": "Ricardo Mateo / Jose Manuel Granados",
           "rival": "Xavier Maso / Xavi Sitges",
           "horario_pista": "16/10/2026 17:45 / Pista: 11",
           "resultado": "sin resultado",
@@ -454,14 +442,26 @@
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1000&visor=0",
           "estado_programacion": "Partido finalizado"
+        },
+        {
+          "categoria": "+50 4.5 Double MASCULINO",
+          "fase": "grupos",
+          "equipo": "Ricardo Mateo / Jose Manuel Granados",
+          "rival": "Mario Garrido Sanjuan / Juan Antonio Garrido",
+          "horario_pista": "16/10/2026 17:30 / Pista: 11",
+          "resultado": "20-22",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1000&visor=0",
+          "estado_programacion": "Partido finalizado"
         }
       ],
       "logros": [],
       "resumen": {
-        "jugados": 4,
+        "jugados": 5,
         "victorias": 0,
-        "derrotas": 4,
-        "proximos": 3
+        "derrotas": 5,
+        "proximos": 2
       }
     },
     "Brenda Fariña Solís": {
@@ -784,5 +784,5 @@
       }
     }
   },
-  "actualizado": "2026-10-16T16:02:18.542349+00:00"
+  "actualizado": "2026-10-16T16:28:00.172942+00:00"
 }
