@@ -188,18 +188,6 @@
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
           "fase": "grupos",
           "equipo": "Jose Maria Corral / Lucas Corral",
-          "rival": "Isaac González Plaza / Jose Luis González",
-          "horario_pista": "16/10/2026 14:30 / Pista: 5 (Pista 5 (shooter))",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=985&visor=0",
-          "estado_programacion": "Comienza a las 14:30"
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Double MASCULINO",
-          "fase": "grupos",
-          "equipo": "Jose Maria Corral / Lucas Corral",
           "rival": "Juan Jaramillo / Hugo Granados",
           "horario_pista": "16/10/2026 14:45 / Pista: 5 (Pista 5 (shooter))",
           "resultado": "sin resultado",
@@ -315,14 +303,26 @@
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=985&visor=0",
           "estado_programacion": "Partido finalizado"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double MASCULINO",
+          "fase": "grupos",
+          "equipo": "Jose Maria Corral / Lucas Corral",
+          "rival": "Isaac González Plaza / Jose Luis González",
+          "horario_pista": "16/10/2026 14:30 / Pista: 5 (Pista 5 (shooter))",
+          "resultado": "22-21",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=985&visor=0",
+          "estado_programacion": "Partido finalizado"
         }
       ],
       "logros": [],
       "resumen": {
-        "jugados": 1,
-        "victorias": 1,
+        "jugados": 2,
+        "victorias": 2,
         "derrotas": 0,
-        "proximos": 10
+        "proximos": 9
       }
     },
     "Jose Manuel Granados Sánchez": {
@@ -740,5 +740,5 @@
       }
     }
   },
-  "actualizado": "2026-10-16T13:01:53.832025+00:00"
+  "actualizado": "2026-10-16T13:22:26.253532+00:00"
 }
