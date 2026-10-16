@@ -6,10 +6,10 @@
     "grupos_unicos_detectados": 70,
     "categorias_procesadas": 22,
     "grupos_directos_procesados": 0,
-    "cuadros_procesados": 2,
+    "cuadros_procesados": 3,
     "dias_orden_juego_procesados": 2,
     "errores": 0,
-    "filas_partido_leidas": 1047
+    "filas_partido_leidas": 1065
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -24,6 +24,17 @@
     },
     "Hugo Granados Jimenez": {
       "partidos": [
+        {
+          "categoria": "Categoría",
+          "fase": "cuartos",
+          "rival": "Mario Satrústegui Coca",
+          "horario_pista": "16/10/2026 11:45 / Pista: 1 (Pista 1 (shooter))",
+          "resultado": "",
+          "jugado": false,
+          "ganado": null,
+          "url_grupo": "https://pickleprotour.com/ordenJuego.aspx?id_torneo=2341&f=16-10-2026&visor=0",
+          "estado_programacion": "Comienza a las 11:45"
+        },
         {
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
           "fase": "grupos",
@@ -142,6 +153,16 @@
           "estado_programacion": "Comienza a las 18:45"
         },
         {
+          "categoria": "ABSOLUTA 4.5 Single MASCULINO",
+          "fase": "cuartos",
+          "rival": "Mario Satrústegui",
+          "horario_pista": "",
+          "resultado": "16/10/2026 11:45 - Pista:1",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22432&visor=0"
+        },
+        {
           "categoria": "Categoría",
           "fase": "grupos",
           "rival": "Fabio Coloma",
@@ -205,12 +226,17 @@
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=979&visor=0"
         }
       ],
-      "logros": [],
+      "logros": [
+        {
+          "titulo": "Cuartofinalista",
+          "categoria": "ABSOLUTA 4.5 Single MASCULINO"
+        }
+      ],
       "resumen": {
-        "jugados": 6,
+        "jugados": 7,
         "victorias": 6,
-        "derrotas": 0,
-        "proximos": 11
+        "derrotas": 1,
+        "proximos": 12
       }
     },
     "Lucas Corral Falagan": {
@@ -1010,5 +1036,5 @@
       }
     }
   },
-  "actualizado": "2026-10-16T09:20:50.731698+00:00"
+  "actualizado": "2026-10-16T09:56:49.293573+00:00"
 }
