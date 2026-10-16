@@ -6,10 +6,10 @@
     "grupos_unicos_detectados": 70,
     "categorias_procesadas": 22,
     "grupos_directos_procesados": 0,
-    "cuadros_procesados": 10,
+    "cuadros_procesados": 11,
     "dias_orden_juego_procesados": 2,
     "errores": 0,
-    "filas_partido_leidas": 1146
+    "filas_partido_leidas": 1152
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -349,11 +349,11 @@
           "equipo": "Lucas Corral",
           "rival": "Samuel Giraldo",
           "horario_pista": "16/10/2026 18:45 / Pista: 1 (Pista 1 (shooter))",
-          "resultado": "20 - 22",
+          "resultado": "20-22",
           "jugado": true,
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=980&visor=0",
-          "estado_programacion": "Comienza a las 18:45"
+          "estado_programacion": "Partido finalizado"
         }
       ],
       "logros": [
@@ -784,5 +784,5 @@
       }
     }
   },
-  "actualizado": "2026-10-16T17:40:29.209210+00:00"
+  "actualizado": "2026-10-16T17:45:30.335945+00:00"
 }
