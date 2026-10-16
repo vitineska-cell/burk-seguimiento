@@ -9,7 +9,7 @@
     "cuadros_procesados": 12,
     "dias_orden_juego_procesados": 2,
     "errores": 0,
-    "filas_partido_leidas": 1176
+    "filas_partido_leidas": 1178
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -683,18 +683,6 @@
           "categoria": "+50 PRO Double FEMENINO",
           "fase": "grupos",
           "equipo": "Mercedes Cascales / Bárbara Molina",
-          "rival": "Federica Mundula / Monica Ramirez",
-          "horario_pista": "16/10/2026 20:30 / Pista: 7 (Pista 7 (shooter))",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1004&visor=0",
-          "estado_programacion": "Comienza a las 20:30"
-        },
-        {
-          "categoria": "+50 PRO Double FEMENINO",
-          "fase": "grupos",
-          "equipo": "Mercedes Cascales / Bárbara Molina",
           "rival": "Gabriela Costantino / Anna Castells",
           "horario_pista": "16/10/2026 20:45 / Pista: 6 (Pista 6 (shooter))",
           "resultado": "sin resultado",
@@ -762,16 +750,28 @@
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1004&visor=0",
           "estado_programacion": "Partido finalizado"
+        },
+        {
+          "categoria": "+50 PRO Double FEMENINO",
+          "fase": "grupos",
+          "equipo": "Mercedes Cascales / Bárbara Molina",
+          "rival": "Federica Mundula / Monica Ramirez",
+          "horario_pista": "16/10/2026 20:30 / Pista: 7 (Pista 7 (shooter))",
+          "resultado": "15-21",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1004&visor=0",
+          "estado_programacion": "Partido finalizado"
         }
       ],
       "logros": [],
       "resumen": {
-        "jugados": 1,
+        "jugados": 2,
         "victorias": 1,
-        "derrotas": 0,
-        "proximos": 6
+        "derrotas": 1,
+        "proximos": 5
       }
     }
   },
-  "actualizado": "2026-10-16T19:02:55.319108+00:00"
+  "actualizado": "2026-10-16T19:23:25.949336+00:00"
 }
