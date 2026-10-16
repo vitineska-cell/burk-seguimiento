@@ -6,10 +6,10 @@
     "grupos_unicos_detectados": 70,
     "categorias_procesadas": 22,
     "grupos_directos_procesados": 0,
-    "cuadros_procesados": 1,
+    "cuadros_procesados": 2,
     "dias_orden_juego_procesados": 2,
     "errores": 0,
-    "filas_partido_leidas": 1043
+    "filas_partido_leidas": 1047
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -428,27 +428,6 @@
     "Jose Manuel Granados Sánchez": {
       "partidos": [
         {
-          "categoria": "+50 4.5 Single MASCULINO",
-          "fase": "grupos",
-          "rival": "Raul Villarreal Alvarez",
-          "horario_pista": "16/10/2026 10:45 / Pista: 11",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=994&visor=0"
-        },
-        {
-          "categoria": "Categoría",
-          "fase": "grupos",
-          "rival": "Raul Villarreal Alvarez",
-          "horario_pista": "16/10/2026 10:45 / Pista: 11",
-          "resultado": "",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/ordenJuego.aspx?id_torneo=2341&f=16-10-2026&visor=0",
-          "estado_programacion": "Comienza a las 10:45"
-        },
-        {
           "categoria": "+50 4.5 Double MASCULINO",
           "fase": "grupos",
           "rival": "Hector Llopart / Hector Santana",
@@ -555,6 +534,17 @@
           "estado_programacion": "Partido finalizado"
         },
         {
+          "categoria": "Categoría",
+          "fase": "grupos",
+          "rival": "Raul Villarreal Alvarez",
+          "horario_pista": "16/10/2026 / Pista: 11",
+          "resultado": "18-21",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/ordenJuego.aspx?id_torneo=2341&f=16-10-2026&visor=0",
+          "estado_programacion": "Partido finalizado"
+        },
+        {
           "categoria": "+50 4.5 Single MASCULINO",
           "fase": "grupos",
           "rival": "Jose Maria Arroyo",
@@ -573,14 +563,24 @@
           "jugado": true,
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=994&visor=0"
+        },
+        {
+          "categoria": "+50 4.5 Single MASCULINO",
+          "fase": "grupos",
+          "rival": "Raul Villarreal Alvarez",
+          "horario_pista": "16/10/2026 10:45 / Pista: 11",
+          "resultado": "18 - 21",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=994&visor=0"
         }
       ],
       "logros": [],
       "resumen": {
-        "jugados": 4,
+        "jugados": 6,
         "victorias": 0,
-        "derrotas": 4,
-        "proximos": 10
+        "derrotas": 6,
+        "proximos": 8
       }
     },
     "Brenda Fariña Solís": {
@@ -1010,5 +1010,5 @@
       }
     }
   },
-  "actualizado": "2026-10-16T09:00:16.845695+00:00"
+  "actualizado": "2026-10-16T09:20:50.731698+00:00"
 }
