@@ -310,11 +310,11 @@
           "equipo": "Jose Maria Corral / Lucas Corral",
           "rival": "Alex Chaput / Marc Martínez",
           "horario_pista": "16/10/2026 15:30 / Pista: 5 (Pista 5 (shooter))",
-          "resultado": "21 - 18",
+          "resultado": "21-18",
           "jugado": true,
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=985&visor=0",
-          "estado_programacion": "Comienza a las 15:30"
+          "estado_programacion": "Partido finalizado"
         }
       ],
       "logros": [],
@@ -450,18 +450,6 @@
           "categoria": "ABSOLUTA 4.5 Double FEMENINO",
           "fase": "grupos",
           "equipo": "Sara Silvestre / Brenda Fariña",
-          "rival": "María De Lluch Gual / Ana Pietrosanti",
-          "horario_pista": "16/10/2026 15:00 / Pista: 3 (Pista 3 (shooter))",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=988&visor=0",
-          "estado_programacion": "Comienza a las 15:00"
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Double FEMENINO",
-          "fase": "grupos",
-          "equipo": "Sara Silvestre / Brenda Fariña",
           "rival": "Mónica Perez / Yvonne Rivera",
           "horario_pista": "16/10/2026 15:30 / Pista: 3 (Pista 3 (shooter))",
           "resultado": "sin resultado",
@@ -541,14 +529,26 @@
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=982&visor=0",
           "estado_programacion": "Partido finalizado"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double FEMENINO",
+          "fase": "grupos",
+          "equipo": "Sara Silvestre / Brenda Fariña",
+          "rival": "María De Lluch Gual / Ana Pietrosanti",
+          "horario_pista": "16/10/2026 15:00 / Pista: 3 (Pista 3 (shooter))",
+          "resultado": "21-13",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=988&visor=0",
+          "estado_programacion": "Partido finalizado"
         }
       ],
       "logros": [],
       "resumen": {
-        "jugados": 3,
-        "victorias": 1,
+        "jugados": 4,
+        "victorias": 2,
         "derrotas": 2,
-        "proximos": 7
+        "proximos": 6
       }
     },
     "Victor Sebastian Davila": {
@@ -740,5 +740,5 @@
       }
     }
   },
-  "actualizado": "2026-10-16T13:37:56.436427+00:00"
+  "actualizado": "2026-10-16T13:43:02.443790+00:00"
 }
