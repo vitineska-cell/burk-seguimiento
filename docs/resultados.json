@@ -9,7 +9,7 @@
     "cuadros_procesados": 10,
     "dias_orden_juego_procesados": 2,
     "errores": 0,
-    "filas_partido_leidas": 1141
+    "filas_partido_leidas": 1142
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -325,9 +325,9 @@
           "equipo": "Jose Maria Corral / Lucas Corral",
           "rival": "Fabio Coloma / Vicente Garcia",
           "horario_pista": "16/10/2026 16:15 / Pista: 6 (Pista 6 (shooter))",
-          "resultado": "16/10/2026 16:15 - Pista:6",
+          "resultado": "18-21",
           "jugado": true,
-          "ganado": true,
+          "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22437&visor=0",
           "estado_programacion": "Comienza a las 16:15"
         },
@@ -358,14 +358,14 @@
       ],
       "logros": [
         {
-          "titulo": "Semifinalista",
+          "titulo": "Cuartofinalista",
           "categoria": "ABSOLUTA 4.5 Double MASCULINO"
         }
       ],
       "resumen": {
         "jugados": 7,
-        "victorias": 5,
-        "derrotas": 2,
+        "victorias": 4,
+        "derrotas": 3,
         "proximos": 5
       }
     },
@@ -784,5 +784,5 @@
       }
     }
   },
-  "actualizado": "2026-10-16T15:52:03.818020+00:00"
+  "actualizado": "2026-10-16T15:57:12.421740+00:00"
 }
