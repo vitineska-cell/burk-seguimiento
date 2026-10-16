@@ -426,18 +426,6 @@
           "categoria": "ABSOLUTA 4.5 Double FEMENINO",
           "fase": "grupos",
           "equipo": "Sara Silvestre / Brenda Fariña",
-          "rival": "Marangelli Orellana / Laura Alvarez",
-          "horario_pista": "16/10/2026 14:00 / Pista: 3 (Pista 3 (shooter))",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=988&visor=0",
-          "estado_programacion": "Comienza a las 14:00"
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Double FEMENINO",
-          "fase": "grupos",
-          "equipo": "Sara Silvestre / Brenda Fariña",
           "rival": "Blanca De Dorremochea / Leticia Rodriguez",
           "horario_pista": "16/10/2026 14:30 / Pista: 3 (Pista 3 (shooter))",
           "resultado": "sin resultado",
@@ -534,6 +522,18 @@
           "categoria": "ABSOLUTA 4.5 Double FEMENINO",
           "fase": "grupos",
           "equipo": "Sara Silvestre / Brenda Fariña",
+          "rival": "Marangelli Orellana / Laura Alvarez",
+          "horario_pista": "16/10/2026 14:00 / Pista: 3 (Pista 3 (shooter))",
+          "resultado": "13-21",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=988&visor=0",
+          "estado_programacion": "Partido finalizado"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double FEMENINO",
+          "fase": "grupos",
+          "equipo": "Sara Silvestre / Brenda Fariña",
           "rival": "María De Lluch Gual / Ana Pietrosanti",
           "horario_pista": "16/10/2026 15:00 / Pista: 3 (Pista 3 (shooter))",
           "resultado": "21-13",
@@ -545,10 +545,10 @@
       ],
       "logros": [],
       "resumen": {
-        "jugados": 4,
+        "jugados": 5,
         "victorias": 2,
-        "derrotas": 2,
-        "proximos": 6
+        "derrotas": 3,
+        "proximos": 5
       }
     },
     "Victor Sebastian Davila": {
@@ -740,5 +740,5 @@
       }
     }
   },
-  "actualizado": "2026-10-16T13:58:31.840457+00:00"
+  "actualizado": "2026-10-16T14:08:54.021200+00:00"
 }
