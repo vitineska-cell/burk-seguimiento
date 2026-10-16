@@ -6,10 +6,10 @@
     "grupos_unicos_detectados": 70,
     "categorias_procesadas": 22,
     "grupos_directos_procesados": 0,
-    "cuadros_procesados": 4,
+    "cuadros_procesados": 5,
     "dias_orden_juego_procesados": 2,
     "errores": 0,
-    "filas_partido_leidas": 1073
+    "filas_partido_leidas": 1079
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -24,17 +24,6 @@
     },
     "Hugo Granados Jimenez": {
       "partidos": [
-        {
-          "categoria": "Categoría",
-          "fase": "semifinal",
-          "rival": "Alan Llopart Gonzalez",
-          "horario_pista": "16/10/2026 12:00 / Pista: 1 (Pista 1 (shooter))",
-          "resultado": "",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/ordenJuego.aspx?id_torneo=2341&f=16-10-2026&visor=0",
-          "estado_programacion": "Comienza a las 12:00"
-        },
         {
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
           "fase": "grupos",
@@ -217,6 +206,17 @@
           "estado_programacion": "Partido finalizado"
         },
         {
+          "categoria": "Categoría",
+          "fase": "semifinal",
+          "rival": "Alan Llopart Gonzalez",
+          "horario_pista": "16/10/2026 / Pista: 1 (Pista 1 (shooter))",
+          "resultado": "12-21 / 14-21",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/ordenJuego.aspx?id_torneo=2341&f=16-10-2026&visor=0",
+          "estado_programacion": "Partido finalizado"
+        },
+        {
           "categoria": "ABSOLUTA 4.5 Single MASCULINO",
           "fase": "grupos",
           "rival": "Daniel Cabrera",
@@ -258,10 +258,10 @@
         }
       ],
       "resumen": {
-        "jugados": 9,
+        "jugados": 10,
         "victorias": 9,
-        "derrotas": 0,
-        "proximos": 12
+        "derrotas": 1,
+        "proximos": 11
       }
     },
     "Lucas Corral Falagan": {
@@ -1061,5 +1061,5 @@
       }
     }
   },
-  "actualizado": "2026-10-16T10:27:39.530634+00:00"
+  "actualizado": "2026-10-16T10:43:10.622139+00:00"
 }
