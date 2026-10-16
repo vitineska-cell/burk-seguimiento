@@ -9,7 +9,7 @@
     "cuadros_procesados": 7,
     "dias_orden_juego_procesados": 2,
     "errores": 0,
-    "filas_partido_leidas": 1047
+    "filas_partido_leidas": 1111
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -213,22 +213,24 @@
           "fase": "grupos",
           "equipo": "Lucas Corral",
           "rival": "Pedro Cámara",
-          "horario_pista": "16/10/2026 18:15 / Pista: 1",
+          "horario_pista": "16/10/2026 18:15 / Pista: 1 (Pista 1 (shooter))",
           "resultado": "sin resultado",
           "jugado": false,
           "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=980&visor=0"
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=980&visor=0",
+          "estado_programacion": "Comienza a las 18:15"
         },
         {
           "categoria": "ABSOLUTA PRO Single MASCULINO",
           "fase": "grupos",
           "equipo": "Lucas Corral",
           "rival": "Samuel Giraldo",
-          "horario_pista": "16/10/2026 18:45 / Pista: 1",
+          "horario_pista": "16/10/2026 18:45 / Pista: 1 (Pista 1 (shooter))",
           "resultado": "sin resultado",
           "jugado": false,
           "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=980&visor=0"
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=980&visor=0",
+          "estado_programacion": "Comienza a las 18:45"
         },
         {
           "categoria": "ABSOLUTA 4.5 Double MIXTO",
@@ -370,7 +372,8 @@
           "resultado": "sin resultado",
           "jugado": false,
           "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1000&visor=0"
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1000&visor=0",
+          "estado_programacion": "Comienza a las 18:15"
         },
         {
           "categoria": "+50 4.5 Single MASCULINO",
@@ -648,33 +651,36 @@
           "fase": "grupos",
           "equipo": "Mercedes Cascales / Bárbara Molina",
           "rival": "Gabriela Costantino / Anna Castells",
-          "horario_pista": "16/10/2026 20:00 / Pista: 5",
+          "horario_pista": "16/10/2026 20:00 / Pista: 5 (Pista 5 (shooter))",
           "resultado": "sin resultado",
           "jugado": false,
           "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1004&visor=0"
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1004&visor=0",
+          "estado_programacion": "Comienza a las 20:00"
         },
         {
           "categoria": "+50 PRO Double FEMENINO",
           "fase": "grupos",
           "equipo": "Mercedes Cascales / Bárbara Molina",
           "rival": "Marisa Bueno / Yolanda García",
-          "horario_pista": "16/10/2026 20:15 / Pista: 7",
+          "horario_pista": "16/10/2026 20:15 / Pista: 7 (Pista 7 (shooter))",
           "resultado": "sin resultado",
           "jugado": false,
           "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1004&visor=0"
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1004&visor=0",
+          "estado_programacion": "Comienza a las 20:15"
         },
         {
           "categoria": "+50 PRO Double FEMENINO",
           "fase": "grupos",
           "equipo": "Mercedes Cascales / Bárbara Molina",
           "rival": "Federica Mundula / Monica Ramirez",
-          "horario_pista": "16/10/2026 20:30 / Pista: 7",
+          "horario_pista": "16/10/2026 20:30 / Pista: 7 (Pista 7 (shooter))",
           "resultado": "sin resultado",
           "jugado": false,
           "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1004&visor=0"
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1004&visor=0",
+          "estado_programacion": "Comienza a las 20:30"
         },
         {
           "categoria": "+50 PRO Double MIXTO",
@@ -734,5 +740,5 @@
       }
     }
   },
-  "actualizado": "2026-10-16T14:34:39.238916+00:00"
+  "actualizado": "2026-10-16T14:39:47.786773+00:00"
 }
