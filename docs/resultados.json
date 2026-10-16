@@ -27,17 +27,6 @@
         {
           "categoria": "Categoría",
           "fase": "grupos",
-          "rival": "Fabio Coloma",
-          "horario_pista": "16/10/2026 09:00 / Pista: 1 (Pista 1 (shooter))",
-          "resultado": "",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/ordenJuego.aspx?id_torneo=2341&f=16-10-2026&visor=0",
-          "estado_programacion": "Comienza a las 09:00"
-        },
-        {
-          "categoria": "Categoría",
-          "fase": "grupos",
           "rival": "Juan Jaramillo",
           "horario_pista": "16/10/2026 09:45 / Pista: 1 (Pista 1 (shooter))",
           "resultado": "",
@@ -154,16 +143,6 @@
         {
           "categoria": "ABSOLUTA 4.5 Single MASCULINO",
           "fase": "grupos",
-          "rival": "Fabio Coloma",
-          "horario_pista": "16/10/2026 9:00 / Pista: 1",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=979&visor=0"
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Single MASCULINO",
-          "fase": "grupos",
           "rival": "Juan Jaramillo",
           "horario_pista": "16/10/2026 9:45 / Pista: 1",
           "resultado": "sin resultado",
@@ -203,14 +182,35 @@
           "ganado": null,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0",
           "estado_programacion": "Comienza a las 18:45"
+        },
+        {
+          "categoria": "Categoría",
+          "fase": "grupos",
+          "rival": "Fabio Coloma",
+          "horario_pista": "16/10/2026 / Pista: 1 (Pista 1 (shooter))",
+          "resultado": "21-18",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/ordenJuego.aspx?id_torneo=2341&f=16-10-2026&visor=0",
+          "estado_programacion": "Partido finalizado"
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Single MASCULINO",
+          "fase": "grupos",
+          "rival": "Fabio Coloma",
+          "horario_pista": "16/10/2026 9:00 / Pista: 1",
+          "resultado": "21 - 18",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=979&visor=0"
         }
       ],
       "logros": [],
       "resumen": {
-        "jugados": 0,
-        "victorias": 0,
+        "jugados": 2,
+        "victorias": 2,
         "derrotas": 0,
-        "proximos": 17
+        "proximos": 15
       }
     },
     "Lucas Corral Falagan": {
@@ -1010,5 +1010,5 @@
       }
     }
   },
-  "actualizado": "2026-10-15T17:19:24.987214+00:00"
+  "actualizado": "2026-10-16T07:17:27.922908+00:00"
 }
