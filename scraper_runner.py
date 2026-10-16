@@ -23,6 +23,7 @@ from scraper import (
     resultado_esta_jugado,
 )
 from matching import jugador_en_texto_flexible as jugador_en_texto
+from fases import detectar_fase
 
 FASES = {
     "grupos": 0, "dieciseisavos": 1, "octavos": 2,
@@ -92,26 +93,6 @@ def cargar_urls_en_paralelo(
     return paginas, errores
 
 
-def detectar_fase(texto: str) -> str:
-    valor = normalizar(texto)
-    if "final" in valor and "semifinal" not in valor:
-        return "final"
-    if (
-        "semifinal" in valor
-        or "semi final" in valor
-        or valor == "semi"
-        or valor.startswith("semi ")
-    ):
-        return "semifinal"
-    if "cuartos" in valor or "1 4" in valor:
-        return "cuartos"
-    if "octavos" in valor or "1 8" in valor:
-        return "octavos"
-    if "dieciseisavos" in valor or "1 16" in valor:
-        return "dieciseisavos"
-    return "grupos"
-
-
 def categoria_limpia(texto: str, respaldo: str) -> str:
     base = texto or respaldo
     base = re.sub(r"GRUPO\s+\d+\s*-\s*PARTIDOS\s*[·-]?\s*", "", base, flags=re.I)
@@ -147,6 +128,25 @@ def _firma_equipo(texto: str) -> tuple[str, ...]:
         if tokens:
             miembros.append(" ".join(tokens[:2]))
     return tuple(sorted(miembros))
+
+
+def _equipos_coinciden(a: str, b: str) -> bool:
+    """Admite apellidos omitidos, sin confundir individuales con dobles."""
+    from itertools import permutations
+    equipo_a = [normalizar(n).split() for n in a.split("/") if n.strip()]
+    equipo_b = [normalizar(n).split() for n in b.split("/") if n.strip()]
+    if not equipo_a or len(equipo_a) != len(equipo_b):
+        return False
+
+    def mismo_nombre(x, y):
+        corto, largo = sorted((x, y), key=len)
+        if len(corto) < 2 or corto[0] != largo[0]:
+            return False
+        restantes = iter(largo)
+        return all(any(token == otro for otro in restantes) for token in corto)
+
+    return any(all(mismo_nombre(x, y) for x, y in zip(equipo_a, orden))
+               for orden in permutations(equipo_b))
 
 
 def _fusionar_registro(existente: dict[str, Any], nuevo: dict[str, Any]) -> None:
@@ -191,9 +191,34 @@ def incorporar_partidos_enriquecidos(
             if ganador in (1, 2):
                 ganado = (ganador == 1) if en_p1 else (ganador == 2)
             categoria_raw = partido.get("categoria", "") or categoria_respaldo
+            categoria = categoria_limpia(categoria_raw, categoria_respaldo)
+            fase = detectar_fase(categoria_raw)
+            equipo = partido["pareja1"] if en_p1 else partido["pareja2"]
+            # La programación oficial puede omitir la categoría. Solo se une
+            # cuando ambos equipos y la fase identifican un único cruce previo.
+            if normalizar(categoria) in ("categoria", "orden de juego", ""):
+                candidatos = [
+                    p for p in resultados[nombre]["partidos"]
+                    if p.get("fase") == fase
+                    and _equipos_coinciden(p.get("equipo", ""), equipo)
+                    and _equipos_coinciden(p.get("rival", ""), rival)
+                ]
+                if len(candidatos) != 1:
+                    raise ValueError(
+                        f"Categoría no resuelta para {nombre} contra {rival}: "
+                        f"{len(candidatos)} coincidencias; se conservan los datos publicados"
+                    )
+                categoria = candidatos[0]["categoria"]
+            # El marcador se presenta siempre desde el lado del jugador BÜRK.
+            if en_p2:
+                resultado = re.sub(
+                    r"(\d+)\s*[-–:]\s*(\d+)",
+                    lambda m: f"{m.group(2)}-{m.group(1)}", resultado,
+                )
             registro = {
-                "categoria": categoria_limpia(categoria_raw, categoria_respaldo),
-                "fase": detectar_fase(categoria_raw),
+                "categoria": categoria,
+                "fase": fase,
+                "equipo": equipo,
                 "rival": rival,
                 "horario_pista": partido.get("horario_pista", ""),
                 "resultado": resultado,
@@ -216,7 +241,8 @@ def incorporar_partidos_enriquecidos(
                     for item in resultados[nombre]["partidos"]
                     if normalizar(item.get("categoria", "")) == firma_base[1]
                     and item.get("fase") == registro["fase"]
-                    and _firma_equipo(item.get("rival", "")) == _firma_equipo(rival)
+                    and _equipos_coinciden(item.get("equipo", ""), equipo)
+                    and _equipos_coinciden(item.get("rival", ""), rival)
                 ),
                 None,
             )
@@ -395,6 +421,7 @@ def main() -> None:
     except Exception as exc:
         errores += 1
         log(f"ERROR orden de juego: {type(exc).__name__}: {exc}")
+        raise
 
     if filas_detectadas == 0:
         raise RuntimeError("La extracción no produjo filas válidas")

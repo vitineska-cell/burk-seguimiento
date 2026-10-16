@@ -100,7 +100,58 @@ def test_victor_sebastian_es_campeon_y_final_pendiente_recibe_horario():
     }]
 
 
+def test_barcelona_sin_categoria_no_duplica_ni_mezcla_modalidades():
+    from scraper import extraer_partidos_orden_juego
+    nombre = "Brenda Fariña Solís"
+    resultados = {nombre: {"partidos": [], "logros": []}}
+    firmas = set()
+    html = (Path(__file__).parent / "fixture_barcelona_sin_categoria.html").read_text()
+    orden = extraer_partidos_orden_juego(html)
+    assert len(orden) == 7
+    grupos = []
+    for partido in orden:
+        grupo = dict(partido)
+        modalidad = "Double" if "/" in partido["pareja1"] else "Single"
+        grupo["categoria"] = f"GRUPO 1 - PARTIDOS · CATEGORIA ABSOLUTA 4.5 {modalidad} FEMENINO"
+        grupos.append(grupo)
+    incorporar_partidos_enriquecidos(grupos, [nombre], resultados, firmas, "grupos", "respaldo")
+    incorporar_partidos_enriquecidos(orden, [nombre], resultados, firmas, "orden", "Orden de juego")
+    partidos = resultados[nombre]["partidos"]
+    assert len(partidos) == 7
+    assert sum("Single" in p["categoria"] for p in partidos) == 3
+    celia = next(p for p in partidos if p["rival"] == "Celia Millon")
+    assert celia["ganado"] is False
+    assert celia["resultado"] == "15-21"
+    assert "12:00" in celia["horario_pista"]
+
+
+def test_apellido_intermedio_omitido_y_modalidades():
+    from scraper_runner import _equipos_coinciden
+    assert _equipos_coinciden("Juan Plana / David Rius Marti", "David Marti / Juan Plana")
+    assert not _equipos_coinciden("Juan Plana / David Marti", "Juan Plana")
+    assert not _equipos_coinciden("David Rius Marti", "David Garcia")
+
+
+def test_categoria_ambigua_no_se_inventa():
+    nombre = "Ana Pérez"
+    resultados = {nombre: {"partidos": [], "logros": []}}
+    firmas = set()
+    partido = {"pareja1": nombre, "pareja2": "Marta Ruiz", "resultado": "21-10"}
+    for categoria in ("ABSOLUTA Single FEMENINO", "+50 Single FEMENINO"):
+        incorporar_partidos_enriquecidos([dict(partido, categoria=categoria)], [nombre], resultados, firmas, "grupo", categoria)
+    try:
+        incorporar_partidos_enriquecidos([dict(partido, categoria="Grupos · CATEGORIA Categoría")], [nombre], resultados, firmas, "orden", "Orden de juego")
+    except ValueError:
+        pass
+    else:
+        raise AssertionError("Una categoría ambigua debe bloquear la publicación")
+    assert len(resultados[nombre]["partidos"]) == 2
+
+
 if __name__ == "__main__":
+    test_barcelona_sin_categoria_no_duplica_ni_mezcla_modalidades()
+    test_categoria_ambigua_no_se_inventa()
+    test_apellido_intermedio_omitido_y_modalidades()
     test_detectar_fases()
     test_resultado_se_interpreta_segun_lado_del_jugador()
     test_logro_final()

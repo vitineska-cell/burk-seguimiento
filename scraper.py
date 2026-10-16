@@ -484,7 +484,11 @@ def extraer_partidos_orden_juego(
                 ganador = 1
             else:
                 ganador = None
-            hora = re.search(r"\b([0-2]?\d:[0-5]\d)\b", estado)
+            hora_el = partido.select_one(".oj-time-chip")
+            hora_texto = hora_el.get_text(" ", strip=True) if hora_el else ""
+            hora = re.search(r"\b([0-2]?\d:[0-5]\d)\b", estado) or re.search(
+                r"\b([0-2]?\d:[0-5]\d)\b", hora_texto
+            )
             momento = f"{fecha} {hora.group(1)}" if hora else fecha
             if not hora and normalizar(estado) == "a continuacion":
                 momento = f"{fecha} · A continuación"
