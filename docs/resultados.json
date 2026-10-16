@@ -9,7 +9,7 @@
     "cuadros_procesados": 10,
     "dias_orden_juego_procesados": 2,
     "errores": 0,
-    "filas_partido_leidas": 1143
+    "filas_partido_leidas": 1144
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -215,18 +215,6 @@
           "categoria": "ABSOLUTA PRO Single MASCULINO",
           "fase": "grupos",
           "equipo": "Lucas Corral",
-          "rival": "Pedro Cámara",
-          "horario_pista": "16/10/2026 18:15 / Pista: 1 (Pista 1 (shooter))",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=980&visor=0",
-          "estado_programacion": "Comienza a las 18:15"
-        },
-        {
-          "categoria": "ABSOLUTA PRO Single MASCULINO",
-          "fase": "grupos",
-          "equipo": "Lucas Corral",
           "rival": "Samuel Giraldo",
           "horario_pista": "16/10/2026 18:45 / Pista: 1 (Pista 1 (shooter))",
           "resultado": "sin resultado",
@@ -354,6 +342,18 @@
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=980&visor=0",
           "estado_programacion": "Partido finalizado"
+        },
+        {
+          "categoria": "ABSOLUTA PRO Single MASCULINO",
+          "fase": "grupos",
+          "equipo": "Lucas Corral",
+          "rival": "Pedro Cámara",
+          "horario_pista": "16/10/2026 18:15 / Pista: 1 (Pista 1 (shooter))",
+          "resultado": "13-21",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=980&visor=0",
+          "estado_programacion": "Partido finalizado"
         }
       ],
       "logros": [
@@ -363,10 +363,10 @@
         }
       ],
       "resumen": {
-        "jugados": 7,
+        "jugados": 8,
         "victorias": 4,
-        "derrotas": 3,
-        "proximos": 5
+        "derrotas": 4,
+        "proximos": 4
       }
     },
     "Jose Manuel Granados Sánchez": {
@@ -784,5 +784,5 @@
       }
     }
   },
-  "actualizado": "2026-10-16T16:53:52.978652+00:00"
+  "actualizado": "2026-10-16T17:04:15.212385+00:00"
 }
