@@ -9,7 +9,7 @@
     "cuadros_procesados": 12,
     "dias_orden_juego_procesados": 2,
     "errores": 0,
-    "filas_partido_leidas": 1170
+    "filas_partido_leidas": 1176
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -695,7 +695,7 @@
           "fase": "grupos",
           "equipo": "Mercedes Cascales / Bárbara Molina",
           "rival": "Gabriela Costantino / Anna Castells",
-          "horario_pista": "16/10/2026 20:00 / Pista: 5 (Pista 5 (shooter))",
+          "horario_pista": "16/10/2026 20:00 / Pista: 6 (Pista 6 (shooter))",
           "resultado": "sin resultado",
           "jugado": false,
           "ganado": null,
@@ -784,5 +784,5 @@
       }
     }
   },
-  "actualizado": "2026-10-16T18:11:16.325681+00:00"
+  "actualizado": "2026-10-16T18:36:54.960225+00:00"
 }
