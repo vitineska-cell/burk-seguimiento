@@ -6,10 +6,10 @@
     "grupos_unicos_detectados": 70,
     "categorias_procesadas": 22,
     "grupos_directos_procesados": 0,
-    "cuadros_procesados": 11,
+    "cuadros_procesados": 12,
     "dias_orden_juego_procesados": 2,
     "errores": 0,
-    "filas_partido_leidas": 1152
+    "filas_partido_leidas": 1170
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -185,16 +185,16 @@
           "equipo": "Juan Jaramillo / Hugo Granados",
           "rival": "Juan Alfonzo / David Jiménez",
           "horario_pista": "16/10/2026 17:15 / Pista: 6 (Pista 6 (shooter))",
-          "resultado": "16/10/2026 17:15 - Pista:6",
+          "resultado": "21-14 / 17-21 / 16-21",
           "jugado": true,
-          "ganado": true,
+          "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22437&visor=0",
-          "estado_programacion": "Comienza a las 17:15"
+          "estado_programacion": "Partido finalizado"
         }
       ],
       "logros": [
         {
-          "titulo": "Finalista",
+          "titulo": "Semifinalista",
           "categoria": "ABSOLUTA 4.5 Double MASCULINO"
         },
         {
@@ -204,8 +204,8 @@
       ],
       "resumen": {
         "jugados": 11,
-        "victorias": 10,
-        "derrotas": 1,
+        "victorias": 9,
+        "derrotas": 2,
         "proximos": 3
       }
     },
@@ -784,5 +784,5 @@
       }
     }
   },
-  "actualizado": "2026-10-16T17:45:30.335945+00:00"
+  "actualizado": "2026-10-16T18:11:16.325681+00:00"
 }
