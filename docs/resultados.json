@@ -6,10 +6,10 @@
     "grupos_unicos_detectados": 70,
     "categorias_procesadas": 22,
     "grupos_directos_procesados": 0,
-    "cuadros_procesados": 9,
+    "cuadros_procesados": 10,
     "dias_orden_juego_procesados": 2,
     "errores": 0,
-    "filas_partido_leidas": 1125
+    "filas_partido_leidas": 1131
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -203,18 +203,6 @@
           "categoria": "ABSOLUTA PRO Single MASCULINO",
           "fase": "grupos",
           "equipo": "Lucas Corral",
-          "rival": "Miguel López",
-          "horario_pista": "16/10/2026 17:00 / Pista: 1 (Pista 1 (shooter))",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=980&visor=0",
-          "estado_programacion": "Comienza a las 17:00"
-        },
-        {
-          "categoria": "ABSOLUTA PRO Single MASCULINO",
-          "fase": "grupos",
-          "equipo": "Lucas Corral",
           "rival": "Pedro Cámara",
           "horario_pista": "16/10/2026 18:15 / Pista: 1 (Pista 1 (shooter))",
           "resultado": "sin resultado",
@@ -342,6 +330,18 @@
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=980&visor=0",
           "estado_programacion": "Partido finalizado"
+        },
+        {
+          "categoria": "ABSOLUTA PRO Single MASCULINO",
+          "fase": "grupos",
+          "equipo": "Lucas Corral",
+          "rival": "Miguel López",
+          "horario_pista": "16/10/2026 17:00 / Pista: 1 (Pista 1 (shooter))",
+          "resultado": "6-21",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=980&visor=0",
+          "estado_programacion": "Comienza a las 17:00"
         }
       ],
       "logros": [
@@ -351,26 +351,14 @@
         }
       ],
       "resumen": {
-        "jugados": 6,
+        "jugados": 7,
         "victorias": 5,
-        "derrotas": 1,
-        "proximos": 6
+        "derrotas": 2,
+        "proximos": 5
       }
     },
     "Jose Manuel Granados Sánchez": {
       "partidos": [
-        {
-          "categoria": "+50 4.5 Double MASCULINO",
-          "fase": "grupos",
-          "equipo": "Ricardo Mateo / Jose Manuel Granados",
-          "rival": "Hector Llopart / Hector Santana",
-          "horario_pista": "16/10/2026 17:15 / Pista: 9",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1000&visor=0",
-          "estado_programacion": "Comienza a las 17:15"
-        },
         {
           "categoria": "+50 4.5 Double MASCULINO",
           "fase": "grupos",
@@ -442,14 +430,26 @@
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=994&visor=0",
           "estado_programacion": "Partido finalizado"
+        },
+        {
+          "categoria": "+50 4.5 Double MASCULINO",
+          "fase": "grupos",
+          "equipo": "Ricardo Mateo / Jose Manuel Granados",
+          "rival": "Hector Llopart / Hector Santana",
+          "horario_pista": "16/10/2026 17:15 / Pista: 9",
+          "resultado": "16 - 21",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1000&visor=0",
+          "estado_programacion": "Comienza a las 17:15"
         }
       ],
       "logros": [],
       "resumen": {
-        "jugados": 3,
+        "jugados": 4,
         "victorias": 0,
-        "derrotas": 3,
-        "proximos": 4
+        "derrotas": 4,
+        "proximos": 3
       }
     },
     "Brenda Fariña Solís": {
@@ -772,5 +772,5 @@
       }
     }
   },
-  "actualizado": "2026-10-16T15:10:49.366102+00:00"
+  "actualizado": "2026-10-16T15:21:07.605713+00:00"
 }
