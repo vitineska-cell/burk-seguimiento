@@ -212,18 +212,6 @@
     "Lucas Corral Falagan": {
       "partidos": [
         {
-          "categoria": "ABSOLUTA PRO Single MASCULINO",
-          "fase": "grupos",
-          "equipo": "Lucas Corral",
-          "rival": "Samuel Giraldo",
-          "horario_pista": "16/10/2026 18:45 / Pista: 1 (Pista 1 (shooter))",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=980&visor=0",
-          "estado_programacion": "Comienza a las 18:45"
-        },
-        {
           "categoria": "ABSOLUTA 4.5 Double MIXTO",
           "fase": "grupos",
           "equipo": "Marina Hernando / Lucas Corral",
@@ -354,6 +342,18 @@
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=980&visor=0",
           "estado_programacion": "Partido finalizado"
+        },
+        {
+          "categoria": "ABSOLUTA PRO Single MASCULINO",
+          "fase": "grupos",
+          "equipo": "Lucas Corral",
+          "rival": "Samuel Giraldo",
+          "horario_pista": "16/10/2026 18:45 / Pista: 1 (Pista 1 (shooter))",
+          "resultado": "20 - 22",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=980&visor=0",
+          "estado_programacion": "Comienza a las 18:45"
         }
       ],
       "logros": [
@@ -363,10 +363,10 @@
         }
       ],
       "resumen": {
-        "jugados": 8,
+        "jugados": 9,
         "victorias": 4,
-        "derrotas": 4,
-        "proximos": 4
+        "derrotas": 5,
+        "proximos": 3
       }
     },
     "Jose Manuel Granados Sánchez": {
@@ -784,5 +784,5 @@
       }
     }
   },
-  "actualizado": "2026-10-16T17:19:43.824670+00:00"
+  "actualizado": "2026-10-16T17:40:29.209210+00:00"
 }
