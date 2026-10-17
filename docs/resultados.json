@@ -1100,6 +1100,10 @@
           "equipo_ids": [
             "10073005",
             "10772706"
+          ],
+          "rival_ids": [
+            "1329558",
+            "16739015"
           ]
         },
         {
@@ -1282,7 +1286,13 @@
     "barbara molina duran": [
       "10772706"
     ],
+    "benigna villasuso": [
+      "16739015"
+    ],
     "blanca de dorremochea": [
+      "10611649"
+    ],
+    "blanca de dorremochea de dorremochea zaldivar": [
       "10611649"
     ],
     "blanca de dorremochea zaldivar": [
@@ -1552,6 +1562,9 @@
     "monica ramirez calvo": [
       "10326462"
     ],
+    "nina villasuso cores": [
+      "16739015"
+    ],
     "pablo segade": [
       "10778192"
     ],
@@ -1622,5 +1635,5 @@
       "99000412"
     ]
   },
-  "actualizado": "2026-10-17T07:42:32.515462+00:00"
+  "actualizado": "2026-10-17T08:08:16.306701+00:00"
 }
