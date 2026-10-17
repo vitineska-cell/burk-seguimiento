@@ -311,26 +311,6 @@
           "categoria": "ABSOLUTA 4.5 Double MIXTO",
           "fase": "grupos",
           "equipo": "Marina Hernando / Lucas Corral",
-          "rival": "Alan Llopart / Julia Pulgarin",
-          "horario_pista": "17/10/2026 18:15 / Pista: 6 (Pista 6 (shooter))",
-          "resultado": "",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0",
-          "estado_programacion": "Comienza a las 18:15",
-          "equipo_ids": [
-            "10831502",
-            "7825964"
-          ],
-          "rival_ids": [
-            "11713668",
-            "11848118"
-          ]
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Double MIXTO",
-          "fase": "grupos",
-          "equipo": "Marina Hernando / Lucas Corral",
           "rival": "Sergio Rojo Muñoz / Yasmina Rincón",
           "horario_pista": "17/10/2026 18:30 / Pista: 6 (Pista 6 (shooter))",
           "resultado": "",
@@ -548,6 +528,27 @@
             "10770859",
             "10804856"
           ]
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double MIXTO",
+          "fase": "grupos",
+          "equipo": "Marina Hernando / Lucas Corral",
+          "rival": "Alan Llopart / Julia Pulgarin",
+          "horario_pista": "17/10/2026 18:15 / Pista: 6 (Pista 6 (shooter))",
+          "resultado": "21-5",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0",
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116260",
+          "equipo_ids": [
+            "10831502",
+            "7825964"
+          ],
+          "rival_ids": [
+            "11713668",
+            "11848118"
+          ]
         }
       ],
       "logros": [
@@ -557,10 +558,10 @@
         }
       ],
       "resumen": {
-        "jugados": 10,
-        "victorias": 4,
+        "jugados": 11,
+        "victorias": 5,
         "derrotas": 6,
-        "proximos": 2
+        "proximos": 1
       }
     },
     "Jose Manuel Granados Sánchez": {
@@ -1725,5 +1726,5 @@
       "99000412"
     ]
   },
-  "actualizado": "2026-10-17T17:32:48.911957+00:00"
+  "actualizado": "2026-10-17T17:48:16.281418+00:00"
 }
