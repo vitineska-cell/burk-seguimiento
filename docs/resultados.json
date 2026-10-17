@@ -715,26 +715,6 @@
     "Brenda Fariña Solís": {
       "partidos": [
         {
-          "categoria": "ABSOLUTA PRO Double MIXTO",
-          "fase": "grupos",
-          "equipo": "Javier Pedregosa / Brenda Fariña",
-          "rival": "Asis Garrido G. / Paula Clemente",
-          "horario_pista": "17/10/2026 16:15 / Pista: 3 (Pista 3 (shooter))",
-          "resultado": "",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=992&visor=0",
-          "estado_programacion": "Comienza a las 16:15",
-          "equipo_ids": [
-            "10806349",
-            "7820188"
-          ],
-          "rival_ids": [
-            "10303501",
-            "16670243"
-          ]
-        },
-        {
           "categoria": "ABSOLUTA 4.5 Single FEMENINO",
           "fase": "grupos",
           "equipo": "Brenda Fariña",
@@ -916,14 +896,35 @@
             "14043335",
             "99000269"
           ]
+        },
+        {
+          "categoria": "ABSOLUTA PRO Double MIXTO",
+          "fase": "grupos",
+          "equipo": "Javier Pedregosa / Brenda Fariña",
+          "rival": "Asis Garrido G. / Paula Clemente",
+          "horario_pista": "17/10/2026 16:15 / Pista: 3 (Pista 3 (shooter))",
+          "resultado": "10-21",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=992&visor=0",
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116211",
+          "equipo_ids": [
+            "10806349",
+            "7820188"
+          ],
+          "rival_ids": [
+            "10303501",
+            "16670243"
+          ]
         }
       ],
       "logros": [],
       "resumen": {
-        "jugados": 9,
+        "jugados": 10,
         "victorias": 3,
-        "derrotas": 6,
-        "proximos": 1
+        "derrotas": 7,
+        "proximos": 0
       }
     },
     "Victor Sebastian Davila": {
@@ -1719,5 +1720,5 @@
       "99000412"
     ]
   },
-  "actualizado": "2026-10-17T14:17:39.666999+00:00"
+  "actualizado": "2026-10-17T14:58:45.119180+00:00"
 }
