@@ -10,7 +10,7 @@
     "dias_orden_juego_procesados": 2,
     "incidencias": 0,
     "errores": 0,
-    "filas_partido_leidas": 1235
+    "filas_partido_leidas": 1239
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -1437,6 +1437,9 @@
     "humberto villamizar": [
       "99000265"
     ],
+    "humberto villamizar arroyo": [
+      "99000265"
+    ],
     "isaac gonzalez plaza": [
       "16951958"
     ],
@@ -1588,6 +1591,9 @@
       "10357326"
     ],
     "mario raya": [
+      "10474972"
+    ],
+    "mario raya sampere": [
       "10474972"
     ],
     "mario satrustegui": [
