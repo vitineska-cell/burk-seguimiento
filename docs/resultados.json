@@ -10,7 +10,7 @@
     "dias_orden_juego_procesados": 3,
     "incidencias": 0,
     "errores": 0,
-    "filas_partido_leidas": 1299
+    "filas_partido_leidas": 1301
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -25,26 +25,6 @@
     },
     "Hugo Granados Jimenez": {
       "partidos": [
-        {
-          "categoria": "ABSOLUTA 4.5 Double MIXTO",
-          "fase": "cuartos",
-          "equipo": "Hugo Granados / Lola Perez",
-          "rival": "Agostina Nepote / Daniel Almenar",
-          "horario_pista": "17/10/2026 21:00 / Pista: 6 (Pista 6 (shooter))",
-          "resultado": "",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22431&visor=0",
-          "estado_programacion": "Comienza a las 21:00",
-          "equipo_ids": [
-            "10440238",
-            "10768507"
-          ],
-          "rival_ids": [
-            "10774778",
-            "16973449"
-          ]
-        },
         {
           "categoria": "ABSOLUTA 4.5 Single MASCULINO",
           "fase": "grupos",
@@ -328,6 +308,27 @@
             "10778192",
             "99000413"
           ]
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double MIXTO",
+          "fase": "cuartos",
+          "equipo": "Hugo Granados / Lola Perez",
+          "rival": "Agostina Nepote / Daniel Almenar",
+          "horario_pista": "17/10/2026 21:00 / Pista: 6 (Pista 6 (shooter))",
+          "resultado": "22-21",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22431&visor=0",
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116304",
+          "equipo_ids": [
+            "10440238",
+            "10768507"
+          ],
+          "rival_ids": [
+            "10774778",
+            "16973449"
+          ]
         }
       ],
       "logros": [
@@ -336,7 +337,7 @@
           "categoria": "ABSOLUTA 4.5 Double MASCULINO"
         },
         {
-          "titulo": "Cuartofinalista",
+          "titulo": "Semifinalista",
           "categoria": "ABSOLUTA 4.5 Double MIXTO"
         },
         {
@@ -345,10 +346,10 @@
         }
       ],
       "resumen": {
-        "jugados": 14,
-        "victorias": 11,
+        "jugados": 15,
+        "victorias": 12,
         "derrotas": 3,
-        "proximos": 1
+        "proximos": 0
       }
     },
     "Lucas Corral Falagan": {
@@ -1804,5 +1805,5 @@
       "99000412"
     ]
   },
-  "actualizado": "2026-10-17T19:00:07.017450+00:00"
+  "actualizado": "2026-10-17T19:25:46.890950+00:00"
 }
