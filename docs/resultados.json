@@ -934,26 +934,6 @@
     "Victor Sebastian Davila": {
       "partidos": [
         {
-          "categoria": "ABSOLUTA 4.5 Double MIXTO",
-          "fase": "grupos",
-          "equipo": "Sara Silvestre / Victor Sebastian",
-          "rival": "Yvonne Rivera / Luis Goñi",
-          "horario_pista": "17/10/2026 18:30 / Pista: 7 (Pista 7 (shooter))",
-          "resultado": "",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0",
-          "estado_programacion": "Comienza a las 18:30",
-          "equipo_ids": [
-            "10549379",
-            "10774794"
-          ],
-          "rival_ids": [
-            "10820810",
-            "99000412"
-          ]
-        },
-        {
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
           "fase": "grupos",
           "equipo": "Victor Sebastian / Jose Alberto Martinez",
@@ -1053,14 +1033,35 @@
             "10778192",
             "99000413"
           ]
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double MIXTO",
+          "fase": "grupos",
+          "equipo": "Sara Silvestre / Victor Sebastian",
+          "rival": "Yvonne Rivera / Luis Goñi",
+          "horario_pista": "17/10/2026 18:30 / Pista: 7 (Pista 7 (shooter))",
+          "resultado": "18-21",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0",
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116267",
+          "equipo_ids": [
+            "10549379",
+            "10774794"
+          ],
+          "rival_ids": [
+            "10820810",
+            "99000412"
+          ]
         }
       ],
       "logros": [],
       "resumen": {
-        "jugados": 5,
+        "jugados": 6,
         "victorias": 2,
-        "derrotas": 3,
-        "proximos": 1
+        "derrotas": 4,
+        "proximos": 0
       }
     },
     "Laura Davila Alcala": {
@@ -1726,5 +1727,5 @@
       "99000412"
     ]
   },
-  "actualizado": "2026-10-17T17:48:16.281418+00:00"
+  "actualizado": "2026-10-17T17:58:30.458007+00:00"
 }
