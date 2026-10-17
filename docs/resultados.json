@@ -29,26 +29,6 @@
           "categoria": "ABSOLUTA 4.5 Double MIXTO",
           "fase": "grupos",
           "equipo": "Hugo Granados / Lola Perez",
-          "rival": "David Jiménez / Lorena Jimenez",
-          "horario_pista": "17/10/2026 18:15 / Pista: 3 (Pista 3 (shooter))",
-          "resultado": "",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0",
-          "estado_programacion": "Comienza a las 18:15",
-          "equipo_ids": [
-            "10440238",
-            "10768507"
-          ],
-          "rival_ids": [
-            "10182153",
-            "10252807"
-          ]
-        },
-        {
-          "categoria": "ABSOLUTA 4.5 Double MIXTO",
-          "fase": "grupos",
-          "equipo": "Hugo Granados / Lola Perez",
           "rival": "Juliana Bustos / Humberto Villamizar",
           "horario_pista": "17/10/2026 18:45 / Pista: 3 (Pista 3 (shooter))",
           "resultado": "",
@@ -285,6 +265,27 @@
             "16063729",
             "99000296"
           ]
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double MIXTO",
+          "fase": "grupos",
+          "equipo": "Hugo Granados / Lola Perez",
+          "rival": "David Jiménez / Lorena Jimenez",
+          "horario_pista": "17/10/2026 18:15 / Pista: 3 (Pista 3 (shooter))",
+          "resultado": "20-22",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0",
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116283",
+          "equipo_ids": [
+            "10440238",
+            "10768507"
+          ],
+          "rival_ids": [
+            "10182153",
+            "10252807"
+          ]
         }
       ],
       "logros": [
@@ -298,10 +299,10 @@
         }
       ],
       "resumen": {
-        "jugados": 11,
+        "jugados": 12,
         "victorias": 9,
-        "derrotas": 2,
-        "proximos": 2
+        "derrotas": 3,
+        "proximos": 1
       }
     },
     "Lucas Corral Falagan": {
@@ -1724,5 +1725,5 @@
       "99000412"
     ]
   },
-  "actualizado": "2026-10-17T17:17:25.150162+00:00"
+  "actualizado": "2026-10-17T17:32:48.911957+00:00"
 }
