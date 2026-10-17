@@ -6,11 +6,11 @@
     "grupos_unicos_detectados": 70,
     "categorias_procesadas": 22,
     "grupos_directos_procesados": 0,
-    "cuadros_procesados": 16,
+    "cuadros_procesados": 17,
     "dias_orden_juego_procesados": 2,
     "incidencias": 0,
     "errores": 0,
-    "filas_partido_leidas": 1209
+    "filas_partido_leidas": 1215
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -1233,18 +1233,42 @@
             "10326462",
             "10771261"
           ]
+        },
+        {
+          "categoria": "+50 PRO Double MIXTO",
+          "fase": "cuartos",
+          "equipo": "Juan Jose Gomez / Bárbara Molina",
+          "rival": "Pernilla Ohlin / Quintin Garrido",
+          "horario_pista": "17/10/2026 11:30 / Pista: 8 (Pista 8 (VILA))",
+          "resultado": "17/10/2026 11:30 - Pista:8",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22440&visor=0",
+          "estado_programacion": "Partido finalizado",
+          "equipo_ids": [
+            "10073005",
+            "10772706"
+          ],
+          "rival_ids": [
+            "10112077",
+            "99000451"
+          ]
         }
       ],
       "logros": [
         {
           "titulo": "Semifinalista",
           "categoria": "+50 PRO Double FEMENINO"
+        },
+        {
+          "titulo": "Cuartofinalista",
+          "categoria": "+50 PRO Double MIXTO"
         }
       ],
       "resumen": {
-        "jugados": 8,
+        "jugados": 9,
         "victorias": 4,
-        "derrotas": 4,
+        "derrotas": 5,
         "proximos": 0
       }
     }
@@ -1356,6 +1380,9 @@
       "99000458"
     ],
     "federico bitan": [
+      "10081610"
+    ],
+    "federico bitan georget": [
       "10081610"
     ],
     "gabriela costantino": [
@@ -1595,6 +1622,15 @@
     "pedro camara camara": [
       "14043335"
     ],
+    "pernilla ohlin": [
+      "99000451"
+    ],
+    "quintin garrido": [
+      "10112077"
+    ],
+    "quintin garrido sanchez": [
+      "10112077"
+    ],
     "raul villarreal alvarez": [
       "99000488"
     ],
@@ -1650,5 +1686,5 @@
       "99000412"
     ]
   },
-  "actualizado": "2026-10-17T10:21:39.126445+00:00"
+  "actualizado": "2026-10-17T10:36:58.136404+00:00"
 }
