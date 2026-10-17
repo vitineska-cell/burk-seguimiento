@@ -308,26 +308,6 @@
     "Lucas Corral Falagan": {
       "partidos": [
         {
-          "categoria": "ABSOLUTA 4.5 Double MIXTO",
-          "fase": "grupos",
-          "equipo": "Marina Hernando / Lucas Corral",
-          "rival": "Sergio Rojo Muñoz / Yasmina Rincón",
-          "horario_pista": "17/10/2026 18:30 / Pista: 6 (Pista 6 (shooter))",
-          "resultado": "",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0",
-          "estado_programacion": "Comienza a las 18:30",
-          "equipo_ids": [
-            "10831502",
-            "7825964"
-          ],
-          "rival_ids": [
-            "10771782",
-            "10794130"
-          ]
-        },
-        {
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
           "fase": "grupos",
           "equipo": "Jose Maria Corral / Lucas Corral",
@@ -549,6 +529,27 @@
             "11713668",
             "11848118"
           ]
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double MIXTO",
+          "fase": "grupos",
+          "equipo": "Marina Hernando / Lucas Corral",
+          "rival": "Sergio Rojo Muñoz / Yasmina Rincón",
+          "horario_pista": "17/10/2026 18:30 / Pista: 6 (Pista 6 (shooter))",
+          "resultado": "16-21",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0",
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116261",
+          "equipo_ids": [
+            "10831502",
+            "7825964"
+          ],
+          "rival_ids": [
+            "10771782",
+            "10794130"
+          ]
         }
       ],
       "logros": [
@@ -558,10 +559,10 @@
         }
       ],
       "resumen": {
-        "jugados": 11,
+        "jugados": 12,
         "victorias": 5,
-        "derrotas": 6,
-        "proximos": 1
+        "derrotas": 7,
+        "proximos": 0
       }
     },
     "Jose Manuel Granados Sánchez": {
@@ -1727,5 +1728,5 @@
       "99000412"
     ]
   },
-  "actualizado": "2026-10-17T17:58:30.458007+00:00"
+  "actualizado": "2026-10-17T18:03:39.199237+00:00"
 }
