@@ -139,12 +139,10 @@ def test_categoria_ambigua_no_se_inventa():
     partido = {"pareja1": nombre, "pareja2": "Marta Ruiz", "resultado": "21-10"}
     for categoria in ("ABSOLUTA Single FEMENINO", "+50 Single FEMENINO"):
         incorporar_partidos_enriquecidos([dict(partido, categoria=categoria)], [nombre], resultados, firmas, "grupo", categoria)
-    try:
-        incorporar_partidos_enriquecidos([dict(partido, categoria="Grupos · CATEGORIA Categoría")], [nombre], resultados, firmas, "orden", "Orden de juego")
-    except ValueError:
-        pass
-    else:
-        raise AssertionError("Una categoría ambigua debe bloquear la publicación")
+    incidencias = []
+    incorporar_partidos_enriquecidos([dict(partido, categoria="Grupos · CATEGORIA Categoría")], [nombre], resultados, firmas, "orden", "Orden de juego", incidencias)
+    assert len(incidencias) == 1
+    assert incidencias[0]['tipo'] == 'categoria_no_resuelta'
     assert len(resultados[nombre]["partidos"]) == 2
 
 

@@ -14,4 +14,4 @@ scraper_runner.detectar_fase = detectar_fase
 
 
 if __name__ == "__main__":
-    scraper_runner.main()
+    scraper_runner.ejecutar()

@@ -3,6 +3,8 @@
 from __future__ import annotations
 
 import json
+import copy
+import hashlib
 import re
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -22,7 +24,7 @@ from scraper import (
     guardar_debug, limpiar_texto, log, normalizar,
     resultado_esta_jugado,
 )
-from matching import jugador_en_texto_flexible as jugador_en_texto
+from matching import IdentidadesOficiales, jugador_en_texto_flexible as jugador_en_texto
 from fases import detectar_fase
 
 FASES = {
@@ -30,6 +32,7 @@ FASES = {
     "cuartos": 3, "semifinal": 4, "final": 5,
 }
 MAX_PARALLEL_REQUESTS = 6
+STATUS_PATH = OUTPUT_PATH.with_name('estado.json')
 
 
 def listado_cuadros_cargado(html: str) -> bool:
@@ -54,12 +57,17 @@ def cargar_url(url: str, intentos: int = 3, timeout: int = 35) -> str:
                         "Chrome/130 Safari/537.36"
                     ),
                     "Accept-Language": "es-ES,es;q=0.9",
+                    "Cache-Control": "no-cache",
                 },
             )
             with urlopen(request, timeout=timeout) as respuesta:
                 contenido = respuesta.read()
                 charset = respuesta.headers.get_content_charset() or "utf-8"
-            return contenido.decode(charset, errors="replace")
+            html = contenido.decode(charset, errors="replace")
+            nombre = hashlib.sha256(url.encode()).hexdigest()[:16]
+            guardar_debug(nombre + '.html', html)
+            guardar_debug(nombre + '.url', url)
+            return html
         except Exception as exc:
             ultimo_error = exc
             if intento < intentos:
@@ -130,9 +138,13 @@ def _firma_equipo(texto: str) -> tuple[str, ...]:
     return tuple(sorted(miembros))
 
 
-def _equipos_coinciden(a: str, b: str) -> bool:
+def _equipos_coinciden(a: str, b: str, identidades=None) -> bool:
     """Admite apellidos omitidos, sin confundir individuales con dobles."""
     from itertools import permutations
+    if identidades:
+        ids_a, ids_b = identidades.equipo(a), identidades.equipo(b)
+        if ids_a and ids_b:
+            return ids_a == ids_b
     equipo_a = [normalizar(n).split() for n in a.split("/") if n.strip()]
     equipo_b = [normalizar(n).split() for n in b.split("/") if n.strip()]
     if not equipo_a or len(equipo_a) != len(equipo_b):
@@ -151,15 +163,18 @@ def _equipos_coinciden(a: str, b: str) -> bool:
 
 def _fusionar_registro(existente: dict[str, Any], nuevo: dict[str, Any]) -> None:
     """Completa un cruce ya visto con resultado, horario o estado más reciente."""
-    if nuevo.get("resultado"):
+    if nuevo.get("jugado") or (not existente.get("jugado") and nuevo.get("resultado")):
         existente["resultado"] = nuevo["resultado"]
         existente["jugado"] = nuevo["jugado"]
-    if nuevo.get("ganado") is not None:
-        existente["ganado"] = nuevo["ganado"]
+        existente["ganado"] = nuevo.get("ganado")
     if nuevo.get("horario_pista"):
         existente["horario_pista"] = nuevo["horario_pista"]
-    if nuevo.get("estado_programacion"):
+    if nuevo.get("estado_programacion") and not existente.get("jugado"):
         existente["estado_programacion"] = nuevo["estado_programacion"]
+    if existente.get("jugado"):
+        existente['estado_programacion'] = 'Partido finalizado'
+    if nuevo.get('id_partido'):
+        existente['id_partido'] = nuevo['id_partido']
     url_existente = normalizar(existente.get("url_grupo", ""))
     url_nueva = normalizar(nuevo.get("url_grupo", ""))
     if nuevo.get("url_grupo") and (
@@ -173,6 +188,7 @@ def incorporar_partidos_enriquecidos(
     partidos: list[dict[str, str]], jugadores: list[str],
     resultados: dict[str, dict[str, Any]], firmas: set[tuple[str, ...]],
     url_origen: str, categoria_respaldo: str,
+    incidencias: list | None = None, identidades=None,
 ) -> int:
     encontrados = 0
     for partido in partidos:
@@ -183,15 +199,19 @@ def incorporar_partidos_enriquecidos(
                 continue
             rival = partido["pareja2"] if en_p1 else partido["pareja1"]
             resultado = limpiar_texto(partido["resultado"])
-            jugado = resultado_esta_jugado(resultado)
+            jugado = partido.get('jugado', resultado_esta_jugado(resultado))
+            if not jugado and not resultado_esta_jugado(resultado):
+                resultado = ''
             ganador = partido.get("ganador") or (
                 _ganador_desde_resultado(resultado) if jugado else None
             )
             ganado = None
-            if ganador in (1, 2):
+            if jugado and ganador in (1, 2):
                 ganado = (ganador == 1) if en_p1 else (ganador == 2)
             categoria_raw = partido.get("categoria", "") or categoria_respaldo
             categoria = categoria_limpia(categoria_raw, categoria_respaldo)
+            if normalizar(categoria) == 'categoria' and normalizar(categoria_respaldo) not in ('categoria', 'orden de juego', ''):
+                categoria = categoria_respaldo
             fase = detectar_fase(categoria_raw)
             equipo = partido["pareja1"] if en_p1 else partido["pareja2"]
             # La programación oficial puede omitir la categoría. Solo se une
@@ -200,14 +220,17 @@ def incorporar_partidos_enriquecidos(
                 candidatos = [
                     p for p in resultados[nombre]["partidos"]
                     if p.get("fase") == fase
-                    and _equipos_coinciden(p.get("equipo", ""), equipo)
-                    and _equipos_coinciden(p.get("rival", ""), rival)
+                    and _equipos_coinciden(p.get("equipo", ""), equipo, identidades)
+                    and _equipos_coinciden(p.get("rival", ""), rival, identidades)
                 ]
                 if len(candidatos) != 1:
-                    raise ValueError(
-                        f"Categoría no resuelta para {nombre} contra {rival}: "
-                        f"{len(candidatos)} coincidencias; se conservan los datos publicados"
-                    )
+                    incidencia = {'jugador': nombre, 'rival': rival, 'fase': fase,
+                                  'url': url_origen, 'tipo': 'categoria_no_resuelta',
+                                  'partido': partido}
+                    if incidencias is not None:
+                        incidencias.append(incidencia)
+                    log(f"AVISO: cruce sin categoría confirmada: {nombre} contra {rival}")
+                    continue
                 categoria = candidatos[0]["categoria"]
             # El marcador se presenta siempre desde el lado del jugador BÜRK.
             if en_p2:
@@ -226,6 +249,8 @@ def incorporar_partidos_enriquecidos(
                 "ganado": ganado,
                 "url_grupo": url_origen,
             }
+            if partido.get('id_partido'):
+                registro['id_partido'] = partido['id_partido']
             if partido.get("estado_programacion"):
                 registro["estado_programacion"] = partido["estado_programacion"]
 
@@ -241,8 +266,8 @@ def incorporar_partidos_enriquecidos(
                     for item in resultados[nombre]["partidos"]
                     if normalizar(item.get("categoria", "")) == firma_base[1]
                     and item.get("fase") == registro["fase"]
-                    and _equipos_coinciden(item.get("equipo", ""), equipo)
-                    and _equipos_coinciden(item.get("rival", ""), rival)
+                    and _equipos_coinciden(item.get("equipo", ""), equipo, identidades)
+                    and _equipos_coinciden(item.get("rival", ""), rival, identidades)
                 ),
                 None,
             )
@@ -268,6 +293,8 @@ def calcular_logros(partidos: list[dict[str, Any]]) -> list[dict[str, str]]:
         ultimo = max(eliminatorias, key=lambda p: FASES.get(p.get("fase", "grupos"), 0))
         fase = ultimo.get("fase", "grupos")
         ganado = ultimo.get("ganado")
+        if ganado is None:
+            continue
         if fase == "final":
             texto = "Campeón" if ganado else "Finalista"
         elif fase == "semifinal":
@@ -288,12 +315,81 @@ def salida_tiene_cambios(anterior: dict[str, Any], nueva: dict[str, Any]) -> boo
     return any(anterior.get(clave) != nueva.get(clave) for clave in claves)
 
 
+def leer_json(path):
+    try:
+        return json.loads(path.read_text(encoding='utf-8'))
+    except (OSError, json.JSONDecodeError):
+        return {}
+
+
+def escribir_json(path, data):
+    path.parent.mkdir(exist_ok=True)
+    temporal = path.with_suffix('.tmp')
+    temporal.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding='utf-8')
+    temporal.replace(path)
+
+
+def conservar_resultados_confirmados(anterior, resultados, torneo_id, incidencias, identidades=None, fuentes_incompletas=False):
+    """Una fuente incompleta no borra resultados ya publicados del mismo torneo."""
+    if anterior.get('torneo_id') != torneo_id:
+        return
+    for nombre, datos in resultados.items():
+        for previo in anterior.get('jugadores', {}).get(nombre, {}).get('partidos', []):
+            if not previo.get('jugado') and not fuentes_incompletas:
+                continue
+            actual = next((p for p in datos['partidos']
+                           if p['categoria'] == previo['categoria'] and p['fase'] == previo['fase']
+                           and _equipos_coinciden(p.get('equipo', ''), previo.get('equipo', ''), identidades)
+                           and _equipos_coinciden(p['rival'], previo['rival'], identidades)), None)
+            if actual is not None and actual.get('jugado'):
+                continue  # Una corrección oficial actual sí sustituye el marcador anterior.
+            if actual is not None and not previo.get('jugado'):
+                continue
+            if actual is not None and 'cancel' in normalizar(actual.get('estado_programacion', '')):
+                continue
+            if actual is None:
+                actual = copy.deepcopy(previo)
+                datos['partidos'].append(actual)
+            else:
+                _fusionar_registro(actual, previo)
+            actual['pendiente_verificacion'] = True
+            incidencias.append({'tipo': 'resultado_conservado', 'jugador': nombre,
+                                'rival': previo['rival'], 'url': previo.get('url_grupo', '')})
+
+
+def publicar_estado(config, incidencias, errores=0, error=None):
+    previo = leer_json(STATUS_PATH)
+    ahora = datetime.now(timezone.utc).isoformat()
+    estado = 'error' if error else ('parcial' if errores or incidencias else 'ok')
+    data = {'torneo_id': config.get('torneo_id'), 'estado': estado,
+            'comprobado': ahora,
+            'ultima_correcta': ahora if estado == 'ok' else previo.get('ultima_correcta'),
+            'actualizacion_hasta': config.get('actualizacion_hasta'),
+            'errores': errores, 'incidencias': [
+                {k: v for k, v in i.items() if k != 'partido'} for i in incidencias]}
+    if error:
+        data['mensaje'] = str(error)
+    escribir_json(STATUS_PATH, data)
+
+
+def ejecutar():
+    try:
+        main()
+    except Exception as exc:
+        publicar_estado(cargar_config(), [], errores=1, error=exc)
+        raise
+
+
 def main() -> None:
     inicio = time.monotonic()
     config = cargar_config()
     torneo_id = int(config["torneo_id"])
     torneo_nombre = config.get("torneo_nombre", "")
     jugadores: list[str] = config["jugadores"]
+    anterior = leer_json(OUTPUT_PATH)
+    alias_previos = anterior.get('identidades', {}) if anterior.get('torneo_id') == torneo_id else {}
+    incidencias = []
+    identidades = IdentidadesOficiales(anteriores=alias_previos)
     resultados: dict[str, dict[str, Any]] = {n: {"partidos": [], "logros": []} for n in jugadores}
     firmas: set[tuple[str, ...]] = set()
     categorias_procesadas = paginas_grupo_procesadas = errores = filas_detectadas = 0
@@ -347,7 +443,7 @@ def main() -> None:
             filas_detectadas += len(partidos_categoria)
             encontrados = incorporar_partidos_enriquecidos(
                 partidos_categoria, jugadores, resultados, firmas,
-                url_categoria or url_torneo, nombre_categoria)
+                url_categoria or url_torneo, nombre_categoria, incidencias)
             categorias_procesadas += 1
             log(
                 f"[{indice}/{len(destinos)}] {nombre_categoria}: "
@@ -369,7 +465,7 @@ def main() -> None:
                 filas_detectadas += len(partidos_grupo)
                 incorporar_partidos_enriquecidos(
                     partidos_grupo, jugadores, resultados, firmas,
-                    url_grupo, nombre_categoria)
+                    url_grupo, nombre_categoria, incidencias)
                 paginas_grupo_procesadas += 1
 
         for url_cuadro in destino.get("cuadro_urls", []):
@@ -386,7 +482,7 @@ def main() -> None:
             filas_detectadas += len(partidos_cuadro)
             encontrados = incorporar_partidos_enriquecidos(
                 partidos_cuadro, jugadores, resultados, firmas,
-                url_cuadro, nombre_categoria,
+                url_cuadro, nombre_categoria, incidencias,
             )
             cuadros_procesados += 1
             log(
@@ -397,7 +493,10 @@ def main() -> None:
     try:
         url_panel_orden = f"{BASE_URL}/torneo_panel.ashx?panel=ordenjuego&id={torneo_id}"
         urls_orden = extraer_urls_orden_juego(cargar_url(url_panel_orden), torneo_id)
+        if not urls_orden and anterior.get('diagnostico', {}).get('dias_orden_juego_procesados'):
+            raise RuntimeError('La orden de juego antes publicada no está disponible en este barrido')
         paginas_orden, fallos_orden = cargar_urls_en_paralelo(urls_orden)
+        ordenes = []
         for url_orden in urls_orden:
             if url_orden in fallos_orden:
                 errores += 1
@@ -408,12 +507,20 @@ def main() -> None:
             partidos_orden = extraer_partidos_orden_juego(
                 paginas_orden.get(url_orden, ""), fecha
             )
+            if not partidos_orden:
+                errores += 1
+                incidencias.append({'tipo': 'orden_vacia', 'url': url_orden})
+                continue
             filas_detectadas += len(partidos_orden)
+            ordenes.append((url_orden, partidos_orden))
+            dias_orden_procesados += 1
+        identidades = IdentidadesOficiales((p for _, partidos in ordenes for p in partidos), alias_previos)
+        for url_orden, partidos_orden in ordenes:
             incorporar_partidos_enriquecidos(
                 partidos_orden, jugadores, resultados, firmas,
                 url_orden, "Orden de juego",
+                incidencias, identidades,
             )
-            dias_orden_procesados += 1
         log(
             f"Orden de juego: {dias_orden_procesados} día(s), "
             f"{len(urls_orden)} publicado(s)"
@@ -421,11 +528,19 @@ def main() -> None:
     except Exception as exc:
         errores += 1
         log(f"ERROR orden de juego: {type(exc).__name__}: {exc}")
-        raise
+        incidencias.append({'tipo': 'error_orden_juego', 'detalle': str(exc)})
 
     if filas_detectadas == 0:
         raise RuntimeError("La extracción no produjo filas válidas")
+    conservar_resultados_confirmados(anterior, resultados, torneo_id, incidencias, identidades, errores > 0)
+    ids_seguidos = set()
     for datos in resultados.values():
+        for partido in datos['partidos']:
+            for campo in ('equipo', 'rival'):
+                ids = identidades.equipo(partido.get(campo, ''))
+                if ids:
+                    partido[campo + '_ids'] = list(ids)
+                    ids_seguidos.update(ids)
         datos["partidos"].sort(
             key=lambda x: (
                 x["jugado"],
@@ -451,23 +566,23 @@ def main() -> None:
                         "grupos_directos_procesados": paginas_grupo_procesadas,
                         "cuadros_procesados": cuadros_procesados,
                         "dias_orden_juego_procesados": dias_orden_procesados,
+                        "incidencias": len(incidencias),
                         "errores": errores, "filas_partido_leidas": filas_detectadas},
         "jugadores": resultados,
+        "identidades": {nombre: sorted(ids) for nombre, ids in sorted(identidades.alias.items())
+                        if ids & ids_seguidos},
     }
     OUTPUT_PATH.parent.mkdir(exist_ok=True)
-    anterior: dict[str, Any] = {}
-    if OUTPUT_PATH.exists():
-        try:
-            anterior = json.loads(OUTPUT_PATH.read_text(encoding="utf-8"))
-        except (OSError, json.JSONDecodeError):
-            anterior = {}
-    if anterior and not salida_tiene_cambios(anterior, salida):
+    guardar_debug('incidencias.json', json.dumps(incidencias, ensure_ascii=False, indent=2))
+    publicar_estado(config, incidencias, errores)
+    cambios_deportivos = salida_tiene_cambios(anterior, salida)
+    if anterior and not cambios_deportivos and anterior.get('identidades') == salida['identidades']:
         log("Sin cambios deportivos: se conserva resultados.json y no se crea un commit.")
         return
-    salida["actualizado"] = datetime.now(timezone.utc).isoformat()
-    OUTPUT_PATH.write_text(json.dumps(salida, ensure_ascii=False, indent=2), encoding="utf-8")
+    salida["actualizado"] = datetime.now(timezone.utc).isoformat() if cambios_deportivos else anterior['actualizado']
+    escribir_json(OUTPUT_PATH, salida)
     log(f"Listo: {total} partidos para {len(jugadores)} jugadores BÜRK.")
 
 
 if __name__ == "__main__":
-    main()
+    ejecutar()

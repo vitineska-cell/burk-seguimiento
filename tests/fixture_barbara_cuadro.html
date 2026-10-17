@@ -1,0 +1,400 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head id="Head1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4BV6DBCZDW"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-4BV6DBCZDW');
+</script>
+
+<script>
+    function crearCookie(clave, valor, diasexpiracion) {
+        var d = new Date();
+        d.setTime(d.getTime() + (diasexpiracion * 24 * 60 * 60 * 1000));
+        var expires = "expires=" + d.toUTCString();
+        document.cookie = clave + "=" + valor + "; " + expires;
+    }
+
+    function obtenerCookie(clave) {
+        var name = clave + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1);
+            if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+        }
+        return "";
+    }
+
+    function comprobarCookie(clave) {
+        var clave = obtenerCookie(clave);
+        if (clave != "") {
+            // La cookie existe.
+            return true;
+        } else {
+            // La cookie no existe.
+            return false;
+        }
+    }
+
+    function grabaScroll(url) {
+        //graba las pos actual del scroll en la cookie...
+        var pos;
+        pos = posTop();  //document.body.scrollTop;  //document.getElementById("divPage").scrollTop;
+        // alert(pos);
+        crearCookie(url, pos, 1);
+
+    }
+
+    function cambiaScroll(url) {
+        //posiciona en div ...
+        var pos;
+        pos = obtenerCookie(url);
+        //alert('cambia a ' + pos);
+
+        //if (pos == '') { } else { document.getElementById("divPage").scrollTop = obtenerCookie(url); }
+        //if (pos == '') { } else { document.body.scrollTop = pos; }
+        if (pos == '') { } else { window.scrollTo(0, pos); }
+
+    }
+
+    function posTop() {
+
+        return typeof window.pageYOffset != 'undefined' ? window.pageYOffset : document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ? document.body.scrollTop : 0;
+    }
+
+
+    //El nombre del controlador que mantiene la sesión
+    var CONTROLADOR = "noCerrarSesion.ashx";
+
+    //Ejecuta el script en segundo plano evitando así que caduque la sesión de esta página
+    function MantenSesion() {
+        var head = document.getElementsByTagName('head').item(0);
+        script = document.createElement('script');
+        script.src = CONTROLADOR;
+        script.setAttribute('type', 'text/javascript');
+        script.defer = true;
+        head.appendChild(script);
+    }
+
+
+
+    //Temporizador para matener la sesión activa
+    setInterval("MantenSesion()", 600000);
+            
+            </script>
+    
+
+    <script src="jsweb/vendor/modernizr-2.8.1.min.js"></script>
+
+    <meta charset="utf-8" /><meta name="description" /><meta name="keywords" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap-grid.min.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/styles.css?v=1.3.5" />
+    <link rel="stylesheet" href="css/galeria.css?v=1.3.5" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" /><link rel="icon" href="img/favicon.ico" /><meta property="og:image" content="https://pickleprotour.com/img/LOGOP.png" /><meta property="og:description" content="Cervezas Victoria Pickle Pro Tour Circuito Nacional de Pickleball RFET" /><meta property="description" content="Cervezas Victoria Pickle Pro Tour Circuito Nacional de Pickleball RFET" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Pickle Pro Tour</title><meta name='Subject' content='' /><meta name='Title' content='' /><meta name='Description' content='' /><meta name='Keywords' content='' /><meta name='Author' content='' /><meta name='Copyright' content='' /><meta name='Robots' content='' /><meta name='Robot' content='' />
+<style>
+/* ============================================
+   TORNEO CUADRO - Estilo Pickle Pro Tour
+   ============================================ */
+:root {
+    --navy: #0b0c4c;
+    --navy-light: rgba(11, 12, 76, 0.06);
+    --cyan: #00D4AA;
+    --cyan-soft: #6ED4FF;
+    --border: #E5E9F0;
+    --bg: #F8F9FB;
+    --white: #fff;
+    --shadow: 0 2px 8px rgba(11, 12, 76, 0.06);
+    --radius: 12px;
+}
+
+.cuadro-body {
+    padding: 24px;
+    color: var(--navy);
+}
+.cuadro-body.con-header {
+    padding-top: 140px;
+}
+
+p { margin-bottom: 0; }
+
+.tournament-header {
+    background: var(--navy);
+    color: var(--white);
+    padding: 14px 28px;
+    border-radius: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+.tournament-header img { max-width: 100%; height: auto; }
+
+.round-selector {
+    display: none;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.round-selector button {
+    background: var(--white);
+    color: var(--navy);
+    border: 2px solid var(--border);
+    padding: 9px 20px;
+    margin: 0 4px 8px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+.round-selector button:hover { border-color: var(--navy); }
+
+.round-selector button.active,
+.round-btn.active {
+    background: var(--navy);
+    color: var(--white);
+    border-color: var(--navy);
+}
+
+.tournament-container {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+}
+.tournament-container::-webkit-scrollbar { height: 6px; }
+.tournament-container::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+.tournament-round {
+    display: flex;
+    flex-direction: column;
+    min-width: 260px;
+    margin-right: 20px;
+}
+
+.round-header {
+    background: transparent;
+    color: var(--navy);
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 50px;
+    margin-bottom: 12px;
+    border: 2px solid var(--border);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.match-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+}
+
+.match {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: 10px;
+    background: var(--white);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.match-team {
+    padding: 10px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+.match-team:last-child { border-bottom: none; }
+
+.match-team.winner {
+    background: rgba(0, 212, 170, 0.08);
+    font-weight: 700;
+}
+
+.winner::after {
+    content: " \2713";
+    color: var(--cyan);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.team-name { flex: 1; color: var(--navy); font-size: 13px; font-weight: 500; }
+.team-score { margin-left: 10px; font-weight: 700; font-size: 13px; color: var(--navy); }
+
+.match-result {
+    background: var(--navy);
+    padding: 4px 14px;
+    font-weight: 700;
+    font-style: normal;
+    text-align: right;
+    font-size: 12px;
+    color: var(--cyan-soft);
+    letter-spacing: 0.5px;
+}
+
+.seed {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: var(--white);
+    font-size: 11px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.match-connector { flex: 1; border-right: 2px solid var(--border); margin: 0 auto; }
+.match-connector-container { width: 20px; display: flex; align-items: center; }
+.horizontal-connector { width: 100%; height: 2px; background: var(--border); }
+
+.final-winner {
+    background: var(--navy-light);
+    border: 2px solid var(--navy);
+    border-radius: var(--radius);
+    padding: 16px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 15px;
+    margin-top: 20px;
+    box-shadow: var(--shadow);
+    color: var(--navy);
+}
+
+.licSel {
+    background: rgb(0, 212, 170);
+    color: var(--navy);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+    .tournament-container { flex-wrap: nowrap; overflow-x: auto; }
+    .tournament-round { min-width: 220px; }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .tournament-container { flex-wrap: wrap; justify-content: center; overflow-x: hidden; }
+    .tournament-round { min-width: calc(50% - 20px); margin: 0 10px 20px; border-right: 1px dashed var(--border); padding-right: 15px; }
+    .tournament-round:nth-child(even) { border-right: none; }
+    .team-name { font-size: 13px; }
+    .team-score { font-size: 12px; }
+    .round-header { font-size: 13px; margin-bottom: 14px; }
+    .final-winner { font-size: 16px; padding: 20px; }
+    .tournament-header img { width: 100%; }
+}
+
+@media (max-width: 768px) {
+    .cuadro-body { padding: 16px; }
+    .cuadro-body.con-header { padding-top: 110px; }
+    .round-selector { display: block; }
+    .tournament-container { flex-wrap: nowrap; overflow-x: hidden; }
+    .tournament-round { min-width: 100%; margin-right: 0; display: none; }
+    .tournament-header { font-size: 13px; padding: 12px 20px; }
+    .tournament-header img { width: 100%; }
+    .match-team { padding: 8px 10px; }
+    .team-name { font-size: 12px; }
+    .team-score { font-size: 12px; }
+}
+</style>
+<title>
+
+</title></head>
+<body>
+	<form method="post" action="./torneoCuadro.aspx?id=22445&amp;visor=0" id="forwm">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNjgwMTk0NDAxZGSoSR5dmZKeim8GOxJ6RG3F+zBOxaT8ZK3IN7F2BYIuyg==" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CD179273" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAKOVqxiCc7sVPAmSwqSD6WUGlRYaYBZJZhGwxaQngXY8BBZcmU7/tgfb0v3uYYG/0Te15QRcFehiOqxDtDQ7+Q5" />
+</div>
+    <input type="hidden" name="ctl00$hfAppMovil" id="hfAppMovil" value="NO" />
+
+    
+<div class="cuadro-body">
+    <section class="datos">
+        <div class='tournament-header'> CATEGORIA +50 PRO Double FEMENINO</div> <div class='round-selector' style='display: none;'> <button type='button' class='round-btn  active ' data-round='1'>Semi</button>  <button type='button' class='round-btn ' data-round='2'>Final</button> </div><div class='tournament-container justify-content-md-center'> <div class='tournament-round  active ' data-round='1' style='display: flex;'> <div class='round-header'>Semi</div> <div class='match-container'><div class='match'><div class='match-team winner'><span class='seed'>1</span><div class='team-name'>Elena Bonilla / Eva Martinez</div></div><div class='match-result'>21-12 / 21-10 </div><div class='match-team '><div class='team-name'>Mercedes Cascales / Bárbara Molina</div></div></div><div class='match'><div class='match-team '><div class='team-name'>Mª Elena Gomez / Piti Ferrando</div></div><div class='match-result'>12-21 / 14-21 </div><div class='match-team winner'><span class='seed'>2</span><div class='team-name'>Federica Mundula / Monica Ramirez</div></div></div></div></div> <div class='tournament-round ' data-round='2' style='display: flex;'> <div class='round-header'>Final</div> <div class='match-container'><div class='match'><div class='match-team '><span class='seed'>1</span><div class='team-name'>Elena Bonilla / Eva Martinez</div></div><div class='match-result'>17/10/2026 19:00 - Pista:12</div><div class='match-team '><span class='seed'>2</span><div class='team-name'>Federica Mundula / Monica Ramirez</div></div></div></div></div></div>
+    </section>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var roundButtons = document.querySelectorAll('.round-btn');
+    var tournamentRounds = document.querySelectorAll('.tournament-round');
+    if (!roundButtons.length || !tournamentRounds.length) return;
+
+    function activateRound(roundNumber) {
+        roundButtons.forEach(function(btn) {
+            if (btn.getAttribute('data-round') === roundNumber) { btn.classList.add('active'); }
+            else { btn.classList.remove('active'); }
+        });
+        tournamentRounds.forEach(function(round) {
+            round.style.display = (round.getAttribute('data-round') === roundNumber) ? 'flex' : 'none';
+        });
+    }
+
+    roundButtons.forEach(function(button) {
+        button.addEventListener('click', function(event) {
+            event.preventDefault();
+            activateRound(this.getAttribute('data-round'));
+            window.scrollTo({ top: document.querySelector('.tournament-header').offsetTop, behavior: 'smooth' });
+            return false;
+        });
+    });
+
+    function checkScreenWidth() {
+        if (window.innerWidth <= 768) {
+            document.querySelector('.round-selector').style.display = 'block';
+            var activeBtn = document.querySelector('.round-btn.active');
+            activateRound(activeBtn ? activeBtn.getAttribute('data-round') : '1');
+        } else {
+            document.querySelector('.round-selector').style.display = 'none';
+            tournamentRounds.forEach(function(r) { r.style.display = 'flex'; });
+        }
+    }
+
+    checkScreenWidth();
+    window.addEventListener('resize', checkScreenWidth);
+});
+</script>
+
+</form> 
+
+
+
+<script type="text/javascript">
+    function abrirurl(link) {
+        document.location.href = link;
+    }
+</script>
+<!-- JavaScript -->
+    <script src="js/main.js"></script>
+    
+    
+
+</body>
+<script src="js/galeria.js?v=1.2.5"></script>
+</html>

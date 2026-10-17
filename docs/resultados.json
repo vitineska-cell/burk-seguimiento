@@ -6,10 +6,11 @@
     "grupos_unicos_detectados": 70,
     "categorias_procesadas": 22,
     "grupos_directos_procesados": 0,
-    "cuadros_procesados": 12,
+    "cuadros_procesados": 14,
     "dias_orden_juego_procesados": 2,
+    "incidencias": 0,
     "errores": 0,
-    "filas_partido_leidas": 1178
+    "filas_partido_leidas": 1191
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -30,11 +31,19 @@
           "equipo": "Hugo Granados / Lola Perez",
           "rival": "Alba Garcia / Javier Tejada",
           "horario_pista": "17/10/2026 17:45 / Pista: 3 (Pista 3 (shooter))",
-          "resultado": "sin resultado",
+          "resultado": "",
           "jugado": false,
           "ganado": null,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0",
-          "estado_programacion": "Comienza a las 17:45"
+          "estado_programacion": "Comienza a las 17:45",
+          "equipo_ids": [
+            "10440238",
+            "10768507"
+          ],
+          "rival_ids": [
+            "16063729",
+            "99000296"
+          ]
         },
         {
           "categoria": "ABSOLUTA 4.5 Double MIXTO",
@@ -42,11 +51,19 @@
           "equipo": "Hugo Granados / Lola Perez",
           "rival": "David Jiménez / Lorena Jimenez",
           "horario_pista": "17/10/2026 18:15 / Pista: 3 (Pista 3 (shooter))",
-          "resultado": "sin resultado",
+          "resultado": "",
           "jugado": false,
           "ganado": null,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0",
-          "estado_programacion": "Comienza a las 18:15"
+          "estado_programacion": "Comienza a las 18:15",
+          "equipo_ids": [
+            "10440238",
+            "10768507"
+          ],
+          "rival_ids": [
+            "10182153",
+            "10252807"
+          ]
         },
         {
           "categoria": "ABSOLUTA 4.5 Double MIXTO",
@@ -54,11 +71,19 @@
           "equipo": "Hugo Granados / Lola Perez",
           "rival": "Juliana Bustos / Humberto Villamizar",
           "horario_pista": "17/10/2026 18:45 / Pista: 3 (Pista 3 (shooter))",
-          "resultado": "sin resultado",
+          "resultado": "",
           "jugado": false,
           "ganado": null,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0",
-          "estado_programacion": "Comienza a las 18:45"
+          "estado_programacion": "Comienza a las 18:45",
+          "equipo_ids": [
+            "10440238",
+            "10768507"
+          ],
+          "rival_ids": [
+            "99000265",
+            "99000463"
+          ]
         },
         {
           "categoria": "ABSOLUTA 4.5 Single MASCULINO",
@@ -70,7 +95,14 @@
           "jugado": true,
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=979&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116308",
+          "equipo_ids": [
+            "10440238"
+          ],
+          "rival_ids": [
+            "99000371"
+          ]
         },
         {
           "categoria": "ABSOLUTA 4.5 Single MASCULINO",
@@ -82,7 +114,14 @@
           "jugado": true,
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=979&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116310",
+          "equipo_ids": [
+            "10440238"
+          ],
+          "rival_ids": [
+            "10813584"
+          ]
         },
         {
           "categoria": "ABSOLUTA 4.5 Single MASCULINO",
@@ -94,7 +133,14 @@
           "jugado": true,
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=979&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116312",
+          "equipo_ids": [
+            "10440238"
+          ],
+          "rival_ids": [
+            "77202525"
+          ]
         },
         {
           "categoria": "ABSOLUTA 4.5 Single MASCULINO",
@@ -106,7 +152,14 @@
           "jugado": true,
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22432&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116352",
+          "equipo_ids": [
+            "10440238"
+          ],
+          "rival_ids": [
+            "10771378"
+          ]
         },
         {
           "categoria": "ABSOLUTA 4.5 Single MASCULINO",
@@ -118,7 +171,14 @@
           "jugado": true,
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22432&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116356",
+          "equipo_ids": [
+            "10440238"
+          ],
+          "rival_ids": [
+            "11713668"
+          ]
         },
         {
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
@@ -130,7 +190,16 @@
           "jugado": true,
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=985&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116537",
+          "equipo_ids": [
+            "10440238",
+            "10813584"
+          ],
+          "rival_ids": [
+            "6630926",
+            "99000492"
+          ]
         },
         {
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
@@ -142,7 +211,16 @@
           "jugado": true,
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=985&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116539",
+          "equipo_ids": [
+            "10440238",
+            "10813584"
+          ],
+          "rival_ids": [
+            "7825922",
+            "7825964"
+          ]
         },
         {
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
@@ -154,7 +232,16 @@
           "jugado": true,
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=985&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116541",
+          "equipo_ids": [
+            "10440238",
+            "10813584"
+          ],
+          "rival_ids": [
+            "10474972",
+            "99000265"
+          ]
         },
         {
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
@@ -166,7 +253,16 @@
           "jugado": true,
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=985&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116543",
+          "equipo_ids": [
+            "10440238",
+            "10813584"
+          ],
+          "rival_ids": [
+            "16951958",
+            "16978598"
+          ]
         },
         {
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
@@ -178,7 +274,16 @@
           "jugado": true,
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22437&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116559",
+          "equipo_ids": [
+            "10440238",
+            "10813584"
+          ],
+          "rival_ids": [
+            "10252807",
+            "99000490"
+          ]
         }
       ],
       "logros": [
@@ -206,11 +311,19 @@
           "equipo": "Marina Hernando / Lucas Corral",
           "rival": "Jose Alberto Martinez / Carmen Rosa",
           "horario_pista": "17/10/2026 17:45 / Pista: 6 (Pista 6 (shooter))",
-          "resultado": "sin resultado",
+          "resultado": "",
           "jugado": false,
           "ganado": null,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0",
-          "estado_programacion": "Comienza a las 17:45"
+          "estado_programacion": "Comienza a las 17:45",
+          "equipo_ids": [
+            "10831502",
+            "7825964"
+          ],
+          "rival_ids": [
+            "10770859",
+            "10804856"
+          ]
         },
         {
           "categoria": "ABSOLUTA 4.5 Double MIXTO",
@@ -218,11 +331,19 @@
           "equipo": "Marina Hernando / Lucas Corral",
           "rival": "Alan Llopart / Julia Pulgarin",
           "horario_pista": "17/10/2026 18:15 / Pista: 6 (Pista 6 (shooter))",
-          "resultado": "sin resultado",
+          "resultado": "",
           "jugado": false,
           "ganado": null,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0",
-          "estado_programacion": "Comienza a las 18:15"
+          "estado_programacion": "Comienza a las 18:15",
+          "equipo_ids": [
+            "10831502",
+            "7825964"
+          ],
+          "rival_ids": [
+            "11713668",
+            "11848118"
+          ]
         },
         {
           "categoria": "ABSOLUTA 4.5 Double MIXTO",
@@ -230,11 +351,19 @@
           "equipo": "Marina Hernando / Lucas Corral",
           "rival": "Sergio Rojo Muñoz / Yasmina Rincón",
           "horario_pista": "17/10/2026 18:30 / Pista: 6 (Pista 6 (shooter))",
-          "resultado": "sin resultado",
+          "resultado": "",
           "jugado": false,
           "ganado": null,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0",
-          "estado_programacion": "Comienza a las 18:30"
+          "estado_programacion": "Comienza a las 18:30",
+          "equipo_ids": [
+            "10831502",
+            "7825964"
+          ],
+          "rival_ids": [
+            "10771782",
+            "10794130"
+          ]
         },
         {
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
@@ -246,7 +375,16 @@
           "jugado": true,
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=985&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116535",
+          "equipo_ids": [
+            "7825922",
+            "7825964"
+          ],
+          "rival_ids": [
+            "10474972",
+            "99000265"
+          ]
         },
         {
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
@@ -258,7 +396,16 @@
           "jugado": true,
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=985&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116538",
+          "equipo_ids": [
+            "7825922",
+            "7825964"
+          ],
+          "rival_ids": [
+            "16951958",
+            "16978598"
+          ]
         },
         {
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
@@ -270,7 +417,16 @@
           "jugado": true,
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=985&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116539",
+          "equipo_ids": [
+            "7825922",
+            "7825964"
+          ],
+          "rival_ids": [
+            "10440238",
+            "10813584"
+          ]
         },
         {
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
@@ -282,7 +438,16 @@
           "jugado": true,
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=985&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116542",
+          "equipo_ids": [
+            "7825922",
+            "7825964"
+          ],
+          "rival_ids": [
+            "6630926",
+            "99000492"
+          ]
         },
         {
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
@@ -294,7 +459,16 @@
           "jugado": true,
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22437&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116557",
+          "equipo_ids": [
+            "7825922",
+            "7825964"
+          ],
+          "rival_ids": [
+            "99000332",
+            "99000371"
+          ]
         },
         {
           "categoria": "ABSOLUTA PRO Single MASCULINO",
@@ -306,7 +480,14 @@
           "jugado": true,
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=980&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116160",
+          "equipo_ids": [
+            "7825964"
+          ],
+          "rival_ids": [
+            "11906875"
+          ]
         },
         {
           "categoria": "ABSOLUTA PRO Single MASCULINO",
@@ -318,7 +499,14 @@
           "jugado": true,
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=980&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116161",
+          "equipo_ids": [
+            "7825964"
+          ],
+          "rival_ids": [
+            "7404007"
+          ]
         },
         {
           "categoria": "ABSOLUTA PRO Single MASCULINO",
@@ -330,7 +518,14 @@
           "jugado": true,
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=980&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116166",
+          "equipo_ids": [
+            "7825964"
+          ],
+          "rival_ids": [
+            "14043335"
+          ]
         },
         {
           "categoria": "ABSOLUTA PRO Single MASCULINO",
@@ -342,7 +537,14 @@
           "jugado": true,
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=980&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116168",
+          "equipo_ids": [
+            "7825964"
+          ],
+          "rival_ids": [
+            "17037919"
+          ]
         }
       ],
       "logros": [
@@ -370,7 +572,14 @@
           "jugado": true,
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=994&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116705",
+          "equipo_ids": [
+            "10768375"
+          ],
+          "rival_ids": [
+            "11855551"
+          ]
         },
         {
           "categoria": "+50 4.5 Single MASCULINO",
@@ -382,7 +591,14 @@
           "jugado": true,
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=994&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116706",
+          "equipo_ids": [
+            "10768375"
+          ],
+          "rival_ids": [
+            "6526258"
+          ]
         },
         {
           "categoria": "+50 4.5 Single MASCULINO",
@@ -394,7 +610,14 @@
           "jugado": true,
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=994&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116709",
+          "equipo_ids": [
+            "10768375"
+          ],
+          "rival_ids": [
+            "99000488"
+          ]
         },
         {
           "categoria": "+50 4.5 Double MASCULINO",
@@ -406,7 +629,16 @@
           "jugado": true,
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1000&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116606",
+          "equipo_ids": [
+            "10768375",
+            "10834358"
+          ],
+          "rival_ids": [
+            "11828491",
+            "1329558"
+          ]
         },
         {
           "categoria": "+50 4.5 Double MASCULINO",
@@ -418,7 +650,16 @@
           "jugado": true,
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1000&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116608",
+          "equipo_ids": [
+            "10768375",
+            "10834358"
+          ],
+          "rival_ids": [
+            "10357326",
+            "16724454"
+          ]
         },
         {
           "categoria": "+50 4.5 Double MASCULINO",
@@ -430,7 +671,16 @@
           "jugado": true,
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1000&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116610",
+          "equipo_ids": [
+            "10768375",
+            "10834358"
+          ],
+          "rival_ids": [
+            "11936939",
+            "99000501"
+          ]
         },
         {
           "categoria": "+50 4.5 Double MASCULINO",
@@ -442,7 +692,16 @@
           "jugado": true,
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1000&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116613",
+          "equipo_ids": [
+            "10768375",
+            "10834358"
+          ],
+          "rival_ids": [
+            "11500982",
+            "11805035"
+          ]
         }
       ],
       "logros": [],
@@ -461,11 +720,19 @@
           "equipo": "Javier Pedregosa / Brenda Fariña",
           "rival": "Sergi Ventura / Alicia Roca",
           "horario_pista": "17/10/2026 15:00 / Pista: 3 (Pista 3 (shooter))",
-          "resultado": "sin resultado",
+          "resultado": "",
           "jugado": false,
           "ganado": null,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=992&visor=0",
-          "estado_programacion": "Comienza a las 15:00"
+          "estado_programacion": "Comienza a las 15:00",
+          "equipo_ids": [
+            "10806349",
+            "7820188"
+          ],
+          "rival_ids": [
+            "11916882",
+            "6567179"
+          ]
         },
         {
           "categoria": "ABSOLUTA PRO Double MIXTO",
@@ -473,11 +740,19 @@
           "equipo": "Javier Pedregosa / Brenda Fariña",
           "rival": "Giovanna Mandon / Pedro Cámara",
           "horario_pista": "17/10/2026 15:45 / Pista: 3 (Pista 3 (shooter))",
-          "resultado": "sin resultado",
+          "resultado": "",
           "jugado": false,
           "ganado": null,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=992&visor=0",
-          "estado_programacion": "Comienza a las 15:45"
+          "estado_programacion": "Comienza a las 15:45",
+          "equipo_ids": [
+            "10806349",
+            "7820188"
+          ],
+          "rival_ids": [
+            "14043335",
+            "99000269"
+          ]
         },
         {
           "categoria": "ABSOLUTA PRO Double MIXTO",
@@ -485,11 +760,19 @@
           "equipo": "Javier Pedregosa / Brenda Fariña",
           "rival": "Asis Garrido G. / Paula Clemente",
           "horario_pista": "17/10/2026 16:15 / Pista: 3 (Pista 3 (shooter))",
-          "resultado": "sin resultado",
+          "resultado": "",
           "jugado": false,
           "ganado": null,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=992&visor=0",
-          "estado_programacion": "Comienza a las 16:15"
+          "estado_programacion": "Comienza a las 16:15",
+          "equipo_ids": [
+            "10806349",
+            "7820188"
+          ],
+          "rival_ids": [
+            "10303501",
+            "16670243"
+          ]
         },
         {
           "categoria": "ABSOLUTA 4.5 Single FEMENINO",
@@ -501,7 +784,14 @@
           "jugado": true,
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=982&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116437",
+          "equipo_ids": [
+            "7820188"
+          ],
+          "rival_ids": [
+            "13462130"
+          ]
         },
         {
           "categoria": "ABSOLUTA 4.5 Single FEMENINO",
@@ -513,7 +803,14 @@
           "jugado": true,
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=982&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116438",
+          "equipo_ids": [
+            "7820188"
+          ],
+          "rival_ids": [
+            "16951726"
+          ]
         },
         {
           "categoria": "ABSOLUTA 4.5 Single FEMENINO",
@@ -525,7 +822,14 @@
           "jugado": true,
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=982&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116441",
+          "equipo_ids": [
+            "7820188"
+          ],
+          "rival_ids": [
+            "10667402"
+          ]
         },
         {
           "categoria": "ABSOLUTA 4.5 Double FEMENINO",
@@ -537,7 +841,16 @@
           "jugado": true,
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=988&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116514",
+          "equipo_ids": [
+            "10774794",
+            "7820188"
+          ],
+          "rival_ids": [
+            "10450328",
+            "99000413"
+          ]
         },
         {
           "categoria": "ABSOLUTA 4.5 Double FEMENINO",
@@ -549,7 +862,16 @@
           "jugado": true,
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=988&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116516",
+          "equipo_ids": [
+            "10774794",
+            "7820188"
+          ],
+          "rival_ids": [
+            "10611649",
+            "10776295"
+          ]
         },
         {
           "categoria": "ABSOLUTA 4.5 Double FEMENINO",
@@ -561,7 +883,16 @@
           "jugado": true,
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=988&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116518",
+          "equipo_ids": [
+            "10774794",
+            "7820188"
+          ],
+          "rival_ids": [
+            "17035746",
+            "17035829"
+          ]
         },
         {
           "categoria": "ABSOLUTA 4.5 Double FEMENINO",
@@ -573,7 +904,16 @@
           "jugado": true,
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=988&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116520",
+          "equipo_ids": [
+            "10774794",
+            "7820188"
+          ],
+          "rival_ids": [
+            "99000307",
+            "99000412"
+          ]
         }
       ],
       "logros": [],
@@ -592,11 +932,19 @@
           "equipo": "Sara Silvestre / Victor Sebastian",
           "rival": "Daniel Cabrera / María De Lluch Gual",
           "horario_pista": "17/10/2026 17:30 / Pista: 5 (Pista 5 (shooter))",
-          "resultado": "sin resultado",
+          "resultado": "",
           "jugado": false,
           "ganado": null,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0",
-          "estado_programacion": "Comienza a las 17:30"
+          "estado_programacion": "Comienza a las 17:30",
+          "equipo_ids": [
+            "10549379",
+            "10774794"
+          ],
+          "rival_ids": [
+            "17035746",
+            "77202525"
+          ]
         },
         {
           "categoria": "ABSOLUTA 4.5 Double MIXTO",
@@ -604,11 +952,19 @@
           "equipo": "Sara Silvestre / Victor Sebastian",
           "rival": "Marangelli Orellana / Pablo Segade",
           "horario_pista": "17/10/2026 18:00 / Pista: 7 (Pista 7 (shooter))",
-          "resultado": "sin resultado",
+          "resultado": "",
           "jugado": false,
           "ganado": null,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0",
-          "estado_programacion": "Comienza a las 18:00"
+          "estado_programacion": "Comienza a las 18:00",
+          "equipo_ids": [
+            "10549379",
+            "10774794"
+          ],
+          "rival_ids": [
+            "10778192",
+            "99000413"
+          ]
         },
         {
           "categoria": "ABSOLUTA 4.5 Double MIXTO",
@@ -616,11 +972,19 @@
           "equipo": "Sara Silvestre / Victor Sebastian",
           "rival": "Yvonne Rivera / Luis Goñi",
           "horario_pista": "17/10/2026 18:30 / Pista: 7 (Pista 7 (shooter))",
-          "resultado": "sin resultado",
+          "resultado": "",
           "jugado": false,
           "ganado": null,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0",
-          "estado_programacion": "Comienza a las 18:30"
+          "estado_programacion": "Comienza a las 18:30",
+          "equipo_ids": [
+            "10549379",
+            "10774794"
+          ],
+          "rival_ids": [
+            "10820810",
+            "99000412"
+          ]
         },
         {
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
@@ -632,7 +996,12 @@
           "jugado": true,
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=985&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116530",
+          "equipo_ids": [
+            "10549379",
+            "10770859"
+          ]
         },
         {
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
@@ -644,7 +1013,16 @@
           "jugado": true,
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=985&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116531",
+          "equipo_ids": [
+            "10549379",
+            "10770859"
+          ],
+          "rival_ids": [
+            "10538744",
+            "10768549"
+          ]
         },
         {
           "categoria": "ABSOLUTA 4.5 Double MASCULINO",
@@ -656,7 +1034,16 @@
           "jugado": true,
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=985&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116534",
+          "equipo_ids": [
+            "10549379",
+            "10770859"
+          ],
+          "rival_ids": [
+            "99000332",
+            "99000371"
+          ]
         }
       ],
       "logros": [],
@@ -680,28 +1067,24 @@
     "Bárbara Molina Durán": {
       "partidos": [
         {
-          "categoria": "+50 PRO Double FEMENINO",
-          "fase": "grupos",
-          "equipo": "Mercedes Cascales / Bárbara Molina",
-          "rival": "Gabriela Costantino / Anna Castells",
-          "horario_pista": "16/10/2026 20:45 / Pista: 6 (Pista 6 (shooter))",
-          "resultado": "sin resultado",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1004&visor=0",
-          "estado_programacion": "Comienza a las 20:45"
-        },
-        {
           "categoria": "+50 PRO Double MIXTO",
           "fase": "grupos",
           "equipo": "Juan Jose Gomez / Bárbara Molina",
           "rival": "Rinaldo Rossi / Federica Mundula",
           "horario_pista": "17/10/2026 09:15 / Pista: 8 (Pista 8 (VILA))",
-          "resultado": "sin resultado",
+          "resultado": "",
           "jugado": false,
           "ganado": null,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1007&visor=0",
-          "estado_programacion": "Comienza a las 09:15"
+          "estado_programacion": "Comienza a las 09:15",
+          "equipo_ids": [
+            "10073005",
+            "10772706"
+          ],
+          "rival_ids": [
+            "99000457",
+            "99000458"
+          ]
         },
         {
           "categoria": "+50 PRO Double MIXTO",
@@ -709,11 +1092,19 @@
           "equipo": "Juan Jose Gomez / Bárbara Molina",
           "rival": "Federico Bitan / Eva Martinez",
           "horario_pista": "17/10/2026 09:45 / Pista: 8 (Pista 8 (VILA))",
-          "resultado": "sin resultado",
+          "resultado": "",
           "jugado": false,
           "ganado": null,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1007&visor=0",
-          "estado_programacion": "Comienza a las 09:45"
+          "estado_programacion": "Comienza a las 09:45",
+          "equipo_ids": [
+            "10073005",
+            "10772706"
+          ],
+          "rival_ids": [
+            "10081610",
+            "10768242"
+          ]
         },
         {
           "categoria": "+50 PRO Double MIXTO",
@@ -721,11 +1112,19 @@
           "equipo": "Juan Jose Gomez / Bárbara Molina",
           "rival": "Hector Santana / Benigna Villasuso",
           "horario_pista": "17/10/2026 10:15 / Pista: 8 (Pista 8 (VILA))",
-          "resultado": "sin resultado",
+          "resultado": "",
           "jugado": false,
           "ganado": null,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1007&visor=0",
-          "estado_programacion": "Comienza a las 10:15"
+          "estado_programacion": "Comienza a las 10:15",
+          "equipo_ids": [
+            "10073005",
+            "10772706"
+          ],
+          "rival_ids": [
+            "1329558",
+            "2131746"
+          ]
         },
         {
           "categoria": "+50 PRO Double MIXTO",
@@ -733,11 +1132,19 @@
           "equipo": "Juan Jose Gomez / Bárbara Molina",
           "rival": "Juber Aviles / Monica Ramirez",
           "horario_pista": "17/10/2026 11:00 / Pista: 8 (Pista 8 (VILA))",
-          "resultado": "sin resultado",
+          "resultado": "",
           "jugado": false,
           "ganado": null,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1007&visor=0",
-          "estado_programacion": "Comienza a las 11:00"
+          "estado_programacion": "Comienza a las 11:00",
+          "equipo_ids": [
+            "10073005",
+            "10772706"
+          ],
+          "rival_ids": [
+            "10326462",
+            "10771261"
+          ]
         },
         {
           "categoria": "+50 PRO Double FEMENINO",
@@ -749,7 +1156,16 @@
           "jugado": true,
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1004&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116724",
+          "equipo_ids": [
+            "10772706",
+            "99000337"
+          ],
+          "rival_ids": [
+            "10773150",
+            "99000288"
+          ]
         },
         {
           "categoria": "+50 PRO Double FEMENINO",
@@ -761,17 +1177,459 @@
           "jugado": true,
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1004&visor=0",
-          "estado_programacion": "Partido finalizado"
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116721",
+          "equipo_ids": [
+            "10772706",
+            "99000337"
+          ],
+          "rival_ids": [
+            "10326462",
+            "99000458"
+          ]
+        },
+        {
+          "categoria": "+50 PRO Double FEMENINO",
+          "fase": "grupos",
+          "equipo": "Mercedes Cascales / Bárbara Molina",
+          "rival": "Gabriela Costantino / Anna Castells",
+          "horario_pista": "16/10/2026 20:45 / Pista: 6 (Pista 6 (shooter))",
+          "resultado": "21-7",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1004&visor=0",
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116720",
+          "equipo_ids": [
+            "10772706",
+            "99000337"
+          ],
+          "rival_ids": [
+            "11855626",
+            "16954332"
+          ]
+        },
+        {
+          "categoria": "+50 PRO Double FEMENINO",
+          "fase": "semifinal",
+          "equipo": "Mercedes Cascales / Bárbara Molina",
+          "rival": "Elena Bonilla / Eva Martinez",
+          "horario_pista": "16/10/2026 21:30 / Pista: 6 (Pista 6 (shooter))",
+          "resultado": "12-21 / 10-21",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22445&visor=0",
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116725",
+          "equipo_ids": [
+            "10772706",
+            "99000337"
+          ],
+          "rival_ids": [
+            "10768242",
+            "10804848"
+          ]
         }
       ],
-      "logros": [],
+      "logros": [
+        {
+          "titulo": "Semifinalista",
+          "categoria": "+50 PRO Double FEMENINO"
+        }
+      ],
       "resumen": {
-        "jugados": 2,
-        "victorias": 1,
-        "derrotas": 1,
-        "proximos": 5
+        "jugados": 4,
+        "victorias": 2,
+        "derrotas": 2,
+        "proximos": 4
       }
     }
   },
-  "actualizado": "2026-10-16T19:23:25.949336+00:00"
+  "identidades": {
+    "alan llopart": [
+      "11713668"
+    ],
+    "alan llopart gonzalez": [
+      "11713668"
+    ],
+    "alba garcia": [
+      "16063729"
+    ],
+    "aldara aguilera": [
+      "10667402"
+    ],
+    "alex chaput": [
+      "6630926"
+    ],
+    "alicia roca": [
+      "11916882"
+    ],
+    "alicia roca aso": [
+      "11916882"
+    ],
+    "ana pietrosanti": [
+      "17035829"
+    ],
+    "anna castells": [
+      "11855626"
+    ],
+    "asis garrido g": [
+      "16670243"
+    ],
+    "asis garrido guerrero": [
+      "16670243"
+    ],
+    "barbara molina": [
+      "10772706"
+    ],
+    "barbara molina duran": [
+      "10772706"
+    ],
+    "benigna villasuso": [
+      "2131746"
+    ],
+    "blanca de dorremochea": [
+      "10611649"
+    ],
+    "blanca de dorremochea zaldivar": [
+      "10611649"
+    ],
+    "brenda farina": [
+      "7820188"
+    ],
+    "carmen rosa": [
+      "10804856"
+    ],
+    "carmen rosa franquelo": [
+      "10804856"
+    ],
+    "celia millon": [
+      "16951726"
+    ],
+    "celia millon soto": [
+      "16951726"
+    ],
+    "daniel cabrera": [
+      "77202525"
+    ],
+    "daniel cabrera garcia": [
+      "77202525"
+    ],
+    "david jimenez": [
+      "10252807"
+    ],
+    "david jimenez alvarez": [
+      "10252807"
+    ],
+    "david marti": [
+      "11500982"
+    ],
+    "david rius marti": [
+      "11500982"
+    ],
+    "elena bonilla": [
+      "10804848"
+    ],
+    "elena bonilla gonzalez": [
+      "10804848"
+    ],
+    "eva martinez": [
+      "10768242"
+    ],
+    "eva martinez gonzalez": [
+      "10768242"
+    ],
+    "fabio coloma": [
+      "99000371"
+    ],
+    "fabio coloma barba": [
+      "99000371"
+    ],
+    "federica mundula": [
+      "99000458"
+    ],
+    "federico bitan": [
+      "10081610"
+    ],
+    "gabriela costantino": [
+      "16954332"
+    ],
+    "giovanna mandon": [
+      "99000269"
+    ],
+    "guille hernando": [
+      "10768549"
+    ],
+    "hector llopart": [
+      "11828491"
+    ],
+    "hector llopart jardiel": [
+      "11828491"
+    ],
+    "hector santana": [
+      "1329558"
+    ],
+    "hector santana alonso": [
+      "1329558"
+    ],
+    "hugo granados": [
+      "10440238"
+    ],
+    "hugo granados jimenez": [
+      "10440238"
+    ],
+    "humberto villamizar": [
+      "99000265"
+    ],
+    "isaac gonzalez plaza": [
+      "16951958"
+    ],
+    "israel vidal": [
+      "6526258"
+    ],
+    "israel vidal giro": [
+      "6526258"
+    ],
+    "javier pedregosa": [
+      "10806349"
+    ],
+    "javier tejada": [
+      "99000296"
+    ],
+    "javier tejada diez": [
+      "99000296"
+    ],
+    "jordi segura": [
+      "11906875"
+    ],
+    "jose alberto martinez": [
+      "10770859"
+    ],
+    "jose luis gonzalez": [
+      "16978598"
+    ],
+    "jose manuel granados": [
+      "10768375"
+    ],
+    "jose maria arroyo": [
+      "11855551"
+    ],
+    "jose maria arroyo colado": [
+      "11855551"
+    ],
+    "jose maria corral": [
+      "7825922"
+    ],
+    "jose maria corral anuarbe": [
+      "7825922"
+    ],
+    "juan alfonzo": [
+      "99000490"
+    ],
+    "juan alfonzo contardo": [
+      "99000490"
+    ],
+    "juan antonio garrido": [
+      "16724454"
+    ],
+    "juan antonio garrido sanjuan": [
+      "16724454"
+    ],
+    "juan jaramillo": [
+      "10813584"
+    ],
+    "juan jaramillo jimenez": [
+      "10813584"
+    ],
+    "juan jose gomez": [
+      "10073005"
+    ],
+    "juan jose gomez delgado": [
+      "10073005"
+    ],
+    "juan plana": [
+      "11805035"
+    ],
+    "juber aviles": [
+      "10771261"
+    ],
+    "juber aviles olmo": [
+      "10771261"
+    ],
+    "julia pulgarin": [
+      "11848118"
+    ],
+    "juliana bustos": [
+      "99000463"
+    ],
+    "laura alvarez": [
+      "10450328"
+    ],
+    "laura alvarez pina": [
+      "10450328"
+    ],
+    "leticia rodriguez": [
+      "10776295"
+    ],
+    "leticia rodriguez villar": [
+      "10776295"
+    ],
+    "lola perez": [
+      "10768507"
+    ],
+    "lola perez lainez": [
+      "10768507"
+    ],
+    "lorena jimenez": [
+      "10182153"
+    ],
+    "lorena jimenez perez": [
+      "10182153"
+    ],
+    "lucas corral": [
+      "7825964"
+    ],
+    "lucas corral falagan": [
+      "7825964"
+    ],
+    "luis goni": [
+      "10820810"
+    ],
+    "marangelli orellana": [
+      "99000413"
+    ],
+    "marangelli orellana vazquez": [
+      "99000413"
+    ],
+    "marc martinez": [
+      "99000492"
+    ],
+    "marcos rodriguez": [
+      "10538744"
+    ],
+    "maria de lluch gual": [
+      "17035746"
+    ],
+    "marina hernando": [
+      "10831502"
+    ],
+    "marina serrano": [
+      "13462130"
+    ],
+    "marina serrano carceles": [
+      "13462130"
+    ],
+    "mario garrido sanjuan": [
+      "10357326"
+    ],
+    "mario raya": [
+      "10474972"
+    ],
+    "mario satrustegui": [
+      "10771378"
+    ],
+    "mario satrustegui coca": [
+      "10771378"
+    ],
+    "marisa bueno": [
+      "10773150"
+    ],
+    "marisa bueno arbas": [
+      "10773150"
+    ],
+    "mercedes cascales": [
+      "99000337"
+    ],
+    "merche cascales campos": [
+      "99000337"
+    ],
+    "miguel lopez": [
+      "7404007"
+    ],
+    "miguel lopez gomez": [
+      "7404007"
+    ],
+    "monica perez": [
+      "99000307"
+    ],
+    "monica ramirez": [
+      "10326462"
+    ],
+    "monica ramirez calvo": [
+      "10326462"
+    ],
+    "nina villasuso cores": [
+      "2131746"
+    ],
+    "pablo segade": [
+      "10778192"
+    ],
+    "pablo segade calvo": [
+      "10778192"
+    ],
+    "paula clemente": [
+      "10303501"
+    ],
+    "paula clemente alonso": [
+      "10303501"
+    ],
+    "pedro camara": [
+      "14043335"
+    ],
+    "pedro camara camara": [
+      "14043335"
+    ],
+    "raul villarreal alvarez": [
+      "99000488"
+    ],
+    "ricardo mateo": [
+      "10834358"
+    ],
+    "rinaldo rossi": [
+      "99000457"
+    ],
+    "samuel giraldo": [
+      "17037919"
+    ],
+    "sara silvestre": [
+      "10774794"
+    ],
+    "sergi ventura": [
+      "6567179"
+    ],
+    "sergio rojo munoz": [
+      "10771782"
+    ],
+    "vicente garcia": [
+      "99000332"
+    ],
+    "vicente garcia cuenca": [
+      "99000332"
+    ],
+    "victor sebastian": [
+      "10549379"
+    ],
+    "xavi sitges": [
+      "99000501"
+    ],
+    "xavi sitges compte": [
+      "99000501"
+    ],
+    "xavier maso": [
+      "11936939"
+    ],
+    "xavier maso mas": [
+      "11936939"
+    ],
+    "yasmina rincon": [
+      "10794130"
+    ],
+    "yolanda garcia": [
+      "99000288"
+    ],
+    "yvonne rivera": [
+      "99000412"
+    ]
+  },
+  "actualizado": "2026-10-17T06:40:31.545025+00:00"
 }

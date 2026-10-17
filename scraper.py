@@ -476,6 +476,14 @@ def extraer_partidos_orden_juego(
             estado_el = partido.select_one(".oj-status")
             estado = limpiar_texto(estado_el.get_text(" ", strip=True)) if estado_el else ""
             estado_normalizado = normalizar(estado)
+            referencias = []
+            for enlace in partido.select('.oj-player-names a[href]'):
+                ident = parse_qs(urlparse(enlace['href']).query).get('id', [''])[0]
+                if ident:
+                    referencias.append([limpiar_texto(enlace.get_text(' ', strip=True)), ident])
+            enlace_partido = partido.select_one('a[href*="headTohead.aspx"]')
+            id_partido = (parse_qs(urlparse(enlace_partido['href']).query).get('idR', [''])[0]
+                          if enlace_partido else '')
             if not resultado and re.search(r"\bp\s*1\b.*\bwo\b", estado_normalizado):
                 resultado = estado
                 ganador = 2
@@ -505,6 +513,12 @@ def extraer_partidos_orden_juego(
                     "resultado": resultado,
                     "ganador": ganador,
                     "estado_programacion": estado,
+                    "referencias_jugadores": referencias,
+                    "id_partido": id_partido,
+                    "jugado": bool(resultado) and (
+                        not estado_normalizado or 'finalizado' in estado_normalizado
+                        or 'wo' in estado_normalizado
+                    ),
                 }
             )
     return partidos

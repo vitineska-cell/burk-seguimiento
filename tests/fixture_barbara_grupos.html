@@ -1,0 +1,287 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head id="Head1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4BV6DBCZDW"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-4BV6DBCZDW');
+</script>
+
+<script>
+    function crearCookie(clave, valor, diasexpiracion) {
+        var d = new Date();
+        d.setTime(d.getTime() + (diasexpiracion * 24 * 60 * 60 * 1000));
+        var expires = "expires=" + d.toUTCString();
+        document.cookie = clave + "=" + valor + "; " + expires;
+    }
+
+    function obtenerCookie(clave) {
+        var name = clave + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1);
+            if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+        }
+        return "";
+    }
+
+    function comprobarCookie(clave) {
+        var clave = obtenerCookie(clave);
+        if (clave != "") {
+            // La cookie existe.
+            return true;
+        } else {
+            // La cookie no existe.
+            return false;
+        }
+    }
+
+    function grabaScroll(url) {
+        //graba las pos actual del scroll en la cookie...
+        var pos;
+        pos = posTop();  //document.body.scrollTop;  //document.getElementById("divPage").scrollTop;
+        // alert(pos);
+        crearCookie(url, pos, 1);
+
+    }
+
+    function cambiaScroll(url) {
+        //posiciona en div ...
+        var pos;
+        pos = obtenerCookie(url);
+        //alert('cambia a ' + pos);
+
+        //if (pos == '') { } else { document.getElementById("divPage").scrollTop = obtenerCookie(url); }
+        //if (pos == '') { } else { document.body.scrollTop = pos; }
+        if (pos == '') { } else { window.scrollTo(0, pos); }
+
+    }
+
+    function posTop() {
+
+        return typeof window.pageYOffset != 'undefined' ? window.pageYOffset : document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ? document.body.scrollTop : 0;
+    }
+
+
+    //El nombre del controlador que mantiene la sesión
+    var CONTROLADOR = "noCerrarSesion.ashx";
+
+    //Ejecuta el script en segundo plano evitando así que caduque la sesión de esta página
+    function MantenSesion() {
+        var head = document.getElementsByTagName('head').item(0);
+        script = document.createElement('script');
+        script.src = CONTROLADOR;
+        script.setAttribute('type', 'text/javascript');
+        script.defer = true;
+        head.appendChild(script);
+    }
+
+
+
+    //Temporizador para matener la sesión activa
+    setInterval("MantenSesion()", 600000);
+            
+            </script>
+    
+
+    <script src="jsweb/vendor/modernizr-2.8.1.min.js"></script>
+
+    <meta charset="utf-8" /><meta name="description" /><meta name="keywords" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap-grid.min.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/styles.css?v=1.3.5" />
+    <link rel="stylesheet" href="css/galeria.css?v=1.3.5" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" /><link rel="icon" href="img/favicon.ico" /><meta property="og:image" content="https://pickleprotour.com/img/LOGOP.png" /><meta property="og:description" content="Cervezas Victoria Pickle Pro Tour Circuito Nacional de Pickleball RFET" /><meta property="description" content="Cervezas Victoria Pickle Pro Tour Circuito Nacional de Pickleball RFET" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Pickle Pro Tour</title><meta name='Subject' content='' /><meta name='Title' content='' /><meta name='Description' content='' /><meta name='Keywords' content='' /><meta name='Author' content='' /><meta name='Copyright' content='' /><meta name='Robots' content='' /><meta name='Robot' content='' />
+<style>
+/* ============================================
+   TORNEO GRUPO - Estilo Pickle Pro Tour
+   ============================================ */
+:root {
+    --navy: #0b0c4c;
+    --navy-light: rgba(11, 12, 76, 0.06);
+    --cyan: #00D4AA;
+    --cyan-soft: #6ED4FF;
+    --border: #E5E9F0;
+    --bg: #F8F9FB;
+    --white: #fff;
+    --shadow: 0 2px 8px rgba(11, 12, 76, 0.06);
+    --radius: 12px;
+}
+
+.grupo-body {
+    padding: 24px;
+    color: var(--navy);
+}
+.grupo-body.con-header {
+    padding-top: 140px;
+}
+
+h1, p { border: 0; padding: 0; color: var(--navy); }
+p { margin-bottom: 0; }
+
+.tournament-header {
+    background: var(--navy);
+    color: var(--white);
+    padding: 14px 28px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.tournament-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.group-header {
+    background: var(--navy);
+    color: var(--white);
+    padding: 12px 24px;
+    margin: 24px 0 12px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+}
+
+.matches-table,
+.standings-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 24px;
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--white);
+}
+
+.matches-table th,
+.standings-table th {
+    background: var(--navy);
+    color: var(--white);
+    font-weight: 700;
+    text-align: left;
+    padding: 12px 14px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.matches-table td,
+.standings-table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--border);
+    background: transparent;
+    font-size: 14px;
+    color: var(--navy);
+}
+
+.matches-table tr:last-child td,
+.standings-table tr:last-child td { border-bottom: none; }
+
+.matches-table tbody tr:hover,
+.standings-table tbody tr:hover { background: var(--navy-light); }
+
+.standings-table td { text-align: center; }
+.standings-table td:first-child { text-align: left; font-weight: 600; }
+
+.action-link {
+    display: inline-block;
+    padding: 6px 14px;
+    background: var(--navy);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+.action-link:hover { background: var(--cyan); color: var(--navy); }
+
+.action-button {
+    background: var(--navy);
+    color: var(--white);
+    border: none;
+    padding: 12px 24px;
+    margin: 0 auto 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 14px;
+    display: block;
+    transition: all 0.25s ease;
+}
+.action-button:hover { background: var(--cyan); color: var(--navy); }
+
+.licSel {
+    background: rgb(0, 212, 170);
+    color: var(--navy);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .grupo-body { padding: 16px; }
+    .grupo-body.con-header { padding-top: 110px; }
+    .tournament-header { font-size: 13px; padding: 12px 20px; }
+    .group-header { font-size: 13px; padding: 10px 18px; margin: 16px 0 10px; }
+    .matches-table, .standings-table { font-size: 13px; }
+    .matches-table th, .standings-table th,
+    .matches-table td, .standings-table td { padding: 8px 8px; font-size: 12px; }
+    .action-link { padding: 4px 10px; font-size: 11px; }
+}
+</style>
+<title>
+
+</title></head>
+<body>
+	<form method="post" action="./torneogrupo.aspx?idT=2341&amp;g=1004&amp;visor=0" id="forwm">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNjgwMTk0NDAxZGSIcPwxuqjxwQbTP1GX/W0YG++rwZudl54hloxLLGPxSw==" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C65C4560" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAKCmb49S3oay91aNJCbRJpUGlRYaYBZJZhGwxaQngXY8Kbtx6VF8gTXOlCxB9K3CgtMhEDzf1VGwuqgzWjm1C8m" />
+</div>
+    <input type="hidden" name="ctl00$hfAppMovil" id="hfAppMovil" value="NO" />
+
+    
+<div class="grupo-body">
+    <section class="datos">
+        <div class='tournament-header'><a href='torneoGrupo.aspx?idT=2341&g=1004&visor=0'> CATEGORIA +50 PRO Double FEMENINO</a></div><div role='alert' style='margin-top: 6px;margin-bottom: 15px;background: skyblue;padding: 7px;border-radius: 30px;color: var(--color-navy, #0b0c4c);text-align: center;'>Pasan los 2 primeros de cada grupo</div><div class=''><div class='group-header'>GRUPO 1 - PARTIDOS</div><table class='matches-table'><tbody><tr><td>Pareja 1</td><td>Pareja 2</td><td>Horario / Pista</td><td>Resultado</td></tr><tr><td> <b style='background: #fd6aa9;padding: 7px;border-radius: 13px;color: #0B0C4C;'> <i class='bi bi-award'></i> Elena Bonilla  /  Eva Martinez</b></td><td>Pernilla Ohlin  /  Annika Billhult </td><td>16/10/2026 19:45  / Pista: 5</td><td>21 - 0  <b>WO Justificado</b></td></tr><tr><td> <b style='background: #fd6aa9;padding: 7px;border-radius: 13px;color: #0B0C4C;'> <i class='bi bi-award'></i> Mª Elena Gomez  /  Piti Ferrando</b></td><td>Angeles Palomo  /  Benigna Villasuso </td><td>16/10/2026 19:45  / Pista: 6</td><td>21 - 8  </td></tr><tr><td> <b style='background: #fd6aa9;padding: 7px;border-radius: 13px;color: #0B0C4C;'> <i class='bi bi-award'></i> Elena Bonilla  /  Eva Martinez</b></td><td>Mª Elena Gomez  /  Piti Ferrando </td><td>16/10/2026 20:00  / Pista: 5</td><td>21 - 17  </td></tr><tr><td> <b style='background: #fd6aa9;padding: 7px;border-radius: 13px;color: #0B0C4C;'> <i class='bi bi-award'></i> Angeles Palomo  /  Benigna Villasuso</b></td><td>Pernilla Ohlin  /  Annika Billhult </td><td>16/10/2026 20:00  / Pista: 7</td><td>21 - 0  <b>WO Justificado</b></td></tr><tr><td> <b style='background: #fd6aa9;padding: 7px;border-radius: 13px;color: #0B0C4C;'> <i class='bi bi-award'></i> Elena Bonilla  /  Eva Martinez</b></td><td>Angeles Palomo  /  Benigna Villasuso </td><td>16/10/2026 20:45  / Pista: 7</td><td>21 - 9  </td></tr><tr><td> <b style='background: #fd6aa9;padding: 7px;border-radius: 13px;color: #0B0C4C;'> <i class='bi bi-award'></i> Mª Elena Gomez  /  Piti Ferrando</b></td><td>Pernilla Ohlin  /  Annika Billhult </td><td>16/10/2026 20:30  / Pista: 5</td><td>21 - 0  <b>WO Justificado</b></td></tr></tbody></table><div class='group-header'>GRUPO 1 - CLASIFICACIÓN</div><table class='standings-table'><thead><tbody><tr><td>Pareja</td><td>Clas.</td><td>P.J</td><td>P.G</td><td>Set F/C</td><td>Dif.</td><td>Juegos F/C</td><td>Puntos</td></tr></thead><tbody><tr><td> Elena Bonilla / Eva Martinez</td><td>1</td><td>3</td><td>3</td><td>3 / 0</td><td>37</td><td>63 / 26</td><td>3</td></tr><tr><td> Mª Elena Gomez / Piti Ferrando</td><td>2</td><td>3</td><td>2</td><td>2 / 1</td><td>30</td><td>59 / 29</td><td>2</td></tr><tr><td> Angeles Palomo / Benigna Villasuso</td><td>3</td><td>3</td><td>1</td><td>1 / 2</td><td>-4</td><td>38 / 42</td><td>1</td></tr><tr><td> Pernilla Ohlin / Annika Billhult</td><td>4</td><td>3</td><td>0</td><td>0 / 3</td><td>-63</td><td>0 / 63</td><td>0</td></tr></tbody></table><div class='group-header'>GRUPO 2 - PARTIDOS</div><table class='matches-table'><tbody><tr><td>Pareja 1</td><td>Pareja 2</td><td>Horario / Pista</td><td>Resultado</td></tr><tr><td> <b style='background: #fd6aa9;padding: 7px;border-radius: 13px;color: #0B0C4C;'> <i class='bi bi-award'></i> Federica Mundula  /  Monica Ramirez</b></td><td>Marisa Bueno  /  Yolanda García </td><td>16/10/2026 19:45  / Pista: 7</td><td>21 - 12  </td></tr><tr><td> <b style='background: #fd6aa9;padding: 7px;border-radius: 13px;color: #0B0C4C;'> <i class='bi bi-award'></i> Mercedes Cascales  /  Bárbara Molina</b></td><td>Gabriela Costantino  /  Anna Castells </td><td>16/10/2026 20:45  / Pista: 6</td><td>21 - 7  </td></tr><tr><td> <b style='background: #fd6aa9;padding: 7px;border-radius: 13px;color: #0B0C4C;'> <i class='bi bi-award'></i> Federica Mundula  /  Monica Ramirez</b></td><td>Mercedes Cascales  /  Bárbara Molina </td><td>16/10/2026 20:30  / Pista: 7</td><td>21 - 15  </td></tr><tr><td> Gabriela Costantino  /  Anna Castells</td><td><b style='background: #fd6aa9;padding: 7px;border-radius: 13px;color: #0B0C4C;'> Marisa Bueno  /  Yolanda García <i class='bi bi-award'></i></b> </td><td>16/10/2026 20:30  / Pista: 6</td><td>18 - 21  </td></tr><tr><td> <b style='background: #fd6aa9;padding: 7px;border-radius: 13px;color: #0B0C4C;'> <i class='bi bi-award'></i> Federica Mundula  /  Monica Ramirez</b></td><td>Gabriela Costantino  /  Anna Castells </td><td>16/10/2026 20:00  / Pista: 6</td><td>21 - 13  </td></tr><tr><td> <b style='background: #fd6aa9;padding: 7px;border-radius: 13px;color: #0B0C4C;'> <i class='bi bi-award'></i> Mercedes Cascales  /  Bárbara Molina</b></td><td>Marisa Bueno  /  Yolanda García </td><td>16/10/2026 20:15  / Pista: 7</td><td>21 - 9  </td></tr></tbody></table><div class='group-header'>GRUPO 2 - CLASIFICACIÓN</div><table class='standings-table'><thead><tbody><tr><td>Pareja</td><td>Clas.</td><td>P.J</td><td>P.G</td><td>Set F/C</td><td>Dif.</td><td>Juegos F/C</td><td>Puntos</td></tr></thead><tbody><tr><td> Federica Mundula / Monica Ramirez</td><td>1</td><td>3</td><td>3</td><td>3 / 0</td><td>23</td><td>63 / 40</td><td>3</td></tr><tr><td> Mercedes Cascales / Bárbara Molina</td><td>2</td><td>3</td><td>2</td><td>2 / 1</td><td>20</td><td>57 / 37</td><td>2</td></tr><tr><td> Marisa Bueno / Yolanda García</td><td>3</td><td>3</td><td>1</td><td>1 / 2</td><td>-18</td><td>42 / 60</td><td>1</td></tr><tr><td> Gabriela Costantino / Anna Castells</td><td>4</td><td>3</td><td>0</td><td>0 / 3</td><td>-25</td><td>38 / 63</td><td>0</td></tr></tbody></table></div>
+    </section>
+</div>
+
+</form> 
+
+
+
+<script type="text/javascript">
+    function abrirurl(link) {
+        document.location.href = link;
+    }
+</script>
+<!-- JavaScript -->
+    <script src="js/main.js"></script>
+    
+    
+
+</body>
+<script src="js/galeria.js?v=1.2.5"></script>
+</html>

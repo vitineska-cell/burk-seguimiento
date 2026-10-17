@@ -1,0 +1,14 @@
+const fs=require('fs'),vm=require('vm'),assert=require('node:assert/strict');
+const scope={Date,console};vm.createContext(scope);vm.runInContext(fs.readFileSync('docs/estado.js','utf8'),scope);
+const now=Date.parse('2026-10-17T06:30:00Z');
+assert.equal(scope.evaluarEstado({estado:'ok',comprobado:'2026-10-17T06:25:00Z'},now).aviso,false);
+assert.equal(scope.evaluarEstado({estado:'ok',comprobado:'2026-10-16T19:23:00Z'},now).aviso,true);
+assert.equal(scope.evaluarEstado({estado:'error',comprobado:'2026-10-17T06:29:00Z'},now).aviso,true);
+assert.equal(scope.evaluarEstado({estado:'parcial',comprobado:'2026-10-17T06:29:00Z'},now).aviso,true);
+assert.equal(scope.evaluarEstado(null,now).aviso,true);
+assert.equal(scope.estadoPendiente({horario_pista:'16/10/2026 20:45',estado_programacion:'Comienza a las 20:45'},now),'Sin resultado publicado');
+assert.equal(scope.estadoPendiente({horario_pista:'17/10/2026 09:15',estado_programacion:'Comienza a las 09:15'},now),'Comienza a las 09:15');
+assert.equal(scope.estadoPendiente({horario_pista:'16/10/2026 20:45',estado_programacion:'En juego'},now),'En juego');
+const html=fs.readFileSync('docs/index.html','utf8');
+new vm.Script(html.match(/<script>([\s\S]*?)<\/script>/)[1]);
+console.log('OK: 8 comprobaciones de salud, caducidad y horarios; JavaScript válido.');

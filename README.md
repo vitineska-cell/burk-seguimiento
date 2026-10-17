@@ -85,17 +85,41 @@ Run workflow**. El panel comprueba cada 60 segundos si hay nuevos datos.
 
 ---
 
-## ⚠️ Si algo falla
+## Comprobación y recuperación de resultados
 
-El paso más delicado es cuando el scraper busca los grupos del torneo (esa
-parte de la web usa JavaScript y no se pudo probar en directo antes de
-lanzarlo). Si el **Run workflow** falla o el panel se queda vacío tras
-ejecutarlo:
+El visor distingue **Último cambio detectado** (datos deportivos) de **Última
+comprobación correcta** (consulta de las fuentes). `docs/estado.json` se publica
+en cada ciclo incluso si no cambia ningún marcador. Si una consulta falla,
+el visor avisa; también avisa tras 15 minutos sin comprobación dentro de la
+ventana del torneo. Un fallo no se presenta como ausencia de resultados.
 
-1. Ve a **Actions**, entra en la ejecución que falló (aparecerá con una ❌)
-2. Copia el texto del log (botón de copiar o selecciona todo)
-3. Pégaselo a Claude en la conversación — con eso se ajusta el scraper en
-   minutos, sin que tengas que entender el código.
+La extracción combina grupos, cuadros y orden de juego. Los alias se vinculan
+por los identificadores oficiales de jugador (por ejemplo, Mercedes Cascales
+y Merche Cascales Campos). Se conservan esos alias durante el mismo torneo.
+Un cruce con categoría ambigua se registra como incidencia, con enlace a la
+fuente, y no detiene la actualización de los demás. Los resultados confirmados
+se conservan con aviso si una fuente desaparece o vuelve a mostrar pendientes.
+Una corrección oficial con marcador sí puede sustituir un resultado anterior.
+Los marcadores en curso no se cuentan como victorias ni derrotas.
+
+Las fuentes HTML de cada barrido y las incidencias se guardan en el artefacto
+`diagnostico-scraper` de GitHub Actions durante siete días. El diagnóstico usa
+las descargas guardadas, sin depender de Playwright. Si se modifica el código
+durante un barrido, ese barrido no puede sobrescribir los datos de la corrección.
+
+Pruebas locales y en CI:
+
+```bash
+python tests/run_all.py
+node tests/test_panel.cjs
+```
+
+La regresión de Barcelona del 17/10/2026 incluye HTML real de grupos, cuadro y
+orden de juego de Bárbara: victoria 21–7 y semifinal 12–21 / 10–21. Las pruebas
+cubren además alias, ambigüedades, caídas de fuentes, conservación/corrección de
+resultados, marcadores en curso, comprobaciones sin cambios y avisos del visor.
+La frecuencia solicitada sigue siendo cinco minutos; la cola de GitHub y la
+publicación oficial pueden introducir retrasos, que ahora quedan visibles.
 
 ---
 

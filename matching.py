@@ -30,3 +30,31 @@ def jugador_en_texto_flexible(nombre_jugador: str, texto_pareja: str) -> bool:
             return True
 
     return False
+
+
+class IdentidadesOficiales:
+    """Relaciona alias únicamente cuando la fuente los vincula al mismo ID."""
+    def __init__(self, partidos=(), anteriores=None):
+        self.alias = {nombre: set(ids) for nombre, ids in (anteriores or {}).items()}
+        for partido in partidos:
+            for nombre, identificador in partido.get('referencias_jugadores', []):
+                self.alias.setdefault(normalizar(nombre), set()).add(str(identificador))
+
+    def persona(self, nombre):
+        valor = normalizar(nombre)
+        ids = self.alias.get(valor, set())
+        if not ids:
+            tokens = valor.split()
+            if len(tokens) < 2:
+                return None
+            for alias, candidatos in self.alias.items():
+                partes = alias.split()
+                corto, largo = sorted((tokens, partes), key=len)
+                restantes = iter(largo)
+                if corto[0] == largo[0] and all(any(t == x for x in restantes) for t in corto):
+                    ids = ids | candidatos
+        return next(iter(ids)) if len(ids) == 1 else None
+
+    def equipo(self, texto):
+        miembros = [self.persona(n.strip()) for n in texto.split('/') if n.strip()]
+        return tuple(sorted(miembros)) if miembros and all(miembros) else None

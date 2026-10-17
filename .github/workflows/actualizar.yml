@@ -30,6 +30,7 @@ on:
       - "jugadores.json"
       - "ventana.py"
       - "docs/index.html"
+      - "docs/estado.js"
       - "tests/**"
       - ".github/workflows/actualizar.yml"
   push:
@@ -44,6 +45,7 @@ on:
       - "jugadores.json"
       - "ventana.py"
       - "docs/index.html"
+      - "docs/estado.js"
       - "tests/**"
       - ".github/workflows/actualizar.yml"
 
@@ -148,14 +150,11 @@ jobs:
           github.event_name == 'push' || github.event_name == 'pull_request'
         run: |
           python -m py_compile scraper.py scraper_runner.py scraper_final.py matching.py fases.py ventana.py diagnostico_parser.py
-          python -u tests/test_parser.py
-          python -u tests/test_runner.py
-          python -u tests/test_matching.py
-          python -u tests/test_logros.py
-          python -u tests/test_ventana.py
-          python -u tests/test_config.py
+          python -u tests/run_all.py
+          node tests/test_panel.cjs
 
       - name: Ejecutar el scraper
+        id: scraper
         if: >-
           steps.ventana.outputs.activo == 'true' &&
           steps.deduplicar.outputs.omitir != 'true' &&
@@ -184,18 +183,20 @@ jobs:
           path: |
             debug/
             docs/resultados.json
+            docs/estado.json
           if-no-files-found: ignore
           retention-days: 7
 
       - name: Guardar los resultados actualizados
         if: >-
+          always() && steps.scraper.outcome != 'skipped' && steps.scraper.outcome != '' &&
           steps.ventana.outputs.activo == 'true' &&
           steps.deduplicar.outputs.omitir != 'true' &&
           github.event_name != 'pull_request'
         run: |
           git config user.name "BÜRK Bot"
           git config user.email "actions@github.com"
-          git add docs/resultados.json
+          git add docs/resultados.json docs/estado.json
 
           if git diff --staged --quiet; then
             echo "No hay cambios en resultados.json"
@@ -205,7 +206,13 @@ jobs:
           git commit -m "Actualizar resultados $(date -u +'%Y-%m-%d %H:%M UTC')"
 
           for intento in 1 2 3; do
-            git pull --rebase -X theirs origin main && git push origin HEAD:main && exit 0
+            git fetch origin main
+            # No publicar un barrido ejecutado con código anterior a una corrección.
+            if ! git diff --quiet HEAD^ origin/main -- '*.py' jugadores.json .github/workflows/actualizar.yml; then
+              echo "Código actualizado durante el barrido; el próximo ciclo regenerará los datos."
+              exit 0
+            fi
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
             echo "Push rechazado; reintento $intento/3..."
             git rebase --abort 2>/dev/null || true
             sleep $((intento * 3))
