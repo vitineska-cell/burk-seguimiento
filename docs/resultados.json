@@ -6,11 +6,11 @@
     "grupos_unicos_detectados": 70,
     "categorias_procesadas": 22,
     "grupos_directos_procesados": 0,
-    "cuadros_procesados": 17,
+    "cuadros_procesados": 18,
     "dias_orden_juego_procesados": 2,
     "incidencias": 0,
     "errores": 0,
-    "filas_partido_leidas": 1215
+    "filas_partido_leidas": 1223
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -1240,11 +1240,12 @@
           "equipo": "Juan Jose Gomez / Bárbara Molina",
           "rival": "Pernilla Ohlin / Quintin Garrido",
           "horario_pista": "17/10/2026 11:30 / Pista: 8 (Pista 8 (VILA))",
-          "resultado": "17/10/2026 11:30 - Pista:8",
+          "resultado": "21-19",
           "jugado": true,
-          "ganado": false,
+          "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22440&visor=0",
           "estado_programacion": "Partido finalizado",
+          "id_partido": "116643",
           "equipo_ids": [
             "10073005",
             "10772706"
@@ -1252,6 +1253,26 @@
           "rival_ids": [
             "10112077",
             "99000451"
+          ]
+        },
+        {
+          "categoria": "+50 PRO Double MIXTO",
+          "fase": "semifinal",
+          "equipo": "Juan Jose Gomez / Bárbara Molina",
+          "rival": "Elena Bonilla / Silvio Martin Suarez",
+          "horario_pista": "17/10/2026 11:45 / Pista: 8 (Pista 8 (VILA))",
+          "resultado": "17/10/2026 45-11 - Pista:8",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22440&visor=0",
+          "estado_programacion": "Partido finalizado",
+          "equipo_ids": [
+            "10073005",
+            "10772706"
+          ],
+          "rival_ids": [
+            "10605668",
+            "10804848"
           ]
         }
       ],
@@ -1261,14 +1282,14 @@
           "categoria": "+50 PRO Double FEMENINO"
         },
         {
-          "titulo": "Cuartofinalista",
+          "titulo": "Finalista",
           "categoria": "+50 PRO Double MIXTO"
         }
       ],
       "resumen": {
-        "jugados": 9,
-        "victorias": 4,
-        "derrotas": 5,
+        "jugados": 10,
+        "victorias": 6,
+        "derrotas": 4,
         "proximos": 0
       }
     }
@@ -1655,6 +1676,9 @@
     "sergio rojo munoz": [
       "10771782"
     ],
+    "silvio martin suarez": [
+      "10605668"
+    ],
     "vicente garcia": [
       "99000332"
     ],
@@ -1686,5 +1710,5 @@
       "99000412"
     ]
   },
-  "actualizado": "2026-10-17T10:36:58.136404+00:00"
+  "actualizado": "2026-10-17T11:02:40.982463+00:00"
 }
