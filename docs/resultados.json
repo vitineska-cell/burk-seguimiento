@@ -10,7 +10,7 @@
     "dias_orden_juego_procesados": 2,
     "incidencias": 0,
     "errores": 0,
-    "filas_partido_leidas": 1239
+    "filas_partido_leidas": 1243
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -718,26 +718,6 @@
           "categoria": "ABSOLUTA PRO Double MIXTO",
           "fase": "grupos",
           "equipo": "Javier Pedregosa / Brenda Fariña",
-          "rival": "Sergi Ventura / Alicia Roca",
-          "horario_pista": "17/10/2026 15:00 / Pista: 3 (Pista 3 (shooter))",
-          "resultado": "",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=992&visor=0",
-          "estado_programacion": "Comienza a las 15:00",
-          "equipo_ids": [
-            "10806349",
-            "7820188"
-          ],
-          "rival_ids": [
-            "11916882",
-            "6567179"
-          ]
-        },
-        {
-          "categoria": "ABSOLUTA PRO Double MIXTO",
-          "fase": "grupos",
-          "equipo": "Javier Pedregosa / Brenda Fariña",
           "rival": "Giovanna Mandon / Pedro Cámara",
           "horario_pista": "17/10/2026 15:45 / Pista: 3 (Pista 3 (shooter))",
           "resultado": "",
@@ -914,14 +894,35 @@
             "99000307",
             "99000412"
           ]
+        },
+        {
+          "categoria": "ABSOLUTA PRO Double MIXTO",
+          "fase": "grupos",
+          "equipo": "Javier Pedregosa / Brenda Fariña",
+          "rival": "Sergi Ventura / Alicia Roca",
+          "horario_pista": "17/10/2026 15:00 / Pista: 3 (Pista 3 (shooter))",
+          "resultado": "14-21",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=992&visor=0",
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116206",
+          "equipo_ids": [
+            "10806349",
+            "7820188"
+          ],
+          "rival_ids": [
+            "11916882",
+            "6567179"
+          ]
         }
       ],
       "logros": [],
       "resumen": {
-        "jugados": 7,
+        "jugados": 8,
         "victorias": 3,
-        "derrotas": 4,
-        "proximos": 3
+        "derrotas": 5,
+        "proximos": 2
       }
     },
     "Victor Sebastian Davila": {
@@ -1717,5 +1718,5 @@
       "99000412"
     ]
   },
-  "actualizado": "2026-10-17T11:48:45.773456+00:00"
+  "actualizado": "2026-10-17T13:21:15.022012+00:00"
 }
