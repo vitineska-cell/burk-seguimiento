@@ -10,7 +10,7 @@
     "dias_orden_juego_procesados": 2,
     "incidencias": 0,
     "errores": 0,
-    "filas_partido_leidas": 1272
+    "filas_partido_leidas": 1276
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -25,26 +25,6 @@
     },
     "Hugo Granados Jimenez": {
       "partidos": [
-        {
-          "categoria": "ABSOLUTA 4.5 Double MIXTO",
-          "fase": "grupos",
-          "equipo": "Hugo Granados / Lola Perez",
-          "rival": "Alba Garcia / Javier Tejada",
-          "horario_pista": "17/10/2026 17:45 / Pista: 3 (Pista 3 (shooter))",
-          "resultado": "",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0",
-          "estado_programacion": "Comienza a las 17:45",
-          "equipo_ids": [
-            "10440238",
-            "10768507"
-          ],
-          "rival_ids": [
-            "16063729",
-            "99000296"
-          ]
-        },
         {
           "categoria": "ABSOLUTA 4.5 Double MIXTO",
           "fase": "grupos",
@@ -284,6 +264,27 @@
             "10252807",
             "99000490"
           ]
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double MIXTO",
+          "fase": "grupos",
+          "equipo": "Hugo Granados / Lola Perez",
+          "rival": "Alba Garcia / Javier Tejada",
+          "horario_pista": "17/10/2026 17:45 / Pista: 3 (Pista 3 (shooter))",
+          "resultado": "21-11",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0",
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116281",
+          "equipo_ids": [
+            "10440238",
+            "10768507"
+          ],
+          "rival_ids": [
+            "16063729",
+            "99000296"
+          ]
         }
       ],
       "logros": [
@@ -297,34 +298,14 @@
         }
       ],
       "resumen": {
-        "jugados": 10,
-        "victorias": 8,
+        "jugados": 11,
+        "victorias": 9,
         "derrotas": 2,
-        "proximos": 3
+        "proximos": 2
       }
     },
     "Lucas Corral Falagan": {
       "partidos": [
-        {
-          "categoria": "ABSOLUTA 4.5 Double MIXTO",
-          "fase": "grupos",
-          "equipo": "Marina Hernando / Lucas Corral",
-          "rival": "Jose Alberto Martinez / Carmen Rosa",
-          "horario_pista": "17/10/2026 17:45 / Pista: 6 (Pista 6 (shooter))",
-          "resultado": "",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0",
-          "estado_programacion": "Comienza a las 17:45",
-          "equipo_ids": [
-            "10831502",
-            "7825964"
-          ],
-          "rival_ids": [
-            "10770859",
-            "10804856"
-          ]
-        },
         {
           "categoria": "ABSOLUTA 4.5 Double MIXTO",
           "fase": "grupos",
@@ -545,6 +526,27 @@
           "rival_ids": [
             "17037919"
           ]
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double MIXTO",
+          "fase": "grupos",
+          "equipo": "Marina Hernando / Lucas Corral",
+          "rival": "Jose Alberto Martinez / Carmen Rosa",
+          "horario_pista": "17/10/2026 17:45 / Pista: 6 (Pista 6 (shooter))",
+          "resultado": "18-21",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0",
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116258",
+          "equipo_ids": [
+            "10831502",
+            "7825964"
+          ],
+          "rival_ids": [
+            "10770859",
+            "10804856"
+          ]
         }
       ],
       "logros": [
@@ -554,10 +556,10 @@
         }
       ],
       "resumen": {
-        "jugados": 9,
+        "jugados": 10,
         "victorias": 4,
-        "derrotas": 5,
-        "proximos": 3
+        "derrotas": 6,
+        "proximos": 2
       }
     },
     "Jose Manuel Granados Sánchez": {
@@ -1721,5 +1723,5 @@
       "99000412"
     ]
   },
-  "actualizado": "2026-10-17T16:05:34.143663+00:00"
+  "actualizado": "2026-10-17T16:51:43.092879+00:00"
 }
