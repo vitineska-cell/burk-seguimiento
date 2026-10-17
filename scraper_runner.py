@@ -118,6 +118,8 @@ def categoria_limpia(texto: str, respaldo: str) -> str:
 
 def _ganador_desde_resultado(resultado: str) -> int | None:
     """Interpreta uno o varios sets y devuelve 1/2; no adivina empates."""
+    if not resultado_esta_jugado(resultado):
+        return None
     parciales = re.findall(r"(\d+)\s*[-–:]\s*(\d+)", resultado or "")
     if not parciales:
         return None
@@ -199,7 +201,12 @@ def incorporar_partidos_enriquecidos(
                 continue
             rival = partido["pareja2"] if en_p1 else partido["pareja1"]
             resultado = limpiar_texto(partido["resultado"])
-            jugado = partido.get('jugado', resultado_esta_jugado(resultado))
+            marcador_valido = resultado_esta_jugado(resultado)
+            jugado = bool(partido.get('jugado', marcador_valido) and marcador_valido)
+            if resultado and not marcador_valido and normalizar(resultado) not in ('', 'sin resultado', 'pendiente', 'por jugar', '0 0'):
+                if incidencias is not None:
+                    incidencias.append({'tipo': 'marcador_no_reconocido', 'jugador': nombre,
+                                        'rival': rival, 'url': url_origen, 'valor': resultado})
             if not jugado and not resultado_esta_jugado(resultado):
                 resultado = ''
             ganador = partido.get("ganador") or (
@@ -335,6 +342,9 @@ def conservar_resultados_confirmados(anterior, resultados, torneo_id, incidencia
         return
     for nombre, datos in resultados.items():
         for previo in anterior.get('jugadores', {}).get(nombre, {}).get('partidos', []):
+            # No perpetuar datos inválidos publicados por versiones anteriores.
+            if previo.get('jugado') and not resultado_esta_jugado(previo.get('resultado', '')):
+                continue
             if not previo.get('jugado') and not fuentes_incompletas:
                 continue
             actual = next((p for p in datos['partidos']

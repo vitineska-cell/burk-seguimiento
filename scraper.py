@@ -388,6 +388,10 @@ def extraer_partidos_cuadro(
                 continue
             resultado_el = partido.select_one(":scope > .match-result")
             resultado = limpiar_texto(resultado_el.get_text(" ", strip=True)) if resultado_el else ""
+            # Esta misma caja contiene el horario mientras el cruce está pendiente.
+            horario = resultado if re.search(r"\b\d{1,2}/\d{1,2}/\d{4}\b|\bpista\s*:", resultado, re.I) else ""
+            if horario:
+                resultado = ""
             ganador = None
             if "winner" in (equipos[0].get("class") or []):
                 ganador = 1
@@ -398,9 +402,10 @@ def extraer_partidos_cuadro(
                     "categoria": f"{fase} · CATEGORIA {categoria}",
                     "pareja1": nombres[0],
                     "pareja2": nombres[1],
-                    "horario_pista": "",
+                    "horario_pista": horario,
                     "resultado": resultado,
                     "ganador": ganador,
+                    "jugado": resultado_esta_jugado(resultado) and ganador is not None,
                 }
             )
     return partidos
@@ -525,8 +530,11 @@ def extraer_partidos_orden_juego(
 
 
 def resultado_esta_jugado(resultado: str) -> bool:
-    valor = normalizar(resultado)
-    return valor not in ("", "-", "sin resultado", "pendiente", "por jugar")
+    """Solo admite marcadores completos o WO; una hora nunca es un marcador."""
+    valor = limpiar_texto(resultado or "")
+    if re.fullmatch(r"\d{1,3}\s*[-–]\s*\d{1,3}(?:\s*/\s*\d{1,3}\s*[-–]\s*\d{1,3})*", valor):
+        return any(int(n) for n in re.findall(r"\d+", valor))
+    return bool(re.fullmatch(r"(?:p\s*[12]\s+)?w\s*[./]?\s*o\.?", valor, re.I))
 
 
 def guardar_debug(nombre: str, contenido: str) -> None:

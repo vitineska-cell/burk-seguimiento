@@ -14,6 +14,48 @@ ROOT = Path(__file__).parent
 NOMBRE = 'Bárbara Molina Durán'
 CAT = '+50 PRO Double FEMENINO'
 
+def test_horario_de_cuadro_no_es_marcador_ni_victoria():
+    from scraper import resultado_esta_jugado
+    for texto in ('17/10/2026 11:45 - Pista:8', '17/10/2026 45-11 - Pista:8',
+                  '11:45', '0-0', 'pendiente', '21-9 texto desconocido'):
+        assert not resultado_esta_jugado(texto), texto
+        assert r._ganador_desde_resultado(texto) is None
+    for texto in ('21-9', '21 - 14 / 19-21 / 11-6', 'P1 WO', 'W.O.'):
+        assert resultado_esta_jugado(texto), texto
+    partidos = extraer_partidos_cuadro((ROOT/'fixture_barbara_mixto_pendiente.html').read_text())
+    datos = {NOMBRE: {'partidos': []}}
+    avisos = []
+    r.incorporar_partidos_enriquecidos(partidos, [NOMBRE], datos, set(), 'cuadro', 'Mixto', avisos)
+    assert not avisos
+    semi = next(p for p in datos[NOMBRE]['partidos'] if p['fase'] == 'semifinal')
+    assert semi['horario_pista'] == '17/10/2026 11:45 - Pista:8'
+    assert semi['resultado'] == '' and not semi['jugado'] and semi['ganado'] is None
+    assert not any(l['titulo'] == 'Finalista' for l in r.calcular_logros(datos[NOMBRE]['partidos']))
+    # El historial erróneo tampoco puede resucitar la victoria falsa.
+    corrupto = dict(semi, resultado='17/10/2026 45-11 - Pista:8', jugado=True, ganado=True)
+    anterior = {'torneo_id':2341, 'jugadores':{NOMBRE:{'partidos':[corrupto]}}}
+    r.conservar_resultados_confirmados(anterior, datos, 2341, avisos)
+    assert semi['resultado'] == '' and not semi['jugado'] and not avisos
+    # Un marcador posterior sí se incorpora, orientado al jugador BÜRK.
+    siguiente = (ROOT/'fixture_barbara_mixto_pendiente.html').read_text().replace('17/10/2026 11:45 - Pista:8', '21-15 / 21-17')
+    # El marcador sin ganador oficial todavía no finaliza el encuentro.
+    r.incorporar_partidos_enriquecidos(extraer_partidos_cuadro(siguiente), [NOMBRE], datos, set(), 'cuadro', 'Mixto', avisos)
+    assert not semi['jugado'] and semi['ganado'] is None
+    siguiente = siguiente.replace('<div class="match-team"><span class="seed">1</span>', '<div class="match-team winner"><span class="seed">1</span>')
+    r.incorporar_partidos_enriquecidos(extraer_partidos_cuadro(siguiente), [NOMBRE], datos, set(), 'cuadro', 'Mixto', avisos)
+    assert semi['jugado'] and semi['ganado'] is False
+    assert semi['resultado'] == '15-21 / 17-21'
+
+def test_marcador_desconocido_no_se_publica_como_resultado():
+    datos = {NOMBRE: {'partidos': []}}
+    avisos = []
+    r.incorporar_partidos_enriquecidos([{'categoria':CAT, 'pareja1':NOMBRE,
+        'pareja2':'Otra Jugadora', 'resultado':'formato nuevo', 'jugado':True}],
+        [NOMBRE], datos, set(), 'oficial', CAT, avisos)
+    assert avisos[0]['tipo'] == 'marcador_no_reconocido'
+    assert not datos[NOMBRE]['partidos'][0]['jugado']
+    assert datos[NOMBRE]['partidos'][0]['resultado'] == ''
+
 def fuentes():
     return (extraer_todas_las_tablas_partidos((ROOT / 'fixture_barbara_grupos.html').read_text()),
             extraer_partidos_cuadro((ROOT / 'fixture_barbara_cuadro.html').read_text()),
