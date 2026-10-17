@@ -10,7 +10,7 @@
     "dias_orden_juego_procesados": 3,
     "incidencias": 0,
     "errores": 0,
-    "filas_partido_leidas": 1293
+    "filas_partido_leidas": 1299
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -27,22 +27,22 @@
       "partidos": [
         {
           "categoria": "ABSOLUTA 4.5 Double MIXTO",
-          "fase": "octavos",
+          "fase": "cuartos",
           "equipo": "Hugo Granados / Lola Perez",
-          "rival": "Marangelli Orellana / Pablo Segade",
-          "horario_pista": "17/10/2026 19:15 / Pista: 6 (Pista 6 (shooter))",
+          "rival": "Agostina Nepote / Daniel Almenar",
+          "horario_pista": "17/10/2026 21:00 / Pista: 6 (Pista 6 (shooter))",
           "resultado": "",
           "jugado": false,
           "ganado": null,
           "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22431&visor=0",
-          "estado_programacion": "Comienza a las 19:15",
+          "estado_programacion": "Comienza a las 21:00",
           "equipo_ids": [
             "10440238",
             "10768507"
           ],
           "rival_ids": [
-            "10778192",
-            "99000413"
+            "10774778",
+            "16973449"
           ]
         },
         {
@@ -307,6 +307,27 @@
             "99000265",
             "99000463"
           ]
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double MIXTO",
+          "fase": "octavos",
+          "equipo": "Hugo Granados / Lola Perez",
+          "rival": "Marangelli Orellana / Pablo Segade",
+          "horario_pista": "17/10/2026 19:15 / Pista: 6 (Pista 6 (shooter))",
+          "resultado": "21-19",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22431&visor=0",
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116299",
+          "equipo_ids": [
+            "10440238",
+            "10768507"
+          ],
+          "rival_ids": [
+            "10778192",
+            "99000413"
+          ]
         }
       ],
       "logros": [
@@ -315,13 +336,17 @@
           "categoria": "ABSOLUTA 4.5 Double MASCULINO"
         },
         {
+          "titulo": "Cuartofinalista",
+          "categoria": "ABSOLUTA 4.5 Double MIXTO"
+        },
+        {
           "titulo": "Semifinalista",
           "categoria": "ABSOLUTA 4.5 Single MASCULINO"
         }
       ],
       "resumen": {
-        "jugados": 13,
-        "victorias": 10,
+        "jugados": 14,
+        "victorias": 11,
         "derrotas": 3,
         "proximos": 1
       }
@@ -1328,6 +1353,12 @@
     }
   },
   "identidades": {
+    "agostina nepote": [
+      "16973449"
+    ],
+    "agostina nepote rodriguez": [
+      "16973449"
+    ],
     "alan llopart": [
       "11713668"
     ],
@@ -1393,6 +1424,12 @@
     ],
     "celia millon soto": [
       "16951726"
+    ],
+    "daniel almenar": [
+      "10774778"
+    ],
+    "daniel almenar gonzalez": [
+      "10774778"
     ],
     "daniel cabrera": [
       "77202525"
@@ -1754,6 +1791,9 @@
     "yasmina rincon": [
       "10794130"
     ],
+    "yasmina rincon ortiz": [
+      "10794130"
+    ],
     "yolanda garcia": [
       "99000288"
     ],
@@ -1764,5 +1804,5 @@
       "99000412"
     ]
   },
-  "actualizado": "2026-10-17T18:34:28.979157+00:00"
+  "actualizado": "2026-10-17T19:00:07.017450+00:00"
 }
