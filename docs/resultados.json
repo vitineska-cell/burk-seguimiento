@@ -1218,11 +1218,12 @@
           "equipo": "Juan Jose Gomez / Bárbara Molina",
           "rival": "Hector Santana / Benigna Villasuso",
           "horario_pista": "17/10/2026 10:15 / Pista: 8 (Pista 8 (VILA))",
-          "resultado": "21 - 15",
+          "resultado": "21-15",
           "jugado": true,
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1007&visor=0",
           "estado_programacion": "Partido finalizado",
+          "id_partido": "116627",
           "equipo_ids": [
             "10073005",
             "10772706"
@@ -1642,5 +1643,5 @@
       "99000412"
     ]
   },
-  "actualizado": "2026-10-17T09:14:47.606012+00:00"
+  "actualizado": "2026-10-17T09:20:01.647088+00:00"
 }
