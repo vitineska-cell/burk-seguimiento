@@ -6,11 +6,11 @@
     "grupos_unicos_detectados": 70,
     "categorias_procesadas": 22,
     "grupos_directos_procesados": 0,
-    "cuadros_procesados": 21,
+    "cuadros_procesados": 22,
     "dias_orden_juego_procesados": 3,
     "incidencias": 0,
     "errores": 0,
-    "filas_partido_leidas": 1279
+    "filas_partido_leidas": 1293
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -27,22 +27,22 @@
       "partidos": [
         {
           "categoria": "ABSOLUTA 4.5 Double MIXTO",
-          "fase": "grupos",
+          "fase": "octavos",
           "equipo": "Hugo Granados / Lola Perez",
-          "rival": "Juliana Bustos / Humberto Villamizar",
-          "horario_pista": "17/10/2026 18:45 / Pista: 3 (Pista 3 (shooter))",
+          "rival": "Marangelli Orellana / Pablo Segade",
+          "horario_pista": "17/10/2026 19:15 / Pista: 6 (Pista 6 (shooter))",
           "resultado": "",
           "jugado": false,
           "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0",
-          "estado_programacion": "Comienza a las 18:45",
+          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22431&visor=0",
+          "estado_programacion": "Comienza a las 19:15",
           "equipo_ids": [
             "10440238",
             "10768507"
           ],
           "rival_ids": [
-            "99000265",
-            "99000463"
+            "10778192",
+            "99000413"
           ]
         },
         {
@@ -286,6 +286,27 @@
             "10182153",
             "10252807"
           ]
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double MIXTO",
+          "fase": "grupos",
+          "equipo": "Hugo Granados / Lola Perez",
+          "rival": "Juliana Bustos / Humberto Villamizar",
+          "horario_pista": "17/10/2026 18:45 / Pista: 3 (Pista 3 (shooter))",
+          "resultado": "21-15",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0",
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116285",
+          "equipo_ids": [
+            "10440238",
+            "10768507"
+          ],
+          "rival_ids": [
+            "99000265",
+            "99000463"
+          ]
         }
       ],
       "logros": [
@@ -299,8 +320,8 @@
         }
       ],
       "resumen": {
-        "jugados": 12,
-        "victorias": 9,
+        "jugados": 13,
+        "victorias": 10,
         "derrotas": 3,
         "proximos": 1
       }
@@ -1427,6 +1448,9 @@
     "guille hernando": [
       "10768549"
     ],
+    "guillermo hernando garcia": [
+      "10768549"
+    ],
     "hector llopart": [
       "11828491"
     ],
@@ -1473,6 +1497,9 @@
       "11906875"
     ],
     "jose alberto martinez": [
+      "10770859"
+    ],
+    "jose alberto martinez moreno": [
       "10770859"
     ],
     "jose luis gonzalez": [
@@ -1571,6 +1598,9 @@
     "luis goni": [
       "10820810"
     ],
+    "luis goni lillo": [
+      "10820810"
+    ],
     "marangelli orellana": [
       "99000413"
     ],
@@ -1630,6 +1660,9 @@
     ],
     "miguel lopez gomez": [
       "7404007"
+    ],
+    "monica andrea perez olivares": [
+      "99000307"
     ],
     "monica perez": [
       "99000307"
@@ -1726,7 +1759,10 @@
     ],
     "yvonne rivera": [
       "99000412"
+    ],
+    "yvonne rivera crespi": [
+      "99000412"
     ]
   },
-  "actualizado": "2026-10-17T18:13:55.429738+00:00"
+  "actualizado": "2026-10-17T18:34:28.979157+00:00"
 }
