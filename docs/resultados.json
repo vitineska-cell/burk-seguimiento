@@ -10,7 +10,7 @@
     "dias_orden_juego_procesados": 3,
     "incidencias": 0,
     "errores": 0,
-    "filas_partido_leidas": 1305
+    "filas_partido_leidas": 1306
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -25,27 +25,6 @@
     },
     "Hugo Granados Jimenez": {
       "partidos": [
-        {
-          "categoria": "ABSOLUTA 4.5 Double MIXTO",
-          "fase": "semifinal",
-          "equipo": "Hugo Granados / Lola Perez",
-          "rival": "David Jiménez / Lorena Jimenez",
-          "horario_pista": "17/10/2026 21:30 / Pista: 2 (Pista 2 (shooter))",
-          "resultado": "",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22431&visor=0",
-          "estado_programacion": "Comienza a las 21:30",
-          "id_partido": "116306",
-          "equipo_ids": [
-            "10440238",
-            "10768507"
-          ],
-          "rival_ids": [
-            "10182153",
-            "10252807"
-          ]
-        },
         {
           "categoria": "ABSOLUTA 4.5 Single MASCULINO",
           "fase": "grupos",
@@ -350,6 +329,27 @@
             "10774778",
             "16973449"
           ]
+        },
+        {
+          "categoria": "ABSOLUTA 4.5 Double MIXTO",
+          "fase": "semifinal",
+          "equipo": "Hugo Granados / Lola Perez",
+          "rival": "David Jiménez / Lorena Jimenez",
+          "horario_pista": "17/10/2026 21:30 / Pista: 2 (Pista 2 (shooter))",
+          "resultado": "21-19 / 10-21 / 13-21",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneoCuadro.aspx?id=22431&visor=0",
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116306",
+          "equipo_ids": [
+            "10440238",
+            "10768507"
+          ],
+          "rival_ids": [
+            "10182153",
+            "10252807"
+          ]
         }
       ],
       "logros": [
@@ -367,10 +367,10 @@
         }
       ],
       "resumen": {
-        "jugados": 15,
+        "jugados": 16,
         "victorias": 12,
-        "derrotas": 3,
-        "proximos": 1
+        "derrotas": 4,
+        "proximos": 0
       }
     },
     "Lucas Corral Falagan": {
@@ -1826,5 +1826,5 @@
       "99000412"
     ]
   },
-  "actualizado": "2026-10-17T19:36:02.816650+00:00"
+  "actualizado": "2026-10-17T20:32:29.043771+00:00"
 }
