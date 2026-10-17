@@ -10,7 +10,7 @@
     "dias_orden_juego_procesados": 3,
     "incidencias": 0,
     "errores": 0,
-    "filas_partido_leidas": 1230
+    "filas_partido_leidas": 1279
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -30,11 +30,12 @@
           "fase": "grupos",
           "equipo": "Hugo Granados / Lola Perez",
           "rival": "Juliana Bustos / Humberto Villamizar",
-          "horario_pista": "17/10/2026 18:45 / Pista: 3",
+          "horario_pista": "17/10/2026 18:45 / Pista: 3 (Pista 3 (shooter))",
           "resultado": "",
           "jugado": false,
           "ganado": null,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0",
+          "estado_programacion": "Comienza a las 18:45",
           "equipo_ids": [
             "10440238",
             "10768507"
@@ -249,11 +250,13 @@
           "fase": "grupos",
           "equipo": "Hugo Granados / Lola Perez",
           "rival": "Alba Garcia / Javier Tejada",
-          "horario_pista": "17/10/2026 17:45 / Pista: 3",
-          "resultado": "21 - 11",
+          "horario_pista": "17/10/2026 17:45 / Pista: 3 (Pista 3 (shooter))",
+          "resultado": "21-11",
           "jugado": true,
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0",
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116281",
           "equipo_ids": [
             "10440238",
             "10768507"
@@ -268,11 +271,13 @@
           "fase": "grupos",
           "equipo": "Hugo Granados / Lola Perez",
           "rival": "David Jiménez / Lorena Jimenez",
-          "horario_pista": "17/10/2026 18:15 / Pista: 3",
-          "resultado": "20 - 22",
+          "horario_pista": "17/10/2026 18:15 / Pista: 3 (Pista 3 (shooter))",
+          "resultado": "20-22",
           "jugado": true,
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0",
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116283",
           "equipo_ids": [
             "10440238",
             "10768507"
@@ -488,11 +493,13 @@
           "fase": "grupos",
           "equipo": "Marina Hernando / Lucas Corral",
           "rival": "Jose Alberto Martinez / Carmen Rosa",
-          "horario_pista": "17/10/2026 17:45 / Pista: 6",
+          "horario_pista": "17/10/2026 17:45 / Pista: 6 (Pista 6 (shooter))",
           "resultado": "18-21",
           "jugado": true,
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0",
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116258",
           "equipo_ids": [
             "10831502",
             "7825964"
@@ -507,11 +514,13 @@
           "fase": "grupos",
           "equipo": "Marina Hernando / Lucas Corral",
           "rival": "Alan Llopart / Julia Pulgarin",
-          "horario_pista": "17/10/2026 18:15 / Pista: 6",
-          "resultado": "21 - 5",
+          "horario_pista": "17/10/2026 18:15 / Pista: 6 (Pista 6 (shooter))",
+          "resultado": "21-5",
           "jugado": true,
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0",
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116260",
           "equipo_ids": [
             "10831502",
             "7825964"
@@ -526,11 +535,13 @@
           "fase": "grupos",
           "equipo": "Marina Hernando / Lucas Corral",
           "rival": "Sergio Rojo Muñoz / Yasmina Rincón",
-          "horario_pista": "17/10/2026 18:30 / Pista: 6",
+          "horario_pista": "17/10/2026 18:30 / Pista: 6 (Pista 6 (shooter))",
           "resultado": "16-21",
           "jugado": true,
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0",
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116261",
           "equipo_ids": [
             "10831502",
             "7825964"
@@ -987,11 +998,13 @@
           "fase": "grupos",
           "equipo": "Sara Silvestre / Victor Sebastian",
           "rival": "Daniel Cabrera / María De Lluch Gual",
-          "horario_pista": "17/10/2026 17:30 / Pista: 5",
-          "resultado": "21 - 13",
+          "horario_pista": "17/10/2026 17:30 / Pista: 5 (Pista 5 (shooter))",
+          "resultado": "21-13",
           "jugado": true,
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0",
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116263",
           "equipo_ids": [
             "10549379",
             "10774794"
@@ -1006,11 +1019,13 @@
           "fase": "grupos",
           "equipo": "Sara Silvestre / Victor Sebastian",
           "rival": "Marangelli Orellana / Pablo Segade",
-          "horario_pista": "17/10/2026 18:00 / Pista: 7",
-          "resultado": "14 - 21",
+          "horario_pista": "17/10/2026 18:00 / Pista: 7 (Pista 7 (shooter))",
+          "resultado": "14-21",
           "jugado": true,
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0",
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116265",
           "equipo_ids": [
             "10549379",
             "10774794"
@@ -1025,11 +1040,13 @@
           "fase": "grupos",
           "equipo": "Sara Silvestre / Victor Sebastian",
           "rival": "Yvonne Rivera / Luis Goñi",
-          "horario_pista": "17/10/2026 18:30 / Pista: 7",
-          "resultado": "18 - 21",
+          "horario_pista": "17/10/2026 18:30 / Pista: 7 (Pista 7 (shooter))",
+          "resultado": "18-21",
           "jugado": true,
           "ganado": false,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0",
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116267",
           "equipo_ids": [
             "10549379",
             "10774794"
@@ -1711,5 +1728,5 @@
       "99000412"
     ]
   },
-  "actualizado": "2026-10-17T18:08:44.576721+00:00"
+  "actualizado": "2026-10-17T18:13:55.429738+00:00"
 }
