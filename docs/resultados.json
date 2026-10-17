@@ -6,11 +6,11 @@
     "grupos_unicos_detectados": 70,
     "categorias_procesadas": 22,
     "grupos_directos_procesados": 0,
-    "cuadros_procesados": 15,
+    "cuadros_procesados": 16,
     "dias_orden_juego_procesados": 2,
     "incidencias": 0,
     "errores": 0,
-    "filas_partido_leidas": 1195
+    "filas_partido_leidas": 1209
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -1067,26 +1067,6 @@
     "Bárbara Molina Durán": {
       "partidos": [
         {
-          "categoria": "+50 PRO Double MIXTO",
-          "fase": "grupos",
-          "equipo": "Juan Jose Gomez / Bárbara Molina",
-          "rival": "Juber Aviles / Monica Ramirez",
-          "horario_pista": "17/10/2026 11:00 / Pista: 8 (Pista 8 (VILA))",
-          "resultado": "",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1007&visor=0",
-          "estado_programacion": "Comienza a las 11:00",
-          "equipo_ids": [
-            "10073005",
-            "10772706"
-          ],
-          "rival_ids": [
-            "10326462",
-            "10771261"
-          ]
-        },
-        {
           "categoria": "+50 PRO Double FEMENINO",
           "fase": "grupos",
           "equipo": "Mercedes Cascales / Bárbara Molina",
@@ -1232,6 +1212,27 @@
             "1329558",
             "16739015"
           ]
+        },
+        {
+          "categoria": "+50 PRO Double MIXTO",
+          "fase": "grupos",
+          "equipo": "Juan Jose Gomez / Bárbara Molina",
+          "rival": "Juber Aviles / Monica Ramirez",
+          "horario_pista": "17/10/2026 11:00 / Pista: 8 (Pista 8 (VILA))",
+          "resultado": "21-19",
+          "jugado": true,
+          "ganado": true,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1007&visor=0",
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116630",
+          "equipo_ids": [
+            "10073005",
+            "10772706"
+          ],
+          "rival_ids": [
+            "10326462",
+            "10771261"
+          ]
         }
       ],
       "logros": [
@@ -1241,10 +1242,10 @@
         }
       ],
       "resumen": {
-        "jugados": 7,
-        "victorias": 3,
+        "jugados": 8,
+        "victorias": 4,
         "derrotas": 4,
-        "proximos": 1
+        "proximos": 0
       }
     }
   },
@@ -1612,6 +1613,9 @@
     "sergi ventura": [
       "6567179"
     ],
+    "sergi ventura roig": [
+      "6567179"
+    ],
     "sergio rojo munoz": [
       "10771782"
     ],
@@ -1646,5 +1650,5 @@
       "99000412"
     ]
   },
-  "actualizado": "2026-10-17T09:20:01.647088+00:00"
+  "actualizado": "2026-10-17T10:21:39.126445+00:00"
 }
