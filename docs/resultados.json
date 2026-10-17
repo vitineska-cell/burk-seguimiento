@@ -1039,6 +1039,7 @@
           "ganado": true,
           "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=991&visor=0",
           "estado_programacion": "Partido finalizado",
+          "id_partido": "116263",
           "equipo_ids": [
             "10549379",
             "10774794"
@@ -1720,5 +1721,5 @@
       "99000412"
     ]
   },
-  "actualizado": "2026-10-17T16:00:25.919694+00:00"
+  "actualizado": "2026-10-17T16:05:34.143663+00:00"
 }
