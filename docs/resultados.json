@@ -1070,26 +1070,6 @@
           "categoria": "+50 PRO Double MIXTO",
           "fase": "grupos",
           "equipo": "Juan Jose Gomez / Bárbara Molina",
-          "rival": "Rinaldo Rossi / Federica Mundula",
-          "horario_pista": "17/10/2026 09:15 / Pista: 8 (Pista 8 (VILA))",
-          "resultado": "",
-          "jugado": false,
-          "ganado": null,
-          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1007&visor=0",
-          "estado_programacion": "Comienza a las 09:15",
-          "equipo_ids": [
-            "10073005",
-            "10772706"
-          ],
-          "rival_ids": [
-            "99000457",
-            "99000458"
-          ]
-        },
-        {
-          "categoria": "+50 PRO Double MIXTO",
-          "fase": "grupos",
-          "equipo": "Juan Jose Gomez / Bárbara Molina",
           "rival": "Federico Bitan / Eva Martinez",
           "horario_pista": "17/10/2026 09:45 / Pista: 8 (Pista 8 (VILA))",
           "resultado": "",
@@ -1120,10 +1100,6 @@
           "equipo_ids": [
             "10073005",
             "10772706"
-          ],
-          "rival_ids": [
-            "1329558",
-            "2131746"
           ]
         },
         {
@@ -1229,6 +1205,27 @@
             "10768242",
             "10804848"
           ]
+        },
+        {
+          "categoria": "+50 PRO Double MIXTO",
+          "fase": "grupos",
+          "equipo": "Juan Jose Gomez / Bárbara Molina",
+          "rival": "Rinaldo Rossi / Federica Mundula",
+          "horario_pista": "17/10/2026 09:15 / Pista: 8 (Pista 8 (VILA))",
+          "resultado": "10-21",
+          "jugado": true,
+          "ganado": false,
+          "url_grupo": "https://pickleprotour.com/torneogrupo.aspx?idT=2341&g=1007&visor=0",
+          "estado_programacion": "Partido finalizado",
+          "id_partido": "116623",
+          "equipo_ids": [
+            "10073005",
+            "10772706"
+          ],
+          "rival_ids": [
+            "99000457",
+            "99000458"
+          ]
         }
       ],
       "logros": [
@@ -1238,10 +1235,10 @@
         }
       ],
       "resumen": {
-        "jugados": 4,
+        "jugados": 5,
         "victorias": 2,
-        "derrotas": 2,
-        "proximos": 4
+        "derrotas": 3,
+        "proximos": 3
       }
     }
   },
@@ -1284,9 +1281,6 @@
     ],
     "barbara molina duran": [
       "10772706"
-    ],
-    "benigna villasuso": [
-      "2131746"
     ],
     "blanca de dorremochea": [
       "10611649"
@@ -1558,9 +1552,6 @@
     "monica ramirez calvo": [
       "10326462"
     ],
-    "nina villasuso cores": [
-      "2131746"
-    ],
     "pablo segade": [
       "10778192"
     ],
@@ -1631,5 +1622,5 @@
       "99000412"
     ]
   },
-  "actualizado": "2026-10-17T06:40:31.545025+00:00"
+  "actualizado": "2026-10-17T07:42:32.515462+00:00"
 }
