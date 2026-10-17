@@ -6,11 +6,11 @@
     "grupos_unicos_detectados": 70,
     "categorias_procesadas": 22,
     "grupos_directos_procesados": 0,
-    "cuadros_procesados": 14,
+    "cuadros_procesados": 15,
     "dias_orden_juego_procesados": 2,
     "incidencias": 0,
     "errores": 0,
-    "filas_partido_leidas": 1191
+    "filas_partido_leidas": 1195
   },
   "jugadores": {
     "Oscar Villar Sancosmed": {
@@ -1454,6 +1454,9 @@
       "10073005"
     ],
     "juan plana": [
+      "11805035"
+    ],
+    "juan plana nusas": [
       "11805035"
     ],
     "juber aviles": [
