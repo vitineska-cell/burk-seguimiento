@@ -1,9 +1,10 @@
 {
   "torneo_id": 2341,
-  "estado": "ok",
-  "comprobado": "2026-10-18T15:47:40.316320+00:00",
+  "estado": "error",
+  "comprobado": "2026-10-18T15:54:25.190793+00:00",
   "ultima_correcta": "2026-10-18T15:47:40.316320+00:00",
   "actualizacion_hasta": "2026-10-19T12:00:00+02:00",
-  "errores": 0,
-  "incidencias": []
+  "errores": 1,
+  "incidencias": [],
+  "mensaje": "No se pudo cargar https://pickleprotour.com/torneo.aspx?id=2341: <urlopen error timed out>"
 }
